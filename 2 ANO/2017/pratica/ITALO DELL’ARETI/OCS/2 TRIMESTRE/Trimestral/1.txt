@@ -1,0 +1,25 @@
+  THUNDERBOLT
+
+A tecnologia Thunderbolt, permite acessar uma grande variedade de periféricos de alta velocidade e monitores de alta resolução com uma única porta e um cabo que transporta dados via DisplayPort e PCI Express.
+
+Através do displayPort, pode-se utilizar de uma resolução 4k, com altas taxas de quadro, e pelo PCI Express, permite-se a transferência de dados a 20Gb/s.
+
+A tecnologia Thunderbolt é amplamente empregada nos computadores da Apple, que possuem a tecnologia thunderbolt nativamente.
+
+Um grande utilitário desta tecnologia, é que com o adaptador correto, pode-se transformar uma porta thunderbolt em um ethernet, USB, FireWire, e Fibre Channel.
+
+
+
+  FireWire
+
+É um forte concorrente do USB, que foi inicialmente desenvolvido pela Apple, e se tornou popular por padronizar vários dispositivos de entrada e saída.
+
+O Firewire é um barramento serial, muito similar ao USB em vários aspectos. Sua versão inicial já operava a 400 megabits (ou 50 MB/s), enquanto o USB 1.1 operava a apenas 12 megabits.
+
+Com o surgimento do USB, o Firewire acabou restrito a certas áreas. A principal delas é a transferência de vídeos a partir de uma filmadora digital. Desde o final da década de 1990 as câmeras migraram das fitas analógicas para o padrão DV (digital video), onde o vídeo é gravado diretamente em formato digital (numa fita mini-DV, HD ou mesmo memória flash, como em alguns modelos recentes) e depois transferido para o micro através de uma porta Firewire para que seja editado e finalizado.
+
+Apesar disso, o USB utilizava transmissores e circuitos mais baratos e era livre de pagamento de royalties, o que acabou fazendo com que ele se popularizasse rapidamente. Na época, a indústria
+
+procurava um barramento de baixo custo para substituir as portas seriais e paralelas e, como de praxe, acabou ganhando a solução mais barata.
+
+Atualmente o Firewire foi descontinuado, já que temos o USB 3.0, com velocidades rápidas, e preço mais barato.

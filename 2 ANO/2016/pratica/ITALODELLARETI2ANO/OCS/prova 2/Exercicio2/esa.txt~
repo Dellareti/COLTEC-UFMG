@@ -1,0 +1,83 @@
+a) 0101 1010 0011 0000 0000 0000 0000 0100
+
+ 0      10110100   01100000000000000000100
+sinal    expoente       fração
+
+expoente:180 em decimal
+
+fração:1x2 elevado a -2 + 1x2 elevado a -3 + 1x2 elevado a -20
+
+0,25 + 0,125 + 0,00000095367431640625
+
+0,37500095367431640625
+exp: 180 -127 = 53
+
+(-1) elevado a 0 * (1 + 0,37500095367431640625) * 2 elevado a 53 
+
+unsigned int =1513095172
+signed int  =1513095172
+
+
+
+
+
+b) 1000 1101 0011 1010 0000 0000 0000 0100
+
+ 1      00011010   01110100000000000000100
+sinal    expoente    fração
+
+expoente:32 em decimal
+
+fração:1x2 elevado a -2 + 1x2 elevado a -3 + 1x2 elevado a -4 + 1x2 elevado a -6 + 1x2 elevado a -20 
+
+0,25 + 0,125 + 0,00390625 + 0,015625 + 0,00000095367431640625
+
+0,394532200367431640625
+exp: 32 -127 = -95 
+
+(-1) elevado a 1 * (1 + 0,394532200367431640625) * 2 elevado a -95
+
+unsigned int =
+signed int =
+
+
+c) 0000 00 10 0111 0010 0100 0000 0010 0000
+
+ 0      00000100   11100100100000000100000
+sinal    expoente    fração
+
+
+expoente:4 em decimal
+
+fração:1x2 elevado a -1 +1x2 elevado a -2 +1x2 elevado a -3 +1x2 elevado a -6 +1x2 
+elevado a -9 + 1x2 elevado a -17
+
+0,5 + 0,25 + 0,125 + 0,015625 + 0,001953125 + 0,00000762939453125 
+
+0,89063262939453125
+exp:4 -127 = -123
+
+(-1) elevado a 0 *(1 + 0,89063262939453125) * 2 elevado a -123
+
+unsiged int = 41041952
+signed int = 41041952
+
+d) 1010 1101 0001 0000 0000 0000 0000 0010
+
+ 1      01011010   00100000000000000000010
+sinal     expoente    fração
+
+expoente:90 em decimal
+
+
+fração:1x2 elevado a -3 + 1x2 elevado a -22 
+
+0,125 + 0,0000002384185791015625
+
+0,1250002384185791015625
+exp:90 -127 = -37
+
+(-1) elevado a 1 *(1 + 0,1250002384185791015625) * 2 elevado a -37
+
+unsigned int = 2903506946
+singned int = complemento de 2

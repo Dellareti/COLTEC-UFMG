@@ -1,0 +1,15 @@
+O que È ponteiro para função? Ponteiro para função nada mais È uma variável que aponta para um espaço de memória onde começa alguma função
+
+Ponteiros para funções podem ser passados como argumentos para outras funções, e a função apontada pode ser invocada a partir de seu ponteiro. Um exemplo prático desta capacidade é seu uso em uma rotina de ordenação de elementos de um arranjo. Se o arranjo é de inteiros, então uma função de comparação de inteiros deverá ser suportada, tal como
+
+    /*
+     *  compara dois inteiros, retornando:
+     *      0 se os dois elementos forem iguais
+     *      um inteiro negativo se o primeiro elemento for menor
+     *      um inteiro positivo se o primeiro elemento for maior
+     */
+     int comp_int(int *e1, int *e2) {
+        return(*e1 - *e2);
+     }
+
+Os ponteiros de função podem ser bastante interessante para substituir ifís e switches, fazer late-bindings e callbacks.

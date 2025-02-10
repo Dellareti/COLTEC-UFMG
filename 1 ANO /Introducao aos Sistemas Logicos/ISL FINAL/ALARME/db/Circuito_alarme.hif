@@ -1,0 +1,744 @@
+Quartus II
+Version 9.1 Build 304 01/25/2010 Service Pack 1 SJ Web Edition
+45
+3439
+OFF
+OFF
+OFF
+ON
+ON
+OFF
+FV_OFF
+Level2
+0
+0
+VRSM_ON
+VHSM_ON
+0
+-- Start Library Paths --
+-- End Library Paths --
+-- Start VHDL Libraries --
+-- End VHDL Libraries --
+# entity
+DECODIFICADOR_BCD_7SEG
+# storage
+db|Circuito_alarme.(0).cnf
+db|Circuito_alarme.(0).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+decodificadores.vhd
+b7e82b1835427dc922d96a3cc6badfb
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# lmf
+|altera|91sp1|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# entity
+GERADOR_DE_PULSO
+# storage
+db|Circuito_alarme.(13).cnf
+db|Circuito_alarme.(13).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+geradores_ de_pulsos.vhd
+ed8cbcc9b4b1de1242353c3bf390ad
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+contador
+100
+PARAMETER_SIGNED_DEC
+DEF
+}
+# lmf
+|altera|91sp1|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# entity
+TROCA_ESTADO
+# storage
+db|Circuito_alarme.(12).cnf
+db|Circuito_alarme.(12).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+troca_estado.vhd
+1e5998848dedad3adb9b5da5b28f3fd
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# lmf
+|altera|91sp1|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# entity
+FILTRO_BOTAO
+# storage
+db|Circuito_alarme.(4).cnf
+db|Circuito_alarme.(4).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+filtro_digital.vhd
+4b253511f3bd231688311c998599c41
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+frequencia
+10
+PARAMETER_SIGNED_DEC
+USR
+}
+# lmf
+|altera|91sp1|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# entity
+BEEP
+# storage
+db|Circuito_alarme.(2).cnf
+db|Circuito_alarme.(2).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+alarme.vhd
+c68498a3b7b346ba5e3c13bc26b3786b
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+tempo
+10
+PARAMETER_SIGNED_DEC
+USR
+}
+# include_file {
+componentes.vhd
+5d5e84a1df7b40bae6484c1a8fcb548
+}
+# lmf
+|altera|91sp1|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# entity
+REGISTRADOR_8BITS_ARMAZENAMENTO
+# storage
+db|Circuito_alarme.(7).cnf
+db|Circuito_alarme.(7).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+ff_regist.vhd
+cfdb3cef56afd604b41aad69a1e7649
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+ constraint(a)
+7 downto 0
+PARAMETER_STRING
+USR
+ constraint(b)
+7 downto 0
+PARAMETER_STRING
+USR
+}
+# include_file {
+componentes.vhd
+5d5e84a1df7b40bae6484c1a8fcb548
+}
+# lmf
+|altera|91sp1|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# entity
+FF_D
+# storage
+db|Circuito_alarme.(8).cnf
+db|Circuito_alarme.(8).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+ff_regist.vhd
+cfdb3cef56afd604b41aad69a1e7649
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# include_file {
+componentes.vhd
+5d5e84a1df7b40bae6484c1a8fcb548
+}
+# lmf
+|altera|91sp1|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# entity
+TROCA_SENHA
+# storage
+db|Circuito_alarme.(9).cnf
+db|Circuito_alarme.(9).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+troca_senha.vhd
+94262f92c118f730e788e9b67d66cc99
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+ constraint(senha1)
+3 downto 0
+PARAMETER_STRING
+USR
+ constraint(senha2)
+3 downto 0
+PARAMETER_STRING
+USR
+ constraint(senha_reg)
+7 downto 0
+PARAMETER_STRING
+USR
+}
+# include_file {
+componentes.vhd
+5d5e84a1df7b40bae6484c1a8fcb548
+}
+# lmf
+|altera|91sp1|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# entity
+VERIFICADOR_SENHA
+# storage
+db|Circuito_alarme.(10).cnf
+db|Circuito_alarme.(10).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+verificador_senha.vhd
+a813fccb56f606378e3b0fe5f7118b7
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+ constraint(senha_reg)
+7 downto 0
+PARAMETER_STRING
+USR
+ constraint(dig1)
+3 downto 0
+PARAMETER_STRING
+USR
+ constraint(dig2)
+3 downto 0
+PARAMETER_STRING
+USR
+}
+# include_file {
+componentes.vhd
+5d5e84a1df7b40bae6484c1a8fcb548
+}
+# hierarchies {
+VERIFICADOR_SENHA:VERIF
+}
+# lmf
+|altera|91sp1|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# entity
+CONTADOR_ANEL_3BITS
+# storage
+db|Circuito_alarme.(11).cnf
+db|Circuito_alarme.(11).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+contadores.vhd
+e5cfbf72a536fae2ffd33eecef972ed
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# include_file {
+componentes.vhd
+5d5e84a1df7b40bae6484c1a8fcb548
+}
+# lmf
+|altera|91sp1|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# entity
+SELETOR
+# storage
+db|Circuito_alarme.(14).cnf
+db|Circuito_alarme.(14).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+seletor.vhd
+b8704b93bd5a3b8e1ea54bc787fcdd
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+ constraint(d1_verif)
+3 downto 0
+PARAMETER_STRING
+USR
+ constraint(d2_verif)
+3 downto 0
+PARAMETER_STRING
+USR
+ constraint(d1_troca)
+3 downto 0
+PARAMETER_STRING
+USR
+ constraint(d2_troca)
+3 downto 0
+PARAMETER_STRING
+USR
+ constraint(d1_monitorador)
+3 downto 0
+PARAMETER_STRING
+USR
+ constraint(d2_monitorador)
+3 downto 0
+PARAMETER_STRING
+USR
+ constraint(disp1)
+3 downto 0
+PARAMETER_STRING
+USR
+ constraint(disp2)
+3 downto 0
+PARAMETER_STRING
+USR
+}
+# include_file {
+componentes.vhd
+5d5e84a1df7b40bae6484c1a8fcb548
+}
+# lmf
+|altera|91sp1|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# entity
+CONTADOR_30SEG
+# storage
+db|Circuito_alarme.(16).cnf
+db|Circuito_alarme.(16).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+contadores.vhd
+e5cfbf72a536fae2ffd33eecef972ed
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+ constraint(d1)
+3 downto 0
+PARAMETER_STRING
+USR
+ constraint(d2)
+3 downto 0
+PARAMETER_STRING
+USR
+}
+# include_file {
+componentes.vhd
+5d5e84a1df7b40bae6484c1a8fcb548
+}
+# lmf
+|altera|91sp1|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# entity
+FREQ_ALARME
+# storage
+db|Circuito_alarme.(17).cnf
+db|Circuito_alarme.(17).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+alarme.vhd
+c68498a3b7b346ba5e3c13bc26b3786b
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+frequencia
+10
+PARAMETER_SIGNED_DEC
+USR
+}
+# include_file {
+componentes.vhd
+5d5e84a1df7b40bae6484c1a8fcb548
+}
+# lmf
+|altera|91sp1|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# entity
+GERADOR_DE_PULSO
+# storage
+db|Circuito_alarme.(18).cnf
+db|Circuito_alarme.(18).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+geradores_ de_pulsos.vhd
+ed8cbcc9b4b1de1242353c3bf390ad
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+contador
+200
+PARAMETER_SIGNED_DEC
+USR
+}
+# lmf
+|altera|91sp1|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# entity
+GERADOR_DE_PULSO
+# storage
+db|Circuito_alarme.(19).cnf
+db|Circuito_alarme.(19).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+geradores_ de_pulsos.vhd
+ed8cbcc9b4b1de1242353c3bf390ad
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+contador
+400
+PARAMETER_SIGNED_DEC
+USR
+}
+# lmf
+|altera|91sp1|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# entity
+FREQ_ALARME
+# storage
+db|Circuito_alarme.(15).cnf
+db|Circuito_alarme.(15).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+alarme.vhd
+c68498a3b7b346ba5e3c13bc26b3786b
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+frequencia
+400
+PARAMETER_SIGNED_DEC
+USR
+}
+# include_file {
+componentes.vhd
+5d5e84a1df7b40bae6484c1a8fcb548
+}
+# hierarchies {
+FREQ_ALARME:CLKS
+}
+# lmf
+|altera|91sp1|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# entity
+TOP
+# storage
+db|Circuito_alarme.(20).cnf
+db|Circuito_alarme.(20).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+circuito_alarme.vhd
+aa53cfab33c2137ce52b633f809d2
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# include_file {
+componentes.vhd
+5d5e84a1df7b40bae6484c1a8fcb548
+}
+# lmf
+|altera|91sp1|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# entity
+MONITORADOR
+# storage
+db|Circuito_alarme.(1).cnf
+db|Circuito_alarme.(1).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+monitorador.vhd
+e01640f46f9844dd851f53aad958d41
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# include_file {
+componentes.vhd
+5d5e84a1df7b40bae6484c1a8fcb548
+}
+# hierarchies {
+|
+}
+# lmf
+|altera|91sp1|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# complete
+

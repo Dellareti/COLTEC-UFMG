@@ -1,0 +1,58 @@
+1)
+	Tempo de acesso 
+
+Indica quanto tempo a memória gasta para colocar uma informação no barramento de dados após uma determinada posição ter sido endereçada. Isto é, o período de tempo decorrido
+desde o instante em que foi iniciada a operação de acesso (quando a origem - em geral é a CPU - passa o endereço de acesso para o sistema de memória) até que a informação 
+requerida  (instrução ou dado) tenha sido efetivamente transferida. É um dos parâmetros que pode medir o desempenho da memória. Pode ser chamado de tempo de acesso para 
+leitura ou simplesmente tempo de leitura.
+
+O ideal, é claro, é que a capacidade e velocidade de transferência fossem grandes, mas nesse caso o custo seria alto demais. E é por isso que se mencionou "mais importante".
+O tempo de acesso de uma memória é dependente do modo como o sistema de memória é construído e da velocidade dos seus circuitos. Ele varia bastante de acordo com o tipo de
+memória analisado, sendo valores típicos atuais aqueles numa faixa entre 50 e 150 nanossegundos (ns), para a memória principal (ou memória DRAM, conforme será explicado mais
+adiante); de 12 a 60 milissegundos para discos magnéticos (memória secundária), enquanto fitas magnéticas têm tempo de acesso da ordem de poucos segundos.
+
+Deve ser mencionado ainda que o tempo de acesso das memórias eletrônicas (do tipo RAM, ROM, etc. ) é igual, independentemente da distância física entre o local de um acesso
+e o local do próximo acesso, ao passo que, no caso de dispositivos eletromecânicos (discos, fitas, etc.), o tempo de acesso varia conforme a distância física entre dois 
+acessos consecutivos.
+
+Outro parâmetro (utilizado apenas em memórias eletrônicas) é o chamado ciclo de tempo do sistema de memória ("memory system's cycle time") ou simplesmente ciclo de memória, 
+que é o período de tempo decorrido entre duas operações sucessivas de acesso à memória, sejam de escrita ou de leitura. Esse tempo depende de outros fatores relacionados
+aos tempos de funcionamento do sistema. Esses outros fatores podem, em certas memórias, impedir, por um pequeno intervalo de tempo, o uso do sistema de memória para um novo
+acesso, logo após a conclusão do acesso anterior. Nesses casos, o ciclo de memória compreende o tempo de acesso mais um certo tempo para essas outras atividades, a serem 
+descritas mais adiante. Outras memórias não requerem esse tempo adicional entre acessos e, portanto, o ciclo de memória é igual ao tempo de acesso.
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+	Volatilidade 
+
+Memórias podem ser do tipo volátil ou não volátil. Uma memória não volátil é a que retém a informação armazenada quando a energia elétrica é desligada. Memória volátil é 
+aquela que perde a informação armazenada quando a energia elétrica desaparece (interrupção de alimentação elétrica ou desligamento da chave ON/OFF do equipamento).
+Em computação, costuma-se usar o termo tamanho para indicar quantidade de informação (de bits, de bytes, etc.) e não para indicar grandeza física do elemento, como se faz 
+na vida cotidiana. Por exemplo, o tamanho do barramento de dados é 32 bits.
+
+Uma vez que um processador nada pode fazer sem instruções que indiquem a próxima operação a ser realizada, é óbvio que todo sistema de computação deve possuir alguma
+quantidade de memória não volátil. Isto é, ele deve possuir, pelo menos, algumas instruções armazenadas em memória não volátil para serem executadas inicialmente, sempre que 
+se ligar o computador.
+
+Registradores são memória do tipo volátil, como também memórias de semicondutores, do tipo RAM. Memórias magnéticas e óticas, como discos e fitas, e também memórias de 
+semicondutores do tipo ROM, EPROM, etc. são do tipo não volátil.
+
+É possível manter a energia em uma memória originalmente não volátil, através do emprego de baterias. Mais adiante este parâmetro será analisado e exemplificado com um pouco 
+mais de detalhe.
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+	Custo  
+
+O custo de fabricação de uma memória é bastante variado em função de diversos fatores, entre os quais se pode mencionar principalmente a tecnologia de fabricação, que redunda
+em maior ou menor tempo de acesso, ciclo de memória, quantidade de bits em certo espaço físico e outros. Uma boa unidade de medida de custo é o preço por byte armazenado, em 
+vez do custo total da memória em si. Isso porque, devido às diferentes capacidades, seria irreal considerar, para comparação, o custo pelo preço da memória em si, 
+naturalmente diferente, e não da unidade de armazenamento (o byte), igual para todos os tipos.
+
+Em outras palavras, um disco rígido de microcomputador pode armazenar cerca de 3.2 Gb e custar, no mercado, em torno de R$ 350,00, o que indica um custo de R$ 0,12 por Mbyte,
+ enquanto uma memória do tipo de semicondutor, dinâmica (ver item 5.7), pode custar cerca de R$ 40,00 por Mbyte, adquirindo-se, então, 4 Mb por R$ 160,00. Não há comparação 
+possível entre o valor dos 4 Mb de RAM e os 3.2 Gb do disco se analisarmos apenas o dispositivo como um todo (o disco seria mais caro).
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+ 2)
+O processador é o componente do computador que mais influencia no desempenho, Há diversos fatores que determinam e fazem um CPU ser mais rápido que outro dentre tantos, 
+estão o clock, a memória cache .O clock nada mais é do que a frequência com que o processador consegue executar as tarefas. Ou seja, quanto maior a frequência (o clock), 
+menor será o tempo de execução e, portanto, mais rápido será o processador.
+ 

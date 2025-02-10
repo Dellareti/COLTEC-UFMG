@@ -1,0 +1,3 @@
+Como o programa é para assessoria contábil, onde se trabalha com muitos números e estão sujeitos a varias mudanças(constante modificação),onde a organização é necessária para o bom funcionamento do sistema, programação orientada a objetos será a melhor 
+escolha,pois como foi falado na questão anterior a POO possui uma estruturas que permitem uma melhor organização do código,
+em classes definidas, com funcionamento totalmente hierarquizado e relações entre esses componentes .

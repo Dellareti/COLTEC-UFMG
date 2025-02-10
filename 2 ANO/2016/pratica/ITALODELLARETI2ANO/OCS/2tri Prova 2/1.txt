@@ -1,0 +1,15 @@
+
+Princípio da localidade: programas acessam parte relativamente pequena do espaço de endereçamento em qualquer instante do tempo.
+
+Localidade temporal:Uma palavra de memória que acaba de ser referenciada, tende a ser novamente referenciada se um item é referenciado, ele tenderá a referenciado novamente em breve (loops).
+
+
+Localidade Espacial:Itens cujos endereços estão próximos daqueles que acabam de ser referenciados tendem a ser referenciados também brevemente
+Conclusão: usar mecanismos que permitam armazenar temporariamente o material com que se trabalha.
+Observar a estrutura dos programas:
+
+Programas acessam somente uma pequena porção de memória num curto espaço de tempo
+
+variáveis - temporal
+laços - temporal e espacial
+percurso de arrays - espacial 

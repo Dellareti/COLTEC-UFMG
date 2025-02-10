@@ -1,0 +1,21 @@
+ Setor 0 do disco é destinado ao MBR - Master Boot Record;
+
+Que é responsável pela a tarefa de boot do computador;
+MBR possui a tabela de partição, com o endereço inicial e ﬁnal
+de cada partição;
+
+Desde o  momento em que você liga o seu computador até o instante em que o sistema operacional carrega muitos processos.
+
+BIOS lê e executa o MBR;
+
+Tarefas básicas do MBR (Dependendo do SO):
+
+	1 localizar a partição ativa;
+
+	2 ler o primeiro bloco dessa partição, chamado bloco de boot(boot block);
+
+	3 executar o bloco de boot;
+
+Nesses segundos, uma série de processos que juntos se  chamam de boot trabalham para inicializar a máquina e fazê-la funcionar.
+
+Sim e possível mais de um boot a ser ralacionado ao mesmos S.O. 

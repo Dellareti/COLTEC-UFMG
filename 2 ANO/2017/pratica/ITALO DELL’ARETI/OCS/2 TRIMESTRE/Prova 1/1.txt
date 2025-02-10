@@ -1,0 +1,48 @@
+
+1) Uma CPU pipelined, é composta de cinco unidades que realizam processos bem definidos, que juntos compõem o caminho de dados do processador. Estas unidades são as seguintes:
+
+IF - Busca de instruções: a instrução será lida da memória, utilizando o endereço contido no registrador PC, program counter, e depois e colocada no registrador IF/ID, para seguir para a próxima etapa.
+O IF é composto por um registrador PC, que guarda o endereço da instrução atual, uma unidade de busca de instrução na memória, e um somador que calcula o endereço da próxima instrução (instrução atual + 4).
+
+
+ID - Decodificação de instruções e leitura do banco de registradores: a instrução é finalmente decodificada para gerar os sinais de controle das outras unidades, e para acessar os dados 
+contidos nos registradores usados pela instrução, que seguem ao registrador ID/EX.
+O ID é composto por um banco de registradores, que fornece os dados de um registrador através de seu número, por uma unidade de controle, e por um extensor de sinal, que extende os 16 bits finais de instruções de tipo I para estes serem usados na ALU, que usa apenas operandos de 32 bits.
+
+
+EX - Execução e cálculo de endereço: Esta etapa irá realizar as operações aritméticas necessárias da instrução, e irá também calcular o endereço de desvio, caso a instrução executada necessite deste cálculo. Os dados serão então enviados ao registrador EX/MEM.
+O EX é composto por uma ALU, uma unidade de controle da ALU, que seleciona a partir dos bits da instrução, qual operação a ALU deve realizar.
+
+
+MEM - Acesso a memória: Esta etapa acessa o endereço da memória e escreve ou lê dados deste endereço, retornando o valor obtido e os últimos sinais de controle para a última etapa, através do registrador MEM/WB.
+A MEM é composta por uma unidade que escreve ou lê valores na memória através de um endereço.
+
+
+WB - Escrita do resultado: Nesta etapa, caso exista algum valor a ser escrito em algum registrador, este valor é gravado no banco de registradores, e todo o processo se repete, no decorrer das próximas instruções do programa.
+O WB é composto dos dados finais que podem ser guardados no banco de registradores, se a instrução requerir, o que é definido por sinais de controle gerados anteriormente pela unidade de controle.
+
+
+Por o caminho de dados é utilizado multiplexadores, que irão selecionar por exemplo, quais dados serão escritos no banco de registradores, os que saem da ALU, ou saem da unidade de memória. São usados também para selecionar qual o operando a ALU irá utilizar, de acordo com o tipo de instrução, e até mesmo são usados para determinar o endereço da próxima instrução.
+
+Existem também no caminho de dados, registradores que guardam os valores entre as etapas, que foram citados previamente.
+
+-----------------------------------------------------------------------------------------------------------------
+|Classe | Busca de instruções | Leitura de Registrador |Operação ALU|Acesso a Dados|Escrita em Registrador|Total|
+-----------------------------------------------------------------------------------------------------------------
+|  lw   |        200          |          100           |     200    |      200     |        100           | 800 |
+-----------------------------------------------------------------------------------------------------------------
+
+Ciclo único
+
+	*Cada instrução: 800ps
+
+	*Tempo entre início da 1a e 4a instrução: 3 x 800 = 2400ps
+
+Pipelining
+
+	*Cada instrução: 200ps
+	
+	*Tempo entre início da 1a e 4a instrução: 3 x 200 = 600ps
+
+Sendo assim,a utilização de Pipelining 4 vezes mais rápido em relação ao ciclo único,e sob condições ideais,e com grand quantidade de instruções ocorre o ganho de velocidade igual ao número de estágios do pipeline 
+

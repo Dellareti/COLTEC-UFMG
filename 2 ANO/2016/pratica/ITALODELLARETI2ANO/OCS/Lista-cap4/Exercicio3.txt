@@ -1,0 +1,23 @@
+O caminho de dados é a parte do processador que contém a ALU e todas as suas entradas e saídas
+
+O caminho de dados contém:
+Um conjunto de registradores de 32 bits, (PC, SP, MDR ....), que só podem ser acessados pelo microprograma.
+Um barramento B, onde os registradores podem colocar suas informações
+Uma UAL, cujas entradas estão ligadas aos barramentos A e B  
+Um Deslocador alimentado pela saída da UAL e que alimenta o barramento C
+A função a ser executada pela UAL é determinada pelas 6 linhas de controle
+F0 e F1 para determinação da operação
+ENA e ENB para habilitar individualmente suas entradas A e B
+INVA para inverter a entrada de A
+INC que força um vem-um para o bit menos significativo (incremento de 1)
+A figura 4.2 apresenta algumas combinações úteis desses sinais de contrôle
+
+
+Unidade de Controle é responsável por gerar todos os sinais que controlam as operações no exterior do CPU, e ainda por dar todas as instruções para o correto funcionamento 
+interno do CPU; a apoiá-la/o terá a colaboração de uma outra estrutura/actor (o decodificador de instruções).
+
+A unidade de controle executa três ações básicas intrínsecas e pré-programadas pelo próprio fabricante do processador, são elas: busca , decodificação e execução.
+
+Assim sendo, todo processador, ao iniciar sua operação, realiza uma operação cíclica, tendo como base essas três ações. Dependendo do tipo de microprocessador, a unidade de
+ controle pode se ser fixa ou programável. A unidade fixa é aquela unidade que já vem com todo o conjunto de instrução programado em uma PLA que é construída pelo fabricante
+,dentro da Unidade de Controle.

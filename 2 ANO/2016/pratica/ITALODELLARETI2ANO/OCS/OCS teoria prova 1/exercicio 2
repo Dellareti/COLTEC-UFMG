@@ -1,0 +1,16 @@
+a)010110 10001 10000 00000 00000   000100
+    op    rs    rt    rd   shamt    funct
+  	
+não são instruções corretas 
+
+b)100011 01001 11010 00000 00000  000110
+    op    rs    rt     rd  shamt   funct	  
+	
+lw $t0,$a1,valor
+
+c)000000 10011 10010 01000 00000   100000	
+    op     rs    rt    rd   shamt  funct
+
+add $t1,$s0,$s1   	
+
+

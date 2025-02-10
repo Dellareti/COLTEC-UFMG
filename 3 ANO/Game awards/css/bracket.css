@@ -1,0 +1,26 @@
+.navbar{
+  margin-bottom: 0;
+  border-radius: 0;
+}
+ 
+table {
+  border-collapse: collapse;
+  border: none;
+  font: small arial, helvetica, sans-serif;
+}
+
+td {
+  vertical-align: right;
+  width: 10em;
+  margin: 0;
+  padding: 0;
+  margin-top: 10px;
+  /* margin-left: 100px; */    
+}
+  
+td p {
+  border-bottom: solid 1px black;
+}  
+.list-group{
+    cursor: cell;
+}

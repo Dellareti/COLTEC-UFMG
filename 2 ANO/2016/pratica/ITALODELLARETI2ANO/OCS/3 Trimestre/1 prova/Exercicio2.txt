@@ -1,0 +1,48 @@
+	NTFS:
+
+	O New Technology File System, conhecido como NTFS, trata-se de um sistema de arquivos que surgiu juntamente com o lançamento do Windows NT. A grande desenvoltura e excelente desempenho foi o fator determinante para que ele fosse adotado nos sistemas operacionais que surgiram depois do da Microsoft, como Windows XP, Windows Vista, Windows 7 e Windows Server 2008. O NTFS possui várias características, em caso de falhas, por exemplo, quando o computador tem um desligamento repentino, ele tem a capacidade de reverter os dados para a condição anterior ao problema. O NTFS também possui a característica de suportar uma replicação de dados, como acontece nos sistemas RAID, por exemplo. O esquema de permissões de acesso é outra característica do NTFS. O NTFS dá a possibilidade do usuário definir quem pode e, como acessar pastas ou arquivos. Ele também possui muita eficiência no trabalho com grandes arquivos e também unidades de discos bastante cheias.
+
+
+
+	FAT32:
+
+	O sistema de arquivos FAT32 utiliza 32 bits no endereçamento de dados. No FAT16, quanto maior o espaço em disco, maior é o tamanho do cluster. Com o FAT32, é possível usar clusters menores, no geral de 4 KB, mesmo que a unidade ofereça maior capacidade de armazenamento. Assim, o desperdício acaba sendo menor. O sucesso da grande compatibilidade do FAT32 com programas, drivers de dispositivo e as redes existentes, foi reestruturado com o mínimo de alterações na arquitetura do Windows, nas estruturas de dados internos, em APIs e também no formato no disco. Como o FAT32 precisa de 4 bytes para poder armazenar valores do cluster, várias estruturas de dados internos e no disco e APIs publicados foram refeitas ou mesmo expandidas. Ferramentas e drivers existentes continuarão funcionando em unidades FAT32.
+
+
+ 	No entanto, o MS-DOS bloqueia drivers de dispositivo, e as ferramentas do disco precisarão ser revisadas para poder suportar as unidades FAT32. As ferramentas de disco agrupadas da Microsoft, como o Format, Fdisk, Defrag e ScanDisk com base no MS-DOS e no Windows, foram revisadas afim de proporcionar um bom funcionamento com o FAT32. Com o FAT32, o desperdício em disco teve bastante redução. Para ter uma ideia exata, O FAT16, seu antecessor, usava clusters de até 64 KB, agora, o FAT32 pode utilizar clusters de 4 KB. A grande parte dos drives removíveis como PenDrives, Discos USB e Disquetes, utilizam o FAT12, 16 ou 32 como sistema de arquivos.
+
+
+	Seguramente podemos dizer que o FAT32 é mais confiável. Ele tem a capacidade de posicionar o diretório principal em qualquer lugar do disco. Comparando com os sistemas antigos de FAT, havia uma grande limitação no número de entradas que podiam ser alocadas no diretório principal. Com o FAT32 não há essa preocupação. O FAT32 tem a capacidade de suportar partições de até 2 TB.
+
+	EXT2:
+	
+		
+	O sistema de arquivos Ext2 é o mais conhecido, afinal nasceu praticamente junto com o próprio Linux. É usado em distribuições baseadas no kernel série 2.2.X e sem sombra de dúvidas é o mais rápido (em termos de operações de escrita/leitura) das três opções. Isso ocorre porque o Ext2 não é baseado no recurso de Journaling, que faz com que o sistema de arquivos em questão mantenha um journal (um log) onde são armazenadas todas as mudanças feitas em arquivos do disco. A ausência deste recurso torna o Ext2 mais rápido em operações cotidianas dentro do sistema operacional, afinal de contas, não existe a aparente “perda” de tempo no geramento de um log refente a modificações nos arquivos. Em contrapartida, a cada desligamento incorreto do sistema (queda de energia, desligamento acidental) o sistema de arquivos Ext2 encarrega-se de passar um FSCK (uma espécie de scandisk do Linux) em toda a partição, o que acarreta uma enorme perda de tempo (imagine uma partição de 15 GB lotada de arquivos), além de ser sucetível a perda de arquivos, talvez mais do que partições FAT 16/32 usadas no Windows.
+
+  NTFS em comparação com  FAT32 
+
+	Cria partições maiores que 32GB;
+
+	Tem capacidade de compactar arquivos e economizar espaço em disco; Conta com melhor gestão de espaço, assim, gerando menos fragmentação;
+
+	Possui menos espaço desperdiçado; 
+
+	Conta com on-the-fly a criptografia de arquivos usando o EFS (Encrypting File System, o Windows Professional). 
+
+
+   FAT32 RELAÇÃO AO NTFS 
+
+	É compatível com todos os sistemas operacionais; Ocupa menos espaço no disco USB;
+
+	Trabalha de forma mais rápida e com menos uso de memória. 
+	
+	Possui melhor gerenciamento de espaço; Conta com menos fragmentação.
+
+
+   EXT2 EM RELAÇÃO AO NTFS E FAT32
+
+	Rápido em operações cotidianas.
+
+	Ser sucetível a perda de arquivos
+
+

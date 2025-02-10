@@ -1,0 +1,18 @@
+﻿
+Os computadores tem como componentes principais: processador, memória volátil e não volátil e dispositivos I/O.
+
+O processador ou UCP é composta pela ALU, unidade de lógica e aritmética, que realiza os cálculos, e pela UC, unidade de controle, onde as instruções e decisões do computador são feitas.
+
+Memória volátil ou memória primária, é onde os dados de programas sendo executados e onde o sistema operacional fica quando o computador é ligado. Esta memória perde os seus dados quando o computador é desligado. Esta memória é mais rápida que a memória secundária. Ex: RAM.
+
+Memória não volátil ou memória secundária, é onde o computador armazena seus arquivos, e eles são salvos quando o computador é desligado. Esta memória é muito mais lenta que a primária. Ex: HD.
+
+Dispositivo I/O, são os que fazem a interação entre o usuário e o computador, como teclados, mouses, monitores ou caixas de som.
+
+
+
+Computadores funcionam com base em instruções simples, que são geradas no processo de compilação de programas que são usados pelo usuário, ou pelo próprio sistema operacional.
+
+Estas instruções são separadas em instruções lógicas e aritméticas, instruções de controle ou desvio condicional, e instruções lógicas.
+
+Instruções que são pedidas para serem realizadas por um sistema operacional, ou um programa, vão ao processador, onde são interpretadas, e realizadas, utilizando a memória primária, e registrando dados necessários a memória secundária. Dados e instruções podem ser obtidos e mostradas, pelos dispositivos I/O.

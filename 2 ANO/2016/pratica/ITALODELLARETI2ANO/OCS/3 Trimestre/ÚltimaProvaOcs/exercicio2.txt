@@ -1,0 +1,83 @@
+
+Para que a CPU não fique muito tempo sem executar tarefa alguma, os sistemas
+operacionais utilizam técnicas para escalonar os processos que estão em execução ao mesmo
+tempo na maquina.
+
+O escalonamento de processos é uma tarefa complicada, pois nenhum algoritmo é
+totalmente eficiente e a prova de falhas, principalmente em se tratando de sistemas interativos.
+O escalonador do sistema operacional utiliza alguns critérios de escalonamento, como:
+
+- A taxa de utilização de CPU, que é a fração de tempo durante a qual ela está sendo ocupada;
+
+- Throughput que são números de processos terminados por unidade de tempo;
+
+- Turnaround que é o tempo transcorrido desde o momento em que o software entra e o
+instante em que termina sua execução;
+
+- Tempo de resposta: intervalo entre a chegada ao sistema e inicio de sua execução;
+
+- Tempo de espera: soma dos períodos em que o programa estava no seu estado pronto.
+
+
+	Multiprogramação:
+vários processos estão na memória ao mesmo tempo. Quando um processo espera, o sistema operacional coloca outro processo para executar.
+
+
+	- Escalonamento preemptivo:
+ o escalonamento da CPU é preemptivo quando o sistema operacional pode interromper um processo em execução para que outro processo utilize o processador.
+
+
+	- Dispatcher:
+Ou escalonador de curto prazo é uma rotina encarregada de escolher qual
+dos processos no estado de Pronto para rodar deve receber a UCP, de acordo com suas prioridades.
+
+
+	- Fila de prontos:
+
+Ou fila da UCP é uma lista ordenada, de acordo com as prioridades de
+cada processo.
+
+
+	- Fila de espera:
+
+É uma lista de processos suspensos (ou BLOQUEADOS),esperando por
+alguma condição. Por exemplo, a espera de uma operação de E/S, a espera de memória, etc.
+
+
+	- Scheduler/Escalonador:
+
+
+ Além de manipular essas filas, ele também opera com o
+relógio de intervalos, estabelecendo, a cada novo intervalo de tempo, qual o valor da fatia de
+tempo destinada ao processo escolhido para ganhar a UCP. A transferência do controle da UCP ao
+processo escolhido é feita através da reposição do contexto desse processo via seu BCP (Bloco de
+Controle de Processo).
+
+
+Escalonamentos podem ser catalogados por:
+
+- Prioridade de uso
+- Tempo de uso
+- Seqüência organizada
+	
+	Independente da condição necessária do escalonamento, o fim é ter uma otimização do
+fluxo de ordens. Na ausência de escalonamentos, obviamente, haverá um engarrafamento de
+processos e dependendo do quanto seja critico pode chegar a bloquear o andamento dos
+processos e consequentemente do sistema operaciona	
+
+
+
+
+	ROUND ROBIN OU CIRCULAR
+
+
+Algoritmo preemptivo, especialmente útil para sistemas de tempo compartilhado. Cada
+processo ganha um tempo limite para sua execução. Após esse tempo ele é interrompido e
+colocado no fim da fila de prontos. Este tempo é chamado de fatia de tempo, time-slice ou
+quantum.
+
+Geralmente se situa entre 100 e 300ms. O tempo médio de espera é geralmente longo. O
+desempenho do algoritmo depende bastante da escolha do quantum . Se for grande, se parecerá
+com a política FIFO(FIRST-IN FITST-OUT). Se for muito pequeno, o Round Robin é chamado Processador Compartilhado,pois parece, do ponto de vista dos processos, que cada um dos N processos “possui” uma CPU com velocidade 1/N do processador real.
+
+

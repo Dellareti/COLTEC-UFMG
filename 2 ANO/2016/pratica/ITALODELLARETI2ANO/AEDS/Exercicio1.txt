@@ -1,0 +1,27 @@
+CONCEITOS.
+
+           Vértice
+
+ * É cada uma das entidades representadas em um grafo.
+ * Depende da natureza do problema.Podem ser pessoas,casas,etc.
+ * Dois vértices são adjacentes se existir uma aresta ligando eles.
+
+
+	   Aresta
+
+ *Também chamada de arco.
+ *Está associada a dois vértices.
+ *Faz a ligação entre eles ,ou seja,diz qual a relação entre eles.
+
+
+a)Vértice:chip.
+  Aresta :componentes.
+
+
+b)Um grafo simples é um grafo que não possui laços nem arestas paralelas.Para ser um grafo simples deve exigir duas condições
+
+1: Se um grafo possuir um laço,haverá uma entrada diferente de zero na diagonal principal.
+2: Se um grafo possuir arestas paralelas entre os vértices, haverá um valor maior que 1 nas entradas da matriz de adjacência.
+ 
+Essa matriz é um grafo simples.
+

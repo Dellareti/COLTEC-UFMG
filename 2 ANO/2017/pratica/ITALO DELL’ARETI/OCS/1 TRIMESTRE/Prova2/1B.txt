@@ -1,0 +1,9 @@
+﻿Bugs com ponto flutuante já ocorreram no passado, e ficaram até mesmo famosos, como o bug no Intel Pentium FDIV, e problemas no Excel.
+
+Intel Pentium FDIV
+	A Intel, em 1994, percebeu que seu processador Pentium, fazia divisões com ponto flutuante, com erros entre o 4º e 15º dígito decimal, em algumas exceções. Isto repercutiu por toda a mídia, já que a Intel quando descobriu o bug, decidiu esperar um ano, para consertar o problema em outro chip, deixando de 3 a 5 milhões de chips com o bug.
+	O bug foi descoberto por Thomas R. Nicely, que, ao dividir  A-((A/B)*B e usando os números 4.195.835 e 3.145.727, o resultado seria 256., que mesmo concluindo que era um erro raro, fez com que o caso repercutisse na mídia. No fim, ela teve que trocar os chips defeituosos, e teve um prejuízo de aproximadamente 500 milhões de dólares, e caso tivesse corrigido o bug quando descoberto, teria gasto apenas algumas centenas de milhares de dólares.		
+
+
+Excel 2007
+	A microsoft admitiu a existência de um bug no Excel 2007, um bug no arredondamento de multiplicações de ponto flutuante. Trata-se de um bug na apresentação do resultado de uma multiplicação com resultado igual a (2 elevado a 16) ou (2 elevado a 16 -1). Apesar deste problema, o cálculo estava correto no armazenamento interno do resultado. Mesmo assim, microsoft prometeu trazer uma correção para este bug em 2007.

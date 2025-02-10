@@ -1,0 +1,14 @@
+O desempenho de um sistema de E/S,seja ele medido por largura de banda ou latência,depende de todos os elementos no caminho entre o dispositivo e a memória,incluindo o sistema operacional que gera os comandos de E/s.A largura de banda da interconeção ,da memória e do dispositivo determinam a velocidade de transferência máxima do dispositivo,junto com qualquer latência de resposta imposta pelo sistema de memória ou barramentos 
+
+A largura de banda efetiva e a latência de resposta também dependem de outas requisições de E/S que podem causar  disputa por algum recurso no caminho 
+
+
+   Acesso Direto à Memória (DMA)
+
+ O controlador de DMA opera de maneiras mais eficientes. 
+
+* Usando o barramento apenas quando o processador não o utiliza.
+
+* Força o processador a suspender temporariamente sua operação -técnica de de roubo de ciclo.Assim eliminando ciclos de espera desnecessários .
+
+

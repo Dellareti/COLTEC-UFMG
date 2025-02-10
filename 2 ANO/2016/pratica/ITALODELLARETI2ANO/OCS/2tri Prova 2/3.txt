@@ -1,0 +1,32 @@
+
+Isso não é verdade, ela existe.
+
+Ao compilarmos cada programa ele possui seu próprio espaço de endereçamento ,faixas de locias de memória acessível apenas para esse programa.A memória vitual traduz o endereçamento do programa para Endereços Físicos(memória secundaria).
+
+Vantagem: Permitir que programa do usuário exceda tamanho da memória principal.
+
+-------------------------------------------------------------------------------------
+função da memoria virtual:
+
+A memória virtual foi desenvolvida no intuito permitir o compartilhamento seguro e
+eficiente da memória entre vários programas e remover os transtornos de programação
+de uma quantidade pequena e limitada de memória principal. Trata-se de uma “tabela de tradução” na qual os endereços virtuais são convertidos para endereços físicos
+localizados na memória principal. Essa tradução impõe uma proteção do espaço de
+endereçamento de um programa contra outros programas. 
+
+
+Como ocorre esse processo/Onde ela ocorre?
+
+Existem várias técnicas de inserção de elementos em uma memória virtual. A mais
+comum se refere em sobrescrever partes da memória RAM que não foram usadas
+recentemente (LRU), levando os dados para o disco rígido.
+Devido a essa escrita no HD, se um sistema depende periodicamente de uma memória
+virtual, seu desempenho é afetado, já que a velocidade de acesso e bem menor.
+Em um sistema com endereçamento virtual, podem ocorrer faltas de páginas (blocos de
+memória), os quais levam milhões de ciclos de clock para serem resolvidos.
+
+Essa falta ocorre devido à ausência da página na Tabela de Página e, por consequência, não se encontra na cache. Deve-se buscar os dados corretos no disco e substituí-los na RAM.
+
+Por não saber se os dados a que foram substituídos na RAM seriam posteriormente
+utilizados, um backup de todas as páginas de um processo é gerado assim que o mesmo
+se inicia, chamado área de swap. Nele há uma estrutura para registrar onde cada página virtual está localizada no disco.

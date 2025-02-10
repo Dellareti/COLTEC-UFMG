@@ -1,0 +1,85 @@
+		ALGORITIMO
+
+Em uma divisão básica, a qual aprendemos na escola, temos uma divisão quando queremos saber “quantas vezes um número cabe” dentro de outro. Com isso temos os quatro principais componentes desse processo: dividendo (número que será dividido), divisor (número pelo qual será dividido), quociente (resultado da operação) e o resto (valor sobrado quando não é mais possível dividir).  O computador não é tão inteligente quanto os humanos e isso gera alguns problemas como a divisão por 0.
+Se tratando da base binária, o processo de divisão baseia-se se o número cabe ou não dentro de outro  (1 ou 0). O hardware para imitar esse algorítimo inicia o registrador quociente com 0. A cada interação é preciso deslocar o divisor para a direita, colocando-o na metade esquerda do registrador Divisor de 64 bits, a fim de alinhá-lo com o dividendo. O registrador Resto é  inicializado com o dividendo.
+As etapas são bem definidas. Primeiro, subtrai-se o divisor do dividendo, de modo que, se o resultado for positivo, o divisor foi menor ou igual o dividendo, gerando 1 no quociente. Se o resto for negativo, é necessário restaurar o valor do dividendo (somando-o ao resto) e gerar um 0 no quociente. O divisor e deslocado para direita após  cada repetição.
+Considerando sinais na divisão temos uma solução simples: se forem diferentes é preciso negar o quociente. Seguindo da fórmula Dividendo = Divisor X Quociente + Resto, temos a produção de um resto que corresponda ao dividendo.
+
+
+		--------
+                |Inicio|
+	        --------
+                    |<-------------------------------------------------------------------------------------------------------------------------
+		    V	                                                   								      |
+             -------------------------------------                         								      |
+	     |1 Subitrai o registrador divisor   |                                                                                            |
+             |do registrador resto e coloca o    |		                                                                              |
+	     |resultado no registrador resto     |       	                                                                              |
+             -------------------------------------		                                                                              |
+			|                                                                                                                     |
+		        V                                                                                                                     | 
+		-----------------                                                                                                             |
+	|------	|teste de resto |----------------------------------|				                                              |
+        V	-----------------		                   V                                                                          |
+---------------------------------------------            -----------------------------------------------------------------------------        |              
+|Desloca o registrador quociente à esquerda  |           | Restaura o valor original ao adicionar o registrador Divisor ao registrador|       |            
+|transformando o novo bit mais a direita em 1|           | resto e colocando a soma no registrador resto.Também desloca o registrador |       |          
+----------------------------------------------           | quociente à esquerda ,transformando o novo bit menos significativo em 0    |       |      
+		|				     	  -----------------------------------------------------------------------------       |          
+		|				    	           |                                                                          | 
+                |                                                  |                                                                          | 
+		V				    	           V                                                                          |
+             -----------------------------------------------------------                                                                      |
+             |Desloca o registrador Divisor  para 1 bit à direita     |                                                                       |
+             ----------------------------------------------------------                                                                       |
+			|                                                                                                                     |
+			|                                                                                                                     |
+			V                                             	                                                                      |
+ 		  ---------------                                                                                                             |
+  		  |33 repetição?|-------------------------------------------------------------------------------------------------------------- 
+		  ---------------
+                        |
+		    Terminado	
+
+
+
+
+
+	HARDWARE DE DIVISÃO
+
+
+
+
+              -------------------
+              | Divisor         |
+              |	deslocando para |    <-----------------                 
+              |	a direita       |                     |
+              -------------------                     | 
+                         |64 bits                     |  
+	----------|      |	         	      |
+        |         |      |                            |
+        |         V      V                            |
+	|	---------------                       |       -----------------------
+	|	| ALU 64-bit  |  <---------------     |       |    Quociente desloca| <-----   
+	|	---------------                 |     |	      |para a esquerda	    |	   |
+	|		  |                     |     |	      -----------------------      |
+	|		  |                     |     |                    |               | 
+	|		  V                 --------------                 |               |
+	|	   ----------         	    |	Teste de |    <-------------               |
+	|	   | Resto   |	<-----------|	controle |----------------------------------  	
+	|	   ----------               --------------
+	|		|
+	|		|64 bits
+	|----------------	
+
+
+	EXEMPLO 
+               1001
+	1000|1001010
+	    -1000
+	       10
+	       101
+	       1010
+	      -1000
+	-------------
+		10		

@@ -1,0 +1,16 @@
+3)
+
+ i) Entrada e saída programada:
+A desvantagem do polling é que ele pode desperdiçar muito tempo de processador, pois os processadores são muito mais rápidos do que os dispositivos E/S, e os levam a ficar com um tempo ocioso muito alto. O processador lê periodicamente o registrador de status para descobrir se uma operação foi ou não concluída. Quando a operação estiver completa, o processador ainda terá que verificar o registrador status para determinar se ele teve sucesso. Devido a vantagem de ser um sistema simples, o polling pode ser empregado em dispositivos em que o overhead é mais previsível, o que é útil para tempo real, como em sistemas embarcados. Outra vantagem do polling é sua fácil implementação, que é feita via software.
+
+
+ii) Para reduzir o overhead do método polling, foi inventado a E/S por interrupções para notificar o processador quando um dispositivo E/S exigir algum processamento. O processador trabalha normalmente, e quando há a necessidade de enviar ou receber dados, envia ao processador o comando para que ele pare sua instrução atual, resolva a E/S, e depois volte a funcionar normalmente. 
+
+A E/S controlada por interrupção libera o processador de ter de esperar por cada evento de E/S, embora, se usássemos esse método para transferir dados de ou para um disco rígido, o overhead, seria enorme, pois isso poderia resultar em um grande tempo ocioso, enquanto a transferência ocorre. Este método é utilizado para sistemas comuns, que precisam de mais processamento que outro mais simples, podendo utilizar mais do tempo do processador.
+
+
+
+iii)
+A DMA (Acesso direto a memória) permite, ao contrário do polling ou da E/S controlada por interrupção, transferir dados de um disco rígido sem consumir todos os ciclos de processador para uma única E/S.
+As desvantagens de ter DMA são consequentes da existência de endereços de memória virtuais e físicos, e da incoerência de dados causada na cache, já que a DMA não passa pelo processador, e pode alterar os dados da memória principal sem que haja coerência de dados nas hierarquias de memória. Estes problemas devem ser tratados então, via hardware e software, levando a uma maior complexidade de sua implementação. Apesar de todos os problemas, se estes forem tratados, temos uma implementação que apesar de custosa, é bem eficiente.
+

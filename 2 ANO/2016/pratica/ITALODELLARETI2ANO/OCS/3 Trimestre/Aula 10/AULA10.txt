@@ -1,0 +1,85 @@
+First-Come, First-Served (FCFS)
+
+
+Processo     Burst Time
+P1               24
+P2                3
+P3                3
+
+ Suponha que os processos chegam pela ordem: P1, P2, P3
+ A Carta Gantt de escalonamento é:
+
+ Tempos de espera: 
+
+  P1= 0;
+  P2= 24;
+  P3 = 27
+ 
+TME: (0 + 24 + 27)/3 = 17
+
+Suponha que os processos chegam pela ordem: P2, P3, P1.
+
+ A Carta de Gantt de escalonamento é:
+ Tempos de espera P1 = 6; P2 = 0; P3 = 3
+ TME: (6 + 0 + 3)/3 = 3
+ 	Muito melhor que o caso anterior.
+ 	Convoy effect: processo curto antes de processo longo
+
+Conclusões FCFS
+
+O tempo médio de espera é, por vezes, bastante elevado,
+mas isto depende muito da duração e frequência dos bursts.
+
+O algoritmo FCFS não é preemptivo. Não é, pois, adequado
+para sistemas interactivos (time sharing) ou de tempo real.
+
+Batch Systems – Pode ser Adequado.
+
+----------------------------------------------------------------------------------------------------------------
+
+Shortest-Job-First(SJF)
+
+ Associa-se a cada processo (ao PCB) o tempo do seu próximo CPU burst.
+ Usa-se estes tempos para escalonar/seleccionar o processo com o CPU
+burst mais pequeno.
+
+Quando dois processo têm o mesmo CPU burst, o desempate faz-se por FCFS.
+
+  Dois esquemas:
+ 
+ não-preemptivo – uma vez a CPU atribuída a um processo, este não pode ser
+preempcionado até completar o seu CPU burst.
+
+
+ preemptivo – se um novo processo chega à ready queue com um CPU burst
+menor que o tempo restante do processo em execução, então há preempção.
+Este esquema é conhecido por Shortest-Remaining-Time-First (SRTF).
+
+
+ SJF é óptimo – uma vez que minimiza o tempo médio de espera dum dado
+conjunto de processos.
+
+
+ O problema está em determinar qual é o valor do próximo CPU burst dum
+processo.
+----------------------------------------------------------------------------------------------------------------
+(Round-Robin)
+
+ Inspirado na história de Robin Hood onde, na procura de justiça, Robin roubava dos ricos para entregar aos
+ pobres, fazendo assim com que todos no seu reino tivesse o mesmo tanto de bens. Uma das mais simples e robustas
+ entre as atuais técnicas utilizadas para problemas de distribuição de carga, nesse escalonamento o sistema
+ operacional possui um timer, chamado de quantum, onde todos os processos ganham o mesmo valor de quantum para
+ rodarem na CPU, depois que o quantum acaba e o processo não terminou, ocorre uma preempção e o processo é 
+inserido no fim da fila. 
+
+Se o processo termina antes de um quantum, a CPU é liberada para a execução de novos
+processos. Em ambos os casos, após a liberação da CPU, um novo processo é escolhido na fila. Novos processos
+são inseridos no fim da fila.Quando um processo é retirado da fila para a CPU, ocorre uma troca de contexto, 
+o que resulta em um tempo adicional na execução do processo.Esta técnica remove a necessidade de criar sistemas
+ para monitoração dinâmica e são obviamente construídas de forma muito mais rápida e prática das que fazem 
+balanceamento através de medições de recursos.
+
+
+Esta técnica foi criada antes mesmo de existirem computadores e é até hoje utilizada em larga escala por 
+inúmeros sistemas com diferentes propósitos. . Com exceção do algoritmo RR, FIFO e escalonamento garantido, 
+todos os outros sofrem do problema de Inanição (starvation), preemptivo;

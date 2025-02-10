@@ -1,0 +1,25 @@
+O overflow ocorre quando o resuntado de uma operação não pode ser representado com o hardware disponível,no caso de nossos estudos,uma
+palavra de 32 bits.Geralmente o projetista do computador precisa oferecer uma maneira de detectar o overflow ou ignorá-lo dependendo do caso.
+
+Overflow na adição:
+
+Sinais opostos
+
+Quando se soman operandos com sinais diferentes,não poderá haver overflow.O motivo é que a soma não pode ser maior do que um dos operandos.Como os operandos são de sinais opostos e eles cabem nos 32 bits,a soma também precisa caber nos 32 bits.Portanto não ocorre
+overflow ao se somar operandos positivos e negativos.
+
+
+Sinais iguais 
+
+Quando os sinais dos operandos são iguais,o overflow pode ocorrer,pois possuem sinais iguais.Quando uma soma de dosi números  de 32 bits pode gerar um resultado que precisa de 33 bits para ser totalmente expresso.A falta de um 33 bit significa que,quando o overflow
+ocorre o bit de sinal está sendo definido com o valor do resultado,no lugar do sinal apropriado do resultado.Como precisamos apenas de um bit extra,somente o bit de sinal pode estar errado.  
+
+-------------------------------------------------------------------------------------------------------------------------------------- 
+
+Overflow na multiplicação :
+
+O overflow na multiplicação ocorre quando um calculo estoura os 32 bits,as operações aritméticas podem criar resultados muito grandes para caber nesse tamanho de palavra fixo.Com ou sem sinal pode ocorrer overflow.É facil de se detectar overflow em números sem sinal,mas quase sempre são ignorados,pois alguns programas não querem detectar o overflow e geralmente são usados para endereços de memória.
+
+Com complemento de dois pode ocorre o overflow,mas alguns sistemas de software exijam detecção de overflow,de forma que todos os computadores de hoje  tenham um meio de detectá-lo. 
+
+---------------------------------------------------------------------------------------------------------------------------------------

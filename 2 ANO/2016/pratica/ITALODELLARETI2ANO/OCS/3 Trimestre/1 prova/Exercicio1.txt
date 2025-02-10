@@ -1,0 +1,96 @@
+Os serviços gerenciados pelo S.O:
+
+	Execução de programas;
+	
+	Interface com usuário;
+
+	Operações de entrada/saída;
+
+	Manipulação de sistema de arquivos;
+
+	Detecção de erros;
+
+	Alocação de recursos;
+
+	Proteção.
+
+
+		Execução de programas:
+
+Um conceito fundamental para todos os sistemas operacionais é o processo.Um processo é basicamente um programa em execução.Associado a cada processo está o seu espaço de endereçamento,uma lista de posições de memória , que vai de o até o máximo ,que esse processo pode ler e escrever .O espaço de de endereçamento contém o programa executável,dados do programa e sua pilha .
+
+Cada processo possui:
+
+	Um espaço de endereço;
+	Uma lista de alocação de memória (mínimo, máximo);
+	Um conjunto de registradores (contador de programa);
+	O Sistema Operacional controla todos os processos;
+
+
+Quando um processo é suspenso temporariamente ,ele deverá ser seiniciado mais tarde,exatamente do mesmo ponto em que estava quando foi interompido.
+
+
+	Um processo pode resultar na execução de outros processos, chamados de processos  filhos.Características para a hierarquia de processos.
+
+
+
+		
+		Interface com usuário:
+
+ A interface de usuário é forma como  o sistema operacional se apresenta. Ele pode ser de três tipos:
+
+a) gráfica (GUI - graphical user interface) como no windows
+
+b) linha de comandado (CLI - command-line interface) como no prompt do windows (ou do antigo Ms-DOS) ou 
+shell do linux.
+
+c) de lote (batch), onde os comandos são lidos de um arquivo
+
+
+
+
+
+		Operações de entrada/saída:
+
+A execução de programas significa que o SO pode iniciar, executar e encerrar programas. As operações de I/O
+são serviços que permite que um processo acesse dispositivos de I/O. Além disso, no caso de arquivos, 
+tipicamente existe um serviço de manipulação de sistema de arquivos. Normalmente um programar de alto nível
+não tem que se preocupar como ler e gravar arquivos no sistema. Essa é função é do SO e é disponibilizada por 
+uma chamada de sistema (SystemCall). 
+
+
+
+		Detecção de erros:
+
+Outra função do SO é detectar erros. Por exemplo, imagine que vc está gravando um arquivo no HD externo e
+alguém puxa o cabo da USB!!!! O SO deve ser capaz de identificar isso e no mínimo dizer ao usuário que ele
+deve fazer uma nova gravação. Outro exemplo, é se vc puxar o cabo de rede, ora.. o SO deve ser capaz de
+perceber essa perda de conexão, o SO deve ser capaz de detectar erros no Hardware da máquina.
+
+		
+		
+		Manipulação de sistema de arquivos:
+
+	Para ter um local para guardar os arquivos,a maioria dos sistemas operacionais fornece um diretório 
+como um modo de agrupar arquivos.São necessárias chamadas de sistema a (system calls) fornecem uma interface
+entre um programa em execução e o S.O. Estão, geralmente,disponíveis como instruções nas linguagens de baixo 
+nível ou até mesmo em linguagens de alto nível, como C.Portanto, o serviço de manipulação de arquivos (ler, gravar, organizar, pesquisar, apagar...) é função do SO.
+
+
+
+		Alocação de recursos:
+
+Alocação de recursos.Uma das funções mais interessante do SO é alocar recursos de forma compartilhada 
+entre diversos processos. Por exemplo, os SO's tem políticas/algoritmos de escalonamento da CPU, ou seja, 
+define qual processo vai usar a CPU e por quanto tempo vai ficar de posse da CPU. 
+
+
+
+		Proteção:
+
+O S.O deve fornecer Proteção e Segurança, o SO deve fornecer um mecanismo de autenticação, por exemplo, login e senha. Ou seja, segurança significa evitar invasores no sistema. Já proteção tem maior ligação com o controle dos recursos. Ou seja, um sistema estará protegido se qualquer acesso a recursos seja controlado pelo SO.
+
+
+
+
+

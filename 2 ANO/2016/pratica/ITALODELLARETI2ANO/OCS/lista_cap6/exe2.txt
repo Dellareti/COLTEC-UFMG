@@ -1,0 +1,23 @@
+	E/S Programada
+
+Problema: tempo de espera do processador.
+Vejamos o uso da E/S programada para ler um bloco de dados de um dispositivo periférico para a memória:
+ 
+   *Uma palavra de 16 bits é lida de cada vez;
+
+   *Para cada palavra lida, o processador permanece em ciclo de verificação de estado;
+ 
+   *Até que se determine que uma  palavra está disponível no registrador de dados do módulo de E/S;
+
+	Acesso Direto à Memória 
+ 
+Vejamos o uso do acesso direto à memória quando o processador deseja ler um bloco de dados.
+ Ele envia um comando ao módulo de DMA, com as informações
+ 
+ Indicação de operação de leitura;
+ 
+ O endereço do dispositivo de E/S;
+ 
+ O endereço de memória para início da leitura;
+ 
+ Número de palavras a serem lidas;

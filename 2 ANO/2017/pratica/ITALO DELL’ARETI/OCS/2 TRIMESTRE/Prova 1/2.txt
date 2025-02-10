@@ -1,0 +1,30 @@
+2) Três hazards podem ocorrer em um pipeline:
+
+
+	Hazard estrutural: Ele acontece quando o hardware não pode admitir um certo conjunto de instruções em um mesmo ciclo, quando tenta-se utilizar um mesmo hardware para executar duas coisas diferentes ao mesmo tempo.
+
+Os projetistas do MIPS o desenvolveram de forma com que suas instruções fossem executadas em um único pipeline, evitando este hazard estrutural.
+
+Este problema ocorre por exemplo, caso tenhamos uma única memória, e duas instruções estejam procurando algo nesta memória, em processos diferentes, como na busca de uma instrução, e na busca de algum dado na memória.
+
+
+	Hazard de dados: Este hazard ocorre quando uma instrução precisa de um dado que ainda está em uma instrução no pipeline anterior. Por exemplo, quando se utiliza um registrador em uma instrução, e seu valor é alterado na instrução anterior, como acontece nos seguintes códigos assembly para MIPS:
+
+	add $s0,$t0,$t1
+
+	sub $t2,$s0,$t3
+
+A segunda instrução precisa do valor do $s0 após a soma realizada. Ou esperamos a primeira instrução realizada(stall), ou então passamos o valor do $s0 após a soma para a próxima instrução, antes da primeira terminar(forwarding), o que economizaria mais tempo.
+
+Existem casos, em que forwardings não são possíveis, como nas seguintes linhas de código:
+
+	lw $s0,0($t1)
+
+	add $t3,$s0,$s1
+
+O registrador $s0 na da instrução load word só recebe seu valor na penúltima etapa, do pipeline, então não podemos adiantar o dado para a seguinte instrução, então deve-se obrigatoriamente usar um stall, em que a segunda instrução é ignorada passando a ser um nop, e depois e executada novamente para a continuação do programa, que neste caso utilizaria um outro forwarding.
+
+
+	Hazard de controle: Ocorre quando alguma decisão deve ser tomada, e a próxima instrução é executada por estar no pipeline. Para resolver este problema, pode-se tomar duas soluções, fazer um stall sempre que uma instrução puder tomar algum desvio, ou prever se a decisão será tomada ou não, e caso a previsão esteja correta, estaria então economizando mais tempo. Existem em processadores versões mais sofisticadas de previsões de desvios, como conter um histórico das últimas previsões tomadas, e com base nisto escolher a melhor previsão a ser feita.
+
+Um exemplo de instrução que pode ocasionar este tipo de hazard é a instrução beq, que toma um desvio com base em uma comparação de dois valores, executando ou não a próxima instrução com base no desvio a ser ou não tomado.

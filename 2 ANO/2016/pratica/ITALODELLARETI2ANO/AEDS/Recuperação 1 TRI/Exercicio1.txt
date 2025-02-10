@@ -1,0 +1,25 @@
+﻿2 a) Em árvores binárias, temos três tipos de percursos possíveis: pré ordem,ordem simétrica e pós ordem.
+
+Pré ordem: raiz, filho esquerda, filho direita. Inicia-se pela raíz, e recursivamente percorre a parte da esquerda e depois a parte direita.
+
+Ordem simétrica: Filho da esquerda, raíz, filho da direita. Inicia-se recursivamente pelo filho a esquerda, e quando ele for um nó que não tem filhos a esquerda, e retorna a raíz e vai para a parte a direita.
+
+Pós ordem: Filho da esquerda, filho da direita, raíz. Percorre por todos os elementos da esquerda, até o nó não ter filhos a esquerda, então, vai ao filho da direita, e depois retorna a raíz.
+
+Em árvores com número de filhos variáveis, pode-se percorrer usando a pré ordem ou pós ordem, e não de forma simétrica, já que não há como percorrer para a esquerda e direita nessa estrutura, já que os filhos não estão conectados diretamente a sua raíz, e sim pelo seu irmão.
+
+b) Listas encadeadas: estrutura que representa seus elementos sequencialmente. Cada elemento contém seu valor, e aponta para outro elemento, que aponta para outro elemento, recursivamente.
+Existem listas duplamente encadeadas, que além de os elementos apontarem para o próximo, apontam para o seu anterior, permitindo uma manipulação de dois sentidos.
+Ainda existem listas circulares, em que o último elemento aponta para o primeiro, fechando um "círculo" entre os elementos.
+Como listas são mais flexíveis, e gastam menos computacionalmente, são usadas quando se quer armazenar vários dados de mesmo tipo, de forma encadeada, da mesma forma de que vetores são utilizados.
+
+Pilhas: Esta estrutura segue o conceito de empilhamento, onde o acesso aos seus elementos é feito somente pelo topo. Seus elementos funcionam da seguinte forma: último elemento a entrar, é o primeiro a sair (LIFO, last in first out).
+Um exemplo do uso de pilhas ocorre em parte da memória usada pelo processador, conhecida como pilha de execução. Outro exemplo de pilha, é encontrado em calculadoras, que empilham os valores, e realizam a operação em seu topo expressões (pós-fixadas).
+
+Filas: Estrutura que se assemelha a lista encadeada, mas só é controlada pelo seu final e pelo seu início. É uma estrutura de tipo FIFO, first in, first out, o primeiro elemento a entrar é o último a sair.
+Existem filas duplas, onde é possível inserir elementos nas duas extremidades da fila, e é possível retirar elementos das duas extremidades também (início e fim).
+Um exemplo pŕatico de filas, é a fila de impressão, onde se imprime por uma ordem, definida pela fila: o primeiro a entrar, é o primeiro a sair.
+
+
+Árvores: Estrutura de dados que funciona de forma hierárquica, sendo que cada elemento, aponta para outros dois que fazem a mesma coisa com outros elementos. Existem árvores binárias (com dois sub-elementos) e árvores com número de sub-elementos variáveis.
+É uma estrutura usada para o funcionamento de um conjunto de diretórios, onde subdiretórios estão conectados de uma única maneira a um diretório raíz. Também é usada em computação gráfica, onde árvores com quatro e oito sub-elementos são comuns (quadtree e octree). 

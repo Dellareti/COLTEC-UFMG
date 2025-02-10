@@ -1,0 +1,93 @@
+2
+﻿a)	0101	 1010	 0011	 0000	 0000	 0000	 0000	 0100
+
+	010110 == OP CODE == 2
+A instrução acima não pode ser executada, já que ela não se encontra nas instruções do MIPS.
+
+
+0101	 1010	 0011	 0000	 0000	 0000	 0000	 0100
+
+Unsigned == 1513095172 
+
+Complemento de 2 == 1513095172
+
+Ponto flutuante = (-1)e0  * (1+F) * 2eExp
+	Exp = 180 - 127 = 53
+	Fração = 0,375000477 = (2e-2) + (2e-3) + (2e-21) // 2 elevado a - a posição da parte fracionaria.
+	P.F = (-1)e0 * (1,375000477) * 2e53
+
+---------------------------------------------------------------------------------------------------------------------------------------
+
+b)
+	
+1000	 1101	 0011 	1010 	0000	 0000	 0000	 0100
+
+100011		01001			11010 			0000000000000100
+op code		reg rs			reg rt	constante/endereço de 16 bits
+
+lw				9		 	26					4
+				reg $t1		reg reservado
+
+
+Esta é uma instrução de load word, mas se encontra com problemas, já que o registrador que se tenta fazer uso, o 26, se encontra na lista dos registradores reservados para o sistema operacional, e não pode ser usado desta forma.
+O problema é que o load word tentará carregar uma informação da posição da memória, no endereço deste registrador, levando a resultados inesperados.
+
+1000	 1101	 0011 	1010 	0000	 0000	 0000	 0100
+
+Unsigned == 2369388548
+Complemento de 2 == -1925578748
+
+Ponto flutuante = (-1)e1  * (1+F) * 2eExp
+	Exp = 26 - 127
+	Fração = 0,365162514
+	P.F = (-1)e1 * (1,365162514) * 2e-101
+
+---------------------------------------------------------------------------------------------------------------------------------------
+
+
+c) 
+
+0000 	0010 	0111 	0010 	0100	 0000	 0010	 0000
+
+000000	10011 	10010 	01000 	00000 	100000
+op code 	reg res 	reg rt 	reg rd 	shamt 	funct
+
+add		19		 18		8	
+		$s3		 $s2		$t0
+
+Tipo Registador.
+
+A operação desta instrução é um add, seguindo os campos op code e funct, e ela faz uso dos registradores $s3,$s2 e $t0.
+
+Instrução: add $t0,$s3,$s2
+Instrução ocorre sem problemas.
+
+
+0000 	0010 	0111 	0010 	0100	 0000	 0010	 0000
+
+Unsigned == 41041952
+Complemento de 2 == 41041952
+Ponto flutuante = (-1)e1  * (1+F) * 2eExp
+	Exp = 4 - 127
+	Fração = 0,89258194
+	P.F = (-1)e0 * (1,89258194) * 2e-123
+
+--------------------------------------------------------------------------------------------
+
+d) 1010 1101 0001 0000 0000 0000 0000 0010
+
+101011		01000		10000	0000000000000010
+op code 	reg res 	reg rt  constante/endereço de 16 bits
+sw			8 			16				 
+			$t0         $s0		
+
+sw $s0,2($t0) 
+Instrução ocorre sem problemas.
+
+
+Unsigned == 2903506946
+Complemento de 2 == -1391460350
+Ponto flutuante = (-1)e1  * (1+F) * 2eExp
+	Exp =  90 - 127
+	Fração = 0,125000238
+	P.F = (-1)e1 * (1,125000238) * 2e-37

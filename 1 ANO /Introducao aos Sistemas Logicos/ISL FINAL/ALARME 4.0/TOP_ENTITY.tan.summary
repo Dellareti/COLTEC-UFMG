@@ -1,0 +1,66 @@
+--------------------------------------------------------------------------------------
+Timing Analyzer Summary
+--------------------------------------------------------------------------------------
+
+Type           : Worst-case tsu
+Slack          : N/A
+Required Time  : None
+Actual Time    : 1.914 ns
+From           : botao5
+To             : FILTRO_BOTAO:FILTRO_B5|shift_reg[7]
+From Clock     : --
+To Clock       : clk66
+Failed Paths   : 0
+
+Type           : Worst-case tco
+Slack          : N/A
+Required Time  : None
+Actual Time    : 14.004 ns
+From           : FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|E
+To             : E
+From Clock     : clk66
+To Clock       : --
+Failed Paths   : 0
+
+Type           : Worst-case th
+Slack          : N/A
+Required Time  : None
+Actual Time    : 2.118 ns
+From           : ADC_SSTRB
+To             : CONVERSOR_COMPLETO:CONVERSAO|ADC_INTERFACE:ADC|SR_CAPTURE[1]
+From Clock     : --
+To Clock       : clk66
+Failed Paths   : 0
+
+Type           : Clock Setup: 'clk66'
+Slack          : N/A
+Required Time  : None
+Actual Time    : 47.71 MHz ( period = 20.958 ns )
+From           : FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[2]
+To             : FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|E
+From Clock     : clk66
+To Clock       : clk66
+Failed Paths   : 0
+
+Type           : Clock Hold: 'clk66'
+Slack          : Not operational: Clock Skew > Data Delay
+Required Time  : None
+Actual Time    : N/A
+From           : MONITORADOR:MONITORADOR_DISTANCIA|cont30seg
+To             : CONTADOR_30SEG:TIMER|a2[0]
+From Clock     : clk66
+To Clock       : clk66
+Failed Paths   : 5
+
+Type           : Total number of failed paths
+Slack          : 
+Required Time  : 
+Actual Time    : 
+From           : 
+To             : 
+From Clock     : 
+To Clock       : 
+Failed Paths   : 5
+
+--------------------------------------------------------------------------------------
+

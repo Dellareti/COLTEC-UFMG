@@ -1,0 +1,5 @@
+a) a -> b -> e -> d -> c -> b -> a 
+b) a -> b -> c -> d -> e  
+c) b ->c -> d -> e -> b -> a   
+d) b -> c -> d -> e    
+e) abedc (ciclo hamiltoniano), cbedcab (caminho euleriano)  

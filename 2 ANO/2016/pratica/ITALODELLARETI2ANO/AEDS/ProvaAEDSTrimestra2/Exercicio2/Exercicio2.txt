@@ -1,0 +1,22 @@
+Temos grafo como a estrutura base na qual o trabalho será baseado. A proposta é simples: há uma nave no qual Ripley deverá encontrar a saída. Contudo, o alien poderá aparecer durante o percurso, devendo Ripley mudar seu caminho caso queira sobreviver.
+
+Colocando em perspectiva, basicamente deverá haver dois processos:
+
+* Traçar uma rota mais curta para a saída;
+* Caso o alien apareça, deve-se mudar a rota para uma na qual o caminho esteja livre.
+
+Sendo assim, podemos definir a seguinte estrutura de dados:
+
+O nome da estrutura é Vertice. Seguimos esse linha de raciocínio como se cada vértice fosse uma ala da nave. As variáveis inteiras alien e ripley variam entre 0 e 1 indicando se, os respectivos personagens se encontram na posição demarcada da nave. O vetor distancia, indica o quão distante a posição atual está da próxima (é um vetor pois, ao se tratar de duas dimensões, temos quatro direções posições possíveis: esquerda, direita, cima, baixo - nesta ordem).
+
+A estrutura vertice *adjacente[4] se trata da próxima ala da nave (ou próxima posição em que é possível acessar no labirinto) e, pelos mesmos motivos da distância, é um vetor com quatro posições.
+
+A variável inteira identificador é um vetor e existe com o motivo de representar as quatro direções citadas. Sua função específica se refere a evitar a ocorrência de loops infinitos, como no caso de tentar percorrer todo um labirinto que forma uma figura geométrica. Por fim, a variável n representa o vértice em que se está 
+
+Os processos para sua criação são bem distintos. Em um primeiro momento, cada um dos vértices (0-Entrada, 1 a 10-intermediários, 12-Saída) são criados e inseridos no vértice inicial. Logo após, foi construída uma função que, a partir da estrutura de um grafo, fornece a altura e a largura para a criação de uma matriz que represente o labirinto.
+
+Se trata de uma matriz binária. Onde há 1 poderá ser um possível caminho para saída. Para poder transferir os dados do grafo de maneira precisa para a matriz, foi criada a função preenche_matriz que, ao receber por parâmetros a a largura, altura e o grafo, transfere os dados para uma matiz binária.
+
+Em questão de visualização por parte do usuário, buscamos uma forma mais eficiente de se imprimir a matriz. A solução encontrada foi o caractere 219 da tabela ASCII.
+
+

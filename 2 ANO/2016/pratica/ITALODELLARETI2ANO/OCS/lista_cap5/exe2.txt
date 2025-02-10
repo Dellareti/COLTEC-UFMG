@@ -1,0 +1,9 @@
+A fim de obter a concordância, após uma escrita, dos dados entre uma cache e amemória principal, foi criada o sistema write-through.
+ Assim os dados seriam escritosao mesmo tempo na cache e na memória principal.Embora seja simples, esse processo não oferece um 
+bom desempenho porque as escritaslevariam muito tempo. Uma alternativa seria usar um buffer de escrita (ou write buffer). Os dados
+seriamarmazenados no buffer enquanto esperam para ser colocados na memória, fazendo comque o processador possa continuar a execução
+após armazenar os dados na cache.Quando os dados são escritos na memória principal, o buffer é liberado.Contudo, se o buffer estiver
+cheio e o processador atingir uma escrita, o mesmoprecisará sofrer um stall até que haja uma posição livre. Stalls também podem
+sercausados   quando   as   escritas   ocorrem   em   bursts   (rajadas),   fazendo   com   que   osprocessadores aumentem a profundidade
+do buffer de escrita para além de uma únicaentrada.Devido a esses diversos problemas, principalmente em caches maiores, o esquema 
+write-through possui uma alternativa chamada write-back.

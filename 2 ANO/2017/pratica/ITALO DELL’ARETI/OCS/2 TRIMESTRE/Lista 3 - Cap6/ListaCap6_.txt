@@ -1,0 +1,34 @@
+1)
+   E/S Programada -> um programa enviará ao módulo E/S um comando, que será executado e quando terminado, é sinalizado com o carregamento de um valor no registrador de estado.
+O módulo não alerta do término da execução, o processador deve checar periodicamente pelo término. Conhecido por polling.
+
+DMA -> é um controlador exclusivo de acesso à memória. Ele usa o barramento quando o processador não o usa.
+Quando ele o utiliza, suspende a operação do processador (roubo de ciclo).
+Ele é independente do processador, e permite que outros componentes também acessem a RAM diretamente, sem o processador, como o disco rígido.
+Existem 8 canais, e dois dispositivos não podem utilizar o mesmo, se não há conflito.
+Deve-se tomar o cuidado de manter a coerência entre os endereços da cache e da memória primária, já que a DMA não usa o processador para fazer o acesso a RAM.
+
+
+2)
+   i) Em sistemas pequenos, como embarcados, este sistema é eficiente, mas em sistemas maiores, ele se torna inviável, já que o processador perde muito tempo e recursos checando a todo momento o estado do dispositivo.
+
+
+   ii) É mais eficiente que o pulling, por não gastar tantos recursos, mas o overhead é alto, por exemplo quando precisa-se transferir dados do disco pra memória ou contrário, será usado uma fração grande do processador.
+
+
+   iii) A vantagem do DMA é que o dispositivo E/S não depende do processador para acessar a memória, a desvantagem da DAM é que sem a passagem pelo processador, pode haver uma inconsistência dos dados na cache e na RAM, e para isso ser resolvido, deve ser desenvolvido alguma técnica, que normalmente deixa o processo de acesso da DAM mais complexo.
+
+
+3)  
+    Controladores de acesso direto a memória, podem alterar os dados da mesma diretamente, sem interferência do processador, o que pode levar a incoerência de dados entre a cache e a memória.
+Existem três técnicas que podem ser aplicadas para resolver estes problemas de incoerência entre as hierarquias de memória, e estes são:
+
+   I)Rotear a atividade da E/S pela cache, fazendo com que as leituras sempre vejam os dados mais recentes. O problema desta implementação é a queda de desempenho geral do processador, já que os dados de E/S são raramente usados imediatamente, impedindo outros programas de serem executados com uma precisão que possa ser necessária.
+
+
+   II)Pode-se forçar a ocorrência de write-backs na cache para cada escrita na memória (flush de cache). É uma técnica bem viável, já que exige pouco suporte do hardware, e deixa o software realizar sua função de forma eficiente.
+
+
+   III) Oferecer um mecanismo de hardware para fazer o flush nas entradas específicas da cache, invalidando-as para garantir coerência na cache.
+Este recurso é bastante usado em multiprocessadores, e pode-se usar a mesma técnica em E/S.
+

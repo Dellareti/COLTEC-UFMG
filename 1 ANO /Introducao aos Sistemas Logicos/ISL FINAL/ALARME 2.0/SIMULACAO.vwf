@@ -1,0 +1,1163 @@
+/*
+WARNING: Do NOT edit the input and output ports in this file in a text
+editor if you plan to continue editing the block that represents it in
+the Block Editor! File corruption is VERY likely to occur.
+*/
+
+/*
+Copyright (C) 1991-2010 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+*/
+
+HEADER
+{
+	VERSION = 1;
+	TIME_UNIT = ns;
+	PRINT_OPTIONS = "Print_options_version 6\
+range_start 0ps\
+range_end 500.0us\
+width 1\
+names_percentage 25\
+comments 1\
+grid_lines 1\
+time_bars 1\
+name_every_page 0\
+expand_groups 0\
+print_all 1\
+print_row_height 100";
+	DATA_OFFSET = 0.0;
+	DATA_DURATION = 500000.0;
+	SIMULATION_TIME = 500000.0;
+	GRID_PHASE = 0.0;
+	GRID_PERIOD = 10.0;
+	GRID_DUTY_CYCLE = 50;
+}
+
+SIGNAL("clk66")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "";
+}
+
+SIGNAL("botao0")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "";
+}
+
+SIGNAL("botao1")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "";
+}
+
+SIGNAL("botao2")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "";
+}
+
+SIGNAL("botao3")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "";
+}
+
+SIGNAL("botao4")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "";
+}
+
+SIGNAL("botao5")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "";
+}
+
+SIGNAL("buzzer")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "";
+}
+
+SIGNAL("led_requerimento_senha")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "";
+}
+
+SIGNAL("estado_do_circuito")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "";
+}
+
+SIGNAL("DISTA[0]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "";
+}
+
+SIGNAL("DISTA[1]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "";
+}
+
+SIGNAL("DISTA[2]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "";
+}
+
+SIGNAL("senhazina")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = BUS;
+	WIDTH = 8;
+	LSB_INDEX = 0;
+	DIRECTION = OUTPUT;
+	PARENT = "";
+}
+
+SIGNAL("senhazina[7]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "senhazina";
+}
+
+SIGNAL("senhazina[6]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "senhazina";
+}
+
+SIGNAL("senhazina[5]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "senhazina";
+}
+
+SIGNAL("senhazina[4]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "senhazina";
+}
+
+SIGNAL("senhazina[3]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "senhazina";
+}
+
+SIGNAL("senhazina[2]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "senhazina";
+}
+
+SIGNAL("senhazina[1]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "senhazina";
+}
+
+SIGNAL("senhazina[0]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "senhazina";
+}
+
+SIGNAL("sensor_data")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = BUS;
+	WIDTH = 8;
+	LSB_INDEX = 0;
+	DIRECTION = INPUT;
+	PARENT = "";
+}
+
+SIGNAL("sensor_data[7]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "sensor_data";
+}
+
+SIGNAL("sensor_data[6]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "sensor_data";
+}
+
+SIGNAL("sensor_data[5]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "sensor_data";
+}
+
+SIGNAL("sensor_data[4]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "sensor_data";
+}
+
+SIGNAL("sensor_data[3]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "sensor_data";
+}
+
+SIGNAL("sensor_data[2]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "sensor_data";
+}
+
+SIGNAL("sensor_data[1]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "sensor_data";
+}
+
+SIGNAL("sensor_data[0]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "sensor_data";
+}
+
+TRANSITION_LIST("clk66")
+{
+	NODE
+	{
+		REPEAT = 1;
+		NODE
+		{
+			REPEAT = 33333;
+			LEVEL 0 FOR 7.5;
+			LEVEL 1 FOR 7.5;
+		}
+		LEVEL 0 FOR 5.0;
+	}
+}
+
+TRANSITION_LIST("botao0")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 267567.567;
+		LEVEL 1 FOR 14054.054;
+		LEVEL 0 FOR 218378.379;
+	}
+}
+
+TRANSITION_LIST("botao1")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 140000.0;
+		LEVEL 1 FOR 13513.513;
+		LEVEL 0 FOR 164864.865;
+		LEVEL 1 FOR 16756.757;
+		LEVEL 0 FOR 164864.865;
+	}
+}
+
+TRANSITION_LIST("botao2")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 178918.918;
+		LEVEL 1 FOR 11351.352;
+		LEVEL 0 FOR 161621.621;
+		LEVEL 1 FOR 16756.757;
+		LEVEL 0 FOR 131351.352;
+	}
+}
+
+TRANSITION_LIST("botao3")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 218918.918;
+		LEVEL 1 FOR 18378.379;
+		LEVEL 0 FOR 159459.459;
+		LEVEL 1 FOR 21621.622;
+		LEVEL 0 FOR 81621.622;
+	}
+}
+
+TRANSITION_LIST("botao4")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 101621.621;
+		LEVEL 1 FOR 12972.973;
+		LEVEL 0 FOR 385405.406;
+	}
+}
+
+TRANSITION_LIST("botao5")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 16216.216;
+		LEVEL 1 FOR 16756.756;
+		LEVEL 0 FOR 25405.406;
+		LEVEL 1 FOR 15675.676;
+		LEVEL 0 FOR 425945.946;
+	}
+}
+
+TRANSITION_LIST("buzzer")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 17678.533;
+		LEVEL 1 FOR 144.264;
+		NODE
+		{
+			REPEAT = 111;
+			LEVEL 0 FOR 6.389;
+			LEVEL 1 FOR 143.611;
+		}
+		LEVEL 0 FOR 25325.736;
+		LEVEL 1 FOR 144.264;
+		NODE
+		{
+			REPEAT = 104;
+			LEVEL 0 FOR 6.389;
+			LEVEL 1 FOR 143.611;
+		}
+		LEVEL 0 FOR 27458.126;
+		LEVEL 1 FOR 141.874;
+		NODE
+		{
+			REPEAT = 86;
+			LEVEL 0 FOR 6.389;
+			LEVEL 1 FOR 143.611;
+		}
+		LEVEL 0 FOR 25298.22;
+		LEVEL 1 FOR 141.78;
+		NODE
+		{
+			REPEAT = 90;
+			LEVEL 0 FOR 6.389;
+			LEVEL 1 FOR 143.611;
+		}
+		LEVEL 0 FOR 25239.008;
+		LEVEL 1 FOR 140.992;
+		NODE
+		{
+			REPEAT = 76;
+			LEVEL 0 FOR 6.389;
+			LEVEL 1 FOR 143.611;
+		}
+		LEVEL 0 FOR 28598.583;
+		LEVEL 1 FOR 141.417;
+		NODE
+		{
+			REPEAT = 122;
+			LEVEL 0 FOR 6.389;
+			LEVEL 1 FOR 143.611;
+		}
+		LEVEL 0 FOR 30158.021;
+		LEVEL 1 FOR 141.979;
+		NODE
+		{
+			REPEAT = 93;
+			LEVEL 0 FOR 6.389;
+			LEVEL 1 FOR 143.611;
+		}
+		LEVEL 0 FOR 36668.22;
+		LEVEL 1 FOR 141.78;
+		NODE
+		{
+			REPEAT = 111;
+			LEVEL 0 FOR 6.389;
+			LEVEL 1 FOR 143.611;
+		}
+		LEVEL 0 FOR 16689.008;
+		LEVEL 1 FOR 140.992;
+		NODE
+		{
+			REPEAT = 112;
+			LEVEL 0 FOR 6.389;
+			LEVEL 1 FOR 143.611;
+		}
+		LEVEL 0 FOR 28058.583;
+		LEVEL 1 FOR 141.417;
+		NODE
+		{
+			REPEAT = 132;
+			LEVEL 0 FOR 6.389;
+			LEVEL 1 FOR 143.611;
+		}
+		NODE
+		{
+			REPEAT = 4;
+			LEVEL 0 FOR 6.389;
+			LEVEL 1 FOR 293.611;
+		}
+		LEVEL 0 FOR 6.389;
+		LEVEL 1 FOR 143.611;
+		LEVEL 0 FOR 0.716;
+		LEVEL 1 FOR 299.284;
+		LEVEL 0 FOR 6.389;
+		LEVEL 1 FOR 189.327;
+		NODE
+		{
+			REPEAT = 242;
+			LEVEL 0 FOR 165.0;
+			LEVEL 1 FOR 165.0;
+		}
+		LEVEL 0 FOR 151.487;
+	}
+}
+
+TRANSITION_LIST("led_requerimento_senha")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 268967.359;
+		LEVEL 1 FOR 129240.0;
+		LEVEL 0 FOR 4815.05;
+		LEVEL 1 FOR 96977.591;
+	}
+}
+
+TRANSITION_LIST("estado_do_circuito")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 398219.816;
+		LEVEL 1 FOR 101780.184;
+	}
+}
+
+TRANSITION_LIST("DISTA[0]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 1 FOR 17684.795;
+		LEVEL 0 FOR 482315.205;
+	}
+}
+
+TRANSITION_LIST("DISTA[1]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 17684.835;
+		LEVEL 1 FOR 42120.0;
+		LEVEL 0 FOR 440195.165;
+	}
+}
+
+TRANSITION_LIST("DISTA[2]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 59804.825;
+		LEVEL 1 FOR 440195.175;
+	}
+}
+
+TRANSITION_LIST("senhazina[7]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 500000.0;
+	}
+}
+
+TRANSITION_LIST("senhazina[6]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 500000.0;
+	}
+}
+
+TRANSITION_LIST("senhazina[5]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 500000.0;
+	}
+}
+
+TRANSITION_LIST("senhazina[4]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 220379.795;
+		LEVEL 1 FOR 279620.205;
+	}
+}
+
+TRANSITION_LIST("senhazina[3]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 500000.0;
+	}
+}
+
+TRANSITION_LIST("senhazina[2]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 500000.0;
+	}
+}
+
+TRANSITION_LIST("senhazina[1]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 500000.0;
+	}
+}
+
+TRANSITION_LIST("senhazina[0]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 220381.757;
+		LEVEL 1 FOR 279618.243;
+	}
+}
+
+TRANSITION_LIST("sensor_data[7]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 120000.0;
+		LEVEL 1 FOR 320.0;
+		LEVEL 0 FOR 1280.0;
+		LEVEL 1 FOR 1280.0;
+		NODE
+		{
+			REPEAT = 147;
+			LEVEL 0 FOR 1280.0;
+			LEVEL 1 FOR 1280.0;
+		}
+		LEVEL 0 FOR 800.0;
+	}
+}
+
+TRANSITION_LIST("sensor_data[6]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 120000.0;
+		LEVEL 1 FOR 320.0;
+		LEVEL 0 FOR 640.0;
+		LEVEL 1 FOR 640.0;
+		NODE
+		{
+			REPEAT = 295;
+			LEVEL 0 FOR 640.0;
+			LEVEL 1 FOR 640.0;
+		}
+		LEVEL 0 FOR 640.0;
+		LEVEL 1 FOR 160.0;
+	}
+}
+
+TRANSITION_LIST("sensor_data[5]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 320.0;
+		LEVEL 1 FOR 220.54;
+		LEVEL 0 FOR 119459.46;
+		LEVEL 1 FOR 320.0;
+		NODE
+		{
+			REPEAT = 593;
+			LEVEL 0 FOR 320.0;
+			LEVEL 1 FOR 320.0;
+		}
+		LEVEL 0 FOR 160.0;
+	}
+}
+
+TRANSITION_LIST("sensor_data[4]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 160.0;
+			LEVEL 1 FOR 160.0;
+		}
+		LEVEL 0 FOR 160.0;
+		LEVEL 1 FOR 60.54;
+		LEVEL 0 FOR 119619.46;
+		LEVEL 1 FOR 160.0;
+		NODE
+		{
+			REPEAT = 1186;
+			LEVEL 0 FOR 160.0;
+			LEVEL 1 FOR 160.0;
+		}
+		LEVEL 0 FOR 160.0;
+	}
+}
+
+TRANSITION_LIST("sensor_data[3]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		NODE
+		{
+			REPEAT = 3;
+			LEVEL 0 FOR 80.0;
+			LEVEL 1 FOR 80.0;
+		}
+		LEVEL 0 FOR 119600.0;
+		LEVEL 1 FOR 80.0;
+		NODE
+		{
+			REPEAT = 2374;
+			LEVEL 0 FOR 80.0;
+			LEVEL 1 FOR 80.0;
+		}
+	}
+}
+
+TRANSITION_LIST("sensor_data[2]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		NODE
+		{
+			REPEAT = 6;
+			LEVEL 0 FOR 40.0;
+			LEVEL 1 FOR 40.0;
+		}
+		LEVEL 0 FOR 40.0;
+		LEVEL 1 FOR 20.54;
+		LEVEL 0 FOR 119499.46;
+		LEVEL 1 FOR 40.0;
+		NODE
+		{
+			REPEAT = 4749;
+			LEVEL 0 FOR 40.0;
+			LEVEL 1 FOR 40.0;
+		}
+	}
+}
+
+TRANSITION_LIST("sensor_data[1]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		NODE
+		{
+			REPEAT = 13;
+			LEVEL 0 FOR 20.0;
+			LEVEL 1 FOR 20.0;
+		}
+		LEVEL 0 FOR 20.0;
+		LEVEL 1 FOR 0.54;
+		LEVEL 0 FOR 119479.46;
+		LEVEL 1 FOR 20.0;
+		NODE
+		{
+			REPEAT = 9499;
+			LEVEL 0 FOR 20.0;
+			LEVEL 1 FOR 20.0;
+		}
+	}
+}
+
+TRANSITION_LIST("sensor_data[0]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		NODE
+		{
+			REPEAT = 27;
+			LEVEL 0 FOR 10.0;
+			LEVEL 1 FOR 10.0;
+		}
+		LEVEL 0 FOR 119470.0;
+		LEVEL 1 FOR 10.0;
+		NODE
+		{
+			REPEAT = 18999;
+			LEVEL 0 FOR 10.0;
+			LEVEL 1 FOR 10.0;
+		}
+	}
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "clk66";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = ASCII;
+	TREE_INDEX = 0;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "botao0";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = ASCII;
+	TREE_INDEX = 1;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "botao1";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = ASCII;
+	TREE_INDEX = 2;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "botao2";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = ASCII;
+	TREE_INDEX = 3;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "botao3";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = ASCII;
+	TREE_INDEX = 4;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "botao4";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = ASCII;
+	TREE_INDEX = 5;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "botao5";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = ASCII;
+	TREE_INDEX = 6;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "buzzer";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = ASCII;
+	TREE_INDEX = 7;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "sensor_data";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 8;
+	TREE_LEVEL = 0;
+	CHILDREN = 9, 10, 11, 12, 13, 14, 15, 16;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "sensor_data[7]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 9;
+	TREE_LEVEL = 1;
+	PARENT = 8;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "sensor_data[6]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 10;
+	TREE_LEVEL = 1;
+	PARENT = 8;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "sensor_data[5]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 11;
+	TREE_LEVEL = 1;
+	PARENT = 8;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "sensor_data[4]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 12;
+	TREE_LEVEL = 1;
+	PARENT = 8;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "sensor_data[3]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 13;
+	TREE_LEVEL = 1;
+	PARENT = 8;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "sensor_data[2]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 14;
+	TREE_LEVEL = 1;
+	PARENT = 8;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "sensor_data[1]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 15;
+	TREE_LEVEL = 1;
+	PARENT = 8;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "sensor_data[0]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 16;
+	TREE_LEVEL = 1;
+	PARENT = 8;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "led_requerimento_senha";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 17;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "estado_do_circuito";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 18;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "DISTA[0]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 19;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "DISTA[1]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 20;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "DISTA[2]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 21;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "senhazina";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = ASCII;
+	TREE_INDEX = 22;
+	TREE_LEVEL = 0;
+	CHILDREN = 23, 24, 25, 26, 27, 28, 29, 30;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "senhazina[7]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = ASCII;
+	TREE_INDEX = 23;
+	TREE_LEVEL = 1;
+	PARENT = 22;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "senhazina[6]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = ASCII;
+	TREE_INDEX = 24;
+	TREE_LEVEL = 1;
+	PARENT = 22;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "senhazina[5]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = ASCII;
+	TREE_INDEX = 25;
+	TREE_LEVEL = 1;
+	PARENT = 22;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "senhazina[4]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = ASCII;
+	TREE_INDEX = 26;
+	TREE_LEVEL = 1;
+	PARENT = 22;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "senhazina[3]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = ASCII;
+	TREE_INDEX = 27;
+	TREE_LEVEL = 1;
+	PARENT = 22;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "senhazina[2]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = ASCII;
+	TREE_INDEX = 28;
+	TREE_LEVEL = 1;
+	PARENT = 22;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "senhazina[1]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = ASCII;
+	TREE_INDEX = 29;
+	TREE_LEVEL = 1;
+	PARENT = 22;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "senhazina[0]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = ASCII;
+	TREE_INDEX = 30;
+	TREE_LEVEL = 1;
+	PARENT = 22;
+}
+
+TIME_BAR
+{
+	TIME = 0;
+	MASTER = TRUE;
+}
+
+TIME_BAR
+{
+	TIME = 0;
+	MASTER = TRUE;
+}
+;

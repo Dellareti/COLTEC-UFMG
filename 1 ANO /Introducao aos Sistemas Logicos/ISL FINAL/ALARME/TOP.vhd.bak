@@ -1,0 +1,32 @@
+LIBRARY IEEE;
+USE IEEE.STD_LOGIC_1164.ALL;
+USE IEEE.STD_LOGIC_UNSIGNED.ALL;
+USE IEEE.NUMERIC_STD.ALL;
+USE IEEE.STD_LOGIC_ARITH.ALL;
+USE WORK.COMPONENTES.ALL;
+
+ENTITY TOP_ENTITY IS
+	PORT(botao0,botao1,botao2,botao3,botao4,botao5:IN STD_LOGIC;
+		 clk66:IN STD_LOGIC;
+	 b0_filtrado,b1_filtrado,b2_filtrado,b3_filtrado,b4_filtrado,b5_filtrado:out STD_LOGIC 	);
+END ENTITY;
+
+
+ARCHITECTURE arc OF TOP_ENTITY IS
+--	SIGNAL b0_filtrado,b1_filtrado,b2_filtrado,b3_filtrado,b4_filtrado,b5_filtrado: STD_LOGIC := '0';
+
+
+BEGIN
+										--333333 = 5ms
+	FILTRO_DIG0: FILTRO_BOTAO GENERIC MAP(10) PORT MAP(botao0,clk66,botao0_filtrado);
+	FILTRO_DIG1: FILTRO_BOTAO GENERIC MAP(10) PORT MAP(botao1,clk66,botao1_filtrado);
+	FILTRO_DIG2: FILTRO_BOTAO GENERIC MAP(10) PORT MAP(botao2,clk66,botao2_filtrado);
+	FILTRO_DIG3: FILTRO_BOTAO GENERIC MAP(10) PORT MAP(botao3,clk66,botao3_filtrado);
+	FILTRO_DIG4: FILTRO_BOTAO GENERIC MAP(10) PORT MAP(botao4,clk66,botao4_filtrado);
+	FILTRO_DIG5: FILTRO_BOTAO GENERIC MAP(10) PORT MAP(botao5,clk66,botao5_filtrado);
+
+
+
+
+
+END ARCHITECTURE;

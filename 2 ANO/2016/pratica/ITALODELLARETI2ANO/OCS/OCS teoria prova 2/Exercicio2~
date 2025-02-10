@@ -1,0 +1,20 @@
+
+Instrução dividida em cinco estágios: Pipeline de cinco estágios
+
+	IF (Instruction Fetch): Busca de instruções
+
+	ID (Instruction Decode): Decodiﬁcação de instruções e leitura de registradores.
+
+	EX: Execução ou cálculo do endereço.
+
+	MEM: Acesso à memória de dados.
+
+	WB (Write Back): Escrita do resultado.
+
+	MUX : Multiplexador.
+	
+	ALU: Unidade lógica aritimética.
+
+	ADD: Somador. 
+	
+	PC: Compilador de programa. 

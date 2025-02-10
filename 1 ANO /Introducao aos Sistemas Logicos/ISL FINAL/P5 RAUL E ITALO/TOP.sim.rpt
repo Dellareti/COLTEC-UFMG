@@ -1,0 +1,934 @@
+Simulator report for TOP
+Wed Oct 14 03:05:24 2015
+Quartus II Version 9.1 Build 304 01/25/2010 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. Coverage Summary
+  6. Complete 1/0-Value Coverage
+  7. Missing 1-Value Coverage
+  8. Missing 0-Value Coverage
+  9. Simulator INI Usage
+ 10. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2010 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++---------------------------------------------+
+; Simulator Summary                           ;
++-----------------------------+---------------+
+; Type                        ; Value         ;
++-----------------------------+---------------+
+; Simulation Start Time       ; 0 ps          ;
+; Simulation End Time         ; 2.0 ms        ;
+; Simulation Netlist Size     ; 292 nodes     ;
+; Simulation Coverage         ;      27.62 %  ;
+; Total Number of Transitions ; 3254058       ;
+; Simulation Breakpoints      ; 0             ;
+; Family                      ; MAX II        ;
+; Device                      ; EPM1270F256C5 ;
++-----------------------------+---------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                          ;
++--------------------------------------------------------------------------------------------+----------------+---------------+
+; Option                                                                                     ; Setting        ; Default Value ;
++--------------------------------------------------------------------------------------------+----------------+---------------+
+; Simulation mode                                                                            ; Timing         ; Timing        ;
+; Start time                                                                                 ; 0 ns           ; 0 ns          ;
+; Simulation results format                                                                  ; CVWF           ;               ;
+; Vector input source                                                                        ; SIMULATION.vwf ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On             ; On            ;
+; Check outputs                                                                              ; Off            ; Off           ;
+; Report simulation coverage                                                                 ; On             ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On             ; On            ;
+; Display missing 1-value coverage report                                                    ; On             ; On            ;
+; Display missing 0-value coverage report                                                    ; On             ; On            ;
+; Detect setup and hold time violations                                                      ; Off            ; Off           ;
+; Detect glitches                                                                            ; Off            ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off            ; Off           ;
+; Generate Signal Activity File                                                              ; Off            ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off            ; Off           ;
+; Group bus channels in simulation results                                                   ; Off            ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On             ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE     ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off            ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; Off            ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto           ; Auto          ;
++--------------------------------------------------------------------------------------------+----------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II to view the waveform report data.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;      27.62 % ;
+; Total nodes checked                                 ; 292          ;
+; Total output ports checked                          ; 449          ;
+; Total output ports with complete 1/0-value coverage ; 124          ;
+; Total output ports with no 1/0-value coverage       ; 323          ;
+; Total output ports with no 1-value coverage         ; 323          ;
+; Total output ports with no 0-value coverage         ; 325          ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++---------------------------------------------------------------------+
+; Complete 1/0-Value Coverage                                         ;
++--------------------+-----------------------------+------------------+
+; Node Name          ; Output Port Name            ; Output Port Type ;
++--------------------+-----------------------------+------------------+
+; |TOP|Add5~0        ; |TOP|Add5~0                 ; combout          ;
+; |TOP|Add5~0        ; |TOP|Add5~2COUT1_188        ; cout1            ;
+; |TOP|Add5~5        ; |TOP|Add5~5                 ; combout          ;
+; |TOP|Add5~5        ; |TOP|Add5~7COUT1_190        ; cout1            ;
+; |TOP|Add5~10       ; |TOP|Add5~10                ; combout          ;
+; |TOP|Add5~10       ; |TOP|Add5~12                ; cout             ;
+; |TOP|Add5~15       ; |TOP|Add5~15                ; combout          ;
+; |TOP|Add5~15       ; |TOP|Add5~17COUT1_186       ; cout1            ;
+; |TOP|Equal4~0      ; |TOP|Equal4~0               ; combout          ;
+; |TOP|Add5~20       ; |TOP|Add5~20                ; combout          ;
+; |TOP|Add5~20       ; |TOP|Add5~22COUT1_192       ; cout1            ;
+; |TOP|Add5~25       ; |TOP|Add5~25                ; combout          ;
+; |TOP|Equal4~1      ; |TOP|Equal4~1               ; combout          ;
+; |TOP|Equal4~4      ; |TOP|Equal4~4               ; combout          ;
+; |TOP|Equal4~10     ; |TOP|Equal4~10              ; combout          ;
+; |TOP|duty_c[1]     ; |TOP|duty_c[1]~1            ; cout0            ;
+; |TOP|duty_c[1]     ; |TOP|duty_c[1]~1COUT1_95    ; cout1            ;
+; |TOP|duty_c[0]     ; |TOP|duty_c[0]~3            ; cout             ;
+; |TOP|Equal3~0      ; |TOP|Equal3~0               ; combout          ;
+; |TOP|duty_c[3]     ; |TOP|duty_c[3]~5            ; cout0            ;
+; |TOP|duty_c[3]     ; |TOP|duty_c[3]~5COUT1_99    ; cout1            ;
+; |TOP|duty_c[2]     ; |TOP|duty_c[2]~7            ; cout0            ;
+; |TOP|duty_c[2]     ; |TOP|duty_c[2]~7COUT1_97    ; cout1            ;
+; |TOP|Equal3~1      ; |TOP|Equal3~1               ; combout          ;
+; |TOP|duty_c[5]     ; |TOP|duty_c[5]~9            ; cout             ;
+; |TOP|duty_c[4]     ; |TOP|duty_c[4]~11           ; cout0            ;
+; |TOP|duty_c[4]     ; |TOP|duty_c[4]~11COUT1_101  ; cout1            ;
+; |TOP|Equal3~2      ; |TOP|Equal3~2               ; combout          ;
+; |TOP|duty_c[7]     ; |TOP|duty_c[7]~13           ; cout0            ;
+; |TOP|duty_c[6]     ; |TOP|duty_c[6]~15           ; cout0            ;
+; |TOP|Equal3~4      ; |TOP|Equal3~4               ; combout          ;
+; |TOP|duty_c[9]     ; |TOP|duty_c[9]~17           ; cout0            ;
+; |TOP|duty_c[8]     ; |TOP|duty_c[8]~19           ; cout0            ;
+; |TOP|duty_c[11]    ; |TOP|duty_c[11]~21COUT1_111 ; cout1            ;
+; |TOP|duty_c[10]    ; |TOP|duty_c[10]~23          ; cout             ;
+; |TOP|duty_c[13]    ; |TOP|duty_c[13]~25COUT1_115 ; cout1            ;
+; |TOP|duty_c[12]    ; |TOP|duty_c[12]~27COUT1_113 ; cout1            ;
+; |TOP|duty_c[15]    ; |TOP|duty_c[15]~29          ; cout             ;
+; |TOP|duty_c[14]    ; |TOP|duty_c[14]~31COUT1_117 ; cout1            ;
+; |TOP|duty_c[17]    ; |TOP|duty_c[17]~33          ; cout0            ;
+; |TOP|duty_c[16]    ; |TOP|duty_c[16]~35          ; cout0            ;
+; |TOP|duty_c[19]    ; |TOP|duty_c[19]~37          ; cout0            ;
+; |TOP|duty_c[18]    ; |TOP|duty_c[18]~39          ; cout0            ;
+; |TOP|duty_c[21]    ; |TOP|duty_c[21]~41COUT1_127 ; cout1            ;
+; |TOP|duty_c[20]    ; |TOP|duty_c[20]~43          ; cout             ;
+; |TOP|duty_c[23]    ; |TOP|duty_c[23]~45COUT1_131 ; cout1            ;
+; |TOP|duty_c[22]    ; |TOP|duty_c[22]~47COUT1_129 ; cout1            ;
+; |TOP|duty_c[25]    ; |TOP|duty_c[25]~49          ; cout             ;
+; |TOP|duty_c[24]    ; |TOP|duty_c[24]~51COUT1_133 ; cout1            ;
+; |TOP|duty_c[27]    ; |TOP|duty_c[27]~53          ; cout0            ;
+; |TOP|duty_c[26]    ; |TOP|duty_c[26]~55          ; cout0            ;
+; |TOP|duty_c[29]    ; |TOP|duty_c[29]~57          ; cout0            ;
+; |TOP|duty_c[28]    ; |TOP|duty_c[28]~59          ; cout0            ;
+; |TOP|duty_c[30]    ; |TOP|duty_c[30]~63          ; cout             ;
+; |TOP|Equal3~20     ; |TOP|Equal3~20              ; combout          ;
+; |TOP|Equal5~8      ; |TOP|Equal5~8               ; combout          ;
+; |TOP|Equal5~9      ; |TOP|Equal5~9               ; combout          ;
+; |TOP|Equal5~10     ; |TOP|Equal5~10              ; combout          ;
+; |TOP|Add4~0        ; |TOP|Add4~0                 ; combout          ;
+; |TOP|Add4~0        ; |TOP|Add4~2COUT1_188        ; cout1            ;
+; |TOP|Add4~5        ; |TOP|Add4~5                 ; combout          ;
+; |TOP|Add4~5        ; |TOP|Add4~7COUT1_190        ; cout1            ;
+; |TOP|Equal0~0      ; |TOP|Equal0~0               ; combout          ;
+; |TOP|Add4~10       ; |TOP|Add4~10                ; combout          ;
+; |TOP|Add4~10       ; |TOP|Add4~12COUT1_192       ; cout1            ;
+; |TOP|Add4~15       ; |TOP|Add4~15                ; combout          ;
+; |TOP|Add4~15       ; |TOP|Add4~17                ; cout             ;
+; |TOP|Equal0~1      ; |TOP|Equal0~1               ; combout          ;
+; |TOP|Add4~20       ; |TOP|Add4~20                ; combout          ;
+; |TOP|Add4~25       ; |TOP|Add4~25                ; combout          ;
+; |TOP|duty_l[7]     ; |TOP|duty_l[7]~9COUT1_96    ; cout1            ;
+; |TOP|Equal0~2      ; |TOP|Equal0~2               ; combout          ;
+; |TOP|duty_l[9]     ; |TOP|duty_l[9]~13COUT1_100  ; cout1            ;
+; |TOP|duty_l[8]     ; |TOP|duty_l[8]~15COUT1_98   ; cout1            ;
+; |TOP|Equal0~4      ; |TOP|Equal0~4               ; combout          ;
+; |TOP|duty_l[10]    ; |TOP|duty_l[10]~19COUT1_102 ; cout1            ;
+; |TOP|duty_l[13]    ; |TOP|duty_l[13]~21          ; cout0            ;
+; |TOP|duty_l[12]    ; |TOP|duty_l[12]~23          ; cout0            ;
+; |TOP|duty_l[15]    ; |TOP|duty_l[15]~25          ; cout0            ;
+; |TOP|duty_l[14]    ; |TOP|duty_l[14]~27          ; cout0            ;
+; |TOP|duty_l[17]    ; |TOP|duty_l[17]~29COUT1_112 ; cout1            ;
+; |TOP|Equal0~10     ; |TOP|Equal0~10              ; combout          ;
+; |TOP|duty_l[19]    ; |TOP|duty_l[19]~33COUT1_116 ; cout1            ;
+; |TOP|duty_l[18]    ; |TOP|duty_l[18]~35COUT1_114 ; cout1            ;
+; |TOP|duty_l[20]    ; |TOP|duty_l[20]~39COUT1_118 ; cout1            ;
+; |TOP|duty_l[23]    ; |TOP|duty_l[23]~41          ; cout0            ;
+; |TOP|duty_l[22]    ; |TOP|duty_l[22]~43          ; cout0            ;
+; |TOP|duty_l[25]    ; |TOP|duty_l[25]~45          ; cout0            ;
+; |TOP|duty_l[24]    ; |TOP|duty_l[24]~47          ; cout0            ;
+; |TOP|duty_l[27]    ; |TOP|duty_l[27]~49COUT1_128 ; cout1            ;
+; |TOP|duty_l[29]    ; |TOP|duty_l[29]~53COUT1_132 ; cout1            ;
+; |TOP|duty_l[28]    ; |TOP|duty_l[28]~55COUT1_130 ; cout1            ;
+; |TOP|Add4~140      ; |TOP|Add4~140               ; combout          ;
+; |TOP|Add4~140      ; |TOP|Add4~142               ; cout             ;
+; |TOP|Add4~145      ; |TOP|Add4~145               ; combout          ;
+; |TOP|Add4~145      ; |TOP|Add4~147COUT1_186      ; cout1            ;
+; |TOP|Equal1~0      ; |TOP|Equal1~0               ; combout          ;
+; |TOP|duty_l[30]    ; |TOP|duty_l[30]~59COUT1_134 ; cout1            ;
+; |TOP|Equal0~19     ; |TOP|Equal0~19              ; combout          ;
+; |TOP|Equal1~1      ; |TOP|Equal1~1               ; combout          ;
+; |TOP|Equal1~2      ; |TOP|Equal1~2               ; combout          ;
+; |TOP|Equal1~10     ; |TOP|Equal1~10              ; combout          ;
+; |TOP|cont2[2]      ; |TOP|cont2[2]               ; regout           ;
+; |TOP|cont2[3]      ; |TOP|cont2[3]               ; regout           ;
+; |TOP|cont2[0]      ; |TOP|cont2[0]               ; regout           ;
+; |TOP|cont2[1]      ; |TOP|cont2[1]               ; regout           ;
+; |TOP|cont2[4]      ; |TOP|cont2[4]               ; regout           ;
+; |TOP|cont2[5]      ; |TOP|cont2[5]               ; regout           ;
+; |TOP|ultimoBnt     ; |TOP|duty_c[31]~64          ; combout          ;
+; |TOP|ultimoBnt     ; |TOP|ultimoBnt              ; regout           ;
+; |TOP|duty_c[0]~65  ; |TOP|duty_c[0]~65           ; combout          ;
+; |TOP|LessThan3~0   ; |TOP|LessThan3~0            ; combout          ;
+; |TOP|duty_c[0]~66  ; |TOP|duty_c[0]~66           ; combout          ;
+; |TOP|duty_c[0]~67  ; |TOP|duty_c[0]~67           ; combout          ;
+; |TOP|duty_c[31]~68 ; |TOP|duty_c[31]~68          ; combout          ;
+; |TOP|cont[2]       ; |TOP|cont[2]                ; regout           ;
+; |TOP|cont[3]       ; |TOP|cont[3]                ; regout           ;
+; |TOP|duty_l[31]~60 ; |TOP|duty_l[31]~60          ; combout          ;
+; |TOP|cont[4]       ; |TOP|cont[4]                ; regout           ;
+; |TOP|cont[5]       ; |TOP|cont[5]                ; regout           ;
+; |TOP|clk           ; |TOP|clk~corein             ; combout          ;
+; |TOP|b2            ; |TOP|b2~corein              ; combout          ;
+; |TOP|b1            ; |TOP|b1~corein              ; combout          ;
+; |TOP|cooler        ; |TOP|cooler                 ; padio            ;
++--------------------+-----------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++---------------------------------------------------------------------+
+; Missing 1-Value Coverage                                            ;
++--------------------+-----------------------------+------------------+
+; Node Name          ; Output Port Name            ; Output Port Type ;
++--------------------+-----------------------------+------------------+
+; |TOP|led~reg0      ; |TOP|led~reg0               ; regout           ;
+; |TOP|Add5~0        ; |TOP|Add5~2                 ; cout0            ;
+; |TOP|Add5~5        ; |TOP|Add5~7                 ; cout0            ;
+; |TOP|Add5~15       ; |TOP|Add5~17                ; cout0            ;
+; |TOP|Add5~20       ; |TOP|Add5~22                ; cout0            ;
+; |TOP|Add5~25       ; |TOP|Add5~27                ; cout             ;
+; |TOP|Add5~30       ; |TOP|Add5~30                ; combout          ;
+; |TOP|Add5~30       ; |TOP|Add5~32                ; cout0            ;
+; |TOP|Add5~30       ; |TOP|Add5~32COUT1_194       ; cout1            ;
+; |TOP|Add5~35       ; |TOP|Add5~35                ; combout          ;
+; |TOP|Add5~35       ; |TOP|Add5~37                ; cout0            ;
+; |TOP|Add5~35       ; |TOP|Add5~37COUT1_196       ; cout1            ;
+; |TOP|Add5~40       ; |TOP|Add5~40                ; combout          ;
+; |TOP|Add5~40       ; |TOP|Add5~42                ; cout0            ;
+; |TOP|Add5~40       ; |TOP|Add5~42COUT1_198       ; cout1            ;
+; |TOP|Add5~45       ; |TOP|Add5~45                ; combout          ;
+; |TOP|Add5~45       ; |TOP|Add5~47                ; cout0            ;
+; |TOP|Add5~45       ; |TOP|Add5~47COUT1_200       ; cout1            ;
+; |TOP|Add5~50       ; |TOP|Add5~50                ; combout          ;
+; |TOP|Add5~50       ; |TOP|Add5~52                ; cout             ;
+; |TOP|Add5~55       ; |TOP|Add5~55                ; combout          ;
+; |TOP|Add5~55       ; |TOP|Add5~57                ; cout0            ;
+; |TOP|Add5~55       ; |TOP|Add5~57COUT1_202       ; cout1            ;
+; |TOP|Equal4~2      ; |TOP|Equal4~2               ; combout          ;
+; |TOP|Add5~60       ; |TOP|Add5~60                ; combout          ;
+; |TOP|Add5~60       ; |TOP|Add5~62                ; cout0            ;
+; |TOP|Add5~60       ; |TOP|Add5~62COUT1_204       ; cout1            ;
+; |TOP|Add5~65       ; |TOP|Add5~65                ; combout          ;
+; |TOP|Add5~65       ; |TOP|Add5~67                ; cout0            ;
+; |TOP|Add5~65       ; |TOP|Add5~67COUT1_206       ; cout1            ;
+; |TOP|Add5~70       ; |TOP|Add5~70                ; combout          ;
+; |TOP|Add5~70       ; |TOP|Add5~72                ; cout0            ;
+; |TOP|Add5~70       ; |TOP|Add5~72COUT1_208       ; cout1            ;
+; |TOP|Add5~75       ; |TOP|Add5~75                ; combout          ;
+; |TOP|Add5~75       ; |TOP|Add5~77                ; cout             ;
+; |TOP|Equal4~3      ; |TOP|Equal4~3               ; combout          ;
+; |TOP|Add5~80       ; |TOP|Add5~80                ; combout          ;
+; |TOP|Add5~80       ; |TOP|Add5~82                ; cout0            ;
+; |TOP|Add5~80       ; |TOP|Add5~82COUT1_210       ; cout1            ;
+; |TOP|Add5~85       ; |TOP|Add5~85                ; combout          ;
+; |TOP|Add5~85       ; |TOP|Add5~87                ; cout0            ;
+; |TOP|Add5~85       ; |TOP|Add5~87COUT1_212       ; cout1            ;
+; |TOP|Add5~90       ; |TOP|Add5~90                ; combout          ;
+; |TOP|Add5~90       ; |TOP|Add5~92                ; cout0            ;
+; |TOP|Add5~90       ; |TOP|Add5~92COUT1_214       ; cout1            ;
+; |TOP|Add5~95       ; |TOP|Add5~95                ; combout          ;
+; |TOP|Add5~95       ; |TOP|Add5~97                ; cout0            ;
+; |TOP|Add5~95       ; |TOP|Add5~97COUT1_216       ; cout1            ;
+; |TOP|Equal4~5      ; |TOP|Equal4~5               ; combout          ;
+; |TOP|Add5~100      ; |TOP|Add5~100               ; combout          ;
+; |TOP|Add5~100      ; |TOP|Add5~102               ; cout             ;
+; |TOP|Add5~105      ; |TOP|Add5~105               ; combout          ;
+; |TOP|Add5~105      ; |TOP|Add5~107               ; cout0            ;
+; |TOP|Add5~105      ; |TOP|Add5~107COUT1_218      ; cout1            ;
+; |TOP|Equal4~6      ; |TOP|Equal4~6               ; combout          ;
+; |TOP|Add5~110      ; |TOP|Add5~110               ; combout          ;
+; |TOP|Add5~110      ; |TOP|Add5~112               ; cout0            ;
+; |TOP|Add5~110      ; |TOP|Add5~112COUT1_220      ; cout1            ;
+; |TOP|Add5~115      ; |TOP|Add5~115               ; combout          ;
+; |TOP|Add5~115      ; |TOP|Add5~117               ; cout0            ;
+; |TOP|Add5~115      ; |TOP|Add5~117COUT1_222      ; cout1            ;
+; |TOP|Equal4~7      ; |TOP|Equal4~7               ; combout          ;
+; |TOP|Add5~120      ; |TOP|Add5~120               ; combout          ;
+; |TOP|Add5~120      ; |TOP|Add5~122               ; cout0            ;
+; |TOP|Add5~120      ; |TOP|Add5~122COUT1_224      ; cout1            ;
+; |TOP|Add5~125      ; |TOP|Add5~125               ; combout          ;
+; |TOP|Add5~125      ; |TOP|Add5~127               ; cout             ;
+; |TOP|Add5~130      ; |TOP|Add5~130               ; combout          ;
+; |TOP|Add5~130      ; |TOP|Add5~132               ; cout0            ;
+; |TOP|Add5~130      ; |TOP|Add5~132COUT1_226      ; cout1            ;
+; |TOP|Add5~135      ; |TOP|Add5~135               ; combout          ;
+; |TOP|Add5~135      ; |TOP|Add5~137               ; cout0            ;
+; |TOP|Add5~135      ; |TOP|Add5~137COUT1_228      ; cout1            ;
+; |TOP|Equal4~8      ; |TOP|Equal4~8               ; combout          ;
+; |TOP|Add5~140      ; |TOP|Add5~140               ; combout          ;
+; |TOP|Add5~140      ; |TOP|Add5~142               ; cout0            ;
+; |TOP|Add5~140      ; |TOP|Add5~142COUT1_230      ; cout1            ;
+; |TOP|Add5~145      ; |TOP|Add5~145               ; combout          ;
+; |TOP|Add5~145      ; |TOP|Add5~147               ; cout0            ;
+; |TOP|Add5~145      ; |TOP|Add5~147COUT1_232      ; cout1            ;
+; |TOP|Add5~150      ; |TOP|Add5~150               ; combout          ;
+; |TOP|Add5~150      ; |TOP|Add5~152               ; cout             ;
+; |TOP|Add5~155      ; |TOP|Add5~155               ; combout          ;
+; |TOP|Equal4~9      ; |TOP|Equal4~9               ; combout          ;
+; |TOP|duty_c[7]     ; |TOP|duty_c[7]~13COUT1_105  ; cout1            ;
+; |TOP|duty_c[6]     ; |TOP|duty_c[6]~15COUT1_103  ; cout1            ;
+; |TOP|Equal3~3      ; |TOP|Equal3~3               ; combout          ;
+; |TOP|duty_c[9]     ; |TOP|duty_c[9]~17COUT1_109  ; cout1            ;
+; |TOP|duty_c[8]     ; |TOP|duty_c[8]~19COUT1_107  ; cout1            ;
+; |TOP|Equal3~5      ; |TOP|Equal3~5               ; combout          ;
+; |TOP|duty_c[11]    ; |TOP|duty_c[11]~21          ; cout0            ;
+; |TOP|Equal3~6      ; |TOP|Equal3~6               ; combout          ;
+; |TOP|duty_c[13]    ; |TOP|duty_c[13]~25          ; cout0            ;
+; |TOP|duty_c[12]    ; |TOP|duty_c[12]~27          ; cout0            ;
+; |TOP|Equal3~7      ; |TOP|Equal3~7               ; combout          ;
+; |TOP|duty_c[14]    ; |TOP|duty_c[14]~31          ; cout0            ;
+; |TOP|Equal3~8      ; |TOP|Equal3~8               ; combout          ;
+; |TOP|Equal3~9      ; |TOP|Equal3~9               ; combout          ;
+; |TOP|duty_c[17]    ; |TOP|duty_c[17]~33COUT1_121 ; cout1            ;
+; |TOP|duty_c[16]    ; |TOP|duty_c[16]~35COUT1_119 ; cout1            ;
+; |TOP|Equal3~10     ; |TOP|Equal3~10              ; combout          ;
+; |TOP|duty_c[19]    ; |TOP|duty_c[19]~37COUT1_125 ; cout1            ;
+; |TOP|duty_c[18]    ; |TOP|duty_c[18]~39COUT1_123 ; cout1            ;
+; |TOP|Equal3~11     ; |TOP|Equal3~11              ; combout          ;
+; |TOP|duty_c[21]    ; |TOP|duty_c[21]~41          ; cout0            ;
+; |TOP|Equal3~12     ; |TOP|Equal3~12              ; combout          ;
+; |TOP|duty_c[23]    ; |TOP|duty_c[23]~45          ; cout0            ;
+; |TOP|duty_c[22]    ; |TOP|duty_c[22]~47          ; cout0            ;
+; |TOP|Equal3~13     ; |TOP|Equal3~13              ; combout          ;
+; |TOP|Equal3~14     ; |TOP|Equal3~14              ; combout          ;
+; |TOP|duty_c[24]    ; |TOP|duty_c[24]~51          ; cout0            ;
+; |TOP|Equal3~15     ; |TOP|Equal3~15              ; combout          ;
+; |TOP|duty_c[27]    ; |TOP|duty_c[27]~53COUT1_137 ; cout1            ;
+; |TOP|duty_c[26]    ; |TOP|duty_c[26]~55COUT1_135 ; cout1            ;
+; |TOP|Equal3~16     ; |TOP|Equal3~16              ; combout          ;
+; |TOP|duty_c[29]    ; |TOP|duty_c[29]~57COUT1_141 ; cout1            ;
+; |TOP|duty_c[28]    ; |TOP|duty_c[28]~59COUT1_139 ; cout1            ;
+; |TOP|Equal3~17     ; |TOP|Equal3~17              ; combout          ;
+; |TOP|Equal3~18     ; |TOP|Equal3~18              ; combout          ;
+; |TOP|Equal3~19     ; |TOP|Equal3~19              ; combout          ;
+; |TOP|Equal5~0      ; |TOP|Equal5~0               ; combout          ;
+; |TOP|Equal5~1      ; |TOP|Equal5~1               ; combout          ;
+; |TOP|Equal5~2      ; |TOP|Equal5~2               ; combout          ;
+; |TOP|Equal5~3      ; |TOP|Equal5~3               ; combout          ;
+; |TOP|Equal5~4      ; |TOP|Equal5~4               ; combout          ;
+; |TOP|Equal5~5      ; |TOP|Equal5~5               ; combout          ;
+; |TOP|Equal5~6      ; |TOP|Equal5~6               ; combout          ;
+; |TOP|Equal5~7      ; |TOP|Equal5~7               ; combout          ;
+; |TOP|Add4~0        ; |TOP|Add4~2                 ; cout0            ;
+; |TOP|Add4~5        ; |TOP|Add4~7                 ; cout0            ;
+; |TOP|duty_l[3]     ; |TOP|duty_l[3]~1            ; cout0            ;
+; |TOP|duty_l[3]     ; |TOP|duty_l[3]~1COUT1_90    ; cout1            ;
+; |TOP|duty_l[2]     ; |TOP|duty_l[2]~3            ; cout0            ;
+; |TOP|duty_l[2]     ; |TOP|duty_l[2]~3COUT1_88    ; cout1            ;
+; |TOP|Add4~10       ; |TOP|Add4~12                ; cout0            ;
+; |TOP|duty_l[5]     ; |TOP|duty_l[5]~5            ; cout0            ;
+; |TOP|duty_l[5]     ; |TOP|duty_l[5]~5COUT1_94    ; cout1            ;
+; |TOP|duty_l[4]     ; |TOP|duty_l[4]~7            ; cout0            ;
+; |TOP|duty_l[4]     ; |TOP|duty_l[4]~7COUT1_92    ; cout1            ;
+; |TOP|Add4~20       ; |TOP|Add4~22COUT1_194       ; cout1            ;
+; |TOP|Add4~25       ; |TOP|Add4~27                ; cout0            ;
+; |TOP|Add4~25       ; |TOP|Add4~27COUT1_196       ; cout1            ;
+; |TOP|duty_l[7]     ; |TOP|duty_l[7]~9            ; cout0            ;
+; |TOP|duty_l[6]     ; |TOP|duty_l[6]~11           ; cout             ;
+; |TOP|Add4~30       ; |TOP|Add4~30                ; combout          ;
+; |TOP|Add4~30       ; |TOP|Add4~32                ; cout0            ;
+; |TOP|Add4~30       ; |TOP|Add4~32COUT1_198       ; cout1            ;
+; |TOP|Add4~35       ; |TOP|Add4~35                ; combout          ;
+; |TOP|Add4~35       ; |TOP|Add4~37                ; cout0            ;
+; |TOP|Add4~35       ; |TOP|Add4~37COUT1_200       ; cout1            ;
+; |TOP|duty_l[9]     ; |TOP|duty_l[9]~13           ; cout0            ;
+; |TOP|duty_l[8]     ; |TOP|duty_l[8]~15           ; cout0            ;
+; |TOP|Equal0~3      ; |TOP|Equal0~3               ; combout          ;
+; |TOP|Add4~40       ; |TOP|Add4~40                ; combout          ;
+; |TOP|Add4~40       ; |TOP|Add4~42                ; cout             ;
+; |TOP|Add4~45       ; |TOP|Add4~45                ; combout          ;
+; |TOP|Add4~45       ; |TOP|Add4~47                ; cout0            ;
+; |TOP|Add4~45       ; |TOP|Add4~47COUT1_202       ; cout1            ;
+; |TOP|duty_l[11]    ; |TOP|duty_l[11]~17          ; cout             ;
+; |TOP|duty_l[10]    ; |TOP|duty_l[10]~19          ; cout0            ;
+; |TOP|Equal0~5      ; |TOP|Equal0~5               ; combout          ;
+; |TOP|Add4~50       ; |TOP|Add4~50                ; combout          ;
+; |TOP|Add4~50       ; |TOP|Add4~52                ; cout0            ;
+; |TOP|Add4~50       ; |TOP|Add4~52COUT1_206       ; cout1            ;
+; |TOP|duty_l[13]    ; |TOP|duty_l[13]~21COUT1_106 ; cout1            ;
+; |TOP|Add4~55       ; |TOP|Add4~55                ; combout          ;
+; |TOP|Add4~55       ; |TOP|Add4~57                ; cout0            ;
+; |TOP|Add4~55       ; |TOP|Add4~57COUT1_204       ; cout1            ;
+; |TOP|duty_l[12]    ; |TOP|duty_l[12]~23COUT1_104 ; cout1            ;
+; |TOP|Equal0~6      ; |TOP|Equal0~6               ; combout          ;
+; |TOP|Equal0~7      ; |TOP|Equal0~7               ; combout          ;
+; |TOP|Add4~60       ; |TOP|Add4~60                ; combout          ;
+; |TOP|Add4~60       ; |TOP|Add4~62                ; cout0            ;
+; |TOP|Add4~60       ; |TOP|Add4~62COUT1_208       ; cout1            ;
+; |TOP|Add4~65       ; |TOP|Add4~65                ; combout          ;
+; |TOP|Add4~65       ; |TOP|Add4~67                ; cout             ;
+; |TOP|duty_l[15]    ; |TOP|duty_l[15]~25COUT1_110 ; cout1            ;
+; |TOP|duty_l[14]    ; |TOP|duty_l[14]~27COUT1_108 ; cout1            ;
+; |TOP|Equal0~8      ; |TOP|Equal0~8               ; combout          ;
+; |TOP|Add4~70       ; |TOP|Add4~70                ; combout          ;
+; |TOP|Add4~70       ; |TOP|Add4~72                ; cout0            ;
+; |TOP|Add4~70       ; |TOP|Add4~72COUT1_210       ; cout1            ;
+; |TOP|Add4~75       ; |TOP|Add4~75                ; combout          ;
+; |TOP|Add4~75       ; |TOP|Add4~77                ; cout0            ;
+; |TOP|Add4~75       ; |TOP|Add4~77COUT1_212       ; cout1            ;
+; |TOP|duty_l[17]    ; |TOP|duty_l[17]~29          ; cout0            ;
+; |TOP|duty_l[16]    ; |TOP|duty_l[16]~31          ; cout             ;
+; |TOP|Equal0~9      ; |TOP|Equal0~9               ; combout          ;
+; |TOP|Add4~80       ; |TOP|Add4~80                ; combout          ;
+; |TOP|Add4~80       ; |TOP|Add4~82                ; cout0            ;
+; |TOP|Add4~80       ; |TOP|Add4~82COUT1_214       ; cout1            ;
+; |TOP|Add4~85       ; |TOP|Add4~85                ; combout          ;
+; |TOP|Add4~85       ; |TOP|Add4~87                ; cout0            ;
+; |TOP|Add4~85       ; |TOP|Add4~87COUT1_216       ; cout1            ;
+; |TOP|duty_l[19]    ; |TOP|duty_l[19]~33          ; cout0            ;
+; |TOP|duty_l[18]    ; |TOP|duty_l[18]~35          ; cout0            ;
+; |TOP|Equal0~11     ; |TOP|Equal0~11              ; combout          ;
+; |TOP|Add4~90       ; |TOP|Add4~90                ; combout          ;
+; |TOP|Add4~90       ; |TOP|Add4~92                ; cout             ;
+; |TOP|Add4~95       ; |TOP|Add4~95                ; combout          ;
+; |TOP|Add4~95       ; |TOP|Add4~97                ; cout0            ;
+; |TOP|Add4~95       ; |TOP|Add4~97COUT1_218       ; cout1            ;
+; |TOP|duty_l[21]    ; |TOP|duty_l[21]~37          ; cout             ;
+; |TOP|duty_l[20]    ; |TOP|duty_l[20]~39          ; cout0            ;
+; |TOP|Equal0~12     ; |TOP|Equal0~12              ; combout          ;
+; |TOP|Add4~100      ; |TOP|Add4~100               ; combout          ;
+; |TOP|Add4~100      ; |TOP|Add4~102               ; cout0            ;
+; |TOP|Add4~100      ; |TOP|Add4~102COUT1_220      ; cout1            ;
+; |TOP|Add4~105      ; |TOP|Add4~105               ; combout          ;
+; |TOP|Add4~105      ; |TOP|Add4~107               ; cout0            ;
+; |TOP|Add4~105      ; |TOP|Add4~107COUT1_222      ; cout1            ;
+; |TOP|duty_l[23]    ; |TOP|duty_l[23]~41COUT1_122 ; cout1            ;
+; |TOP|duty_l[22]    ; |TOP|duty_l[22]~43COUT1_120 ; cout1            ;
+; |TOP|Equal0~13     ; |TOP|Equal0~13              ; combout          ;
+; |TOP|Add4~110      ; |TOP|Add4~110               ; combout          ;
+; |TOP|Add4~110      ; |TOP|Add4~112               ; cout0            ;
+; |TOP|Add4~110      ; |TOP|Add4~112COUT1_224      ; cout1            ;
+; |TOP|Add4~115      ; |TOP|Add4~115               ; combout          ;
+; |TOP|Add4~115      ; |TOP|Add4~117               ; cout             ;
+; |TOP|duty_l[25]    ; |TOP|duty_l[25]~45COUT1_126 ; cout1            ;
+; |TOP|duty_l[24]    ; |TOP|duty_l[24]~47COUT1_124 ; cout1            ;
+; |TOP|Equal0~14     ; |TOP|Equal0~14              ; combout          ;
+; |TOP|Equal0~15     ; |TOP|Equal0~15              ; combout          ;
+; |TOP|Add4~120      ; |TOP|Add4~120               ; combout          ;
+; |TOP|Add4~120      ; |TOP|Add4~122               ; cout0            ;
+; |TOP|Add4~120      ; |TOP|Add4~122COUT1_226      ; cout1            ;
+; |TOP|Add4~125      ; |TOP|Add4~125               ; combout          ;
+; |TOP|Add4~125      ; |TOP|Add4~127               ; cout0            ;
+; |TOP|Add4~125      ; |TOP|Add4~127COUT1_228      ; cout1            ;
+; |TOP|duty_l[27]    ; |TOP|duty_l[27]~49          ; cout0            ;
+; |TOP|duty_l[26]    ; |TOP|duty_l[26]~51          ; cout             ;
+; |TOP|Equal0~16     ; |TOP|Equal0~16              ; combout          ;
+; |TOP|Add4~130      ; |TOP|Add4~130               ; combout          ;
+; |TOP|Add4~130      ; |TOP|Add4~132               ; cout0            ;
+; |TOP|Add4~130      ; |TOP|Add4~132COUT1_230      ; cout1            ;
+; |TOP|Add4~135      ; |TOP|Add4~135               ; combout          ;
+; |TOP|Add4~135      ; |TOP|Add4~137               ; cout0            ;
+; |TOP|Add4~135      ; |TOP|Add4~137COUT1_232      ; cout1            ;
+; |TOP|duty_l[29]    ; |TOP|duty_l[29]~53          ; cout0            ;
+; |TOP|duty_l[28]    ; |TOP|duty_l[28]~55          ; cout0            ;
+; |TOP|Equal0~17     ; |TOP|Equal0~17              ; combout          ;
+; |TOP|Add4~145      ; |TOP|Add4~147               ; cout0            ;
+; |TOP|Add4~150      ; |TOP|Add4~150               ; combout          ;
+; |TOP|Add4~150      ; |TOP|Add4~152               ; cout             ;
+; |TOP|Add4~155      ; |TOP|Add4~155               ; combout          ;
+; |TOP|duty_l[31]    ; |TOP|duty_l[31]             ; regout           ;
+; |TOP|duty_l[30]    ; |TOP|duty_l[30]~59          ; cout0            ;
+; |TOP|Equal0~18     ; |TOP|Equal0~18              ; combout          ;
+; |TOP|led~0         ; |TOP|led~0                  ; combout          ;
+; |TOP|Equal1~3      ; |TOP|Equal1~3               ; combout          ;
+; |TOP|Equal1~4      ; |TOP|Equal1~4               ; combout          ;
+; |TOP|Equal1~5      ; |TOP|Equal1~5               ; combout          ;
+; |TOP|Equal1~6      ; |TOP|Equal1~6               ; combout          ;
+; |TOP|Equal1~7      ; |TOP|Equal1~7               ; combout          ;
+; |TOP|Equal1~8      ; |TOP|Equal1~8               ; combout          ;
+; |TOP|Equal1~9      ; |TOP|Equal1~9               ; combout          ;
+; |TOP|Equal2~0      ; |TOP|Equal2~0               ; combout          ;
+; |TOP|Equal2~1      ; |TOP|Equal2~1               ; combout          ;
+; |TOP|Equal2~2      ; |TOP|Equal2~2               ; combout          ;
+; |TOP|Equal2~3      ; |TOP|Equal2~3               ; combout          ;
+; |TOP|Equal2~4      ; |TOP|Equal2~4               ; combout          ;
+; |TOP|Equal2~5      ; |TOP|Equal2~5               ; combout          ;
+; |TOP|Equal2~6      ; |TOP|Equal2~6               ; combout          ;
+; |TOP|Equal2~7      ; |TOP|Equal2~7               ; combout          ;
+; |TOP|Equal2~8      ; |TOP|Equal2~8               ; combout          ;
+; |TOP|Equal2~9      ; |TOP|Equal2~9               ; combout          ;
+; |TOP|cont2[6]      ; |TOP|cont2[6]               ; regout           ;
+; |TOP|cont2[7]      ; |TOP|cont2[7]               ; regout           ;
+; |TOP|cont2[8]      ; |TOP|cont2[8]               ; regout           ;
+; |TOP|cont2[9]      ; |TOP|cont2[9]               ; regout           ;
+; |TOP|cont2[10]     ; |TOP|cont2[10]              ; regout           ;
+; |TOP|cont2[11]     ; |TOP|cont2[11]              ; regout           ;
+; |TOP|cont2[12]     ; |TOP|cont2[12]              ; regout           ;
+; |TOP|cont2[13]     ; |TOP|cont2[13]              ; regout           ;
+; |TOP|cont2[14]     ; |TOP|cont2[14]              ; regout           ;
+; |TOP|cont2[15]     ; |TOP|cont2[15]              ; regout           ;
+; |TOP|cont2[16]     ; |TOP|cont2[16]              ; regout           ;
+; |TOP|cont2[17]     ; |TOP|cont2[17]              ; regout           ;
+; |TOP|cont2[18]     ; |TOP|cont2[18]              ; regout           ;
+; |TOP|cont2[19]     ; |TOP|cont2[19]              ; regout           ;
+; |TOP|cont2[20]     ; |TOP|cont2[20]              ; regout           ;
+; |TOP|cont2[21]     ; |TOP|cont2[21]              ; regout           ;
+; |TOP|cont2[22]     ; |TOP|cont2[22]              ; regout           ;
+; |TOP|cont2[23]     ; |TOP|cont2[23]              ; regout           ;
+; |TOP|cont2[24]     ; |TOP|cont2[24]              ; regout           ;
+; |TOP|cont2[25]     ; |TOP|cont2[25]              ; regout           ;
+; |TOP|cont2[26]     ; |TOP|cont2[26]              ; regout           ;
+; |TOP|cont2[27]     ; |TOP|cont2[27]              ; regout           ;
+; |TOP|cont2[28]     ; |TOP|cont2[28]              ; regout           ;
+; |TOP|cont2[29]     ; |TOP|cont2[29]              ; regout           ;
+; |TOP|cont2[30]     ; |TOP|cont2[30]              ; regout           ;
+; |TOP|cont2[31]     ; |TOP|cont2[31]              ; regout           ;
+; |TOP|Equal5~11     ; |TOP|Equal5~11              ; combout          ;
+; |TOP|duty_l[31]~61 ; |TOP|duty_l[31]~61          ; combout          ;
+; |TOP|LessThan1~0   ; |TOP|LessThan1~0            ; combout          ;
+; |TOP|Add1~1        ; |TOP|Add1~1                 ; combout          ;
+; |TOP|cont[7]       ; |TOP|cont[7]                ; regout           ;
+; |TOP|cont[8]       ; |TOP|cont[8]                ; regout           ;
+; |TOP|cont[9]       ; |TOP|cont[9]                ; regout           ;
+; |TOP|cont[10]      ; |TOP|cont[10]               ; regout           ;
+; |TOP|cont[11]      ; |TOP|cont[11]               ; regout           ;
+; |TOP|cont[13]      ; |TOP|cont[13]               ; regout           ;
+; |TOP|cont[12]      ; |TOP|cont[12]               ; regout           ;
+; |TOP|cont[14]      ; |TOP|cont[14]               ; regout           ;
+; |TOP|cont[15]      ; |TOP|cont[15]               ; regout           ;
+; |TOP|cont[16]      ; |TOP|cont[16]               ; regout           ;
+; |TOP|cont[17]      ; |TOP|cont[17]               ; regout           ;
+; |TOP|cont[18]      ; |TOP|cont[18]               ; regout           ;
+; |TOP|cont[19]      ; |TOP|cont[19]               ; regout           ;
+; |TOP|cont[20]      ; |TOP|cont[20]               ; regout           ;
+; |TOP|cont[21]      ; |TOP|cont[21]               ; regout           ;
+; |TOP|cont[22]      ; |TOP|cont[22]               ; regout           ;
+; |TOP|cont[23]      ; |TOP|cont[23]               ; regout           ;
+; |TOP|cont[24]      ; |TOP|cont[24]               ; regout           ;
+; |TOP|cont[25]      ; |TOP|cont[25]               ; regout           ;
+; |TOP|cont[26]      ; |TOP|cont[26]               ; regout           ;
+; |TOP|cont[27]      ; |TOP|cont[27]               ; regout           ;
+; |TOP|cont[28]      ; |TOP|cont[28]               ; regout           ;
+; |TOP|cont[29]      ; |TOP|cont[29]               ; regout           ;
+; |TOP|cont[30]      ; |TOP|cont[30]               ; regout           ;
+; |TOP|cont[31]      ; |TOP|cont[31]               ; regout           ;
+; |TOP|b3            ; |TOP|b3~corein              ; combout          ;
+; |TOP|led           ; |TOP|led                    ; padio            ;
++--------------------+-----------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++---------------------------------------------------------------------+
+; Missing 0-Value Coverage                                            ;
++--------------------+-----------------------------+------------------+
+; Node Name          ; Output Port Name            ; Output Port Type ;
++--------------------+-----------------------------+------------------+
+; |TOP|led~reg0      ; |TOP|led~reg0               ; regout           ;
+; |TOP|Add5~0        ; |TOP|Add5~2                 ; cout0            ;
+; |TOP|Add5~5        ; |TOP|Add5~7                 ; cout0            ;
+; |TOP|Add5~15       ; |TOP|Add5~17                ; cout0            ;
+; |TOP|Add5~20       ; |TOP|Add5~22                ; cout0            ;
+; |TOP|Add5~25       ; |TOP|Add5~27                ; cout             ;
+; |TOP|Add5~30       ; |TOP|Add5~30                ; combout          ;
+; |TOP|Add5~30       ; |TOP|Add5~32                ; cout0            ;
+; |TOP|Add5~30       ; |TOP|Add5~32COUT1_194       ; cout1            ;
+; |TOP|Add5~35       ; |TOP|Add5~35                ; combout          ;
+; |TOP|Add5~35       ; |TOP|Add5~37                ; cout0            ;
+; |TOP|Add5~35       ; |TOP|Add5~37COUT1_196       ; cout1            ;
+; |TOP|Add5~40       ; |TOP|Add5~40                ; combout          ;
+; |TOP|Add5~40       ; |TOP|Add5~42                ; cout0            ;
+; |TOP|Add5~40       ; |TOP|Add5~42COUT1_198       ; cout1            ;
+; |TOP|Add5~45       ; |TOP|Add5~45                ; combout          ;
+; |TOP|Add5~45       ; |TOP|Add5~47                ; cout0            ;
+; |TOP|Add5~45       ; |TOP|Add5~47COUT1_200       ; cout1            ;
+; |TOP|Add5~50       ; |TOP|Add5~50                ; combout          ;
+; |TOP|Add5~50       ; |TOP|Add5~52                ; cout             ;
+; |TOP|Add5~55       ; |TOP|Add5~55                ; combout          ;
+; |TOP|Add5~55       ; |TOP|Add5~57                ; cout0            ;
+; |TOP|Add5~55       ; |TOP|Add5~57COUT1_202       ; cout1            ;
+; |TOP|Equal4~2      ; |TOP|Equal4~2               ; combout          ;
+; |TOP|Add5~60       ; |TOP|Add5~60                ; combout          ;
+; |TOP|Add5~60       ; |TOP|Add5~62                ; cout0            ;
+; |TOP|Add5~60       ; |TOP|Add5~62COUT1_204       ; cout1            ;
+; |TOP|Add5~65       ; |TOP|Add5~65                ; combout          ;
+; |TOP|Add5~65       ; |TOP|Add5~67                ; cout0            ;
+; |TOP|Add5~65       ; |TOP|Add5~67COUT1_206       ; cout1            ;
+; |TOP|Add5~70       ; |TOP|Add5~70                ; combout          ;
+; |TOP|Add5~70       ; |TOP|Add5~72                ; cout0            ;
+; |TOP|Add5~70       ; |TOP|Add5~72COUT1_208       ; cout1            ;
+; |TOP|Add5~75       ; |TOP|Add5~75                ; combout          ;
+; |TOP|Add5~75       ; |TOP|Add5~77                ; cout             ;
+; |TOP|Equal4~3      ; |TOP|Equal4~3               ; combout          ;
+; |TOP|Add5~80       ; |TOP|Add5~80                ; combout          ;
+; |TOP|Add5~80       ; |TOP|Add5~82                ; cout0            ;
+; |TOP|Add5~80       ; |TOP|Add5~82COUT1_210       ; cout1            ;
+; |TOP|Add5~85       ; |TOP|Add5~85                ; combout          ;
+; |TOP|Add5~85       ; |TOP|Add5~87                ; cout0            ;
+; |TOP|Add5~85       ; |TOP|Add5~87COUT1_212       ; cout1            ;
+; |TOP|Add5~90       ; |TOP|Add5~90                ; combout          ;
+; |TOP|Add5~90       ; |TOP|Add5~92                ; cout0            ;
+; |TOP|Add5~90       ; |TOP|Add5~92COUT1_214       ; cout1            ;
+; |TOP|Add5~95       ; |TOP|Add5~95                ; combout          ;
+; |TOP|Add5~95       ; |TOP|Add5~97                ; cout0            ;
+; |TOP|Add5~95       ; |TOP|Add5~97COUT1_216       ; cout1            ;
+; |TOP|Equal4~5      ; |TOP|Equal4~5               ; combout          ;
+; |TOP|Add5~100      ; |TOP|Add5~100               ; combout          ;
+; |TOP|Add5~100      ; |TOP|Add5~102               ; cout             ;
+; |TOP|Add5~105      ; |TOP|Add5~105               ; combout          ;
+; |TOP|Add5~105      ; |TOP|Add5~107               ; cout0            ;
+; |TOP|Add5~105      ; |TOP|Add5~107COUT1_218      ; cout1            ;
+; |TOP|Equal4~6      ; |TOP|Equal4~6               ; combout          ;
+; |TOP|Add5~110      ; |TOP|Add5~110               ; combout          ;
+; |TOP|Add5~110      ; |TOP|Add5~112               ; cout0            ;
+; |TOP|Add5~110      ; |TOP|Add5~112COUT1_220      ; cout1            ;
+; |TOP|Add5~115      ; |TOP|Add5~115               ; combout          ;
+; |TOP|Add5~115      ; |TOP|Add5~117               ; cout0            ;
+; |TOP|Add5~115      ; |TOP|Add5~117COUT1_222      ; cout1            ;
+; |TOP|Equal4~7      ; |TOP|Equal4~7               ; combout          ;
+; |TOP|Add5~120      ; |TOP|Add5~120               ; combout          ;
+; |TOP|Add5~120      ; |TOP|Add5~122               ; cout0            ;
+; |TOP|Add5~120      ; |TOP|Add5~122COUT1_224      ; cout1            ;
+; |TOP|Add5~125      ; |TOP|Add5~125               ; combout          ;
+; |TOP|Add5~125      ; |TOP|Add5~127               ; cout             ;
+; |TOP|Add5~130      ; |TOP|Add5~130               ; combout          ;
+; |TOP|Add5~130      ; |TOP|Add5~132               ; cout0            ;
+; |TOP|Add5~130      ; |TOP|Add5~132COUT1_226      ; cout1            ;
+; |TOP|Add5~135      ; |TOP|Add5~135               ; combout          ;
+; |TOP|Add5~135      ; |TOP|Add5~137               ; cout0            ;
+; |TOP|Add5~135      ; |TOP|Add5~137COUT1_228      ; cout1            ;
+; |TOP|Equal4~8      ; |TOP|Equal4~8               ; combout          ;
+; |TOP|Add5~140      ; |TOP|Add5~140               ; combout          ;
+; |TOP|Add5~140      ; |TOP|Add5~142               ; cout0            ;
+; |TOP|Add5~140      ; |TOP|Add5~142COUT1_230      ; cout1            ;
+; |TOP|Add5~145      ; |TOP|Add5~145               ; combout          ;
+; |TOP|Add5~145      ; |TOP|Add5~147               ; cout0            ;
+; |TOP|Add5~145      ; |TOP|Add5~147COUT1_232      ; cout1            ;
+; |TOP|Add5~150      ; |TOP|Add5~150               ; combout          ;
+; |TOP|Add5~150      ; |TOP|Add5~152               ; cout             ;
+; |TOP|Add5~155      ; |TOP|Add5~155               ; combout          ;
+; |TOP|Equal4~9      ; |TOP|Equal4~9               ; combout          ;
+; |TOP|duty_c[7]     ; |TOP|duty_c[7]~13COUT1_105  ; cout1            ;
+; |TOP|duty_c[6]     ; |TOP|duty_c[6]~15COUT1_103  ; cout1            ;
+; |TOP|Equal3~3      ; |TOP|Equal3~3               ; combout          ;
+; |TOP|duty_c[9]     ; |TOP|duty_c[9]~17COUT1_109  ; cout1            ;
+; |TOP|duty_c[8]     ; |TOP|duty_c[8]~19COUT1_107  ; cout1            ;
+; |TOP|Equal3~5      ; |TOP|Equal3~5               ; combout          ;
+; |TOP|duty_c[11]    ; |TOP|duty_c[11]~21          ; cout0            ;
+; |TOP|Equal3~6      ; |TOP|Equal3~6               ; combout          ;
+; |TOP|duty_c[13]    ; |TOP|duty_c[13]~25          ; cout0            ;
+; |TOP|duty_c[12]    ; |TOP|duty_c[12]~27          ; cout0            ;
+; |TOP|Equal3~7      ; |TOP|Equal3~7               ; combout          ;
+; |TOP|duty_c[14]    ; |TOP|duty_c[14]~31          ; cout0            ;
+; |TOP|Equal3~8      ; |TOP|Equal3~8               ; combout          ;
+; |TOP|Equal3~9      ; |TOP|Equal3~9               ; combout          ;
+; |TOP|duty_c[17]    ; |TOP|duty_c[17]~33COUT1_121 ; cout1            ;
+; |TOP|duty_c[16]    ; |TOP|duty_c[16]~35COUT1_119 ; cout1            ;
+; |TOP|Equal3~10     ; |TOP|Equal3~10              ; combout          ;
+; |TOP|duty_c[19]    ; |TOP|duty_c[19]~37COUT1_125 ; cout1            ;
+; |TOP|duty_c[18]    ; |TOP|duty_c[18]~39COUT1_123 ; cout1            ;
+; |TOP|Equal3~11     ; |TOP|Equal3~11              ; combout          ;
+; |TOP|duty_c[21]    ; |TOP|duty_c[21]~41          ; cout0            ;
+; |TOP|Equal3~12     ; |TOP|Equal3~12              ; combout          ;
+; |TOP|duty_c[23]    ; |TOP|duty_c[23]~45          ; cout0            ;
+; |TOP|duty_c[22]    ; |TOP|duty_c[22]~47          ; cout0            ;
+; |TOP|Equal3~13     ; |TOP|Equal3~13              ; combout          ;
+; |TOP|Equal3~14     ; |TOP|Equal3~14              ; combout          ;
+; |TOP|duty_c[24]    ; |TOP|duty_c[24]~51          ; cout0            ;
+; |TOP|Equal3~15     ; |TOP|Equal3~15              ; combout          ;
+; |TOP|duty_c[27]    ; |TOP|duty_c[27]~53COUT1_137 ; cout1            ;
+; |TOP|duty_c[26]    ; |TOP|duty_c[26]~55COUT1_135 ; cout1            ;
+; |TOP|Equal3~16     ; |TOP|Equal3~16              ; combout          ;
+; |TOP|duty_c[29]    ; |TOP|duty_c[29]~57COUT1_141 ; cout1            ;
+; |TOP|duty_c[28]    ; |TOP|duty_c[28]~59COUT1_139 ; cout1            ;
+; |TOP|Equal3~17     ; |TOP|Equal3~17              ; combout          ;
+; |TOP|Equal3~18     ; |TOP|Equal3~18              ; combout          ;
+; |TOP|Equal3~19     ; |TOP|Equal3~19              ; combout          ;
+; |TOP|Equal5~0      ; |TOP|Equal5~0               ; combout          ;
+; |TOP|Equal5~1      ; |TOP|Equal5~1               ; combout          ;
+; |TOP|Equal5~2      ; |TOP|Equal5~2               ; combout          ;
+; |TOP|Equal5~3      ; |TOP|Equal5~3               ; combout          ;
+; |TOP|Equal5~4      ; |TOP|Equal5~4               ; combout          ;
+; |TOP|Equal5~5      ; |TOP|Equal5~5               ; combout          ;
+; |TOP|Equal5~6      ; |TOP|Equal5~6               ; combout          ;
+; |TOP|Equal5~7      ; |TOP|Equal5~7               ; combout          ;
+; |TOP|Add4~0        ; |TOP|Add4~2                 ; cout0            ;
+; |TOP|Add4~5        ; |TOP|Add4~7                 ; cout0            ;
+; |TOP|duty_l[3]     ; |TOP|duty_l[3]~1            ; cout0            ;
+; |TOP|duty_l[3]     ; |TOP|duty_l[3]~1COUT1_90    ; cout1            ;
+; |TOP|duty_l[2]     ; |TOP|duty_l[2]~3            ; cout0            ;
+; |TOP|duty_l[2]     ; |TOP|duty_l[2]~3COUT1_88    ; cout1            ;
+; |TOP|Add4~10       ; |TOP|Add4~12                ; cout0            ;
+; |TOP|duty_l[5]     ; |TOP|duty_l[5]~5            ; cout0            ;
+; |TOP|duty_l[5]     ; |TOP|duty_l[5]~5COUT1_94    ; cout1            ;
+; |TOP|duty_l[4]     ; |TOP|duty_l[4]~7            ; cout0            ;
+; |TOP|duty_l[4]     ; |TOP|duty_l[4]~7COUT1_92    ; cout1            ;
+; |TOP|Add4~20       ; |TOP|Add4~22                ; cout0            ;
+; |TOP|Add4~20       ; |TOP|Add4~22COUT1_194       ; cout1            ;
+; |TOP|Add4~25       ; |TOP|Add4~27                ; cout0            ;
+; |TOP|Add4~25       ; |TOP|Add4~27COUT1_196       ; cout1            ;
+; |TOP|duty_l[7]     ; |TOP|duty_l[7]~9            ; cout0            ;
+; |TOP|duty_l[6]     ; |TOP|duty_l[6]~11           ; cout             ;
+; |TOP|Add4~30       ; |TOP|Add4~30                ; combout          ;
+; |TOP|Add4~30       ; |TOP|Add4~32                ; cout0            ;
+; |TOP|Add4~30       ; |TOP|Add4~32COUT1_198       ; cout1            ;
+; |TOP|Add4~35       ; |TOP|Add4~35                ; combout          ;
+; |TOP|Add4~35       ; |TOP|Add4~37                ; cout0            ;
+; |TOP|Add4~35       ; |TOP|Add4~37COUT1_200       ; cout1            ;
+; |TOP|duty_l[9]     ; |TOP|duty_l[9]~13           ; cout0            ;
+; |TOP|duty_l[8]     ; |TOP|duty_l[8]~15           ; cout0            ;
+; |TOP|Equal0~3      ; |TOP|Equal0~3               ; combout          ;
+; |TOP|Add4~40       ; |TOP|Add4~40                ; combout          ;
+; |TOP|Add4~40       ; |TOP|Add4~42                ; cout             ;
+; |TOP|Add4~45       ; |TOP|Add4~45                ; combout          ;
+; |TOP|Add4~45       ; |TOP|Add4~47                ; cout0            ;
+; |TOP|Add4~45       ; |TOP|Add4~47COUT1_202       ; cout1            ;
+; |TOP|duty_l[11]    ; |TOP|duty_l[11]~17          ; cout             ;
+; |TOP|duty_l[10]    ; |TOP|duty_l[10]~19          ; cout0            ;
+; |TOP|Equal0~5      ; |TOP|Equal0~5               ; combout          ;
+; |TOP|Add4~50       ; |TOP|Add4~50                ; combout          ;
+; |TOP|Add4~50       ; |TOP|Add4~52                ; cout0            ;
+; |TOP|Add4~50       ; |TOP|Add4~52COUT1_206       ; cout1            ;
+; |TOP|duty_l[13]    ; |TOP|duty_l[13]~21COUT1_106 ; cout1            ;
+; |TOP|Add4~55       ; |TOP|Add4~55                ; combout          ;
+; |TOP|Add4~55       ; |TOP|Add4~57                ; cout0            ;
+; |TOP|Add4~55       ; |TOP|Add4~57COUT1_204       ; cout1            ;
+; |TOP|duty_l[12]    ; |TOP|duty_l[12]~23COUT1_104 ; cout1            ;
+; |TOP|Equal0~6      ; |TOP|Equal0~6               ; combout          ;
+; |TOP|Equal0~7      ; |TOP|Equal0~7               ; combout          ;
+; |TOP|Add4~60       ; |TOP|Add4~60                ; combout          ;
+; |TOP|Add4~60       ; |TOP|Add4~62                ; cout0            ;
+; |TOP|Add4~60       ; |TOP|Add4~62COUT1_208       ; cout1            ;
+; |TOP|Add4~65       ; |TOP|Add4~65                ; combout          ;
+; |TOP|Add4~65       ; |TOP|Add4~67                ; cout             ;
+; |TOP|duty_l[15]    ; |TOP|duty_l[15]~25COUT1_110 ; cout1            ;
+; |TOP|duty_l[14]    ; |TOP|duty_l[14]~27COUT1_108 ; cout1            ;
+; |TOP|Equal0~8      ; |TOP|Equal0~8               ; combout          ;
+; |TOP|Add4~70       ; |TOP|Add4~70                ; combout          ;
+; |TOP|Add4~70       ; |TOP|Add4~72                ; cout0            ;
+; |TOP|Add4~70       ; |TOP|Add4~72COUT1_210       ; cout1            ;
+; |TOP|Add4~75       ; |TOP|Add4~75                ; combout          ;
+; |TOP|Add4~75       ; |TOP|Add4~77                ; cout0            ;
+; |TOP|Add4~75       ; |TOP|Add4~77COUT1_212       ; cout1            ;
+; |TOP|duty_l[17]    ; |TOP|duty_l[17]~29          ; cout0            ;
+; |TOP|duty_l[16]    ; |TOP|duty_l[16]~31          ; cout             ;
+; |TOP|Equal0~9      ; |TOP|Equal0~9               ; combout          ;
+; |TOP|Add4~80       ; |TOP|Add4~80                ; combout          ;
+; |TOP|Add4~80       ; |TOP|Add4~82                ; cout0            ;
+; |TOP|Add4~80       ; |TOP|Add4~82COUT1_214       ; cout1            ;
+; |TOP|Add4~85       ; |TOP|Add4~85                ; combout          ;
+; |TOP|Add4~85       ; |TOP|Add4~87                ; cout0            ;
+; |TOP|Add4~85       ; |TOP|Add4~87COUT1_216       ; cout1            ;
+; |TOP|duty_l[19]    ; |TOP|duty_l[19]~33          ; cout0            ;
+; |TOP|duty_l[18]    ; |TOP|duty_l[18]~35          ; cout0            ;
+; |TOP|Equal0~11     ; |TOP|Equal0~11              ; combout          ;
+; |TOP|Add4~90       ; |TOP|Add4~90                ; combout          ;
+; |TOP|Add4~90       ; |TOP|Add4~92                ; cout             ;
+; |TOP|Add4~95       ; |TOP|Add4~95                ; combout          ;
+; |TOP|Add4~95       ; |TOP|Add4~97                ; cout0            ;
+; |TOP|Add4~95       ; |TOP|Add4~97COUT1_218       ; cout1            ;
+; |TOP|duty_l[21]    ; |TOP|duty_l[21]~37          ; cout             ;
+; |TOP|duty_l[20]    ; |TOP|duty_l[20]~39          ; cout0            ;
+; |TOP|Equal0~12     ; |TOP|Equal0~12              ; combout          ;
+; |TOP|Add4~100      ; |TOP|Add4~100               ; combout          ;
+; |TOP|Add4~100      ; |TOP|Add4~102               ; cout0            ;
+; |TOP|Add4~100      ; |TOP|Add4~102COUT1_220      ; cout1            ;
+; |TOP|Add4~105      ; |TOP|Add4~105               ; combout          ;
+; |TOP|Add4~105      ; |TOP|Add4~107               ; cout0            ;
+; |TOP|Add4~105      ; |TOP|Add4~107COUT1_222      ; cout1            ;
+; |TOP|duty_l[23]    ; |TOP|duty_l[23]~41COUT1_122 ; cout1            ;
+; |TOP|duty_l[22]    ; |TOP|duty_l[22]~43COUT1_120 ; cout1            ;
+; |TOP|Equal0~13     ; |TOP|Equal0~13              ; combout          ;
+; |TOP|Add4~110      ; |TOP|Add4~110               ; combout          ;
+; |TOP|Add4~110      ; |TOP|Add4~112               ; cout0            ;
+; |TOP|Add4~110      ; |TOP|Add4~112COUT1_224      ; cout1            ;
+; |TOP|Add4~115      ; |TOP|Add4~115               ; combout          ;
+; |TOP|Add4~115      ; |TOP|Add4~117               ; cout             ;
+; |TOP|duty_l[25]    ; |TOP|duty_l[25]~45COUT1_126 ; cout1            ;
+; |TOP|duty_l[24]    ; |TOP|duty_l[24]~47COUT1_124 ; cout1            ;
+; |TOP|Equal0~14     ; |TOP|Equal0~14              ; combout          ;
+; |TOP|Equal0~15     ; |TOP|Equal0~15              ; combout          ;
+; |TOP|Add4~120      ; |TOP|Add4~120               ; combout          ;
+; |TOP|Add4~120      ; |TOP|Add4~122               ; cout0            ;
+; |TOP|Add4~120      ; |TOP|Add4~122COUT1_226      ; cout1            ;
+; |TOP|Add4~125      ; |TOP|Add4~125               ; combout          ;
+; |TOP|Add4~125      ; |TOP|Add4~127               ; cout0            ;
+; |TOP|Add4~125      ; |TOP|Add4~127COUT1_228      ; cout1            ;
+; |TOP|duty_l[27]    ; |TOP|duty_l[27]~49          ; cout0            ;
+; |TOP|duty_l[26]    ; |TOP|duty_l[26]~51          ; cout             ;
+; |TOP|Equal0~16     ; |TOP|Equal0~16              ; combout          ;
+; |TOP|Add4~130      ; |TOP|Add4~130               ; combout          ;
+; |TOP|Add4~130      ; |TOP|Add4~132               ; cout0            ;
+; |TOP|Add4~130      ; |TOP|Add4~132COUT1_230      ; cout1            ;
+; |TOP|Add4~135      ; |TOP|Add4~135               ; combout          ;
+; |TOP|Add4~135      ; |TOP|Add4~137               ; cout0            ;
+; |TOP|Add4~135      ; |TOP|Add4~137COUT1_232      ; cout1            ;
+; |TOP|duty_l[29]    ; |TOP|duty_l[29]~53          ; cout0            ;
+; |TOP|duty_l[28]    ; |TOP|duty_l[28]~55          ; cout0            ;
+; |TOP|Equal0~17     ; |TOP|Equal0~17              ; combout          ;
+; |TOP|Add4~145      ; |TOP|Add4~147               ; cout0            ;
+; |TOP|Add4~150      ; |TOP|Add4~150               ; combout          ;
+; |TOP|Add4~150      ; |TOP|Add4~152               ; cout             ;
+; |TOP|Add4~155      ; |TOP|Add4~155               ; combout          ;
+; |TOP|duty_l[31]    ; |TOP|duty_l[31]             ; regout           ;
+; |TOP|duty_l[30]    ; |TOP|duty_l[30]~59          ; cout0            ;
+; |TOP|Equal0~18     ; |TOP|Equal0~18              ; combout          ;
+; |TOP|led~0         ; |TOP|led~0                  ; combout          ;
+; |TOP|Equal1~3      ; |TOP|Equal1~3               ; combout          ;
+; |TOP|Equal1~4      ; |TOP|Equal1~4               ; combout          ;
+; |TOP|Equal1~5      ; |TOP|Equal1~5               ; combout          ;
+; |TOP|Equal1~6      ; |TOP|Equal1~6               ; combout          ;
+; |TOP|Equal1~7      ; |TOP|Equal1~7               ; combout          ;
+; |TOP|Equal1~8      ; |TOP|Equal1~8               ; combout          ;
+; |TOP|Equal1~9      ; |TOP|Equal1~9               ; combout          ;
+; |TOP|Equal2~0      ; |TOP|Equal2~0               ; combout          ;
+; |TOP|Equal2~1      ; |TOP|Equal2~1               ; combout          ;
+; |TOP|Equal2~2      ; |TOP|Equal2~2               ; combout          ;
+; |TOP|Equal2~3      ; |TOP|Equal2~3               ; combout          ;
+; |TOP|Equal2~4      ; |TOP|Equal2~4               ; combout          ;
+; |TOP|Equal2~5      ; |TOP|Equal2~5               ; combout          ;
+; |TOP|Equal2~6      ; |TOP|Equal2~6               ; combout          ;
+; |TOP|Equal2~7      ; |TOP|Equal2~7               ; combout          ;
+; |TOP|Equal2~8      ; |TOP|Equal2~8               ; combout          ;
+; |TOP|Equal2~9      ; |TOP|Equal2~9               ; combout          ;
+; |TOP|cont2[6]      ; |TOP|cont2[6]               ; regout           ;
+; |TOP|cont2[7]      ; |TOP|cont2[7]               ; regout           ;
+; |TOP|cont2[8]      ; |TOP|cont2[8]               ; regout           ;
+; |TOP|cont2[9]      ; |TOP|cont2[9]               ; regout           ;
+; |TOP|cont2[10]     ; |TOP|cont2[10]              ; regout           ;
+; |TOP|cont2[11]     ; |TOP|cont2[11]              ; regout           ;
+; |TOP|cont2[12]     ; |TOP|cont2[12]              ; regout           ;
+; |TOP|cont2[13]     ; |TOP|cont2[13]              ; regout           ;
+; |TOP|cont2[14]     ; |TOP|cont2[14]              ; regout           ;
+; |TOP|cont2[15]     ; |TOP|cont2[15]              ; regout           ;
+; |TOP|cont2[16]     ; |TOP|cont2[16]              ; regout           ;
+; |TOP|cont2[17]     ; |TOP|cont2[17]              ; regout           ;
+; |TOP|cont2[18]     ; |TOP|cont2[18]              ; regout           ;
+; |TOP|cont2[19]     ; |TOP|cont2[19]              ; regout           ;
+; |TOP|cont2[20]     ; |TOP|cont2[20]              ; regout           ;
+; |TOP|cont2[21]     ; |TOP|cont2[21]              ; regout           ;
+; |TOP|cont2[22]     ; |TOP|cont2[22]              ; regout           ;
+; |TOP|cont2[23]     ; |TOP|cont2[23]              ; regout           ;
+; |TOP|cont2[24]     ; |TOP|cont2[24]              ; regout           ;
+; |TOP|cont2[25]     ; |TOP|cont2[25]              ; regout           ;
+; |TOP|cont2[26]     ; |TOP|cont2[26]              ; regout           ;
+; |TOP|cont2[27]     ; |TOP|cont2[27]              ; regout           ;
+; |TOP|cont2[28]     ; |TOP|cont2[28]              ; regout           ;
+; |TOP|cont2[29]     ; |TOP|cont2[29]              ; regout           ;
+; |TOP|cont2[30]     ; |TOP|cont2[30]              ; regout           ;
+; |TOP|cont2[31]     ; |TOP|cont2[31]              ; regout           ;
+; |TOP|Equal5~11     ; |TOP|Equal5~11              ; combout          ;
+; |TOP|duty_l[31]~61 ; |TOP|duty_l[31]~61          ; combout          ;
+; |TOP|LessThan1~0   ; |TOP|LessThan1~0            ; combout          ;
+; |TOP|Add1~1        ; |TOP|Add1~1                 ; combout          ;
+; |TOP|cont[6]       ; |TOP|cont[6]                ; regout           ;
+; |TOP|cont[7]       ; |TOP|cont[7]                ; regout           ;
+; |TOP|cont[8]       ; |TOP|cont[8]                ; regout           ;
+; |TOP|cont[9]       ; |TOP|cont[9]                ; regout           ;
+; |TOP|cont[10]      ; |TOP|cont[10]               ; regout           ;
+; |TOP|cont[11]      ; |TOP|cont[11]               ; regout           ;
+; |TOP|cont[13]      ; |TOP|cont[13]               ; regout           ;
+; |TOP|cont[12]      ; |TOP|cont[12]               ; regout           ;
+; |TOP|cont[14]      ; |TOP|cont[14]               ; regout           ;
+; |TOP|cont[15]      ; |TOP|cont[15]               ; regout           ;
+; |TOP|cont[16]      ; |TOP|cont[16]               ; regout           ;
+; |TOP|cont[17]      ; |TOP|cont[17]               ; regout           ;
+; |TOP|cont[18]      ; |TOP|cont[18]               ; regout           ;
+; |TOP|cont[19]      ; |TOP|cont[19]               ; regout           ;
+; |TOP|cont[20]      ; |TOP|cont[20]               ; regout           ;
+; |TOP|cont[21]      ; |TOP|cont[21]               ; regout           ;
+; |TOP|cont[22]      ; |TOP|cont[22]               ; regout           ;
+; |TOP|cont[23]      ; |TOP|cont[23]               ; regout           ;
+; |TOP|cont[24]      ; |TOP|cont[24]               ; regout           ;
+; |TOP|cont[25]      ; |TOP|cont[25]               ; regout           ;
+; |TOP|cont[26]      ; |TOP|cont[26]               ; regout           ;
+; |TOP|cont[27]      ; |TOP|cont[27]               ; regout           ;
+; |TOP|cont[28]      ; |TOP|cont[28]               ; regout           ;
+; |TOP|cont[29]      ; |TOP|cont[29]               ; regout           ;
+; |TOP|cont[30]      ; |TOP|cont[30]               ; regout           ;
+; |TOP|cont[31]      ; |TOP|cont[31]               ; regout           ;
+; |TOP|b3            ; |TOP|b3~corein              ; combout          ;
+; |TOP|led           ; |TOP|led                    ; padio            ;
++--------------------+-----------------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II Simulator
+    Info: Version 9.1 Build 304 01/25/2010 Service Pack 1 SJ Web Edition
+    Info: Processing started: Wed Oct 14 03:04:30 2015
+Info: Command: quartus_sim --read_settings_files=on --write_settings_files=off PWM -c TOP
+Info: Using vector source file "C:/Users/Raul/Desktop/P5 RAUL E ITALO/SIMULATION.vwf"
+Info: Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info: Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Info: Simulation partitioned into 1 sub-simulations
+Info: Simulation coverage is      27.62 %
+Info: Number of transitions in simulation is 3254058
+Info: Quartus II Simulator was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 159 megabytes
+    Info: Processing ended: Wed Oct 14 03:05:24 2015
+    Info: Elapsed time: 00:00:54
+    Info: Total CPU time (on all processors): 00:00:55
+
+

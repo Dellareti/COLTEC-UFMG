@@ -1,0 +1,11 @@
+Fitter Status : Successful - Tue Oct 27 15:00:34 2015
+Quartus II Version : 9.1 Build 304 01/25/2010 SP 1 SJ Web Edition
+Revision Name : TOP
+Top-level Entity Name : TOP
+Family : MAX II
+Device : EPM1270F256C5
+Timing Models : Final
+Total logic elements : 189 / 1,270 ( 15 % )
+Total pins : 12 / 212 ( 6 % )
+Total virtual pins : 0
+UFM blocks : 0 / 1 ( 0 % )

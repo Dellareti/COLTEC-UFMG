@@ -1,0 +1,16 @@
+.data 
+.text
+
+somandoFeliz:
+
+ addi $s0,$a0,$a1   
+ sw $s0,0($sp)	
+j exit:
+
+main:
+
+ lw $t0,$a0,20   
+ lw $t1,$a1,22
+ jal somandoFeliz
+ 
+		

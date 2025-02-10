@@ -1,0 +1,39 @@
+Sistema FAT16
+
+File Allocation Table (tabela de alocação de arquivos), desenvolvido para utilização em conjunto com o DOS 1.0
+ em meados da década de 80 foi também utilizado pelo Windows 3x e pelas primeiras versões do Windows 95.
+
+Ele utiliza 16 bits para endereçamento de dados, por isso o nome FAT-16, sendo assim trabalha-se no máximo
+ com 65.526 posições diferentes. Os setores possuem tamanho de 512 bytes, sendo assim possível aceder 32 MB. 
+Trabalhar somente com discos de 32MB fica difícil, então a Microsoft passou a apontar conjuntos de setores, 
+ou seja os clusters, ao invés de apontar somente em setores.
+
+----------------------------------------------------------------------------------------------------------------
+Sistema Ext3
+
+EXT2 (Second Extended file system) é um sistema de arquivos para dispositivos de blocos (disco rígido, disquete
+, pen drive). Foi desenvolvido para o Linux por Rémy Card para substituir o Ext (Extended file system), que
+ também havia sido criado por Rémy Card.Ext2 foi projetado e implementado para corrigir as deficiências do Ext 
+e prover um sistema que respeitasse a semântica UNIX. A influência do UNIX pode ser vista, por exemplo, na 
+utilização de grupos de blocos, que são análogos aos grupos de cilindros utilizados pelo FFS 
+[CARD, TS'O & TWEEDIE, 1994]. A versão original do FFS originou o que é hoje conhecido como UFS1 
+(Unix File System 1) [MCKUSIC & NEVILLE-NEIL, 2005].
+
+
+----------------------------------------------------------------------------------------------------------------
+Sistema Ext3
+
+Ext3 (terceiro sistema de arquivo estendido) este é o sistema de arquivos padrão em quase todas as distribuições
+ Linux. Embora seja um sistema de arquivos muito estável com ferramentas disponíveis, há um grande problema:
+ Ext3 não é o melhor sistema de arquivos para lidar grande volume de arquivos em um disco. Também não é tão
+ mais rápido assim, use-o se você tem que escrever pequenos arquivos.
+----------------------------------------------------------------------------------------------------------------
+
+Sistema ReiserFS
+
+Desenvolvido por Hans Reiserd e patrocinado pelas empresas SuSe e Linspire. ReiserFS é um sistema de arquivos 
+muito avançado com grandes recursos. Esses recursos incluem “journaling”, indexação avançada, e muitos outros. 
+ReiserFS é particularmente forte se muitos arquivos pequenos têm que ser escritos. No entanto, há duas 
+desvantagens: seu principal desenvolvedor está actualmente a enfrentar uma serie de questões legais, e o 
+sistema de arquivos não é particularmente conhecido por sua estabilidade e apoio da comunidade activa. Use-o se
+ você deseja armazenar muitos arquivos em um diretório, mas certifique-se de fazer uma boa cópia de segurança.

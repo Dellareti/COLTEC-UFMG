@@ -1,0 +1,742 @@
+/*
+WARNING: Do NOT edit the input and output ports in this file in a text
+editor if you plan to continue editing the block that represents it in
+the Block Editor! File corruption is VERY likely to occur.
+*/
+
+/*
+Copyright (C) 1991-2010 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+*/
+
+HEADER
+{
+	VERSION = 1;
+	TIME_UNIT = ns;
+	PRINT_OPTIONS = "Print_options_version 6\
+range_start 0ps\
+range_end 500.0us\
+width 1\
+names_percentage 25\
+comments 1\
+grid_lines 1\
+time_bars 1\
+name_every_page 0\
+expand_groups 0\
+print_all 1\
+print_row_height 100";
+	DATA_OFFSET = 0.0;
+	DATA_DURATION = 2000000.0;
+	SIMULATION_TIME = 2000000.0;
+	GRID_PHASE = 0.0;
+	GRID_PERIOD = 10.0;
+	GRID_DUTY_CYCLE = 50;
+}
+
+SIGNAL("b2")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "";
+}
+
+SIGNAL("b3")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "";
+}
+
+SIGNAL("clk")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "";
+}
+
+SIGNAL("b1")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "";
+}
+
+SIGNAL("cooler")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "";
+}
+
+SIGNAL("led")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "";
+}
+
+TRANSITION_LIST("b2")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 386942.675;
+		LEVEL 1 FOR 347664.543;
+		LEVEL 0 FOR 624203.822;
+		LEVEL 1 FOR 640658.174;
+		LEVEL 0 FOR 530.786;
+	}
+}
+
+TRANSITION_LIST("b3")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 1 FOR 2000000.0;
+	}
+}
+
+TRANSITION_LIST("clk")
+{
+	NODE
+	{
+		REPEAT = 1;
+		NODE
+		{
+			REPEAT = 133333;
+			LEVEL 0 FOR 7.5;
+			LEVEL 1 FOR 7.5;
+		}
+		LEVEL 0 FOR 5.0;
+	}
+}
+
+TRANSITION_LIST("b1")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 1 FOR 5000.0;
+		LEVEL 0 FOR 5000.0;
+		NODE
+		{
+			REPEAT = 198;
+			LEVEL 1 FOR 5000.0;
+			LEVEL 0 FOR 5000.0;
+		}
+		LEVEL 1 FOR 5000.0;
+		LEVEL 0 FOR 5000.0;
+	}
+}
+
+TRANSITION_LIST("cooler")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 5402.075;
+		NODE
+		{
+			REPEAT = 11;
+			LEVEL 1 FOR 45.0;
+			LEVEL 0 FOR 855.0;
+		}
+		NODE
+		{
+			REPEAT = 11;
+			LEVEL 1 FOR 90.0;
+			LEVEL 0 FOR 810.0;
+		}
+		NODE
+		{
+			REPEAT = 11;
+			LEVEL 1 FOR 135.0;
+			LEVEL 0 FOR 765.0;
+		}
+		NODE
+		{
+			REPEAT = 11;
+			LEVEL 1 FOR 180.0;
+			LEVEL 0 FOR 720.0;
+		}
+		NODE
+		{
+			REPEAT = 11;
+			LEVEL 1 FOR 225.0;
+			LEVEL 0 FOR 675.0;
+		}
+		NODE
+		{
+			REPEAT = 11;
+			LEVEL 1 FOR 270.0;
+			LEVEL 0 FOR 630.0;
+		}
+		NODE
+		{
+			REPEAT = 12;
+			LEVEL 1 FOR 315.0;
+			LEVEL 0 FOR 585.0;
+		}
+		NODE
+		{
+			REPEAT = 11;
+			LEVEL 1 FOR 360.0;
+			LEVEL 0 FOR 540.0;
+		}
+		NODE
+		{
+			REPEAT = 11;
+			LEVEL 1 FOR 405.0;
+			LEVEL 0 FOR 495.0;
+		}
+		NODE
+		{
+			REPEAT = 11;
+			LEVEL 1 FOR 450.0;
+			LEVEL 0 FOR 450.0;
+		}
+		NODE
+		{
+			REPEAT = 11;
+			LEVEL 1 FOR 495.0;
+			LEVEL 0 FOR 405.0;
+		}
+		NODE
+		{
+			REPEAT = 11;
+			LEVEL 1 FOR 540.0;
+			LEVEL 0 FOR 360.0;
+		}
+		NODE
+		{
+			REPEAT = 11;
+			LEVEL 1 FOR 585.0;
+			LEVEL 0 FOR 315.0;
+		}
+		NODE
+		{
+			REPEAT = 11;
+			LEVEL 1 FOR 630.0;
+			LEVEL 0 FOR 270.0;
+		}
+		NODE
+		{
+			REPEAT = 11;
+			LEVEL 1 FOR 675.0;
+			LEVEL 0 FOR 225.0;
+		}
+		NODE
+		{
+			REPEAT = 11;
+			LEVEL 1 FOR 720.0;
+			LEVEL 0 FOR 180.0;
+		}
+		NODE
+		{
+			REPEAT = 11;
+			LEVEL 1 FOR 765.0;
+			LEVEL 0 FOR 135.0;
+		}
+		NODE
+		{
+			REPEAT = 11;
+			LEVEL 1 FOR 810.0;
+			LEVEL 0 FOR 90.0;
+		}
+		NODE
+		{
+			REPEAT = 11;
+			LEVEL 1 FOR 855.0;
+			LEVEL 0 FOR 45.0;
+		}
+		LEVEL 1 FOR 200655.0;
+		NODE
+		{
+			REPEAT = 11;
+			LEVEL 0 FOR 45.0;
+			LEVEL 1 FOR 855.0;
+		}
+		LEVEL 0 FOR 45.0;
+		NODE
+		{
+			REPEAT = 11;
+			LEVEL 1 FOR 810.0;
+			LEVEL 0 FOR 90.0;
+		}
+		NODE
+		{
+			REPEAT = 11;
+			LEVEL 1 FOR 765.0;
+			LEVEL 0 FOR 135.0;
+		}
+		NODE
+		{
+			REPEAT = 11;
+			LEVEL 1 FOR 720.0;
+			LEVEL 0 FOR 180.0;
+		}
+		NODE
+		{
+			REPEAT = 11;
+			LEVEL 1 FOR 675.0;
+			LEVEL 0 FOR 225.0;
+		}
+		NODE
+		{
+			REPEAT = 11;
+			LEVEL 1 FOR 630.0;
+			LEVEL 0 FOR 270.0;
+		}
+		NODE
+		{
+			REPEAT = 12;
+			LEVEL 1 FOR 585.0;
+			LEVEL 0 FOR 315.0;
+		}
+		NODE
+		{
+			REPEAT = 11;
+			LEVEL 1 FOR 540.0;
+			LEVEL 0 FOR 360.0;
+		}
+		NODE
+		{
+			REPEAT = 11;
+			LEVEL 1 FOR 495.0;
+			LEVEL 0 FOR 405.0;
+		}
+		NODE
+		{
+			REPEAT = 11;
+			LEVEL 1 FOR 450.0;
+			LEVEL 0 FOR 450.0;
+		}
+		NODE
+		{
+			REPEAT = 11;
+			LEVEL 1 FOR 405.0;
+			LEVEL 0 FOR 495.0;
+		}
+		NODE
+		{
+			REPEAT = 11;
+			LEVEL 1 FOR 360.0;
+			LEVEL 0 FOR 540.0;
+		}
+		NODE
+		{
+			REPEAT = 12;
+			LEVEL 1 FOR 315.0;
+			LEVEL 0 FOR 585.0;
+		}
+		NODE
+		{
+			REPEAT = 11;
+			LEVEL 1 FOR 270.0;
+			LEVEL 0 FOR 630.0;
+		}
+		NODE
+		{
+			REPEAT = 11;
+			LEVEL 1 FOR 225.0;
+			LEVEL 0 FOR 675.0;
+		}
+		NODE
+		{
+			REPEAT = 11;
+			LEVEL 1 FOR 180.0;
+			LEVEL 0 FOR 720.0;
+		}
+		NODE
+		{
+			REPEAT = 11;
+			LEVEL 1 FOR 135.0;
+			LEVEL 0 FOR 765.0;
+		}
+		NODE
+		{
+			REPEAT = 11;
+			LEVEL 1 FOR 90.0;
+			LEVEL 0 FOR 810.0;
+		}
+		NODE
+		{
+			REPEAT = 11;
+			LEVEL 1 FOR 45.0;
+			LEVEL 0 FOR 855.0;
+		}
+		LEVEL 1 FOR 150345.0;
+		NODE
+		{
+			REPEAT = 10;
+			LEVEL 0 FOR 855.0;
+			LEVEL 1 FOR 45.0;
+		}
+		LEVEL 0 FOR 855.0;
+		NODE
+		{
+			REPEAT = 11;
+			LEVEL 1 FOR 90.0;
+			LEVEL 0 FOR 810.0;
+		}
+		NODE
+		{
+			REPEAT = 11;
+			LEVEL 1 FOR 135.0;
+			LEVEL 0 FOR 765.0;
+		}
+		NODE
+		{
+			REPEAT = 11;
+			LEVEL 1 FOR 180.0;
+			LEVEL 0 FOR 720.0;
+		}
+		NODE
+		{
+			REPEAT = 12;
+			LEVEL 1 FOR 225.0;
+			LEVEL 0 FOR 675.0;
+		}
+		NODE
+		{
+			REPEAT = 11;
+			LEVEL 1 FOR 270.0;
+			LEVEL 0 FOR 630.0;
+		}
+		NODE
+		{
+			REPEAT = 11;
+			LEVEL 1 FOR 315.0;
+			LEVEL 0 FOR 585.0;
+		}
+		NODE
+		{
+			REPEAT = 11;
+			LEVEL 1 FOR 360.0;
+			LEVEL 0 FOR 540.0;
+		}
+		NODE
+		{
+			REPEAT = 11;
+			LEVEL 1 FOR 405.0;
+			LEVEL 0 FOR 495.0;
+		}
+		NODE
+		{
+			REPEAT = 11;
+			LEVEL 1 FOR 450.0;
+			LEVEL 0 FOR 450.0;
+		}
+		NODE
+		{
+			REPEAT = 11;
+			LEVEL 1 FOR 495.0;
+			LEVEL 0 FOR 405.0;
+		}
+		NODE
+		{
+			REPEAT = 11;
+			LEVEL 1 FOR 540.0;
+			LEVEL 0 FOR 360.0;
+		}
+		NODE
+		{
+			REPEAT = 11;
+			LEVEL 1 FOR 585.0;
+			LEVEL 0 FOR 315.0;
+		}
+		NODE
+		{
+			REPEAT = 11;
+			LEVEL 1 FOR 630.0;
+			LEVEL 0 FOR 270.0;
+		}
+		NODE
+		{
+			REPEAT = 11;
+			LEVEL 1 FOR 675.0;
+			LEVEL 0 FOR 225.0;
+		}
+		NODE
+		{
+			REPEAT = 11;
+			LEVEL 1 FOR 720.0;
+			LEVEL 0 FOR 180.0;
+		}
+		NODE
+		{
+			REPEAT = 11;
+			LEVEL 1 FOR 765.0;
+			LEVEL 0 FOR 135.0;
+		}
+		NODE
+		{
+			REPEAT = 11;
+			LEVEL 1 FOR 810.0;
+			LEVEL 0 FOR 90.0;
+		}
+		NODE
+		{
+			REPEAT = 11;
+			LEVEL 1 FOR 855.0;
+			LEVEL 0 FOR 45.0;
+		}
+		LEVEL 1 FOR 511155.0;
+		NODE
+		{
+			REPEAT = 10;
+			LEVEL 0 FOR 45.0;
+			LEVEL 1 FOR 855.0;
+		}
+		LEVEL 0 FOR 45.0;
+		NODE
+		{
+			REPEAT = 11;
+			LEVEL 1 FOR 810.0;
+			LEVEL 0 FOR 90.0;
+		}
+		NODE
+		{
+			REPEAT = 11;
+			LEVEL 1 FOR 765.0;
+			LEVEL 0 FOR 135.0;
+		}
+		LEVEL 1 FOR 1620.0;
+		NODE
+		{
+			REPEAT = 10;
+			LEVEL 0 FOR 180.0;
+			LEVEL 1 FOR 720.0;
+		}
+		LEVEL 0 FOR 180.0;
+		NODE
+		{
+			REPEAT = 11;
+			LEVEL 1 FOR 675.0;
+			LEVEL 0 FOR 225.0;
+		}
+		NODE
+		{
+			REPEAT = 11;
+			LEVEL 1 FOR 630.0;
+			LEVEL 0 FOR 270.0;
+		}
+		NODE
+		{
+			REPEAT = 11;
+			LEVEL 1 FOR 585.0;
+			LEVEL 0 FOR 315.0;
+		}
+		NODE
+		{
+			REPEAT = 11;
+			LEVEL 1 FOR 630.0;
+			LEVEL 0 FOR 270.0;
+		}
+		NODE
+		{
+			REPEAT = 11;
+			LEVEL 1 FOR 675.0;
+			LEVEL 0 FOR 225.0;
+		}
+		NODE
+		{
+			REPEAT = 11;
+			LEVEL 1 FOR 720.0;
+			LEVEL 0 FOR 180.0;
+		}
+		NODE
+		{
+			REPEAT = 11;
+			LEVEL 1 FOR 765.0;
+			LEVEL 0 FOR 135.0;
+		}
+		NODE
+		{
+			REPEAT = 11;
+			LEVEL 1 FOR 810.0;
+			LEVEL 0 FOR 90.0;
+		}
+		NODE
+		{
+			REPEAT = 11;
+			LEVEL 1 FOR 855.0;
+			LEVEL 0 FOR 45.0;
+		}
+		LEVEL 1 FOR 331155.0;
+		NODE
+		{
+			REPEAT = 10;
+			LEVEL 0 FOR 45.0;
+			LEVEL 1 FOR 855.0;
+		}
+		LEVEL 0 FOR 45.0;
+		NODE
+		{
+			REPEAT = 11;
+			LEVEL 1 FOR 810.0;
+			LEVEL 0 FOR 90.0;
+		}
+		NODE
+		{
+			REPEAT = 12;
+			LEVEL 1 FOR 765.0;
+			LEVEL 0 FOR 135.0;
+		}
+		NODE
+		{
+			REPEAT = 11;
+			LEVEL 1 FOR 720.0;
+			LEVEL 0 FOR 180.0;
+		}
+		NODE
+		{
+			REPEAT = 11;
+			LEVEL 1 FOR 675.0;
+			LEVEL 0 FOR 225.0;
+		}
+		NODE
+		{
+			REPEAT = 11;
+			LEVEL 1 FOR 630.0;
+			LEVEL 0 FOR 270.0;
+		}
+		NODE
+		{
+			REPEAT = 11;
+			LEVEL 1 FOR 585.0;
+			LEVEL 0 FOR 315.0;
+		}
+		NODE
+		{
+			REPEAT = 11;
+			LEVEL 1 FOR 540.0;
+			LEVEL 0 FOR 360.0;
+		}
+		NODE
+		{
+			REPEAT = 12;
+			LEVEL 1 FOR 495.0;
+			LEVEL 0 FOR 405.0;
+		}
+		NODE
+		{
+			REPEAT = 11;
+			LEVEL 1 FOR 450.0;
+			LEVEL 0 FOR 450.0;
+		}
+		NODE
+		{
+			REPEAT = 5;
+			LEVEL 1 FOR 405.0;
+			LEVEL 0 FOR 495.0;
+		}
+		LEVEL 1 FOR 197.925;
+	}
+}
+
+TRANSITION_LIST("led")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 2000000.0;
+	}
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "b1";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = ASCII;
+	TREE_INDEX = 0;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "b2";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 1;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "b3";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 2;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "clk";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 3;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "cooler";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = ASCII;
+	TREE_INDEX = 4;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "led";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = ASCII;
+	TREE_INDEX = 5;
+	TREE_LEVEL = 0;
+}
+
+TIME_BAR
+{
+	TIME = 0;
+	MASTER = TRUE;
+}
+
+TIME_BAR
+{
+	TIME = 0;
+	MASTER = TRUE;
+}
+;

@@ -1,0 +1,8 @@
+A)O tamanho da página é 2^12 (offset da página) bytes, ou 4KB.Significa o que vou andar na página, 2 elevado ao número do offset.
+
+B)O número de entradas na tabela virtual é igual a 2^20 (número da página virtual), ou ummilhão de entradas.2 elevado ao número 
+da página. 
+
+C)O espaço de endereço virtual é 2^32 bytes (endereço virtual), ou 4 GB, e o espaço deendereçamento   físico   é   2^30   bytes 
+  (endereço   físico),   que   permite   uma   memóriaprincipal de até 1 GB.2 elevado  a quantidade de bits do endereço virtual 
+para achar o espaço. 2 elevado  aquantidade de bits do endereço físico para achar o espaço.

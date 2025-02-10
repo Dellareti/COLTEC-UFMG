@@ -1,0 +1,24 @@
+	E/S Programada
+
+Os dados são transferidos entre o processador e o módulo de E/S;
+O processador executa um programa e tem controle direto da operação de E/S;
+Quando o processador envia um comando para o módulo de E/S, ele tem de esperar (ou verificar periodicamente o periférico) até 
+que essa operação seja concluída;
+
+
+	Acesso Direto à Memória
+
+No Acesso Direto à Memória (direct memory access – DMA) a transferência de dados entre o módulo de E/S e a memória principal é 
+feita diretamente sem envolver o processador;
+
+A técnica de acesso direto à memória envolve um módulo adicional no barramento do sistema, o controlador de DMA;
+O controlador de DMA é capaz de imitar o processador e, de
+fato, controlar o sistema do processador.
+
+O módulo de DMA pode usar o barramento tanto quando este não está sendo usado pelo processador bem como para forçar o processador
+ a suspender sua operação;
+
+ *Essa última técnica é conhecida como roubo de ciclo, porque o módulo de DMA de fato rouba um ciclo de
+barramento do processador.
+ 
+ 

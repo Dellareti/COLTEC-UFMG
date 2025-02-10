@@ -1,0 +1,33 @@
+Estados de processos
+
+Estados possíveis para um processo, e seus relacionamentos entre si.
+
+
+* Não-Submetido
+
+É o processo que ainda não está submetido a CPU, está nas mãos do usuário." Até onde interessa ao sistemas ele não existe, porque o usuário ainda não o submeteu. Ele é simplesmente apresentado como sendo o primeiro passo na vida de um processo. O Sistema Operacional, naturalmente, não reconhece esse estado".Pode por exemplo, ser um arquivo executável que está armazenado no HD.
+
+
+
+* Suspenso
+
+É o processo que já foi submetido, porém permanece suspenso até que o horário ou evento programado ao usuário venha acontecer. Processo suspenso é aquele que esta no aguarde de uma entrada de dados.
+
+
+
+* Pronto
+
+O processo já foi submetido e está pronto para receber a CPU, porém ainda aguarda o escalonador de processos para ter controle da CPU. Processos que estão esperando E/S não se aplicam a esse estado.
+
+
+
+* Executando
+
+A execução propriamente dita. O código está sendo processado. Se ocorrer durante a execução uma requisição de E/S o processo é colocado no estado de espera e outro processo da fila de prontos poderá então concorrer a CPU.
+
+
+* Espera
+
+É o processo que foi colocado na fila de espera de E/S devido ao processador de E/S ser mais lento que a CPU principal. O processo tornaria a CPU mais escrava dele se não houvesse esse estado, pois como ele não está concorrendo à CPU ao executar um E/S, pode-se então colocá-lo no estado de espera para que os demais processos do estado pronto possam concorrer a CPU.
+
+Ex: parte de um código em C

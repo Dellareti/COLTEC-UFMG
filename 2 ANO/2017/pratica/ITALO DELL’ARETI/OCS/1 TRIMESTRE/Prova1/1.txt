@@ -1,0 +1,19 @@
+
+Tempo B = tempo de clock * (n instruções * CPI) 
+Tempo B = tempo de clock *   0,75 (n instruções * (1,3*CPI))		
+
+Tempo B = 97,5% do tempo original.
+
+
+Tempo S
+
+25% do programa (parte da coleta) reduz em 50% o tempo.
+12,5% do programa passa ser considerado, no total de 87,5%.
+
+Tempo S = tempo de clock *87,5% (n instruções * (1,2*CPI)) 
+
+Tempo S = 105% do tempo original.
+
+
+
+A opção B venceria, já que terá um desempenho melhor, e consumirá apenas 97,5% do tempo original que o programa gastaria, além de que a opção S apenas diminuiria o desempenho original.

@@ -1,0 +1,1054 @@
+Simulator report for TOP
+Mon Sep 28 19:08:07 2015
+Quartus II Version 9.1 Build 304 01/25/2010 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. Coverage Summary
+  6. Complete 1/0-Value Coverage
+  7. Missing 1-Value Coverage
+  8. Missing 0-Value Coverage
+  9. Simulator INI Usage
+ 10. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2010 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++---------------------------------------------+
+; Simulator Summary                           ;
++-----------------------------+---------------+
+; Type                        ; Value         ;
++-----------------------------+---------------+
+; Simulation Start Time       ; 0 ps          ;
+; Simulation End Time         ; 1.0 ms        ;
+; Simulation Netlist Size     ; 326 nodes     ;
+; Simulation Coverage         ;      25.49 %  ;
+; Total Number of Transitions ; 1508252       ;
+; Simulation Breakpoints      ; 0             ;
+; Family                      ; MAX II        ;
+; Device                      ; EPM1270F256C5 ;
++-----------------------------+---------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                      ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Option                                                                                     ; Setting    ; Default Value ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Simulation mode                                                                            ; Timing     ; Timing        ;
+; Start time                                                                                 ; 0 ns       ; 0 ns          ;
+; Simulation results format                                                                  ; CVWF       ;               ;
+; Vector input source                                                                        ; FINAL.vwf  ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On         ; On            ;
+; Check outputs                                                                              ; Off        ; Off           ;
+; Report simulation coverage                                                                 ; On         ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On         ; On            ;
+; Display missing 1-value coverage report                                                    ; On         ; On            ;
+; Display missing 0-value coverage report                                                    ; On         ; On            ;
+; Detect setup and hold time violations                                                      ; Off        ; Off           ;
+; Detect glitches                                                                            ; Off        ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off        ; Off           ;
+; Generate Signal Activity File                                                              ; Off        ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off        ; Off           ;
+; Group bus channels in simulation results                                                   ; Off        ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On         ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off        ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; Off        ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto       ; Auto          ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II to view the waveform report data.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;      25.49 % ;
+; Total nodes checked                                 ; 326          ;
+; Total output ports checked                          ; 510          ;
+; Total output ports with complete 1/0-value coverage ; 130          ;
+; Total output ports with no 1/0-value coverage       ; 375          ;
+; Total output ports with no 1-value coverage         ; 376          ;
+; Total output ports with no 0-value coverage         ; 379          ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++-------------------------------------------------------------------------------------------------------------------+
+; Complete 1/0-Value Coverage                                                                                       ;
++---------------------------------------------+--------------------------------------------------+------------------+
+; Node Name                                   ; Output Port Name                                 ; Output Port Type ;
++---------------------------------------------+--------------------------------------------------+------------------+
+; |TOP|libertacao:l1|led                      ; |TOP|libertacao:l1|led                           ; regout           ;
+; |TOP|libertacao:l1|Add1~0                   ; |TOP|libertacao:l1|Add1~0                        ; combout          ;
+; |TOP|libertacao:l1|Add1~0                   ; |TOP|libertacao:l1|Add1~2                        ; cout             ;
+; |TOP|libertacao:l1|Add1~5                   ; |TOP|libertacao:l1|Add1~5                        ; combout          ;
+; |TOP|libertacao:l1|Add1~5                   ; |TOP|libertacao:l1|Add1~7COUT1_186               ; cout1            ;
+; |TOP|libertacao:l1|Add1~10                  ; |TOP|libertacao:l1|Add1~10                       ; combout          ;
+; |TOP|libertacao:l1|Add1~10                  ; |TOP|libertacao:l1|Add1~12COUT1_188              ; cout1            ;
+; |TOP|libertacao:l1|Add1~15                  ; |TOP|libertacao:l1|Add1~15                       ; combout          ;
+; |TOP|libertacao:l1|Add1~15                  ; |TOP|libertacao:l1|Add1~17COUT1_190              ; cout1            ;
+; |TOP|libertacao:l1|Equal1~0                 ; |TOP|libertacao:l1|Equal1~0                      ; combout          ;
+; |TOP|libertacao:l1|Add1~20                  ; |TOP|libertacao:l1|Add1~20                       ; combout          ;
+; |TOP|libertacao:l1|Add1~20                  ; |TOP|libertacao:l1|Add1~22COUT1_192              ; cout1            ;
+; |TOP|libertacao:l1|Add1~25                  ; |TOP|libertacao:l1|Add1~25                       ; combout          ;
+; |TOP|libertacao:l1|Add1~25                  ; |TOP|libertacao:l1|Add1~27                       ; cout0            ;
+; |TOP|libertacao:l1|Add1~30                  ; |TOP|libertacao:l1|Add1~30                       ; combout          ;
+; |TOP|libertacao:l1|Add1~30                  ; |TOP|libertacao:l1|Add1~32                       ; cout             ;
+; |TOP|libertacao:l1|Add1~35                  ; |TOP|libertacao:l1|Add1~35                       ; combout          ;
+; |TOP|libertacao:l1|Add1~35                  ; |TOP|libertacao:l1|Add1~37                       ; cout0            ;
+; |TOP|libertacao:l1|Equal1~1                 ; |TOP|libertacao:l1|Equal1~1                      ; combout          ;
+; |TOP|libertacao:l1|Add1~40                  ; |TOP|libertacao:l1|Add1~40                       ; combout          ;
+; |TOP|libertacao:l1|Add1~40                  ; |TOP|libertacao:l1|Add1~42                       ; cout0            ;
+; |TOP|libertacao:l1|Add1~45                  ; |TOP|libertacao:l1|Add1~45                       ; combout          ;
+; |TOP|libertacao:l1|Add1~45                  ; |TOP|libertacao:l1|Add1~47                       ; cout0            ;
+; |TOP|libertacao:l1|Add1~50                  ; |TOP|libertacao:l1|Add1~50                       ; combout          ;
+; |TOP|libertacao:l1|Add1~50                  ; |TOP|libertacao:l1|Add1~52                       ; cout             ;
+; |TOP|libertacao:l1|Add1~55                  ; |TOP|libertacao:l1|Add1~55                       ; combout          ;
+; |TOP|libertacao:l1|Add1~55                  ; |TOP|libertacao:l1|Add1~57COUT1_202              ; cout1            ;
+; |TOP|libertacao:l1|Equal1~2                 ; |TOP|libertacao:l1|Equal1~2                      ; combout          ;
+; |TOP|libertacao:l1|Add1~60                  ; |TOP|libertacao:l1|Add1~60                       ; combout          ;
+; |TOP|libertacao:l1|Add1~60                  ; |TOP|libertacao:l1|Add1~62COUT1_204              ; cout1            ;
+; |TOP|libertacao:l1|Add1~65                  ; |TOP|libertacao:l1|Add1~65                       ; combout          ;
+; |TOP|libertacao:l1|Add1~70                  ; |TOP|libertacao:l1|Add1~70                       ; combout          ;
+; |TOP|libertacao:l1|Add1~70                  ; |TOP|libertacao:l1|Add1~72COUT1_206              ; cout1            ;
+; |TOP|libertacao:l1|Add1~75                  ; |TOP|libertacao:l1|Add1~75                       ; combout          ;
+; |TOP|libertacao:l1|Add1~75                  ; |TOP|libertacao:l1|Add1~77COUT1_208              ; cout1            ;
+; |TOP|libertacao:l1|contagem[0]              ; |TOP|libertacao:l1|contagem[0]                   ; regout           ;
+; |TOP|libertacao:l2|Add1~0                   ; |TOP|libertacao:l2|Add1~0                        ; combout          ;
+; |TOP|libertacao:l2|Add1~0                   ; |TOP|libertacao:l2|Add1~2                        ; cout             ;
+; |TOP|libertacao:l2|Add1~5                   ; |TOP|libertacao:l2|Add1~5                        ; combout          ;
+; |TOP|libertacao:l2|Add1~5                   ; |TOP|libertacao:l2|Add1~7COUT1_186               ; cout1            ;
+; |TOP|libertacao:l2|Add1~10                  ; |TOP|libertacao:l2|Add1~10                       ; combout          ;
+; |TOP|libertacao:l2|Add1~10                  ; |TOP|libertacao:l2|Add1~12COUT1_188              ; cout1            ;
+; |TOP|libertacao:l2|Add1~15                  ; |TOP|libertacao:l2|Add1~15                       ; combout          ;
+; |TOP|libertacao:l2|Add1~15                  ; |TOP|libertacao:l2|Add1~17COUT1_190              ; cout1            ;
+; |TOP|libertacao:l2|Equal1~0                 ; |TOP|libertacao:l2|Equal1~0                      ; combout          ;
+; |TOP|libertacao:l2|Add1~20                  ; |TOP|libertacao:l2|Add1~20                       ; combout          ;
+; |TOP|libertacao:l2|Add1~20                  ; |TOP|libertacao:l2|Add1~22COUT1_192              ; cout1            ;
+; |TOP|libertacao:l2|Add1~25                  ; |TOP|libertacao:l2|Add1~25                       ; combout          ;
+; |TOP|libertacao:l2|Add1~25                  ; |TOP|libertacao:l2|Add1~27                       ; cout0            ;
+; |TOP|libertacao:l2|Add1~30                  ; |TOP|libertacao:l2|Add1~30                       ; combout          ;
+; |TOP|libertacao:l2|Add1~30                  ; |TOP|libertacao:l2|Add1~32                       ; cout             ;
+; |TOP|libertacao:l2|Add1~35                  ; |TOP|libertacao:l2|Add1~35                       ; combout          ;
+; |TOP|libertacao:l2|Add1~35                  ; |TOP|libertacao:l2|Add1~37                       ; cout0            ;
+; |TOP|libertacao:l2|Equal1~1                 ; |TOP|libertacao:l2|Equal1~1                      ; combout          ;
+; |TOP|libertacao:l2|Add1~40                  ; |TOP|libertacao:l2|Add1~40                       ; combout          ;
+; |TOP|libertacao:l2|Add1~40                  ; |TOP|libertacao:l2|Add1~42                       ; cout0            ;
+; |TOP|libertacao:l2|Add1~45                  ; |TOP|libertacao:l2|Add1~45                       ; combout          ;
+; |TOP|libertacao:l2|Add1~45                  ; |TOP|libertacao:l2|Add1~47                       ; cout0            ;
+; |TOP|libertacao:l2|Add1~50                  ; |TOP|libertacao:l2|Add1~50                       ; combout          ;
+; |TOP|libertacao:l2|Add1~50                  ; |TOP|libertacao:l2|Add1~52                       ; cout             ;
+; |TOP|libertacao:l2|Add1~55                  ; |TOP|libertacao:l2|Add1~55                       ; combout          ;
+; |TOP|libertacao:l2|Add1~55                  ; |TOP|libertacao:l2|Add1~57COUT1_202              ; cout1            ;
+; |TOP|libertacao:l2|Equal1~2                 ; |TOP|libertacao:l2|Equal1~2                      ; combout          ;
+; |TOP|libertacao:l2|Add1~60                  ; |TOP|libertacao:l2|Add1~60                       ; combout          ;
+; |TOP|libertacao:l2|Add1~60                  ; |TOP|libertacao:l2|Add1~62COUT1_204              ; cout1            ;
+; |TOP|libertacao:l2|Add1~65                  ; |TOP|libertacao:l2|Add1~65                       ; combout          ;
+; |TOP|libertacao:l2|Add1~65                  ; |TOP|libertacao:l2|Add1~67                       ; cout             ;
+; |TOP|libertacao:l2|Add1~70                  ; |TOP|libertacao:l2|Add1~70                       ; combout          ;
+; |TOP|libertacao:l2|Add1~70                  ; |TOP|libertacao:l2|Add1~72COUT1_206              ; cout1            ;
+; |TOP|libertacao:l2|Add1~75                  ; |TOP|libertacao:l2|Add1~75                       ; combout          ;
+; |TOP|libertacao:l2|Add1~75                  ; |TOP|libertacao:l2|Add1~77COUT1_208              ; cout1            ;
+; |TOP|libertacao:l2|Equal1~3                 ; |TOP|libertacao:l2|Equal1~3                      ; combout          ;
+; |TOP|libertacao:l2|Add1~90                  ; |TOP|libertacao:l2|Add1~90                       ; combout          ;
+; |TOP|libertacao:l1|count[0]                 ; |TOP|libertacao:l1|count[0]                      ; regout           ;
+; |TOP|libertacao:l1|count[1]                 ; |TOP|libertacao:l1|count[1]                      ; regout           ;
+; |TOP|libertacao:l1|count[2]                 ; |TOP|libertacao:l1|count[2]                      ; regout           ;
+; |TOP|libertacao:l1|count[3]                 ; |TOP|libertacao:l1|count[3]                      ; regout           ;
+; |TOP|libertacao:l1|count[4]                 ; |TOP|libertacao:l1|count[4]                      ; regout           ;
+; |TOP|libertacao:l1|count[6]                 ; |TOP|libertacao:l1|count[6]                      ; regout           ;
+; |TOP|libertacao:l1|count[5]                 ; |TOP|libertacao:l1|count[5]                      ; regout           ;
+; |TOP|libertacao:l1|count[7]                 ; |TOP|libertacao:l1|count[7]                      ; regout           ;
+; |TOP|libertacao:l1|count[8]                 ; |TOP|libertacao:l1|count[8]                      ; regout           ;
+; |TOP|libertacao:l1|count[9]                 ; |TOP|libertacao:l1|count[9]                      ; regout           ;
+; |TOP|libertacao:l1|count[10]                ; |TOP|libertacao:l1|count[10]                     ; regout           ;
+; |TOP|libertacao:l1|count[11]                ; |TOP|libertacao:l1|count[11]                     ; regout           ;
+; |TOP|libertacao:l1|count[12]                ; |TOP|libertacao:l1|count[12]                     ; regout           ;
+; |TOP|libertacao:l1|count[13]                ; |TOP|libertacao:l1|count[13]                     ; regout           ;
+; |TOP|libertacao:l1|count[14]                ; |TOP|libertacao:l1|count[14]                     ; regout           ;
+; |TOP|MAQUINA_DE_ESTADOS:FILTRO|saida        ; |TOP|MAQUINA_DE_ESTADOS:FILTRO|saida             ; regout           ;
+; |TOP|libertacao:l2|count[0]                 ; |TOP|libertacao:l2|count[0]                      ; regout           ;
+; |TOP|libertacao:l2|count[1]                 ; |TOP|libertacao:l2|count[1]                      ; regout           ;
+; |TOP|libertacao:l2|count[2]                 ; |TOP|libertacao:l2|count[2]                      ; regout           ;
+; |TOP|libertacao:l2|count[3]                 ; |TOP|libertacao:l2|count[3]                      ; regout           ;
+; |TOP|libertacao:l2|count[4]                 ; |TOP|libertacao:l2|count[4]                      ; regout           ;
+; |TOP|libertacao:l2|count[6]                 ; |TOP|libertacao:l2|count[6]                      ; regout           ;
+; |TOP|libertacao:l2|count[5]                 ; |TOP|libertacao:l2|count[5]                      ; regout           ;
+; |TOP|libertacao:l2|count[7]                 ; |TOP|libertacao:l2|count[7]                      ; regout           ;
+; |TOP|libertacao:l2|count[8]                 ; |TOP|libertacao:l2|count[8]                      ; regout           ;
+; |TOP|libertacao:l2|count[9]                 ; |TOP|libertacao:l2|count[9]                      ; regout           ;
+; |TOP|libertacao:l2|count[10]                ; |TOP|libertacao:l2|count[10]                     ; regout           ;
+; |TOP|libertacao:l2|count[11]                ; |TOP|libertacao:l2|count[11]                     ; regout           ;
+; |TOP|libertacao:l2|count[12]                ; |TOP|libertacao:l2|count[12]                     ; regout           ;
+; |TOP|libertacao:l2|count[13]                ; |TOP|libertacao:l2|count[13]                     ; regout           ;
+; |TOP|libertacao:l2|count[14]                ; |TOP|libertacao:l2|count[14]                     ; regout           ;
+; |TOP|MAQUINA_DE_ESTADOS:FILTRO|saida~0      ; |TOP|MAQUINA_DE_ESTADOS:FILTRO|saida~0           ; combout          ;
+; |TOP|MAQUINA_DE_ESTADOS:FILTRO|shift_reg[5] ; |TOP|MAQUINA_DE_ESTADOS:FILTRO|shift_reg[5]      ; regout           ;
+; |TOP|MAQUINA_DE_ESTADOS:FILTRO|shift_reg[7] ; |TOP|MAQUINA_DE_ESTADOS:FILTRO|shift_reg[7]      ; regout           ;
+; |TOP|MAQUINA_DE_ESTADOS:FILTRO|saida~1      ; |TOP|MAQUINA_DE_ESTADOS:FILTRO|saida~1           ; combout          ;
+; |TOP|MAQUINA_DE_ESTADOS:FILTRO|shift_reg[1] ; |TOP|MAQUINA_DE_ESTADOS:FILTRO|shift_reg[1]      ; regout           ;
+; |TOP|MAQUINA_DE_ESTADOS:FILTRO|shift_reg[2] ; |TOP|MAQUINA_DE_ESTADOS:FILTRO|shift_reg[2]      ; regout           ;
+; |TOP|MAQUINA_DE_ESTADOS:FILTRO|saida~2      ; |TOP|MAQUINA_DE_ESTADOS:FILTRO|saida~2           ; combout          ;
+; |TOP|MAQUINA_DE_ESTADOS:FILTRO|state        ; |TOP|MAQUINA_DE_ESTADOS:FILTRO|state             ; regout           ;
+; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Equal0~0     ; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Equal0~0          ; combout          ;
+; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Equal0~1     ; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Equal0~1          ; combout          ;
+; |TOP|MAQUINA_DE_ESTADOS:FILTRO|LessThan0~9  ; |TOP|MAQUINA_DE_ESTADOS:FILTRO|LessThan0~9       ; combout          ;
+; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~0       ; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~0            ; combout          ;
+; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~0       ; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~2            ; cout             ;
+; |TOP|MAQUINA_DE_ESTADOS:FILTRO|cont[0]~0    ; |TOP|MAQUINA_DE_ESTADOS:FILTRO|cont[0]~0         ; combout          ;
+; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~10      ; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~10           ; combout          ;
+; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~140     ; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~140          ; combout          ;
+; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~140     ; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~142COUT1_186 ; cout1            ;
+; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~145     ; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~145          ; combout          ;
+; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~145     ; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~147COUT1_188 ; cout1            ;
+; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~150     ; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~150          ; combout          ;
+; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~150     ; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~152COUT1_190 ; cout1            ;
+; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~155     ; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~155          ; combout          ;
+; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~155     ; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~157COUT1_192 ; cout1            ;
+; |TOP|clk                                    ; |TOP|clk~corein                                  ; combout          ;
+; |TOP|btn                                    ; |TOP|btn~corein                                  ; combout          ;
+; |TOP|s1                                     ; |TOP|s1                                          ; padio            ;
++---------------------------------------------+--------------------------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++------------------------------------------------------------------------------------------------------------------+
+; Missing 1-Value Coverage                                                                                         ;
++--------------------------------------------+--------------------------------------------------+------------------+
+; Node Name                                  ; Output Port Name                                 ; Output Port Type ;
++--------------------------------------------+--------------------------------------------------+------------------+
+; |TOP|libertacao:l3|led                     ; |TOP|libertacao:l3|led                           ; regout           ;
+; |TOP|libertacao:l1|Add1~5                  ; |TOP|libertacao:l1|Add1~7                        ; cout0            ;
+; |TOP|libertacao:l1|Add1~10                 ; |TOP|libertacao:l1|Add1~12                       ; cout0            ;
+; |TOP|libertacao:l1|Add1~15                 ; |TOP|libertacao:l1|Add1~17                       ; cout0            ;
+; |TOP|libertacao:l1|Add1~20                 ; |TOP|libertacao:l1|Add1~22                       ; cout0            ;
+; |TOP|libertacao:l1|Add1~25                 ; |TOP|libertacao:l1|Add1~27COUT1_194              ; cout1            ;
+; |TOP|libertacao:l1|Add1~35                 ; |TOP|libertacao:l1|Add1~37COUT1_196              ; cout1            ;
+; |TOP|libertacao:l1|Add1~40                 ; |TOP|libertacao:l1|Add1~42COUT1_198              ; cout1            ;
+; |TOP|libertacao:l1|Add1~45                 ; |TOP|libertacao:l1|Add1~47COUT1_200              ; cout1            ;
+; |TOP|libertacao:l1|Add1~55                 ; |TOP|libertacao:l1|Add1~57                       ; cout0            ;
+; |TOP|libertacao:l1|Add1~60                 ; |TOP|libertacao:l1|Add1~62                       ; cout0            ;
+; |TOP|libertacao:l1|Add1~65                 ; |TOP|libertacao:l1|Add1~67                       ; cout             ;
+; |TOP|libertacao:l1|Add1~70                 ; |TOP|libertacao:l1|Add1~72                       ; cout0            ;
+; |TOP|libertacao:l1|Add1~75                 ; |TOP|libertacao:l1|Add1~77                       ; cout0            ;
+; |TOP|libertacao:l1|Equal1~3                ; |TOP|libertacao:l1|Equal1~3                      ; combout          ;
+; |TOP|libertacao:l1|Equal1~4                ; |TOP|libertacao:l1|Equal1~4                      ; combout          ;
+; |TOP|libertacao:l1|Add1~80                 ; |TOP|libertacao:l1|Add1~80                       ; combout          ;
+; |TOP|libertacao:l1|Add1~80                 ; |TOP|libertacao:l1|Add1~82                       ; cout0            ;
+; |TOP|libertacao:l1|Add1~80                 ; |TOP|libertacao:l1|Add1~82COUT1_214              ; cout1            ;
+; |TOP|libertacao:l1|Add1~85                 ; |TOP|libertacao:l1|Add1~85                       ; combout          ;
+; |TOP|libertacao:l1|Add1~85                 ; |TOP|libertacao:l1|Add1~87                       ; cout0            ;
+; |TOP|libertacao:l1|Add1~85                 ; |TOP|libertacao:l1|Add1~87COUT1_216              ; cout1            ;
+; |TOP|libertacao:l1|Add1~90                 ; |TOP|libertacao:l1|Add1~90                       ; combout          ;
+; |TOP|libertacao:l1|Add1~90                 ; |TOP|libertacao:l1|Add1~92                       ; cout0            ;
+; |TOP|libertacao:l1|Add1~90                 ; |TOP|libertacao:l1|Add1~92COUT1_210              ; cout1            ;
+; |TOP|libertacao:l1|Add1~95                 ; |TOP|libertacao:l1|Add1~95                       ; combout          ;
+; |TOP|libertacao:l1|Add1~95                 ; |TOP|libertacao:l1|Add1~97                       ; cout0            ;
+; |TOP|libertacao:l1|Add1~95                 ; |TOP|libertacao:l1|Add1~97COUT1_212              ; cout1            ;
+; |TOP|libertacao:l1|Equal1~5                ; |TOP|libertacao:l1|Equal1~5                      ; combout          ;
+; |TOP|libertacao:l1|Add1~100                ; |TOP|libertacao:l1|Add1~100                      ; combout          ;
+; |TOP|libertacao:l1|Add1~100                ; |TOP|libertacao:l1|Add1~102                      ; cout             ;
+; |TOP|libertacao:l1|Add1~105                ; |TOP|libertacao:l1|Add1~105                      ; combout          ;
+; |TOP|libertacao:l1|Add1~105                ; |TOP|libertacao:l1|Add1~107                      ; cout0            ;
+; |TOP|libertacao:l1|Add1~105                ; |TOP|libertacao:l1|Add1~107COUT1_218             ; cout1            ;
+; |TOP|libertacao:l1|Add1~110                ; |TOP|libertacao:l1|Add1~110                      ; combout          ;
+; |TOP|libertacao:l1|Add1~110                ; |TOP|libertacao:l1|Add1~112                      ; cout0            ;
+; |TOP|libertacao:l1|Add1~110                ; |TOP|libertacao:l1|Add1~112COUT1_220             ; cout1            ;
+; |TOP|libertacao:l1|Add1~115                ; |TOP|libertacao:l1|Add1~115                      ; combout          ;
+; |TOP|libertacao:l1|Add1~115                ; |TOP|libertacao:l1|Add1~117                      ; cout0            ;
+; |TOP|libertacao:l1|Add1~115                ; |TOP|libertacao:l1|Add1~117COUT1_222             ; cout1            ;
+; |TOP|libertacao:l1|Equal1~6                ; |TOP|libertacao:l1|Equal1~6                      ; combout          ;
+; |TOP|libertacao:l1|Add1~120                ; |TOP|libertacao:l1|Add1~120                      ; combout          ;
+; |TOP|libertacao:l1|Add1~120                ; |TOP|libertacao:l1|Add1~122                      ; cout0            ;
+; |TOP|libertacao:l1|Add1~120                ; |TOP|libertacao:l1|Add1~122COUT1_224             ; cout1            ;
+; |TOP|libertacao:l1|Add1~125                ; |TOP|libertacao:l1|Add1~125                      ; combout          ;
+; |TOP|libertacao:l1|Add1~125                ; |TOP|libertacao:l1|Add1~127                      ; cout             ;
+; |TOP|libertacao:l1|Add1~130                ; |TOP|libertacao:l1|Add1~130                      ; combout          ;
+; |TOP|libertacao:l1|Add1~130                ; |TOP|libertacao:l1|Add1~132                      ; cout0            ;
+; |TOP|libertacao:l1|Add1~130                ; |TOP|libertacao:l1|Add1~132COUT1_226             ; cout1            ;
+; |TOP|libertacao:l1|Add1~135                ; |TOP|libertacao:l1|Add1~135                      ; combout          ;
+; |TOP|libertacao:l1|Add1~135                ; |TOP|libertacao:l1|Add1~137                      ; cout0            ;
+; |TOP|libertacao:l1|Add1~135                ; |TOP|libertacao:l1|Add1~137COUT1_228             ; cout1            ;
+; |TOP|libertacao:l1|Equal1~7                ; |TOP|libertacao:l1|Equal1~7                      ; combout          ;
+; |TOP|libertacao:l1|Add1~140                ; |TOP|libertacao:l1|Add1~140                      ; combout          ;
+; |TOP|libertacao:l1|Add1~140                ; |TOP|libertacao:l1|Add1~142                      ; cout0            ;
+; |TOP|libertacao:l1|Add1~140                ; |TOP|libertacao:l1|Add1~142COUT1_230             ; cout1            ;
+; |TOP|libertacao:l1|Add1~145                ; |TOP|libertacao:l1|Add1~145                      ; combout          ;
+; |TOP|libertacao:l1|Add1~145                ; |TOP|libertacao:l1|Add1~147                      ; cout0            ;
+; |TOP|libertacao:l1|Add1~145                ; |TOP|libertacao:l1|Add1~147COUT1_232             ; cout1            ;
+; |TOP|libertacao:l1|Add1~150                ; |TOP|libertacao:l1|Add1~150                      ; combout          ;
+; |TOP|libertacao:l1|Add1~150                ; |TOP|libertacao:l1|Add1~152                      ; cout             ;
+; |TOP|libertacao:l1|Add1~155                ; |TOP|libertacao:l1|Add1~155                      ; combout          ;
+; |TOP|libertacao:l1|Equal1~8                ; |TOP|libertacao:l1|Equal1~8                      ; combout          ;
+; |TOP|libertacao:l1|Equal1~9                ; |TOP|libertacao:l1|Equal1~9                      ; combout          ;
+; |TOP|libertacao:l1|x                       ; |TOP|libertacao:l1|x~0                           ; combout          ;
+; |TOP|libertacao:l2|Add1~5                  ; |TOP|libertacao:l2|Add1~7                        ; cout0            ;
+; |TOP|libertacao:l2|Add1~10                 ; |TOP|libertacao:l2|Add1~12                       ; cout0            ;
+; |TOP|libertacao:l2|Add1~15                 ; |TOP|libertacao:l2|Add1~17                       ; cout0            ;
+; |TOP|libertacao:l2|Add1~20                 ; |TOP|libertacao:l2|Add1~22                       ; cout0            ;
+; |TOP|libertacao:l2|Add1~25                 ; |TOP|libertacao:l2|Add1~27COUT1_194              ; cout1            ;
+; |TOP|libertacao:l2|Add1~35                 ; |TOP|libertacao:l2|Add1~37COUT1_196              ; cout1            ;
+; |TOP|libertacao:l2|Add1~40                 ; |TOP|libertacao:l2|Add1~42COUT1_198              ; cout1            ;
+; |TOP|libertacao:l2|Add1~45                 ; |TOP|libertacao:l2|Add1~47COUT1_200              ; cout1            ;
+; |TOP|libertacao:l2|Add1~55                 ; |TOP|libertacao:l2|Add1~57                       ; cout0            ;
+; |TOP|libertacao:l2|Add1~60                 ; |TOP|libertacao:l2|Add1~62                       ; cout0            ;
+; |TOP|libertacao:l2|Add1~70                 ; |TOP|libertacao:l2|Add1~72                       ; cout0            ;
+; |TOP|libertacao:l2|Add1~75                 ; |TOP|libertacao:l2|Add1~77                       ; cout0            ;
+; |TOP|libertacao:l2|Equal1~4                ; |TOP|libertacao:l2|Equal1~4                      ; combout          ;
+; |TOP|libertacao:l2|Add1~80                 ; |TOP|libertacao:l2|Add1~80                       ; combout          ;
+; |TOP|libertacao:l2|Add1~80                 ; |TOP|libertacao:l2|Add1~82                       ; cout0            ;
+; |TOP|libertacao:l2|Add1~80                 ; |TOP|libertacao:l2|Add1~82COUT1_214              ; cout1            ;
+; |TOP|libertacao:l2|Add1~85                 ; |TOP|libertacao:l2|Add1~85                       ; combout          ;
+; |TOP|libertacao:l2|Add1~85                 ; |TOP|libertacao:l2|Add1~87                       ; cout0            ;
+; |TOP|libertacao:l2|Add1~85                 ; |TOP|libertacao:l2|Add1~87COUT1_216              ; cout1            ;
+; |TOP|libertacao:l2|Add1~90                 ; |TOP|libertacao:l2|Add1~92                       ; cout0            ;
+; |TOP|libertacao:l2|Add1~90                 ; |TOP|libertacao:l2|Add1~92COUT1_210              ; cout1            ;
+; |TOP|libertacao:l2|Add1~95                 ; |TOP|libertacao:l2|Add1~95                       ; combout          ;
+; |TOP|libertacao:l2|Add1~95                 ; |TOP|libertacao:l2|Add1~97                       ; cout0            ;
+; |TOP|libertacao:l2|Add1~95                 ; |TOP|libertacao:l2|Add1~97COUT1_212              ; cout1            ;
+; |TOP|libertacao:l2|Equal1~5                ; |TOP|libertacao:l2|Equal1~5                      ; combout          ;
+; |TOP|libertacao:l2|Add1~100                ; |TOP|libertacao:l2|Add1~100                      ; combout          ;
+; |TOP|libertacao:l2|Add1~100                ; |TOP|libertacao:l2|Add1~102                      ; cout             ;
+; |TOP|libertacao:l2|Add1~105                ; |TOP|libertacao:l2|Add1~105                      ; combout          ;
+; |TOP|libertacao:l2|Add1~105                ; |TOP|libertacao:l2|Add1~107                      ; cout0            ;
+; |TOP|libertacao:l2|Add1~105                ; |TOP|libertacao:l2|Add1~107COUT1_218             ; cout1            ;
+; |TOP|libertacao:l2|Add1~110                ; |TOP|libertacao:l2|Add1~110                      ; combout          ;
+; |TOP|libertacao:l2|Add1~110                ; |TOP|libertacao:l2|Add1~112                      ; cout0            ;
+; |TOP|libertacao:l2|Add1~110                ; |TOP|libertacao:l2|Add1~112COUT1_220             ; cout1            ;
+; |TOP|libertacao:l2|Add1~115                ; |TOP|libertacao:l2|Add1~115                      ; combout          ;
+; |TOP|libertacao:l2|Add1~115                ; |TOP|libertacao:l2|Add1~117                      ; cout0            ;
+; |TOP|libertacao:l2|Add1~115                ; |TOP|libertacao:l2|Add1~117COUT1_222             ; cout1            ;
+; |TOP|libertacao:l2|Equal1~6                ; |TOP|libertacao:l2|Equal1~6                      ; combout          ;
+; |TOP|libertacao:l2|Add1~120                ; |TOP|libertacao:l2|Add1~120                      ; combout          ;
+; |TOP|libertacao:l2|Add1~120                ; |TOP|libertacao:l2|Add1~122                      ; cout0            ;
+; |TOP|libertacao:l2|Add1~120                ; |TOP|libertacao:l2|Add1~122COUT1_224             ; cout1            ;
+; |TOP|libertacao:l2|Add1~125                ; |TOP|libertacao:l2|Add1~125                      ; combout          ;
+; |TOP|libertacao:l2|Add1~125                ; |TOP|libertacao:l2|Add1~127                      ; cout             ;
+; |TOP|libertacao:l2|Add1~130                ; |TOP|libertacao:l2|Add1~130                      ; combout          ;
+; |TOP|libertacao:l2|Add1~130                ; |TOP|libertacao:l2|Add1~132                      ; cout0            ;
+; |TOP|libertacao:l2|Add1~130                ; |TOP|libertacao:l2|Add1~132COUT1_226             ; cout1            ;
+; |TOP|libertacao:l2|Add1~135                ; |TOP|libertacao:l2|Add1~135                      ; combout          ;
+; |TOP|libertacao:l2|Add1~135                ; |TOP|libertacao:l2|Add1~137                      ; cout0            ;
+; |TOP|libertacao:l2|Add1~135                ; |TOP|libertacao:l2|Add1~137COUT1_228             ; cout1            ;
+; |TOP|libertacao:l2|Equal1~7                ; |TOP|libertacao:l2|Equal1~7                      ; combout          ;
+; |TOP|libertacao:l2|Add1~140                ; |TOP|libertacao:l2|Add1~140                      ; combout          ;
+; |TOP|libertacao:l2|Add1~140                ; |TOP|libertacao:l2|Add1~142                      ; cout0            ;
+; |TOP|libertacao:l2|Add1~140                ; |TOP|libertacao:l2|Add1~142COUT1_230             ; cout1            ;
+; |TOP|libertacao:l2|Add1~145                ; |TOP|libertacao:l2|Add1~145                      ; combout          ;
+; |TOP|libertacao:l2|Add1~145                ; |TOP|libertacao:l2|Add1~147                      ; cout0            ;
+; |TOP|libertacao:l2|Add1~145                ; |TOP|libertacao:l2|Add1~147COUT1_232             ; cout1            ;
+; |TOP|libertacao:l2|Add1~150                ; |TOP|libertacao:l2|Add1~150                      ; combout          ;
+; |TOP|libertacao:l2|Add1~150                ; |TOP|libertacao:l2|Add1~152                      ; cout             ;
+; |TOP|libertacao:l2|Add1~155                ; |TOP|libertacao:l2|Add1~155                      ; combout          ;
+; |TOP|libertacao:l2|Equal1~8                ; |TOP|libertacao:l2|Equal1~8                      ; combout          ;
+; |TOP|libertacao:l2|Equal1~9                ; |TOP|libertacao:l2|Equal1~9                      ; combout          ;
+; |TOP|libertacao:l2|x                       ; |TOP|libertacao:l2|x~0                           ; combout          ;
+; |TOP|libertacao:l3|Add1~0                  ; |TOP|libertacao:l3|Add1~0                        ; combout          ;
+; |TOP|libertacao:l3|Add1~0                  ; |TOP|libertacao:l3|Add1~2                        ; cout             ;
+; |TOP|libertacao:l3|Add1~5                  ; |TOP|libertacao:l3|Add1~5                        ; combout          ;
+; |TOP|libertacao:l3|Add1~5                  ; |TOP|libertacao:l3|Add1~7                        ; cout0            ;
+; |TOP|libertacao:l3|Add1~5                  ; |TOP|libertacao:l3|Add1~7COUT1_186               ; cout1            ;
+; |TOP|libertacao:l3|Add1~10                 ; |TOP|libertacao:l3|Add1~10                       ; combout          ;
+; |TOP|libertacao:l3|Add1~10                 ; |TOP|libertacao:l3|Add1~12                       ; cout0            ;
+; |TOP|libertacao:l3|Add1~10                 ; |TOP|libertacao:l3|Add1~12COUT1_188              ; cout1            ;
+; |TOP|libertacao:l3|Add1~15                 ; |TOP|libertacao:l3|Add1~15                       ; combout          ;
+; |TOP|libertacao:l3|Add1~15                 ; |TOP|libertacao:l3|Add1~17                       ; cout0            ;
+; |TOP|libertacao:l3|Add1~15                 ; |TOP|libertacao:l3|Add1~17COUT1_190              ; cout1            ;
+; |TOP|libertacao:l3|Equal1~0                ; |TOP|libertacao:l3|Equal1~0                      ; combout          ;
+; |TOP|libertacao:l3|Add1~20                 ; |TOP|libertacao:l3|Add1~20                       ; combout          ;
+; |TOP|libertacao:l3|Add1~20                 ; |TOP|libertacao:l3|Add1~22                       ; cout0            ;
+; |TOP|libertacao:l3|Add1~20                 ; |TOP|libertacao:l3|Add1~22COUT1_192              ; cout1            ;
+; |TOP|libertacao:l3|Add1~25                 ; |TOP|libertacao:l3|Add1~25                       ; combout          ;
+; |TOP|libertacao:l3|Add1~25                 ; |TOP|libertacao:l3|Add1~27                       ; cout0            ;
+; |TOP|libertacao:l3|Add1~25                 ; |TOP|libertacao:l3|Add1~27COUT1_194              ; cout1            ;
+; |TOP|libertacao:l3|Add1~30                 ; |TOP|libertacao:l3|Add1~30                       ; combout          ;
+; |TOP|libertacao:l3|Add1~30                 ; |TOP|libertacao:l3|Add1~32                       ; cout             ;
+; |TOP|libertacao:l3|Add1~35                 ; |TOP|libertacao:l3|Add1~35                       ; combout          ;
+; |TOP|libertacao:l3|Add1~35                 ; |TOP|libertacao:l3|Add1~37                       ; cout0            ;
+; |TOP|libertacao:l3|Add1~35                 ; |TOP|libertacao:l3|Add1~37COUT1_196              ; cout1            ;
+; |TOP|libertacao:l3|Equal1~1                ; |TOP|libertacao:l3|Equal1~1                      ; combout          ;
+; |TOP|libertacao:l3|Add1~40                 ; |TOP|libertacao:l3|Add1~40                       ; combout          ;
+; |TOP|libertacao:l3|Add1~40                 ; |TOP|libertacao:l3|Add1~42                       ; cout0            ;
+; |TOP|libertacao:l3|Add1~40                 ; |TOP|libertacao:l3|Add1~42COUT1_198              ; cout1            ;
+; |TOP|libertacao:l3|Add1~45                 ; |TOP|libertacao:l3|Add1~45                       ; combout          ;
+; |TOP|libertacao:l3|Add1~45                 ; |TOP|libertacao:l3|Add1~47                       ; cout0            ;
+; |TOP|libertacao:l3|Add1~45                 ; |TOP|libertacao:l3|Add1~47COUT1_200              ; cout1            ;
+; |TOP|libertacao:l3|Add1~50                 ; |TOP|libertacao:l3|Add1~50                       ; combout          ;
+; |TOP|libertacao:l3|Add1~50                 ; |TOP|libertacao:l3|Add1~52                       ; cout             ;
+; |TOP|libertacao:l3|Add1~55                 ; |TOP|libertacao:l3|Add1~55                       ; combout          ;
+; |TOP|libertacao:l3|Add1~55                 ; |TOP|libertacao:l3|Add1~57                       ; cout0            ;
+; |TOP|libertacao:l3|Add1~55                 ; |TOP|libertacao:l3|Add1~57COUT1_202              ; cout1            ;
+; |TOP|libertacao:l3|Equal1~2                ; |TOP|libertacao:l3|Equal1~2                      ; combout          ;
+; |TOP|libertacao:l3|Add1~60                 ; |TOP|libertacao:l3|Add1~60                       ; combout          ;
+; |TOP|libertacao:l3|Add1~60                 ; |TOP|libertacao:l3|Add1~62                       ; cout0            ;
+; |TOP|libertacao:l3|Add1~60                 ; |TOP|libertacao:l3|Add1~62COUT1_204              ; cout1            ;
+; |TOP|libertacao:l3|Add1~65                 ; |TOP|libertacao:l3|Add1~65                       ; combout          ;
+; |TOP|libertacao:l3|Add1~65                 ; |TOP|libertacao:l3|Add1~67                       ; cout             ;
+; |TOP|libertacao:l3|Add1~70                 ; |TOP|libertacao:l3|Add1~70                       ; combout          ;
+; |TOP|libertacao:l3|Add1~70                 ; |TOP|libertacao:l3|Add1~72                       ; cout0            ;
+; |TOP|libertacao:l3|Add1~70                 ; |TOP|libertacao:l3|Add1~72COUT1_206              ; cout1            ;
+; |TOP|libertacao:l3|Add1~75                 ; |TOP|libertacao:l3|Add1~75                       ; combout          ;
+; |TOP|libertacao:l3|Add1~75                 ; |TOP|libertacao:l3|Add1~77                       ; cout0            ;
+; |TOP|libertacao:l3|Add1~75                 ; |TOP|libertacao:l3|Add1~77COUT1_208              ; cout1            ;
+; |TOP|libertacao:l3|Equal1~3                ; |TOP|libertacao:l3|Equal1~3                      ; combout          ;
+; |TOP|libertacao:l3|Equal1~4                ; |TOP|libertacao:l3|Equal1~4                      ; combout          ;
+; |TOP|libertacao:l3|Add1~80                 ; |TOP|libertacao:l3|Add1~80                       ; combout          ;
+; |TOP|libertacao:l3|Add1~80                 ; |TOP|libertacao:l3|Add1~82                       ; cout0            ;
+; |TOP|libertacao:l3|Add1~80                 ; |TOP|libertacao:l3|Add1~82COUT1_214              ; cout1            ;
+; |TOP|libertacao:l3|Add1~85                 ; |TOP|libertacao:l3|Add1~85                       ; combout          ;
+; |TOP|libertacao:l3|Add1~85                 ; |TOP|libertacao:l3|Add1~87                       ; cout0            ;
+; |TOP|libertacao:l3|Add1~85                 ; |TOP|libertacao:l3|Add1~87COUT1_216              ; cout1            ;
+; |TOP|libertacao:l3|Add1~90                 ; |TOP|libertacao:l3|Add1~90                       ; combout          ;
+; |TOP|libertacao:l3|Add1~90                 ; |TOP|libertacao:l3|Add1~92                       ; cout0            ;
+; |TOP|libertacao:l3|Add1~90                 ; |TOP|libertacao:l3|Add1~92COUT1_210              ; cout1            ;
+; |TOP|libertacao:l3|Add1~95                 ; |TOP|libertacao:l3|Add1~95                       ; combout          ;
+; |TOP|libertacao:l3|Add1~95                 ; |TOP|libertacao:l3|Add1~97                       ; cout0            ;
+; |TOP|libertacao:l3|Add1~95                 ; |TOP|libertacao:l3|Add1~97COUT1_212              ; cout1            ;
+; |TOP|libertacao:l3|Equal1~5                ; |TOP|libertacao:l3|Equal1~5                      ; combout          ;
+; |TOP|libertacao:l3|Add1~100                ; |TOP|libertacao:l3|Add1~100                      ; combout          ;
+; |TOP|libertacao:l3|Add1~100                ; |TOP|libertacao:l3|Add1~102                      ; cout             ;
+; |TOP|libertacao:l3|Add1~105                ; |TOP|libertacao:l3|Add1~105                      ; combout          ;
+; |TOP|libertacao:l3|Add1~105                ; |TOP|libertacao:l3|Add1~107                      ; cout0            ;
+; |TOP|libertacao:l3|Add1~105                ; |TOP|libertacao:l3|Add1~107COUT1_218             ; cout1            ;
+; |TOP|libertacao:l3|Add1~110                ; |TOP|libertacao:l3|Add1~110                      ; combout          ;
+; |TOP|libertacao:l3|Add1~110                ; |TOP|libertacao:l3|Add1~112                      ; cout0            ;
+; |TOP|libertacao:l3|Add1~110                ; |TOP|libertacao:l3|Add1~112COUT1_220             ; cout1            ;
+; |TOP|libertacao:l3|Add1~115                ; |TOP|libertacao:l3|Add1~115                      ; combout          ;
+; |TOP|libertacao:l3|Add1~115                ; |TOP|libertacao:l3|Add1~117                      ; cout0            ;
+; |TOP|libertacao:l3|Add1~115                ; |TOP|libertacao:l3|Add1~117COUT1_222             ; cout1            ;
+; |TOP|libertacao:l3|Equal1~6                ; |TOP|libertacao:l3|Equal1~6                      ; combout          ;
+; |TOP|libertacao:l3|Add1~120                ; |TOP|libertacao:l3|Add1~120                      ; combout          ;
+; |TOP|libertacao:l3|Add1~120                ; |TOP|libertacao:l3|Add1~122                      ; cout0            ;
+; |TOP|libertacao:l3|Add1~120                ; |TOP|libertacao:l3|Add1~122COUT1_224             ; cout1            ;
+; |TOP|libertacao:l3|Add1~125                ; |TOP|libertacao:l3|Add1~125                      ; combout          ;
+; |TOP|libertacao:l3|Add1~125                ; |TOP|libertacao:l3|Add1~127                      ; cout             ;
+; |TOP|libertacao:l3|Add1~130                ; |TOP|libertacao:l3|Add1~130                      ; combout          ;
+; |TOP|libertacao:l3|Add1~130                ; |TOP|libertacao:l3|Add1~132                      ; cout0            ;
+; |TOP|libertacao:l3|Add1~130                ; |TOP|libertacao:l3|Add1~132COUT1_226             ; cout1            ;
+; |TOP|libertacao:l3|Add1~135                ; |TOP|libertacao:l3|Add1~135                      ; combout          ;
+; |TOP|libertacao:l3|Add1~135                ; |TOP|libertacao:l3|Add1~137                      ; cout0            ;
+; |TOP|libertacao:l3|Add1~135                ; |TOP|libertacao:l3|Add1~137COUT1_228             ; cout1            ;
+; |TOP|libertacao:l3|Equal1~7                ; |TOP|libertacao:l3|Equal1~7                      ; combout          ;
+; |TOP|libertacao:l3|Add1~140                ; |TOP|libertacao:l3|Add1~140                      ; combout          ;
+; |TOP|libertacao:l3|Add1~140                ; |TOP|libertacao:l3|Add1~142                      ; cout0            ;
+; |TOP|libertacao:l3|Add1~140                ; |TOP|libertacao:l3|Add1~142COUT1_230             ; cout1            ;
+; |TOP|libertacao:l3|Add1~145                ; |TOP|libertacao:l3|Add1~145                      ; combout          ;
+; |TOP|libertacao:l3|Add1~145                ; |TOP|libertacao:l3|Add1~147                      ; cout0            ;
+; |TOP|libertacao:l3|Add1~145                ; |TOP|libertacao:l3|Add1~147COUT1_232             ; cout1            ;
+; |TOP|libertacao:l3|Add1~150                ; |TOP|libertacao:l3|Add1~150                      ; combout          ;
+; |TOP|libertacao:l3|Add1~150                ; |TOP|libertacao:l3|Add1~152                      ; cout             ;
+; |TOP|libertacao:l3|Add1~155                ; |TOP|libertacao:l3|Add1~155                      ; combout          ;
+; |TOP|libertacao:l3|Equal1~8                ; |TOP|libertacao:l3|Equal1~8                      ; combout          ;
+; |TOP|libertacao:l3|Equal1~9                ; |TOP|libertacao:l3|Equal1~9                      ; combout          ;
+; |TOP|libertacao:l3|x                       ; |TOP|libertacao:l3|x~0                           ; combout          ;
+; |TOP|libertacao:l3|contagem[2]             ; |TOP|libertacao:l3|contagem[2]                   ; regout           ;
+; |TOP|libertacao:l1|count[18]               ; |TOP|libertacao:l1|count[18]                     ; regout           ;
+; |TOP|libertacao:l1|count[19]               ; |TOP|libertacao:l1|count[19]                     ; regout           ;
+; |TOP|libertacao:l1|count[16]               ; |TOP|libertacao:l1|count[16]                     ; regout           ;
+; |TOP|libertacao:l1|count[17]               ; |TOP|libertacao:l1|count[17]                     ; regout           ;
+; |TOP|libertacao:l1|count[20]               ; |TOP|libertacao:l1|count[20]                     ; regout           ;
+; |TOP|libertacao:l1|count[21]               ; |TOP|libertacao:l1|count[21]                     ; regout           ;
+; |TOP|libertacao:l1|count[22]               ; |TOP|libertacao:l1|count[22]                     ; regout           ;
+; |TOP|libertacao:l1|count[23]               ; |TOP|libertacao:l1|count[23]                     ; regout           ;
+; |TOP|libertacao:l1|count[24]               ; |TOP|libertacao:l1|count[24]                     ; regout           ;
+; |TOP|libertacao:l1|count[25]               ; |TOP|libertacao:l1|count[25]                     ; regout           ;
+; |TOP|libertacao:l1|count[26]               ; |TOP|libertacao:l1|count[26]                     ; regout           ;
+; |TOP|libertacao:l1|count[27]               ; |TOP|libertacao:l1|count[27]                     ; regout           ;
+; |TOP|libertacao:l1|count[28]               ; |TOP|libertacao:l1|count[28]                     ; regout           ;
+; |TOP|libertacao:l1|count[29]               ; |TOP|libertacao:l1|count[29]                     ; regout           ;
+; |TOP|libertacao:l1|count[30]               ; |TOP|libertacao:l1|count[30]                     ; regout           ;
+; |TOP|libertacao:l1|count[31]               ; |TOP|libertacao:l1|count[31]                     ; regout           ;
+; |TOP|libertacao:l2|count[18]               ; |TOP|libertacao:l2|count[18]                     ; regout           ;
+; |TOP|libertacao:l2|count[19]               ; |TOP|libertacao:l2|count[19]                     ; regout           ;
+; |TOP|libertacao:l2|count[16]               ; |TOP|libertacao:l2|count[16]                     ; regout           ;
+; |TOP|libertacao:l2|count[17]               ; |TOP|libertacao:l2|count[17]                     ; regout           ;
+; |TOP|libertacao:l2|count[20]               ; |TOP|libertacao:l2|count[20]                     ; regout           ;
+; |TOP|libertacao:l2|count[21]               ; |TOP|libertacao:l2|count[21]                     ; regout           ;
+; |TOP|libertacao:l2|count[22]               ; |TOP|libertacao:l2|count[22]                     ; regout           ;
+; |TOP|libertacao:l2|count[23]               ; |TOP|libertacao:l2|count[23]                     ; regout           ;
+; |TOP|libertacao:l2|count[24]               ; |TOP|libertacao:l2|count[24]                     ; regout           ;
+; |TOP|libertacao:l2|count[25]               ; |TOP|libertacao:l2|count[25]                     ; regout           ;
+; |TOP|libertacao:l2|count[26]               ; |TOP|libertacao:l2|count[26]                     ; regout           ;
+; |TOP|libertacao:l2|count[27]               ; |TOP|libertacao:l2|count[27]                     ; regout           ;
+; |TOP|libertacao:l2|count[28]               ; |TOP|libertacao:l2|count[28]                     ; regout           ;
+; |TOP|libertacao:l2|count[29]               ; |TOP|libertacao:l2|count[29]                     ; regout           ;
+; |TOP|libertacao:l2|count[30]               ; |TOP|libertacao:l2|count[30]                     ; regout           ;
+; |TOP|libertacao:l2|count[31]               ; |TOP|libertacao:l2|count[31]                     ; regout           ;
+; |TOP|libertacao:l3|count[0]                ; |TOP|libertacao:l3|count[0]                      ; regout           ;
+; |TOP|libertacao:l3|count[1]                ; |TOP|libertacao:l3|count[1]                      ; regout           ;
+; |TOP|libertacao:l3|count[2]                ; |TOP|libertacao:l3|count[2]                      ; regout           ;
+; |TOP|libertacao:l3|count[3]                ; |TOP|libertacao:l3|count[3]                      ; regout           ;
+; |TOP|libertacao:l3|count[4]                ; |TOP|libertacao:l3|count[4]                      ; regout           ;
+; |TOP|libertacao:l3|count[6]                ; |TOP|libertacao:l3|count[6]                      ; regout           ;
+; |TOP|libertacao:l3|count[5]                ; |TOP|libertacao:l3|count[5]                      ; regout           ;
+; |TOP|libertacao:l3|count[7]                ; |TOP|libertacao:l3|count[7]                      ; regout           ;
+; |TOP|libertacao:l3|count[8]                ; |TOP|libertacao:l3|count[8]                      ; regout           ;
+; |TOP|libertacao:l3|count[9]                ; |TOP|libertacao:l3|count[9]                      ; regout           ;
+; |TOP|libertacao:l3|count[10]               ; |TOP|libertacao:l3|count[10]                     ; regout           ;
+; |TOP|libertacao:l3|count[11]               ; |TOP|libertacao:l3|count[11]                     ; regout           ;
+; |TOP|libertacao:l3|count[12]               ; |TOP|libertacao:l3|count[12]                     ; regout           ;
+; |TOP|libertacao:l3|count[15]               ; |TOP|libertacao:l3|count[15]                     ; regout           ;
+; |TOP|libertacao:l3|count[13]               ; |TOP|libertacao:l3|count[13]                     ; regout           ;
+; |TOP|libertacao:l3|count[14]               ; |TOP|libertacao:l3|count[14]                     ; regout           ;
+; |TOP|libertacao:l3|count[18]               ; |TOP|libertacao:l3|count[18]                     ; regout           ;
+; |TOP|libertacao:l3|count[19]               ; |TOP|libertacao:l3|count[19]                     ; regout           ;
+; |TOP|libertacao:l3|count[16]               ; |TOP|libertacao:l3|count[16]                     ; regout           ;
+; |TOP|libertacao:l3|count[17]               ; |TOP|libertacao:l3|count[17]                     ; regout           ;
+; |TOP|libertacao:l3|count[20]               ; |TOP|libertacao:l3|count[20]                     ; regout           ;
+; |TOP|libertacao:l3|count[21]               ; |TOP|libertacao:l3|count[21]                     ; regout           ;
+; |TOP|libertacao:l3|count[22]               ; |TOP|libertacao:l3|count[22]                     ; regout           ;
+; |TOP|libertacao:l3|count[23]               ; |TOP|libertacao:l3|count[23]                     ; regout           ;
+; |TOP|libertacao:l3|count[24]               ; |TOP|libertacao:l3|count[24]                     ; regout           ;
+; |TOP|libertacao:l3|count[25]               ; |TOP|libertacao:l3|count[25]                     ; regout           ;
+; |TOP|libertacao:l3|count[26]               ; |TOP|libertacao:l3|count[26]                     ; regout           ;
+; |TOP|libertacao:l3|count[27]               ; |TOP|libertacao:l3|count[27]                     ; regout           ;
+; |TOP|libertacao:l3|count[28]               ; |TOP|libertacao:l3|count[28]                     ; regout           ;
+; |TOP|libertacao:l3|count[29]               ; |TOP|libertacao:l3|count[29]                     ; regout           ;
+; |TOP|libertacao:l3|count[30]               ; |TOP|libertacao:l3|count[30]                     ; regout           ;
+; |TOP|libertacao:l3|count[31]               ; |TOP|libertacao:l3|count[31]                     ; regout           ;
+; |TOP|MAQUINA_DE_ESTADOS:FILTRO|LessThan0~0 ; |TOP|MAQUINA_DE_ESTADOS:FILTRO|LessThan0~0       ; combout          ;
+; |TOP|MAQUINA_DE_ESTADOS:FILTRO|LessThan0~1 ; |TOP|MAQUINA_DE_ESTADOS:FILTRO|LessThan0~1       ; combout          ;
+; |TOP|MAQUINA_DE_ESTADOS:FILTRO|LessThan0~2 ; |TOP|MAQUINA_DE_ESTADOS:FILTRO|LessThan0~2       ; combout          ;
+; |TOP|MAQUINA_DE_ESTADOS:FILTRO|LessThan0~3 ; |TOP|MAQUINA_DE_ESTADOS:FILTRO|LessThan0~3       ; combout          ;
+; |TOP|MAQUINA_DE_ESTADOS:FILTRO|LessThan0~4 ; |TOP|MAQUINA_DE_ESTADOS:FILTRO|LessThan0~4       ; combout          ;
+; |TOP|MAQUINA_DE_ESTADOS:FILTRO|LessThan0~5 ; |TOP|MAQUINA_DE_ESTADOS:FILTRO|LessThan0~5       ; combout          ;
+; |TOP|MAQUINA_DE_ESTADOS:FILTRO|LessThan0~6 ; |TOP|MAQUINA_DE_ESTADOS:FILTRO|LessThan0~6       ; combout          ;
+; |TOP|MAQUINA_DE_ESTADOS:FILTRO|LessThan0~7 ; |TOP|MAQUINA_DE_ESTADOS:FILTRO|LessThan0~7       ; combout          ;
+; |TOP|MAQUINA_DE_ESTADOS:FILTRO|LessThan0~8 ; |TOP|MAQUINA_DE_ESTADOS:FILTRO|LessThan0~8       ; combout          ;
+; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~5      ; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~5            ; combout          ;
+; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~10     ; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~12           ; cout             ;
+; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~15     ; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~15           ; combout          ;
+; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~15     ; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~17           ; cout0            ;
+; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~15     ; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~17COUT1_194  ; cout1            ;
+; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~20     ; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~20           ; combout          ;
+; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~20     ; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~22           ; cout0            ;
+; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~20     ; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~22COUT1_200  ; cout1            ;
+; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~25     ; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~25           ; combout          ;
+; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~25     ; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~27           ; cout             ;
+; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~30     ; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~30           ; combout          ;
+; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~30     ; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~32           ; cout0            ;
+; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~30     ; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~32COUT1_202  ; cout1            ;
+; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~35     ; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~35           ; combout          ;
+; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~35     ; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~37           ; cout0            ;
+; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~35     ; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~37COUT1_204  ; cout1            ;
+; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~40     ; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~40           ; combout          ;
+; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~40     ; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~42           ; cout0            ;
+; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~40     ; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~42COUT1_196  ; cout1            ;
+; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~45     ; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~45           ; combout          ;
+; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~45     ; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~47           ; cout0            ;
+; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~45     ; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~47COUT1_198  ; cout1            ;
+; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~50     ; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~50           ; combout          ;
+; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~50     ; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~52           ; cout0            ;
+; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~50     ; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~52COUT1_206  ; cout1            ;
+; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~55     ; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~55           ; combout          ;
+; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~55     ; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~57           ; cout0            ;
+; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~55     ; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~57COUT1_208  ; cout1            ;
+; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~60     ; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~60           ; combout          ;
+; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~60     ; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~62           ; cout             ;
+; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~65     ; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~65           ; combout          ;
+; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~65     ; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~67           ; cout0            ;
+; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~65     ; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~67COUT1_210  ; cout1            ;
+; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~70     ; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~70           ; combout          ;
+; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~70     ; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~72           ; cout0            ;
+; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~70     ; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~72COUT1_212  ; cout1            ;
+; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~75     ; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~75           ; combout          ;
+; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~75     ; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~77           ; cout0            ;
+; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~75     ; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~77COUT1_214  ; cout1            ;
+; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~80     ; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~80           ; combout          ;
+; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~80     ; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~82           ; cout0            ;
+; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~80     ; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~82COUT1_216  ; cout1            ;
+; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~85     ; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~85           ; combout          ;
+; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~85     ; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~87           ; cout             ;
+; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~90     ; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~90           ; combout          ;
+; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~90     ; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~92           ; cout0            ;
+; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~90     ; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~92COUT1_218  ; cout1            ;
+; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~95     ; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~95           ; combout          ;
+; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~95     ; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~97           ; cout0            ;
+; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~95     ; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~97COUT1_220  ; cout1            ;
+; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~100    ; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~100          ; combout          ;
+; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~100    ; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~102          ; cout0            ;
+; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~100    ; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~102COUT1_222 ; cout1            ;
+; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~105    ; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~105          ; combout          ;
+; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~105    ; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~107          ; cout0            ;
+; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~105    ; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~107COUT1_224 ; cout1            ;
+; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~110    ; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~110          ; combout          ;
+; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~110    ; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~112          ; cout             ;
+; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~115    ; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~115          ; combout          ;
+; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~115    ; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~117          ; cout0            ;
+; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~115    ; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~117COUT1_226 ; cout1            ;
+; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~120    ; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~120          ; combout          ;
+; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~120    ; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~122          ; cout0            ;
+; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~120    ; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~122COUT1_228 ; cout1            ;
+; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~125    ; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~125          ; combout          ;
+; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~125    ; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~127          ; cout0            ;
+; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~125    ; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~127COUT1_230 ; cout1            ;
+; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~130    ; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~130          ; combout          ;
+; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~130    ; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~132          ; cout0            ;
+; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~130    ; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~132COUT1_232 ; cout1            ;
+; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~135    ; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~135          ; combout          ;
+; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~135    ; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~137          ; cout             ;
+; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~140    ; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~142          ; cout0            ;
+; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~145    ; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~147          ; cout0            ;
+; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~150    ; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~152          ; cout0            ;
+; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~155    ; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~157          ; cout0            ;
+; |TOP|s2                                    ; |TOP|s2                                          ; padio            ;
+; |TOP|s3                                    ; |TOP|s3                                          ; padio            ;
++--------------------------------------------+--------------------------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++------------------------------------------------------------------------------------------------------------------+
+; Missing 0-Value Coverage                                                                                         ;
++--------------------------------------------+--------------------------------------------------+------------------+
+; Node Name                                  ; Output Port Name                                 ; Output Port Type ;
++--------------------------------------------+--------------------------------------------------+------------------+
+; |TOP|libertacao:l2|led                     ; |TOP|libertacao:l2|led                           ; regout           ;
+; |TOP|libertacao:l3|led                     ; |TOP|libertacao:l3|led                           ; regout           ;
+; |TOP|libertacao:l1|Add1~5                  ; |TOP|libertacao:l1|Add1~7                        ; cout0            ;
+; |TOP|libertacao:l1|Add1~10                 ; |TOP|libertacao:l1|Add1~12                       ; cout0            ;
+; |TOP|libertacao:l1|Add1~15                 ; |TOP|libertacao:l1|Add1~17                       ; cout0            ;
+; |TOP|libertacao:l1|Add1~20                 ; |TOP|libertacao:l1|Add1~22                       ; cout0            ;
+; |TOP|libertacao:l1|Add1~25                 ; |TOP|libertacao:l1|Add1~27COUT1_194              ; cout1            ;
+; |TOP|libertacao:l1|Add1~35                 ; |TOP|libertacao:l1|Add1~37COUT1_196              ; cout1            ;
+; |TOP|libertacao:l1|Add1~40                 ; |TOP|libertacao:l1|Add1~42COUT1_198              ; cout1            ;
+; |TOP|libertacao:l1|Add1~45                 ; |TOP|libertacao:l1|Add1~47COUT1_200              ; cout1            ;
+; |TOP|libertacao:l1|Add1~55                 ; |TOP|libertacao:l1|Add1~57                       ; cout0            ;
+; |TOP|libertacao:l1|Add1~60                 ; |TOP|libertacao:l1|Add1~62                       ; cout0            ;
+; |TOP|libertacao:l1|Add1~65                 ; |TOP|libertacao:l1|Add1~67                       ; cout             ;
+; |TOP|libertacao:l1|Add1~70                 ; |TOP|libertacao:l1|Add1~72                       ; cout0            ;
+; |TOP|libertacao:l1|Add1~75                 ; |TOP|libertacao:l1|Add1~77                       ; cout0            ;
+; |TOP|libertacao:l1|Equal1~3                ; |TOP|libertacao:l1|Equal1~3                      ; combout          ;
+; |TOP|libertacao:l1|Equal1~4                ; |TOP|libertacao:l1|Equal1~4                      ; combout          ;
+; |TOP|libertacao:l1|Add1~80                 ; |TOP|libertacao:l1|Add1~80                       ; combout          ;
+; |TOP|libertacao:l1|Add1~80                 ; |TOP|libertacao:l1|Add1~82                       ; cout0            ;
+; |TOP|libertacao:l1|Add1~80                 ; |TOP|libertacao:l1|Add1~82COUT1_214              ; cout1            ;
+; |TOP|libertacao:l1|Add1~85                 ; |TOP|libertacao:l1|Add1~85                       ; combout          ;
+; |TOP|libertacao:l1|Add1~85                 ; |TOP|libertacao:l1|Add1~87                       ; cout0            ;
+; |TOP|libertacao:l1|Add1~85                 ; |TOP|libertacao:l1|Add1~87COUT1_216              ; cout1            ;
+; |TOP|libertacao:l1|Add1~90                 ; |TOP|libertacao:l1|Add1~90                       ; combout          ;
+; |TOP|libertacao:l1|Add1~90                 ; |TOP|libertacao:l1|Add1~92                       ; cout0            ;
+; |TOP|libertacao:l1|Add1~90                 ; |TOP|libertacao:l1|Add1~92COUT1_210              ; cout1            ;
+; |TOP|libertacao:l1|Add1~95                 ; |TOP|libertacao:l1|Add1~95                       ; combout          ;
+; |TOP|libertacao:l1|Add1~95                 ; |TOP|libertacao:l1|Add1~97                       ; cout0            ;
+; |TOP|libertacao:l1|Add1~95                 ; |TOP|libertacao:l1|Add1~97COUT1_212              ; cout1            ;
+; |TOP|libertacao:l1|Equal1~5                ; |TOP|libertacao:l1|Equal1~5                      ; combout          ;
+; |TOP|libertacao:l1|Add1~100                ; |TOP|libertacao:l1|Add1~100                      ; combout          ;
+; |TOP|libertacao:l1|Add1~100                ; |TOP|libertacao:l1|Add1~102                      ; cout             ;
+; |TOP|libertacao:l1|Add1~105                ; |TOP|libertacao:l1|Add1~105                      ; combout          ;
+; |TOP|libertacao:l1|Add1~105                ; |TOP|libertacao:l1|Add1~107                      ; cout0            ;
+; |TOP|libertacao:l1|Add1~105                ; |TOP|libertacao:l1|Add1~107COUT1_218             ; cout1            ;
+; |TOP|libertacao:l1|Add1~110                ; |TOP|libertacao:l1|Add1~110                      ; combout          ;
+; |TOP|libertacao:l1|Add1~110                ; |TOP|libertacao:l1|Add1~112                      ; cout0            ;
+; |TOP|libertacao:l1|Add1~110                ; |TOP|libertacao:l1|Add1~112COUT1_220             ; cout1            ;
+; |TOP|libertacao:l1|Add1~115                ; |TOP|libertacao:l1|Add1~115                      ; combout          ;
+; |TOP|libertacao:l1|Add1~115                ; |TOP|libertacao:l1|Add1~117                      ; cout0            ;
+; |TOP|libertacao:l1|Add1~115                ; |TOP|libertacao:l1|Add1~117COUT1_222             ; cout1            ;
+; |TOP|libertacao:l1|Equal1~6                ; |TOP|libertacao:l1|Equal1~6                      ; combout          ;
+; |TOP|libertacao:l1|Add1~120                ; |TOP|libertacao:l1|Add1~120                      ; combout          ;
+; |TOP|libertacao:l1|Add1~120                ; |TOP|libertacao:l1|Add1~122                      ; cout0            ;
+; |TOP|libertacao:l1|Add1~120                ; |TOP|libertacao:l1|Add1~122COUT1_224             ; cout1            ;
+; |TOP|libertacao:l1|Add1~125                ; |TOP|libertacao:l1|Add1~125                      ; combout          ;
+; |TOP|libertacao:l1|Add1~125                ; |TOP|libertacao:l1|Add1~127                      ; cout             ;
+; |TOP|libertacao:l1|Add1~130                ; |TOP|libertacao:l1|Add1~130                      ; combout          ;
+; |TOP|libertacao:l1|Add1~130                ; |TOP|libertacao:l1|Add1~132                      ; cout0            ;
+; |TOP|libertacao:l1|Add1~130                ; |TOP|libertacao:l1|Add1~132COUT1_226             ; cout1            ;
+; |TOP|libertacao:l1|Add1~135                ; |TOP|libertacao:l1|Add1~135                      ; combout          ;
+; |TOP|libertacao:l1|Add1~135                ; |TOP|libertacao:l1|Add1~137                      ; cout0            ;
+; |TOP|libertacao:l1|Add1~135                ; |TOP|libertacao:l1|Add1~137COUT1_228             ; cout1            ;
+; |TOP|libertacao:l1|Equal1~7                ; |TOP|libertacao:l1|Equal1~7                      ; combout          ;
+; |TOP|libertacao:l1|Add1~140                ; |TOP|libertacao:l1|Add1~140                      ; combout          ;
+; |TOP|libertacao:l1|Add1~140                ; |TOP|libertacao:l1|Add1~142                      ; cout0            ;
+; |TOP|libertacao:l1|Add1~140                ; |TOP|libertacao:l1|Add1~142COUT1_230             ; cout1            ;
+; |TOP|libertacao:l1|Add1~145                ; |TOP|libertacao:l1|Add1~145                      ; combout          ;
+; |TOP|libertacao:l1|Add1~145                ; |TOP|libertacao:l1|Add1~147                      ; cout0            ;
+; |TOP|libertacao:l1|Add1~145                ; |TOP|libertacao:l1|Add1~147COUT1_232             ; cout1            ;
+; |TOP|libertacao:l1|Add1~150                ; |TOP|libertacao:l1|Add1~150                      ; combout          ;
+; |TOP|libertacao:l1|Add1~150                ; |TOP|libertacao:l1|Add1~152                      ; cout             ;
+; |TOP|libertacao:l1|Add1~155                ; |TOP|libertacao:l1|Add1~155                      ; combout          ;
+; |TOP|libertacao:l1|Equal1~8                ; |TOP|libertacao:l1|Equal1~8                      ; combout          ;
+; |TOP|libertacao:l1|Equal1~9                ; |TOP|libertacao:l1|Equal1~9                      ; combout          ;
+; |TOP|libertacao:l1|x                       ; |TOP|libertacao:l1|x~0                           ; combout          ;
+; |TOP|libertacao:l2|Add1~5                  ; |TOP|libertacao:l2|Add1~7                        ; cout0            ;
+; |TOP|libertacao:l2|Add1~10                 ; |TOP|libertacao:l2|Add1~12                       ; cout0            ;
+; |TOP|libertacao:l2|Add1~15                 ; |TOP|libertacao:l2|Add1~17                       ; cout0            ;
+; |TOP|libertacao:l2|Add1~20                 ; |TOP|libertacao:l2|Add1~22                       ; cout0            ;
+; |TOP|libertacao:l2|Add1~25                 ; |TOP|libertacao:l2|Add1~27COUT1_194              ; cout1            ;
+; |TOP|libertacao:l2|Add1~35                 ; |TOP|libertacao:l2|Add1~37COUT1_196              ; cout1            ;
+; |TOP|libertacao:l2|Add1~40                 ; |TOP|libertacao:l2|Add1~42COUT1_198              ; cout1            ;
+; |TOP|libertacao:l2|Add1~45                 ; |TOP|libertacao:l2|Add1~47COUT1_200              ; cout1            ;
+; |TOP|libertacao:l2|Add1~55                 ; |TOP|libertacao:l2|Add1~57                       ; cout0            ;
+; |TOP|libertacao:l2|Add1~60                 ; |TOP|libertacao:l2|Add1~62                       ; cout0            ;
+; |TOP|libertacao:l2|Add1~70                 ; |TOP|libertacao:l2|Add1~72                       ; cout0            ;
+; |TOP|libertacao:l2|Add1~75                 ; |TOP|libertacao:l2|Add1~77                       ; cout0            ;
+; |TOP|libertacao:l2|Equal1~4                ; |TOP|libertacao:l2|Equal1~4                      ; combout          ;
+; |TOP|libertacao:l2|Add1~80                 ; |TOP|libertacao:l2|Add1~80                       ; combout          ;
+; |TOP|libertacao:l2|Add1~80                 ; |TOP|libertacao:l2|Add1~82                       ; cout0            ;
+; |TOP|libertacao:l2|Add1~80                 ; |TOP|libertacao:l2|Add1~82COUT1_214              ; cout1            ;
+; |TOP|libertacao:l2|Add1~85                 ; |TOP|libertacao:l2|Add1~85                       ; combout          ;
+; |TOP|libertacao:l2|Add1~85                 ; |TOP|libertacao:l2|Add1~87                       ; cout0            ;
+; |TOP|libertacao:l2|Add1~85                 ; |TOP|libertacao:l2|Add1~87COUT1_216              ; cout1            ;
+; |TOP|libertacao:l2|Add1~90                 ; |TOP|libertacao:l2|Add1~92                       ; cout0            ;
+; |TOP|libertacao:l2|Add1~90                 ; |TOP|libertacao:l2|Add1~92COUT1_210              ; cout1            ;
+; |TOP|libertacao:l2|Add1~95                 ; |TOP|libertacao:l2|Add1~95                       ; combout          ;
+; |TOP|libertacao:l2|Add1~95                 ; |TOP|libertacao:l2|Add1~97                       ; cout0            ;
+; |TOP|libertacao:l2|Add1~95                 ; |TOP|libertacao:l2|Add1~97COUT1_212              ; cout1            ;
+; |TOP|libertacao:l2|Equal1~5                ; |TOP|libertacao:l2|Equal1~5                      ; combout          ;
+; |TOP|libertacao:l2|Add1~100                ; |TOP|libertacao:l2|Add1~100                      ; combout          ;
+; |TOP|libertacao:l2|Add1~100                ; |TOP|libertacao:l2|Add1~102                      ; cout             ;
+; |TOP|libertacao:l2|Add1~105                ; |TOP|libertacao:l2|Add1~105                      ; combout          ;
+; |TOP|libertacao:l2|Add1~105                ; |TOP|libertacao:l2|Add1~107                      ; cout0            ;
+; |TOP|libertacao:l2|Add1~105                ; |TOP|libertacao:l2|Add1~107COUT1_218             ; cout1            ;
+; |TOP|libertacao:l2|Add1~110                ; |TOP|libertacao:l2|Add1~110                      ; combout          ;
+; |TOP|libertacao:l2|Add1~110                ; |TOP|libertacao:l2|Add1~112                      ; cout0            ;
+; |TOP|libertacao:l2|Add1~110                ; |TOP|libertacao:l2|Add1~112COUT1_220             ; cout1            ;
+; |TOP|libertacao:l2|Add1~115                ; |TOP|libertacao:l2|Add1~115                      ; combout          ;
+; |TOP|libertacao:l2|Add1~115                ; |TOP|libertacao:l2|Add1~117                      ; cout0            ;
+; |TOP|libertacao:l2|Add1~115                ; |TOP|libertacao:l2|Add1~117COUT1_222             ; cout1            ;
+; |TOP|libertacao:l2|Equal1~6                ; |TOP|libertacao:l2|Equal1~6                      ; combout          ;
+; |TOP|libertacao:l2|Add1~120                ; |TOP|libertacao:l2|Add1~120                      ; combout          ;
+; |TOP|libertacao:l2|Add1~120                ; |TOP|libertacao:l2|Add1~122                      ; cout0            ;
+; |TOP|libertacao:l2|Add1~120                ; |TOP|libertacao:l2|Add1~122COUT1_224             ; cout1            ;
+; |TOP|libertacao:l2|Add1~125                ; |TOP|libertacao:l2|Add1~125                      ; combout          ;
+; |TOP|libertacao:l2|Add1~125                ; |TOP|libertacao:l2|Add1~127                      ; cout             ;
+; |TOP|libertacao:l2|Add1~130                ; |TOP|libertacao:l2|Add1~130                      ; combout          ;
+; |TOP|libertacao:l2|Add1~130                ; |TOP|libertacao:l2|Add1~132                      ; cout0            ;
+; |TOP|libertacao:l2|Add1~130                ; |TOP|libertacao:l2|Add1~132COUT1_226             ; cout1            ;
+; |TOP|libertacao:l2|Add1~135                ; |TOP|libertacao:l2|Add1~135                      ; combout          ;
+; |TOP|libertacao:l2|Add1~135                ; |TOP|libertacao:l2|Add1~137                      ; cout0            ;
+; |TOP|libertacao:l2|Add1~135                ; |TOP|libertacao:l2|Add1~137COUT1_228             ; cout1            ;
+; |TOP|libertacao:l2|Equal1~7                ; |TOP|libertacao:l2|Equal1~7                      ; combout          ;
+; |TOP|libertacao:l2|Add1~140                ; |TOP|libertacao:l2|Add1~140                      ; combout          ;
+; |TOP|libertacao:l2|Add1~140                ; |TOP|libertacao:l2|Add1~142                      ; cout0            ;
+; |TOP|libertacao:l2|Add1~140                ; |TOP|libertacao:l2|Add1~142COUT1_230             ; cout1            ;
+; |TOP|libertacao:l2|Add1~145                ; |TOP|libertacao:l2|Add1~145                      ; combout          ;
+; |TOP|libertacao:l2|Add1~145                ; |TOP|libertacao:l2|Add1~147                      ; cout0            ;
+; |TOP|libertacao:l2|Add1~145                ; |TOP|libertacao:l2|Add1~147COUT1_232             ; cout1            ;
+; |TOP|libertacao:l2|Add1~150                ; |TOP|libertacao:l2|Add1~150                      ; combout          ;
+; |TOP|libertacao:l2|Add1~150                ; |TOP|libertacao:l2|Add1~152                      ; cout             ;
+; |TOP|libertacao:l2|Add1~155                ; |TOP|libertacao:l2|Add1~155                      ; combout          ;
+; |TOP|libertacao:l2|Equal1~8                ; |TOP|libertacao:l2|Equal1~8                      ; combout          ;
+; |TOP|libertacao:l2|Equal1~9                ; |TOP|libertacao:l2|Equal1~9                      ; combout          ;
+; |TOP|libertacao:l2|x                       ; |TOP|libertacao:l2|x~0                           ; combout          ;
+; |TOP|libertacao:l2|contagem[1]             ; |TOP|libertacao:l2|contagem[1]                   ; regout           ;
+; |TOP|libertacao:l3|Add1~0                  ; |TOP|libertacao:l3|Add1~0                        ; combout          ;
+; |TOP|libertacao:l3|Add1~0                  ; |TOP|libertacao:l3|Add1~2                        ; cout             ;
+; |TOP|libertacao:l3|Add1~5                  ; |TOP|libertacao:l3|Add1~5                        ; combout          ;
+; |TOP|libertacao:l3|Add1~5                  ; |TOP|libertacao:l3|Add1~7                        ; cout0            ;
+; |TOP|libertacao:l3|Add1~5                  ; |TOP|libertacao:l3|Add1~7COUT1_186               ; cout1            ;
+; |TOP|libertacao:l3|Add1~10                 ; |TOP|libertacao:l3|Add1~10                       ; combout          ;
+; |TOP|libertacao:l3|Add1~10                 ; |TOP|libertacao:l3|Add1~12                       ; cout0            ;
+; |TOP|libertacao:l3|Add1~10                 ; |TOP|libertacao:l3|Add1~12COUT1_188              ; cout1            ;
+; |TOP|libertacao:l3|Add1~15                 ; |TOP|libertacao:l3|Add1~15                       ; combout          ;
+; |TOP|libertacao:l3|Add1~15                 ; |TOP|libertacao:l3|Add1~17                       ; cout0            ;
+; |TOP|libertacao:l3|Add1~15                 ; |TOP|libertacao:l3|Add1~17COUT1_190              ; cout1            ;
+; |TOP|libertacao:l3|Equal1~0                ; |TOP|libertacao:l3|Equal1~0                      ; combout          ;
+; |TOP|libertacao:l3|Add1~20                 ; |TOP|libertacao:l3|Add1~20                       ; combout          ;
+; |TOP|libertacao:l3|Add1~20                 ; |TOP|libertacao:l3|Add1~22                       ; cout0            ;
+; |TOP|libertacao:l3|Add1~20                 ; |TOP|libertacao:l3|Add1~22COUT1_192              ; cout1            ;
+; |TOP|libertacao:l3|Add1~25                 ; |TOP|libertacao:l3|Add1~25                       ; combout          ;
+; |TOP|libertacao:l3|Add1~25                 ; |TOP|libertacao:l3|Add1~27                       ; cout0            ;
+; |TOP|libertacao:l3|Add1~25                 ; |TOP|libertacao:l3|Add1~27COUT1_194              ; cout1            ;
+; |TOP|libertacao:l3|Add1~30                 ; |TOP|libertacao:l3|Add1~30                       ; combout          ;
+; |TOP|libertacao:l3|Add1~30                 ; |TOP|libertacao:l3|Add1~32                       ; cout             ;
+; |TOP|libertacao:l3|Add1~35                 ; |TOP|libertacao:l3|Add1~35                       ; combout          ;
+; |TOP|libertacao:l3|Add1~35                 ; |TOP|libertacao:l3|Add1~37                       ; cout0            ;
+; |TOP|libertacao:l3|Add1~35                 ; |TOP|libertacao:l3|Add1~37COUT1_196              ; cout1            ;
+; |TOP|libertacao:l3|Equal1~1                ; |TOP|libertacao:l3|Equal1~1                      ; combout          ;
+; |TOP|libertacao:l3|Add1~40                 ; |TOP|libertacao:l3|Add1~40                       ; combout          ;
+; |TOP|libertacao:l3|Add1~40                 ; |TOP|libertacao:l3|Add1~42                       ; cout0            ;
+; |TOP|libertacao:l3|Add1~40                 ; |TOP|libertacao:l3|Add1~42COUT1_198              ; cout1            ;
+; |TOP|libertacao:l3|Add1~45                 ; |TOP|libertacao:l3|Add1~45                       ; combout          ;
+; |TOP|libertacao:l3|Add1~45                 ; |TOP|libertacao:l3|Add1~47                       ; cout0            ;
+; |TOP|libertacao:l3|Add1~45                 ; |TOP|libertacao:l3|Add1~47COUT1_200              ; cout1            ;
+; |TOP|libertacao:l3|Add1~50                 ; |TOP|libertacao:l3|Add1~50                       ; combout          ;
+; |TOP|libertacao:l3|Add1~50                 ; |TOP|libertacao:l3|Add1~52                       ; cout             ;
+; |TOP|libertacao:l3|Add1~55                 ; |TOP|libertacao:l3|Add1~55                       ; combout          ;
+; |TOP|libertacao:l3|Add1~55                 ; |TOP|libertacao:l3|Add1~57                       ; cout0            ;
+; |TOP|libertacao:l3|Add1~55                 ; |TOP|libertacao:l3|Add1~57COUT1_202              ; cout1            ;
+; |TOP|libertacao:l3|Equal1~2                ; |TOP|libertacao:l3|Equal1~2                      ; combout          ;
+; |TOP|libertacao:l3|Add1~60                 ; |TOP|libertacao:l3|Add1~60                       ; combout          ;
+; |TOP|libertacao:l3|Add1~60                 ; |TOP|libertacao:l3|Add1~62                       ; cout0            ;
+; |TOP|libertacao:l3|Add1~60                 ; |TOP|libertacao:l3|Add1~62COUT1_204              ; cout1            ;
+; |TOP|libertacao:l3|Add1~65                 ; |TOP|libertacao:l3|Add1~65                       ; combout          ;
+; |TOP|libertacao:l3|Add1~65                 ; |TOP|libertacao:l3|Add1~67                       ; cout             ;
+; |TOP|libertacao:l3|Add1~70                 ; |TOP|libertacao:l3|Add1~70                       ; combout          ;
+; |TOP|libertacao:l3|Add1~70                 ; |TOP|libertacao:l3|Add1~72                       ; cout0            ;
+; |TOP|libertacao:l3|Add1~70                 ; |TOP|libertacao:l3|Add1~72COUT1_206              ; cout1            ;
+; |TOP|libertacao:l3|Add1~75                 ; |TOP|libertacao:l3|Add1~75                       ; combout          ;
+; |TOP|libertacao:l3|Add1~75                 ; |TOP|libertacao:l3|Add1~77                       ; cout0            ;
+; |TOP|libertacao:l3|Add1~75                 ; |TOP|libertacao:l3|Add1~77COUT1_208              ; cout1            ;
+; |TOP|libertacao:l3|Equal1~3                ; |TOP|libertacao:l3|Equal1~3                      ; combout          ;
+; |TOP|libertacao:l3|Equal1~4                ; |TOP|libertacao:l3|Equal1~4                      ; combout          ;
+; |TOP|libertacao:l3|Add1~80                 ; |TOP|libertacao:l3|Add1~80                       ; combout          ;
+; |TOP|libertacao:l3|Add1~80                 ; |TOP|libertacao:l3|Add1~82                       ; cout0            ;
+; |TOP|libertacao:l3|Add1~80                 ; |TOP|libertacao:l3|Add1~82COUT1_214              ; cout1            ;
+; |TOP|libertacao:l3|Add1~85                 ; |TOP|libertacao:l3|Add1~85                       ; combout          ;
+; |TOP|libertacao:l3|Add1~85                 ; |TOP|libertacao:l3|Add1~87                       ; cout0            ;
+; |TOP|libertacao:l3|Add1~85                 ; |TOP|libertacao:l3|Add1~87COUT1_216              ; cout1            ;
+; |TOP|libertacao:l3|Add1~90                 ; |TOP|libertacao:l3|Add1~90                       ; combout          ;
+; |TOP|libertacao:l3|Add1~90                 ; |TOP|libertacao:l3|Add1~92                       ; cout0            ;
+; |TOP|libertacao:l3|Add1~90                 ; |TOP|libertacao:l3|Add1~92COUT1_210              ; cout1            ;
+; |TOP|libertacao:l3|Add1~95                 ; |TOP|libertacao:l3|Add1~95                       ; combout          ;
+; |TOP|libertacao:l3|Add1~95                 ; |TOP|libertacao:l3|Add1~97                       ; cout0            ;
+; |TOP|libertacao:l3|Add1~95                 ; |TOP|libertacao:l3|Add1~97COUT1_212              ; cout1            ;
+; |TOP|libertacao:l3|Equal1~5                ; |TOP|libertacao:l3|Equal1~5                      ; combout          ;
+; |TOP|libertacao:l3|Add1~100                ; |TOP|libertacao:l3|Add1~100                      ; combout          ;
+; |TOP|libertacao:l3|Add1~100                ; |TOP|libertacao:l3|Add1~102                      ; cout             ;
+; |TOP|libertacao:l3|Add1~105                ; |TOP|libertacao:l3|Add1~105                      ; combout          ;
+; |TOP|libertacao:l3|Add1~105                ; |TOP|libertacao:l3|Add1~107                      ; cout0            ;
+; |TOP|libertacao:l3|Add1~105                ; |TOP|libertacao:l3|Add1~107COUT1_218             ; cout1            ;
+; |TOP|libertacao:l3|Add1~110                ; |TOP|libertacao:l3|Add1~110                      ; combout          ;
+; |TOP|libertacao:l3|Add1~110                ; |TOP|libertacao:l3|Add1~112                      ; cout0            ;
+; |TOP|libertacao:l3|Add1~110                ; |TOP|libertacao:l3|Add1~112COUT1_220             ; cout1            ;
+; |TOP|libertacao:l3|Add1~115                ; |TOP|libertacao:l3|Add1~115                      ; combout          ;
+; |TOP|libertacao:l3|Add1~115                ; |TOP|libertacao:l3|Add1~117                      ; cout0            ;
+; |TOP|libertacao:l3|Add1~115                ; |TOP|libertacao:l3|Add1~117COUT1_222             ; cout1            ;
+; |TOP|libertacao:l3|Equal1~6                ; |TOP|libertacao:l3|Equal1~6                      ; combout          ;
+; |TOP|libertacao:l3|Add1~120                ; |TOP|libertacao:l3|Add1~120                      ; combout          ;
+; |TOP|libertacao:l3|Add1~120                ; |TOP|libertacao:l3|Add1~122                      ; cout0            ;
+; |TOP|libertacao:l3|Add1~120                ; |TOP|libertacao:l3|Add1~122COUT1_224             ; cout1            ;
+; |TOP|libertacao:l3|Add1~125                ; |TOP|libertacao:l3|Add1~125                      ; combout          ;
+; |TOP|libertacao:l3|Add1~125                ; |TOP|libertacao:l3|Add1~127                      ; cout             ;
+; |TOP|libertacao:l3|Add1~130                ; |TOP|libertacao:l3|Add1~130                      ; combout          ;
+; |TOP|libertacao:l3|Add1~130                ; |TOP|libertacao:l3|Add1~132                      ; cout0            ;
+; |TOP|libertacao:l3|Add1~130                ; |TOP|libertacao:l3|Add1~132COUT1_226             ; cout1            ;
+; |TOP|libertacao:l3|Add1~135                ; |TOP|libertacao:l3|Add1~135                      ; combout          ;
+; |TOP|libertacao:l3|Add1~135                ; |TOP|libertacao:l3|Add1~137                      ; cout0            ;
+; |TOP|libertacao:l3|Add1~135                ; |TOP|libertacao:l3|Add1~137COUT1_228             ; cout1            ;
+; |TOP|libertacao:l3|Equal1~7                ; |TOP|libertacao:l3|Equal1~7                      ; combout          ;
+; |TOP|libertacao:l3|Add1~140                ; |TOP|libertacao:l3|Add1~140                      ; combout          ;
+; |TOP|libertacao:l3|Add1~140                ; |TOP|libertacao:l3|Add1~142                      ; cout0            ;
+; |TOP|libertacao:l3|Add1~140                ; |TOP|libertacao:l3|Add1~142COUT1_230             ; cout1            ;
+; |TOP|libertacao:l3|Add1~145                ; |TOP|libertacao:l3|Add1~145                      ; combout          ;
+; |TOP|libertacao:l3|Add1~145                ; |TOP|libertacao:l3|Add1~147                      ; cout0            ;
+; |TOP|libertacao:l3|Add1~145                ; |TOP|libertacao:l3|Add1~147COUT1_232             ; cout1            ;
+; |TOP|libertacao:l3|Add1~150                ; |TOP|libertacao:l3|Add1~150                      ; combout          ;
+; |TOP|libertacao:l3|Add1~150                ; |TOP|libertacao:l3|Add1~152                      ; cout             ;
+; |TOP|libertacao:l3|Add1~155                ; |TOP|libertacao:l3|Add1~155                      ; combout          ;
+; |TOP|libertacao:l3|Equal1~8                ; |TOP|libertacao:l3|Equal1~8                      ; combout          ;
+; |TOP|libertacao:l3|Equal1~9                ; |TOP|libertacao:l3|Equal1~9                      ; combout          ;
+; |TOP|libertacao:l3|x                       ; |TOP|libertacao:l3|x~0                           ; combout          ;
+; |TOP|libertacao:l3|contagem[2]             ; |TOP|libertacao:l3|contagem[2]                   ; regout           ;
+; |TOP|libertacao:l1|count[15]               ; |TOP|libertacao:l1|count[15]                     ; regout           ;
+; |TOP|libertacao:l1|count[18]               ; |TOP|libertacao:l1|count[18]                     ; regout           ;
+; |TOP|libertacao:l1|count[19]               ; |TOP|libertacao:l1|count[19]                     ; regout           ;
+; |TOP|libertacao:l1|count[16]               ; |TOP|libertacao:l1|count[16]                     ; regout           ;
+; |TOP|libertacao:l1|count[17]               ; |TOP|libertacao:l1|count[17]                     ; regout           ;
+; |TOP|libertacao:l1|count[20]               ; |TOP|libertacao:l1|count[20]                     ; regout           ;
+; |TOP|libertacao:l1|count[21]               ; |TOP|libertacao:l1|count[21]                     ; regout           ;
+; |TOP|libertacao:l1|count[22]               ; |TOP|libertacao:l1|count[22]                     ; regout           ;
+; |TOP|libertacao:l1|count[23]               ; |TOP|libertacao:l1|count[23]                     ; regout           ;
+; |TOP|libertacao:l1|count[24]               ; |TOP|libertacao:l1|count[24]                     ; regout           ;
+; |TOP|libertacao:l1|count[25]               ; |TOP|libertacao:l1|count[25]                     ; regout           ;
+; |TOP|libertacao:l1|count[26]               ; |TOP|libertacao:l1|count[26]                     ; regout           ;
+; |TOP|libertacao:l1|count[27]               ; |TOP|libertacao:l1|count[27]                     ; regout           ;
+; |TOP|libertacao:l1|count[28]               ; |TOP|libertacao:l1|count[28]                     ; regout           ;
+; |TOP|libertacao:l1|count[29]               ; |TOP|libertacao:l1|count[29]                     ; regout           ;
+; |TOP|libertacao:l1|count[30]               ; |TOP|libertacao:l1|count[30]                     ; regout           ;
+; |TOP|libertacao:l1|count[31]               ; |TOP|libertacao:l1|count[31]                     ; regout           ;
+; |TOP|libertacao:l2|count[15]               ; |TOP|libertacao:l2|count[15]                     ; regout           ;
+; |TOP|libertacao:l2|count[18]               ; |TOP|libertacao:l2|count[18]                     ; regout           ;
+; |TOP|libertacao:l2|count[19]               ; |TOP|libertacao:l2|count[19]                     ; regout           ;
+; |TOP|libertacao:l2|count[16]               ; |TOP|libertacao:l2|count[16]                     ; regout           ;
+; |TOP|libertacao:l2|count[17]               ; |TOP|libertacao:l2|count[17]                     ; regout           ;
+; |TOP|libertacao:l2|count[20]               ; |TOP|libertacao:l2|count[20]                     ; regout           ;
+; |TOP|libertacao:l2|count[21]               ; |TOP|libertacao:l2|count[21]                     ; regout           ;
+; |TOP|libertacao:l2|count[22]               ; |TOP|libertacao:l2|count[22]                     ; regout           ;
+; |TOP|libertacao:l2|count[23]               ; |TOP|libertacao:l2|count[23]                     ; regout           ;
+; |TOP|libertacao:l2|count[24]               ; |TOP|libertacao:l2|count[24]                     ; regout           ;
+; |TOP|libertacao:l2|count[25]               ; |TOP|libertacao:l2|count[25]                     ; regout           ;
+; |TOP|libertacao:l2|count[26]               ; |TOP|libertacao:l2|count[26]                     ; regout           ;
+; |TOP|libertacao:l2|count[27]               ; |TOP|libertacao:l2|count[27]                     ; regout           ;
+; |TOP|libertacao:l2|count[28]               ; |TOP|libertacao:l2|count[28]                     ; regout           ;
+; |TOP|libertacao:l2|count[29]               ; |TOP|libertacao:l2|count[29]                     ; regout           ;
+; |TOP|libertacao:l2|count[30]               ; |TOP|libertacao:l2|count[30]                     ; regout           ;
+; |TOP|libertacao:l2|count[31]               ; |TOP|libertacao:l2|count[31]                     ; regout           ;
+; |TOP|libertacao:l3|count[0]                ; |TOP|libertacao:l3|count[0]                      ; regout           ;
+; |TOP|libertacao:l3|count[1]                ; |TOP|libertacao:l3|count[1]                      ; regout           ;
+; |TOP|libertacao:l3|count[2]                ; |TOP|libertacao:l3|count[2]                      ; regout           ;
+; |TOP|libertacao:l3|count[3]                ; |TOP|libertacao:l3|count[3]                      ; regout           ;
+; |TOP|libertacao:l3|count[4]                ; |TOP|libertacao:l3|count[4]                      ; regout           ;
+; |TOP|libertacao:l3|count[6]                ; |TOP|libertacao:l3|count[6]                      ; regout           ;
+; |TOP|libertacao:l3|count[5]                ; |TOP|libertacao:l3|count[5]                      ; regout           ;
+; |TOP|libertacao:l3|count[7]                ; |TOP|libertacao:l3|count[7]                      ; regout           ;
+; |TOP|libertacao:l3|count[8]                ; |TOP|libertacao:l3|count[8]                      ; regout           ;
+; |TOP|libertacao:l3|count[9]                ; |TOP|libertacao:l3|count[9]                      ; regout           ;
+; |TOP|libertacao:l3|count[10]               ; |TOP|libertacao:l3|count[10]                     ; regout           ;
+; |TOP|libertacao:l3|count[11]               ; |TOP|libertacao:l3|count[11]                     ; regout           ;
+; |TOP|libertacao:l3|count[12]               ; |TOP|libertacao:l3|count[12]                     ; regout           ;
+; |TOP|libertacao:l3|count[15]               ; |TOP|libertacao:l3|count[15]                     ; regout           ;
+; |TOP|libertacao:l3|count[13]               ; |TOP|libertacao:l3|count[13]                     ; regout           ;
+; |TOP|libertacao:l3|count[14]               ; |TOP|libertacao:l3|count[14]                     ; regout           ;
+; |TOP|libertacao:l3|count[18]               ; |TOP|libertacao:l3|count[18]                     ; regout           ;
+; |TOP|libertacao:l3|count[19]               ; |TOP|libertacao:l3|count[19]                     ; regout           ;
+; |TOP|libertacao:l3|count[16]               ; |TOP|libertacao:l3|count[16]                     ; regout           ;
+; |TOP|libertacao:l3|count[17]               ; |TOP|libertacao:l3|count[17]                     ; regout           ;
+; |TOP|libertacao:l3|count[20]               ; |TOP|libertacao:l3|count[20]                     ; regout           ;
+; |TOP|libertacao:l3|count[21]               ; |TOP|libertacao:l3|count[21]                     ; regout           ;
+; |TOP|libertacao:l3|count[22]               ; |TOP|libertacao:l3|count[22]                     ; regout           ;
+; |TOP|libertacao:l3|count[23]               ; |TOP|libertacao:l3|count[23]                     ; regout           ;
+; |TOP|libertacao:l3|count[24]               ; |TOP|libertacao:l3|count[24]                     ; regout           ;
+; |TOP|libertacao:l3|count[25]               ; |TOP|libertacao:l3|count[25]                     ; regout           ;
+; |TOP|libertacao:l3|count[26]               ; |TOP|libertacao:l3|count[26]                     ; regout           ;
+; |TOP|libertacao:l3|count[27]               ; |TOP|libertacao:l3|count[27]                     ; regout           ;
+; |TOP|libertacao:l3|count[28]               ; |TOP|libertacao:l3|count[28]                     ; regout           ;
+; |TOP|libertacao:l3|count[29]               ; |TOP|libertacao:l3|count[29]                     ; regout           ;
+; |TOP|libertacao:l3|count[30]               ; |TOP|libertacao:l3|count[30]                     ; regout           ;
+; |TOP|libertacao:l3|count[31]               ; |TOP|libertacao:l3|count[31]                     ; regout           ;
+; |TOP|MAQUINA_DE_ESTADOS:FILTRO|LessThan0~0 ; |TOP|MAQUINA_DE_ESTADOS:FILTRO|LessThan0~0       ; combout          ;
+; |TOP|MAQUINA_DE_ESTADOS:FILTRO|LessThan0~1 ; |TOP|MAQUINA_DE_ESTADOS:FILTRO|LessThan0~1       ; combout          ;
+; |TOP|MAQUINA_DE_ESTADOS:FILTRO|LessThan0~2 ; |TOP|MAQUINA_DE_ESTADOS:FILTRO|LessThan0~2       ; combout          ;
+; |TOP|MAQUINA_DE_ESTADOS:FILTRO|LessThan0~3 ; |TOP|MAQUINA_DE_ESTADOS:FILTRO|LessThan0~3       ; combout          ;
+; |TOP|MAQUINA_DE_ESTADOS:FILTRO|LessThan0~4 ; |TOP|MAQUINA_DE_ESTADOS:FILTRO|LessThan0~4       ; combout          ;
+; |TOP|MAQUINA_DE_ESTADOS:FILTRO|LessThan0~5 ; |TOP|MAQUINA_DE_ESTADOS:FILTRO|LessThan0~5       ; combout          ;
+; |TOP|MAQUINA_DE_ESTADOS:FILTRO|LessThan0~6 ; |TOP|MAQUINA_DE_ESTADOS:FILTRO|LessThan0~6       ; combout          ;
+; |TOP|MAQUINA_DE_ESTADOS:FILTRO|LessThan0~7 ; |TOP|MAQUINA_DE_ESTADOS:FILTRO|LessThan0~7       ; combout          ;
+; |TOP|MAQUINA_DE_ESTADOS:FILTRO|LessThan0~8 ; |TOP|MAQUINA_DE_ESTADOS:FILTRO|LessThan0~8       ; combout          ;
+; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~5      ; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~5            ; combout          ;
+; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~10     ; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~12           ; cout             ;
+; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~15     ; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~15           ; combout          ;
+; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~15     ; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~17           ; cout0            ;
+; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~15     ; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~17COUT1_194  ; cout1            ;
+; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~20     ; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~20           ; combout          ;
+; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~20     ; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~22           ; cout0            ;
+; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~20     ; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~22COUT1_200  ; cout1            ;
+; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~25     ; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~25           ; combout          ;
+; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~25     ; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~27           ; cout             ;
+; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~30     ; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~30           ; combout          ;
+; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~30     ; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~32           ; cout0            ;
+; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~30     ; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~32COUT1_202  ; cout1            ;
+; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~35     ; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~35           ; combout          ;
+; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~35     ; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~37           ; cout0            ;
+; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~35     ; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~37COUT1_204  ; cout1            ;
+; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~40     ; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~40           ; combout          ;
+; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~40     ; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~42           ; cout0            ;
+; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~40     ; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~42COUT1_196  ; cout1            ;
+; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~45     ; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~45           ; combout          ;
+; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~45     ; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~47           ; cout0            ;
+; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~45     ; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~47COUT1_198  ; cout1            ;
+; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~50     ; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~50           ; combout          ;
+; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~50     ; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~52           ; cout0            ;
+; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~50     ; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~52COUT1_206  ; cout1            ;
+; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~55     ; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~55           ; combout          ;
+; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~55     ; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~57           ; cout0            ;
+; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~55     ; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~57COUT1_208  ; cout1            ;
+; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~60     ; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~60           ; combout          ;
+; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~60     ; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~62           ; cout             ;
+; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~65     ; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~65           ; combout          ;
+; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~65     ; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~67           ; cout0            ;
+; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~65     ; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~67COUT1_210  ; cout1            ;
+; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~70     ; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~70           ; combout          ;
+; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~70     ; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~72           ; cout0            ;
+; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~70     ; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~72COUT1_212  ; cout1            ;
+; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~75     ; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~75           ; combout          ;
+; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~75     ; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~77           ; cout0            ;
+; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~75     ; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~77COUT1_214  ; cout1            ;
+; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~80     ; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~80           ; combout          ;
+; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~80     ; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~82           ; cout0            ;
+; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~80     ; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~82COUT1_216  ; cout1            ;
+; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~85     ; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~85           ; combout          ;
+; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~85     ; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~87           ; cout             ;
+; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~90     ; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~90           ; combout          ;
+; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~90     ; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~92           ; cout0            ;
+; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~90     ; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~92COUT1_218  ; cout1            ;
+; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~95     ; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~95           ; combout          ;
+; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~95     ; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~97           ; cout0            ;
+; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~95     ; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~97COUT1_220  ; cout1            ;
+; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~100    ; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~100          ; combout          ;
+; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~100    ; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~102          ; cout0            ;
+; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~100    ; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~102COUT1_222 ; cout1            ;
+; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~105    ; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~105          ; combout          ;
+; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~105    ; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~107          ; cout0            ;
+; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~105    ; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~107COUT1_224 ; cout1            ;
+; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~110    ; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~110          ; combout          ;
+; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~110    ; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~112          ; cout             ;
+; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~115    ; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~115          ; combout          ;
+; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~115    ; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~117          ; cout0            ;
+; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~115    ; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~117COUT1_226 ; cout1            ;
+; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~120    ; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~120          ; combout          ;
+; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~120    ; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~122          ; cout0            ;
+; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~120    ; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~122COUT1_228 ; cout1            ;
+; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~125    ; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~125          ; combout          ;
+; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~125    ; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~127          ; cout0            ;
+; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~125    ; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~127COUT1_230 ; cout1            ;
+; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~130    ; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~130          ; combout          ;
+; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~130    ; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~132          ; cout0            ;
+; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~130    ; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~132COUT1_232 ; cout1            ;
+; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~135    ; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~135          ; combout          ;
+; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~135    ; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~137          ; cout             ;
+; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~140    ; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~142          ; cout0            ;
+; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~145    ; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~147          ; cout0            ;
+; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~150    ; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~152          ; cout0            ;
+; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~155    ; |TOP|MAQUINA_DE_ESTADOS:FILTRO|Add0~157          ; cout0            ;
+; |TOP|s3                                    ; |TOP|s3                                          ; padio            ;
++--------------------------------------------+--------------------------------------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II Simulator
+    Info: Version 9.1 Build 304 01/25/2010 Service Pack 1 SJ Web Edition
+    Info: Processing started: Mon Sep 28 19:07:24 2015
+Info: Command: quartus_sim --read_settings_files=on --write_settings_files=off P4_RAUL_ITALO -c TOP
+Info: Using vector source file "C:/Users/Raul/Desktop/P4 RAUL E ITALO/FINAL.vwf"
+Info: Inverted registers were found during simulation
+    Info: Register: |TOP|libertacao:l1|led
+    Info: Register: |TOP|libertacao:l2|led
+    Info: Register: |TOP|libertacao:l3|led
+    Info: Register: |TOP|libertacao:l1|contagem[0]
+    Info: Register: |TOP|libertacao:l2|contagem[1]
+    Info: Register: |TOP|libertacao:l3|contagem[2]
+Info: Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info: Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Info: Simulation partitioned into 1 sub-simulations
+Info: Simulation coverage is      25.49 %
+Info: Number of transitions in simulation is 1508252
+Info: Quartus II Simulator was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 162 megabytes
+    Info: Processing ended: Mon Sep 28 19:08:08 2015
+    Info: Elapsed time: 00:00:44
+    Info: Total CPU time (on all processors): 00:00:44
+
+

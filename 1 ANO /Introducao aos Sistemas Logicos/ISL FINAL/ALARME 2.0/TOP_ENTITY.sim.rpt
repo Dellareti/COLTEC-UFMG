@@ -1,0 +1,381 @@
+Simulator report for TOP_ENTITY
+Wed Nov 11 16:57:47 2015
+Quartus II Version 9.1 Build 304 01/25/2010 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. Coverage Summary
+  6. Complete 1/0-Value Coverage
+  7. Missing 1-Value Coverage
+  8. Missing 0-Value Coverage
+  9. Simulator INI Usage
+ 10. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2010 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++---------------------------------------------+
+; Simulator Summary                           ;
++-----------------------------+---------------+
+; Type                        ; Value         ;
++-----------------------------+---------------+
+; Simulation Start Time       ; 0 ps          ;
+; Simulation End Time         ; 100.0 us      ;
+; Simulation Netlist Size     ; 79 nodes      ;
+; Simulation Coverage         ;      33.08 %  ;
+; Total Number of Transitions ; 78912         ;
+; Simulation Breakpoints      ; 0             ;
+; Family                      ; MAX II        ;
+; Device                      ; EPM1270F256C5 ;
++-----------------------------+---------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                          ;
++--------------------------------------------------------------------------------------------+----------------+---------------+
+; Option                                                                                     ; Setting        ; Default Value ;
++--------------------------------------------------------------------------------------------+----------------+---------------+
+; Simulation mode                                                                            ; Timing         ; Timing        ;
+; Start time                                                                                 ; 0 ns           ; 0 ns          ;
+; Simulation results format                                                                  ; CVWF           ;               ;
+; Vector input source                                                                        ; BEEP_BOTAO.vwf ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On             ; On            ;
+; Check outputs                                                                              ; Off            ; Off           ;
+; Report simulation coverage                                                                 ; On             ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On             ; On            ;
+; Display missing 1-value coverage report                                                    ; On             ; On            ;
+; Display missing 0-value coverage report                                                    ; On             ; On            ;
+; Detect setup and hold time violations                                                      ; Off            ; Off           ;
+; Detect glitches                                                                            ; Off            ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off            ; Off           ;
+; Generate Signal Activity File                                                              ; Off            ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off            ; Off           ;
+; Group bus channels in simulation results                                                   ; Off            ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On             ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE     ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off            ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; Off            ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto           ; Auto          ;
++--------------------------------------------------------------------------------------------+----------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II to view the waveform report data.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;      33.08 % ;
+; Total nodes checked                                 ; 79           ;
+; Total output ports checked                          ; 133          ;
+; Total output ports with complete 1/0-value coverage ; 44           ;
+; Total output ports with no 1/0-value coverage       ; 86           ;
+; Total output ports with no 1-value coverage         ; 86           ;
+; Total output ports with no 0-value coverage         ; 89           ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++------------------------------------------------------------+
+; Complete 1/0-Value Coverage                                ;
++----------------+------------------------+------------------+
+; Node Name      ; Output Port Name       ; Output Port Type ;
++----------------+------------------------+------------------+
+; |BEEP|Add0~0   ; |BEEP|Add0~0           ; combout          ;
+; |BEEP|Add0~0   ; |BEEP|Add0~2           ; cout             ;
+; |BEEP|Add0~5   ; |BEEP|Add0~5           ; combout          ;
+; |BEEP|Add0~5   ; |BEEP|Add0~7COUT1_188  ; cout1            ;
+; |BEEP|Add0~10  ; |BEEP|Add0~10          ; combout          ;
+; |BEEP|Add0~10  ; |BEEP|Add0~12COUT1_186 ; cout1            ;
+; |BEEP|Add0~15  ; |BEEP|Add0~15          ; combout          ;
+; |BEEP|Add0~15  ; |BEEP|Add0~17COUT1_190 ; cout1            ;
+; |BEEP|Equal0~0 ; |BEEP|Equal0~0         ; combout          ;
+; |BEEP|Add0~20  ; |BEEP|Add0~20          ; combout          ;
+; |BEEP|Add0~20  ; |BEEP|Add0~22COUT1_192 ; cout1            ;
+; |BEEP|Add0~25  ; |BEEP|Add0~25          ; combout          ;
+; |BEEP|Add0~25  ; |BEEP|Add0~27          ; cout0            ;
+; |BEEP|Add0~30  ; |BEEP|Add0~30          ; combout          ;
+; |BEEP|Add0~30  ; |BEEP|Add0~32          ; cout             ;
+; |BEEP|Add0~35  ; |BEEP|Add0~35          ; combout          ;
+; |BEEP|Add0~35  ; |BEEP|Add0~37          ; cout0            ;
+; |BEEP|Equal0~1 ; |BEEP|Equal0~1         ; combout          ;
+; |BEEP|Add0~40  ; |BEEP|Add0~40          ; combout          ;
+; |BEEP|Add0~40  ; |BEEP|Add0~42          ; cout0            ;
+; |BEEP|Add0~45  ; |BEEP|Add0~45          ; combout          ;
+; |BEEP|Add0~45  ; |BEEP|Add0~47          ; cout0            ;
+; |BEEP|Add0~50  ; |BEEP|Add0~50          ; combout          ;
+; |BEEP|Add0~50  ; |BEEP|Add0~52          ; cout             ;
+; |BEEP|Add0~55  ; |BEEP|Add0~55          ; combout          ;
+; |BEEP|Add0~55  ; |BEEP|Add0~57COUT1_202 ; cout1            ;
+; |BEEP|Equal0~2 ; |BEEP|Equal0~2         ; combout          ;
+; |BEEP|Add0~60  ; |BEEP|Add0~60          ; combout          ;
+; |BEEP|Add0~65  ; |BEEP|Add0~65          ; combout          ;
+; |BEEP|LAST     ; |BEEP|process_0~0      ; combout          ;
+; |BEEP|cont[0]  ; |BEEP|cont[0]          ; regout           ;
+; |BEEP|cont[2]  ; |BEEP|cont[2]          ; regout           ;
+; |BEEP|cont[1]  ; |BEEP|cont[1]          ; regout           ;
+; |BEEP|cont[3]  ; |BEEP|cont[3]          ; regout           ;
+; |BEEP|cont[4]  ; |BEEP|cont[4]          ; regout           ;
+; |BEEP|cont[6]  ; |BEEP|cont[6]          ; regout           ;
+; |BEEP|cont[5]  ; |BEEP|cont[5]          ; regout           ;
+; |BEEP|cont[7]  ; |BEEP|cont[7]          ; regout           ;
+; |BEEP|cont[8]  ; |BEEP|cont[8]          ; regout           ;
+; |BEEP|cont[9]  ; |BEEP|cont[9]          ; regout           ;
+; |BEEP|cont[10] ; |BEEP|cont[10]         ; regout           ;
+; |BEEP|cont[11] ; |BEEP|cont[11]         ; regout           ;
+; |BEEP|clk      ; |BEEP|clk~corein       ; combout          ;
+; |BEEP|pulso    ; |BEEP|pulso~corein     ; combout          ;
++----------------+------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++-------------------------------------------------------------+
+; Missing 1-Value Coverage                                    ;
++----------------+-------------------------+------------------+
+; Node Name      ; Output Port Name        ; Output Port Type ;
++----------------+-------------------------+------------------+
+; |BEEP|Add0~5   ; |BEEP|Add0~7            ; cout0            ;
+; |BEEP|Add0~10  ; |BEEP|Add0~12           ; cout0            ;
+; |BEEP|Add0~15  ; |BEEP|Add0~17           ; cout0            ;
+; |BEEP|Add0~20  ; |BEEP|Add0~22           ; cout0            ;
+; |BEEP|Add0~25  ; |BEEP|Add0~27COUT1_194  ; cout1            ;
+; |BEEP|Add0~35  ; |BEEP|Add0~37COUT1_196  ; cout1            ;
+; |BEEP|Add0~40  ; |BEEP|Add0~42COUT1_198  ; cout1            ;
+; |BEEP|Add0~45  ; |BEEP|Add0~47COUT1_200  ; cout1            ;
+; |BEEP|Add0~55  ; |BEEP|Add0~57           ; cout0            ;
+; |BEEP|Add0~60  ; |BEEP|Add0~62           ; cout0            ;
+; |BEEP|Add0~65  ; |BEEP|Add0~67           ; cout0            ;
+; |BEEP|Add0~65  ; |BEEP|Add0~67COUT1_206  ; cout1            ;
+; |BEEP|Add0~70  ; |BEEP|Add0~70           ; combout          ;
+; |BEEP|Add0~70  ; |BEEP|Add0~72           ; cout0            ;
+; |BEEP|Add0~70  ; |BEEP|Add0~72COUT1_208  ; cout1            ;
+; |BEEP|Add0~75  ; |BEEP|Add0~75           ; combout          ;
+; |BEEP|Add0~75  ; |BEEP|Add0~77           ; cout             ;
+; |BEEP|Equal0~3 ; |BEEP|Equal0~3          ; combout          ;
+; |BEEP|Equal0~4 ; |BEEP|Equal0~4          ; combout          ;
+; |BEEP|Add0~80  ; |BEEP|Add0~80           ; combout          ;
+; |BEEP|Add0~80  ; |BEEP|Add0~82           ; cout0            ;
+; |BEEP|Add0~80  ; |BEEP|Add0~82COUT1_210  ; cout1            ;
+; |BEEP|Add0~85  ; |BEEP|Add0~85           ; combout          ;
+; |BEEP|Add0~85  ; |BEEP|Add0~87           ; cout0            ;
+; |BEEP|Add0~85  ; |BEEP|Add0~87COUT1_212  ; cout1            ;
+; |BEEP|Add0~90  ; |BEEP|Add0~90           ; combout          ;
+; |BEEP|Add0~90  ; |BEEP|Add0~92           ; cout0            ;
+; |BEEP|Add0~90  ; |BEEP|Add0~92COUT1_216  ; cout1            ;
+; |BEEP|Add0~95  ; |BEEP|Add0~95           ; combout          ;
+; |BEEP|Add0~95  ; |BEEP|Add0~97           ; cout0            ;
+; |BEEP|Add0~95  ; |BEEP|Add0~97COUT1_214  ; cout1            ;
+; |BEEP|Equal0~5 ; |BEEP|Equal0~5          ; combout          ;
+; |BEEP|Add0~100 ; |BEEP|Add0~100          ; combout          ;
+; |BEEP|Add0~100 ; |BEEP|Add0~102          ; cout0            ;
+; |BEEP|Add0~100 ; |BEEP|Add0~102COUT1_220 ; cout1            ;
+; |BEEP|Add0~105 ; |BEEP|Add0~105          ; combout          ;
+; |BEEP|Add0~105 ; |BEEP|Add0~107          ; cout0            ;
+; |BEEP|Add0~105 ; |BEEP|Add0~107COUT1_222 ; cout1            ;
+; |BEEP|Add0~110 ; |BEEP|Add0~110          ; combout          ;
+; |BEEP|Add0~110 ; |BEEP|Add0~112          ; cout             ;
+; |BEEP|Add0~115 ; |BEEP|Add0~115          ; combout          ;
+; |BEEP|Add0~115 ; |BEEP|Add0~117          ; cout0            ;
+; |BEEP|Add0~115 ; |BEEP|Add0~117COUT1_218 ; cout1            ;
+; |BEEP|Equal0~6 ; |BEEP|Equal0~6          ; combout          ;
+; |BEEP|Add0~120 ; |BEEP|Add0~120          ; combout          ;
+; |BEEP|Add0~120 ; |BEEP|Add0~122          ; cout0            ;
+; |BEEP|Add0~120 ; |BEEP|Add0~122COUT1_224 ; cout1            ;
+; |BEEP|Add0~125 ; |BEEP|Add0~125          ; combout          ;
+; |BEEP|Add0~125 ; |BEEP|Add0~127          ; cout             ;
+; |BEEP|Add0~130 ; |BEEP|Add0~130          ; combout          ;
+; |BEEP|Add0~130 ; |BEEP|Add0~132          ; cout0            ;
+; |BEEP|Add0~130 ; |BEEP|Add0~132COUT1_226 ; cout1            ;
+; |BEEP|Add0~135 ; |BEEP|Add0~135          ; combout          ;
+; |BEEP|Add0~135 ; |BEEP|Add0~137          ; cout0            ;
+; |BEEP|Add0~135 ; |BEEP|Add0~137COUT1_228 ; cout1            ;
+; |BEEP|Equal0~7 ; |BEEP|Equal0~7          ; combout          ;
+; |BEEP|Add0~140 ; |BEEP|Add0~140          ; combout          ;
+; |BEEP|Add0~140 ; |BEEP|Add0~142          ; cout0            ;
+; |BEEP|Add0~140 ; |BEEP|Add0~142COUT1_230 ; cout1            ;
+; |BEEP|Add0~145 ; |BEEP|Add0~145          ; combout          ;
+; |BEEP|Add0~145 ; |BEEP|Add0~147          ; cout0            ;
+; |BEEP|Add0~145 ; |BEEP|Add0~147COUT1_232 ; cout1            ;
+; |BEEP|Add0~150 ; |BEEP|Add0~150          ; combout          ;
+; |BEEP|Add0~150 ; |BEEP|Add0~152          ; cout             ;
+; |BEEP|Add0~155 ; |BEEP|Add0~155          ; combout          ;
+; |BEEP|Equal0~8 ; |BEEP|Equal0~8          ; combout          ;
+; |BEEP|Equal0~9 ; |BEEP|Equal0~9          ; combout          ;
+; |BEEP|cont[13] ; |BEEP|cont[13]          ; regout           ;
+; |BEEP|cont[14] ; |BEEP|cont[14]          ; regout           ;
+; |BEEP|cont[15] ; |BEEP|cont[15]          ; regout           ;
+; |BEEP|cont[16] ; |BEEP|cont[16]          ; regout           ;
+; |BEEP|cont[17] ; |BEEP|cont[17]          ; regout           ;
+; |BEEP|cont[19] ; |BEEP|cont[19]          ; regout           ;
+; |BEEP|cont[18] ; |BEEP|cont[18]          ; regout           ;
+; |BEEP|cont[22] ; |BEEP|cont[22]          ; regout           ;
+; |BEEP|cont[23] ; |BEEP|cont[23]          ; regout           ;
+; |BEEP|cont[20] ; |BEEP|cont[20]          ; regout           ;
+; |BEEP|cont[21] ; |BEEP|cont[21]          ; regout           ;
+; |BEEP|cont[24] ; |BEEP|cont[24]          ; regout           ;
+; |BEEP|cont[25] ; |BEEP|cont[25]          ; regout           ;
+; |BEEP|cont[26] ; |BEEP|cont[26]          ; regout           ;
+; |BEEP|cont[27] ; |BEEP|cont[27]          ; regout           ;
+; |BEEP|cont[28] ; |BEEP|cont[28]          ; regout           ;
+; |BEEP|cont[29] ; |BEEP|cont[29]          ; regout           ;
+; |BEEP|cont[30] ; |BEEP|cont[30]          ; regout           ;
+; |BEEP|cont[31] ; |BEEP|cont[31]          ; regout           ;
++----------------+-------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++-------------------------------------------------------------+
+; Missing 0-Value Coverage                                    ;
++----------------+-------------------------+------------------+
+; Node Name      ; Output Port Name        ; Output Port Type ;
++----------------+-------------------------+------------------+
+; |BEEP|Add0~5   ; |BEEP|Add0~7            ; cout0            ;
+; |BEEP|Add0~10  ; |BEEP|Add0~12           ; cout0            ;
+; |BEEP|Add0~15  ; |BEEP|Add0~17           ; cout0            ;
+; |BEEP|Add0~20  ; |BEEP|Add0~22           ; cout0            ;
+; |BEEP|Add0~25  ; |BEEP|Add0~27COUT1_194  ; cout1            ;
+; |BEEP|Add0~35  ; |BEEP|Add0~37COUT1_196  ; cout1            ;
+; |BEEP|Add0~40  ; |BEEP|Add0~42COUT1_198  ; cout1            ;
+; |BEEP|Add0~45  ; |BEEP|Add0~47COUT1_200  ; cout1            ;
+; |BEEP|Add0~55  ; |BEEP|Add0~57           ; cout0            ;
+; |BEEP|Add0~60  ; |BEEP|Add0~62           ; cout0            ;
+; |BEEP|Add0~60  ; |BEEP|Add0~62COUT1_204  ; cout1            ;
+; |BEEP|Add0~65  ; |BEEP|Add0~67           ; cout0            ;
+; |BEEP|Add0~65  ; |BEEP|Add0~67COUT1_206  ; cout1            ;
+; |BEEP|Add0~70  ; |BEEP|Add0~70           ; combout          ;
+; |BEEP|Add0~70  ; |BEEP|Add0~72           ; cout0            ;
+; |BEEP|Add0~70  ; |BEEP|Add0~72COUT1_208  ; cout1            ;
+; |BEEP|Add0~75  ; |BEEP|Add0~75           ; combout          ;
+; |BEEP|Add0~75  ; |BEEP|Add0~77           ; cout             ;
+; |BEEP|Equal0~3 ; |BEEP|Equal0~3          ; combout          ;
+; |BEEP|Equal0~4 ; |BEEP|Equal0~4          ; combout          ;
+; |BEEP|Add0~80  ; |BEEP|Add0~80           ; combout          ;
+; |BEEP|Add0~80  ; |BEEP|Add0~82           ; cout0            ;
+; |BEEP|Add0~80  ; |BEEP|Add0~82COUT1_210  ; cout1            ;
+; |BEEP|Add0~85  ; |BEEP|Add0~85           ; combout          ;
+; |BEEP|Add0~85  ; |BEEP|Add0~87           ; cout0            ;
+; |BEEP|Add0~85  ; |BEEP|Add0~87COUT1_212  ; cout1            ;
+; |BEEP|Add0~90  ; |BEEP|Add0~90           ; combout          ;
+; |BEEP|Add0~90  ; |BEEP|Add0~92           ; cout0            ;
+; |BEEP|Add0~90  ; |BEEP|Add0~92COUT1_216  ; cout1            ;
+; |BEEP|Add0~95  ; |BEEP|Add0~95           ; combout          ;
+; |BEEP|Add0~95  ; |BEEP|Add0~97           ; cout0            ;
+; |BEEP|Add0~95  ; |BEEP|Add0~97COUT1_214  ; cout1            ;
+; |BEEP|Equal0~5 ; |BEEP|Equal0~5          ; combout          ;
+; |BEEP|Add0~100 ; |BEEP|Add0~100          ; combout          ;
+; |BEEP|Add0~100 ; |BEEP|Add0~102          ; cout0            ;
+; |BEEP|Add0~100 ; |BEEP|Add0~102COUT1_220 ; cout1            ;
+; |BEEP|Add0~105 ; |BEEP|Add0~105          ; combout          ;
+; |BEEP|Add0~105 ; |BEEP|Add0~107          ; cout0            ;
+; |BEEP|Add0~105 ; |BEEP|Add0~107COUT1_222 ; cout1            ;
+; |BEEP|Add0~110 ; |BEEP|Add0~110          ; combout          ;
+; |BEEP|Add0~110 ; |BEEP|Add0~112          ; cout             ;
+; |BEEP|Add0~115 ; |BEEP|Add0~115          ; combout          ;
+; |BEEP|Add0~115 ; |BEEP|Add0~117          ; cout0            ;
+; |BEEP|Add0~115 ; |BEEP|Add0~117COUT1_218 ; cout1            ;
+; |BEEP|Equal0~6 ; |BEEP|Equal0~6          ; combout          ;
+; |BEEP|Add0~120 ; |BEEP|Add0~120          ; combout          ;
+; |BEEP|Add0~120 ; |BEEP|Add0~122          ; cout0            ;
+; |BEEP|Add0~120 ; |BEEP|Add0~122COUT1_224 ; cout1            ;
+; |BEEP|Add0~125 ; |BEEP|Add0~125          ; combout          ;
+; |BEEP|Add0~125 ; |BEEP|Add0~127          ; cout             ;
+; |BEEP|Add0~130 ; |BEEP|Add0~130          ; combout          ;
+; |BEEP|Add0~130 ; |BEEP|Add0~132          ; cout0            ;
+; |BEEP|Add0~130 ; |BEEP|Add0~132COUT1_226 ; cout1            ;
+; |BEEP|Add0~135 ; |BEEP|Add0~135          ; combout          ;
+; |BEEP|Add0~135 ; |BEEP|Add0~137          ; cout0            ;
+; |BEEP|Add0~135 ; |BEEP|Add0~137COUT1_228 ; cout1            ;
+; |BEEP|Equal0~7 ; |BEEP|Equal0~7          ; combout          ;
+; |BEEP|Add0~140 ; |BEEP|Add0~140          ; combout          ;
+; |BEEP|Add0~140 ; |BEEP|Add0~142          ; cout0            ;
+; |BEEP|Add0~140 ; |BEEP|Add0~142COUT1_230 ; cout1            ;
+; |BEEP|Add0~145 ; |BEEP|Add0~145          ; combout          ;
+; |BEEP|Add0~145 ; |BEEP|Add0~147          ; cout0            ;
+; |BEEP|Add0~145 ; |BEEP|Add0~147COUT1_232 ; cout1            ;
+; |BEEP|Add0~150 ; |BEEP|Add0~150          ; combout          ;
+; |BEEP|Add0~150 ; |BEEP|Add0~152          ; cout             ;
+; |BEEP|Add0~155 ; |BEEP|Add0~155          ; combout          ;
+; |BEEP|Equal0~8 ; |BEEP|Equal0~8          ; combout          ;
+; |BEEP|Equal0~9 ; |BEEP|Equal0~9          ; combout          ;
+; |BEEP|cont[12] ; |BEEP|cont[12]          ; regout           ;
+; |BEEP|cont[13] ; |BEEP|cont[13]          ; regout           ;
+; |BEEP|cont[14] ; |BEEP|cont[14]          ; regout           ;
+; |BEEP|cont[15] ; |BEEP|cont[15]          ; regout           ;
+; |BEEP|cont[16] ; |BEEP|cont[16]          ; regout           ;
+; |BEEP|cont[17] ; |BEEP|cont[17]          ; regout           ;
+; |BEEP|cont[19] ; |BEEP|cont[19]          ; regout           ;
+; |BEEP|cont[18] ; |BEEP|cont[18]          ; regout           ;
+; |BEEP|cont[22] ; |BEEP|cont[22]          ; regout           ;
+; |BEEP|cont[23] ; |BEEP|cont[23]          ; regout           ;
+; |BEEP|cont[20] ; |BEEP|cont[20]          ; regout           ;
+; |BEEP|cont[21] ; |BEEP|cont[21]          ; regout           ;
+; |BEEP|cont[24] ; |BEEP|cont[24]          ; regout           ;
+; |BEEP|cont[25] ; |BEEP|cont[25]          ; regout           ;
+; |BEEP|cont[26] ; |BEEP|cont[26]          ; regout           ;
+; |BEEP|cont[27] ; |BEEP|cont[27]          ; regout           ;
+; |BEEP|cont[28] ; |BEEP|cont[28]          ; regout           ;
+; |BEEP|cont[29] ; |BEEP|cont[29]          ; regout           ;
+; |BEEP|cont[30] ; |BEEP|cont[30]          ; regout           ;
+; |BEEP|cont[31] ; |BEEP|cont[31]          ; regout           ;
+; |BEEP|beep     ; |BEEP|beep              ; padio            ;
++----------------+-------------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II Simulator
+    Info: Version 9.1 Build 304 01/25/2010 Service Pack 1 SJ Web Edition
+    Info: Processing started: Wed Nov 11 16:57:46 2015
+Info: Command: quartus_sim --read_settings_files=on --write_settings_files=off Alarme_de_casa -c TOP_ENTITY
+Info: Using vector source file "C:/Users/Aluno-Isl/Desktop/ALARME 2.0/BEEP_BOTAO.vwf"
+Info: Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info: Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Info: Simulation partitioned into 1 sub-simulations
+Info: Simulation coverage is      33.08 %
+Info: Number of transitions in simulation is 78912
+Info: Quartus II Simulator was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 151 megabytes
+    Info: Processing ended: Wed Nov 11 16:57:47 2015
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
+
+

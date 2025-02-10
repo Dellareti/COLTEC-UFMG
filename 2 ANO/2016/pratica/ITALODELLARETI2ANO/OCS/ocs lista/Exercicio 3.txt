@@ -1,0 +1,15 @@
+Arrendodamento
+
+2,56 x 10 elevado a 0  + 3,78 x 10²
+3,8056 x 10²
+3,80 x 10²
+
+maior precisão
+
+Sem arrendodamento
+
+2,46 x 10 elevado a 0 + 3,78 x 10²
+(0,02 + 3,78) x 10²
+3,80 x 10²
+
+menor precisão

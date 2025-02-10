@@ -1,0 +1,55 @@
+1) Existem estados definidos em que processos podem estar: executando, bloqueado e pronto.
+
+Executando: É o estado em que o processo está em sua execução, tem seus dados processados enquanto não for interrompido por um evento externo ou do próprio processo.
+
+
+Bloqueado:Estado em que um processo está interrompido, impedido de ser executado, e pode ser alcançado através de pausas, bloqueios ou interrupções. 
+
+
+Pronto: Estado em que o processo já estava em execução, e foi colocado em uma pausa para poder dar lugar a outro processo que existe ser então executado. Ocorre nos escalonamentos.
+
+
+Trocas de estados: Executando-bloqueado: processos podem ser bloqueados por duas chamadas de sistema(block,pause), que caso acionados, interrompem a execução do processo atual, para outra tarefa ser então feita.
+
+
+Pronto-executando e executando-pronto: São transições que ocorrem durante o escalonamento de processos. O processo pode então ser pausado enquanto outro é realizado ou pode ser colocado para executar no processador.
+
+
+Bloqueado-pronto: Ocorre se o processador estiver ocioso, então o processo é colocado em execução. Caso o processador esteja executando algum processo, o anterior deve aguardar.
+
+-----------------------------------------------------------------------------------------------------------------------
+
+2) A tarefa de escalonar processos ocorre nos processadores devido a necessidade de se gerenciar os vários processos que devem ser executados pelo mesmo. Para tais processos poderem ser todos executados, existe o escalonamento que pode ocorrer em diferentes algoritmos.
+
+Um destes algoritmos é conhecido como FCFS(First-come,first-served).
+O FCFS funciona de maneira simples: processos são acionados com a passagem de tempo, e a ordem de chegada dos processos determinará sua ordem de execução, o processo que chegar primeiro é executado primeiro. A vantagem deste algoritmo está na sua simplicidade de implementação, já que escalonamento conta com parte de seu funcionamento em um hardware dedicado, que tem uma tarefa simples de ser executada. Sua grande desvantagem se encontra no fato de que FCFS pode ter o pior tempo de espera médio para um conjunto de processo, já que o tempo de execução de cada processo não é levado em consideração, o que pode levar a um desempenho geral ruim em muitos casos.
+
+Processo 		Chegada 		Tempo de Execução
+
+p1			   0				20
+p2			   3				5
+p3			   6				3
+
+
+Tempo de espera médio: (0+17+19)/3 = 12
+
+Ordem de execução p1  ->  p2  ->  p3
+				  t0 	  t20	  t25
+
+-----------------------------------------------------------------------------------------------------------------------
+
+3) Deadlock é a situação em que vários processos se encontram, quando cada processo do grupo de processos espera por um evento que somente outro do grupo pode fazer, o que é exemplificado no problema de tais filósofos com o macarrão. 
+Existem quatro condições para que um deadlock ocorra, e todas elas devem ocorrer: 
+
+	Exclusão mútua: cada recurso pode estar somente em uma de duas situações: ou associado a um único processo ou disponível;
+	
+	Posse e espera (hold and wait): processos que já possuem algum recurso podem requer outros recursos;
+
+	Não-preempção: recursos já alocados não podem ser retirados do processo que os alocou; somente o processo que alocou os recursos pode liberá-los;
+	
+	Espera Circular: um processo pode esperar por recursos alocados a outro processo, que por sua vez espera por recursos alocados a outro processo, e assim por diante, até que o último espera por recursos alocados ao primeiro;
+
+Quando ocorre, não se soluciona um deadlock, mas existem maneiras de preveni-lo.
+
+	No caso do jantar, o problema do deadlock ocorre se algum filósofo pega apenas um garfo, se inicialmente um filósofo come macarrão. Quando os garfos passarem novamente, e ele deixar seu garfo na mesa, o loop em que ele pega apenas um garfo continua, e então ele pode sim morrer de fome, devido a um deadlock, um loop sem resolução e sem saída. Um filósofo não pode interferir na alocação de recursos de outro: se um pegou um hashi, somente quem pegou(analogia a alocação) pode liberá-lo.
+

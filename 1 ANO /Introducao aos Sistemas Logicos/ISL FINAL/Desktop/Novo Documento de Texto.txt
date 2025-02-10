@@ -1,0 +1,26 @@
+Componentes do trabalho.
+1 buzzer.
+7 leds.
+4 displays 7-segmentos (anôdo comum).
+1 potenciômetro (100 k Ohms).
+6 botões.
+3 transistores PNP.
+26 resistores.
+
+E MUITOS fios(muitos).
+
+
+Sujeito a modificações
+
+
+
+
+Funcionamento do alarme.
+
+O alarme já vira com uma senha padrão de dois dígitos que será  00  se for de desejo do usuário ele poderá criar outra senha a seu gosto.Ultilizaremos  alguns botões para regularmos o raio de detecção e ele  terá três  níveis.
+Perto: terá  um raio de 1 metro.
+Medio:terá um raio de  3 metros.
+Longe : terá um raio de 5 metros .
+ Quando o circuito tiver ativado em algum desses raios somente  detectará movimento dentro desses  raios qualquer movimento fora destes  será ignorado. Qualquer  movimento( que simularemos no potenciômetro) que estiver dentro deste raio irá desparrar um contador de 30 segundos .
+Caso a senha  não seja digitada ou a senha  digitada estiver errada ativará o buzzer e um led vermelho ,Enquanto a senha correta não for digitada o buzzer permanecerá ativo. Se a senha estiver certa e digitada no tempo determinado ,ativará um led verde que assinala que o processo foi bem sucedido.
+

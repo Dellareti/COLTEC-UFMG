@@ -1,0 +1,10 @@
+A) No problema das pontes de Konigsberg, para sabermos se existe solução, basta sabermos se o grafo modelo do problema é um grafo de Euler ou não.
+
+Solução: Pela análise do grafo das pontes de Konigsberg, observa-se que Para Todo v E V, gr(v) é ímpar. Logo, o grafo não é um grafo de Euler. Isso significa que o problema não possui solução.
+
+B) TEOREMA DE EULER: Um grafo conexo é um grafo de Euler se e somente se todos os seus vértices são de grau par.
+
+
+C) Para que o problema de Konigsberg fosse resolvido,o grafo formado pelas pontes deveria ser um grafo de Euler,assim a soma de todos os ângulos deveria ser um número par.
+
+

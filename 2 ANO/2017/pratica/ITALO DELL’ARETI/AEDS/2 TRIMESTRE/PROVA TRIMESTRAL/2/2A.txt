@@ -1,0 +1,23 @@
+2)
+Os principais tipos de paradigmas de programação são a programação estruturada e a programação orientada a objeto.
+
+P.Estruturada
+
+É um tipo de paradigma mais encontrado em linguagens de baixo nível, como C.
+Suas linguagens seguem um padrão sequencial, e não tem estruturas que permitem uma melhor manutenção de código, ele simplesmente segue uma longa sequência que se torna mais complicada de ser seguida por um programador.
+Apesar disto, permite-se com o C por exemplo, ter uma abordagem mais direta quanto a nível de hardware, fazendo com que tenhamos programas mais rápidos, e que tomam poucos desvios como na POO.
+Pode-se neste paradigma ter um melhor controle do fluxo de execução do programa, através de sua sequencialidade.
+
+P.Orientada a Objetos
+
+Na orientação a objetos, temos a capacidade de criar relacionamentos entre os diversos componentes de um  código, que facilita em sua manutenção. Tudo em uma linguagem POO é organizado, em classes definidas, hierarquias, e relações entre componentes. A POO normalmente nos remete a quatro tópicos importantes:
+
+Abstração - pode-se dar propriedades específicas a cada objeto que criarmos, de forma única, o que leva a certa abstração.
+
+Encapsulamento - o código é bem organizado, e pode-se facilmente alterar poucas linhas de código em um programa para modificar uma tarefa específica sem que sejam necessárias alterações em todo o resto.
+
+Herança - As estruturas seguem uma hierarquia, que facilita o controle e transferência de informações entre outras estruturas.
+
+Polimorfismo - consiste na alteração do funcionamento interno de uma estrutura que é herdada de uma outra estrutura adjacente a esta.
+
+Através destes métodos, conseguimos na programação, criar códigos mais legíveis, organizados, e com funcionamento totalmente hierarquizado, mas deve ser levado em consideração, que mais desvios serão tomados, e consequentemente programas feitos em POO(JAVA por exemplo) são mais lentos que programas em P.Estruturada(C por exemplo).

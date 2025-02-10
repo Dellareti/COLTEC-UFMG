@@ -1,0 +1,23 @@
+--LIBRARY IEEE;
+--USE IEEE.STD_LOGIC_1164.ALL;
+--USE IEEE.STD_LOGIC_UNSIGNED.ALL;
+--USE IEEE.STD_LOGIC_ARITH.ALL;
+--USE WORK.COMPONENTES.ALL;
+--
+--ENTITY TROCA_SENHA IS
+--	PORT(dig1,dig2,senha1,senha2:IN STD_LOGIC_VECTOR(3 DOWNTO 0);
+--		 clk,enable:IN STD_LOGIC;
+--		 verif,led:OUT STD_LOGIC);
+--END ENTITY;
+--
+--ARCHITECTURE arc OF TROCA_SENHA IS
+--	SIGNAL conf:STD_LOGIC;
+--BEGIN
+--	C1: COMPARADOR(dig1,dig2,senha1,senha2,clk,enable,conf,led);	
+--
+--	PORT( d1,d2,s1,s2:IN  STD_LOGIC_VECTOR(3 DOWNTO 0);
+--		  clk,enable :IN  STD_LOGIC;
+--		  c          :BUFFER STD_LOGIC;
+--		  led        :OUT STD_LOGIC);
+--
+--END ARCHITECTURE;

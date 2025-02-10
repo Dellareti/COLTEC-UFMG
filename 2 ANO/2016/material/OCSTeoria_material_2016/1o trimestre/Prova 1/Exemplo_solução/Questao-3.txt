@@ -1,0 +1,21 @@
+Questão 3
+
+Legenda:
+
+	a = $a0
+	b = $a1
+	c = $s0
+
+Código MIPS:
+
+	j main							#inicia programa no main
+
+	somandoFeliz:					#função somandoFeliz
+		add $v0, $a0, $a1			#soma $a0 e $a1 e guarda valor em $v0
+		jr $ra						#retorna para onde foi chamado
+
+	main:
+		addi $a0, $zero, 20			#atribui 20 ao primeiro parâmetro
+		addi $a1, $zero, 22			#atribui 22 ao segundo parâmetro
+		jal somandoFeliz			#chama a função somandoFeliz
+		add $s0, $zero, $v0			#atribui ao registrador $s0 o valor retornado por somandoFeliz

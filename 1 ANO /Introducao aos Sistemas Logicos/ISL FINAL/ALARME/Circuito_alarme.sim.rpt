@@ -1,0 +1,382 @@
+Simulator report for Circuito_alarme
+Thu Nov 05 16:57:18 2015
+Quartus II Version 9.1 Build 304 01/25/2010 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. Coverage Summary
+  6. Complete 1/0-Value Coverage
+  7. Missing 1-Value Coverage
+  8. Missing 0-Value Coverage
+  9. Simulator INI Usage
+ 10. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2010 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++---------------------------------------------+
+; Simulator Summary                           ;
++-----------------------------+---------------+
+; Type                        ; Value         ;
++-----------------------------+---------------+
+; Simulation Start Time       ; 0 ps          ;
+; Simulation End Time         ; 100.0 us      ;
+; Simulation Netlist Size     ; 99 nodes      ;
+; Simulation Coverage         ;      34.81 %  ;
+; Total Number of Transitions ; 81285         ;
+; Simulation Breakpoints      ; 0             ;
+; Family                      ; MAX II        ;
+; Device                      ; EPM1270F256C5 ;
++-----------------------------+---------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                              ;
++--------------------------------------------------------------------------------------------+--------------------+---------------+
+; Option                                                                                     ; Setting            ; Default Value ;
++--------------------------------------------------------------------------------------------+--------------------+---------------+
+; Simulation mode                                                                            ; Timing             ; Timing        ;
+; Start time                                                                                 ; 0 ns               ; 0 ns          ;
+; Simulation results format                                                                  ; CVWF               ;               ;
+; Vector input source                                                                        ; FILTRO_DIGITAL.vwf ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On                 ; On            ;
+; Check outputs                                                                              ; Off                ; Off           ;
+; Report simulation coverage                                                                 ; On                 ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On                 ; On            ;
+; Display missing 1-value coverage report                                                    ; On                 ; On            ;
+; Display missing 0-value coverage report                                                    ; On                 ; On            ;
+; Detect setup and hold time violations                                                      ; Off                ; Off           ;
+; Detect glitches                                                                            ; Off                ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off                ; Off           ;
+; Generate Signal Activity File                                                              ; Off                ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off                ; Off           ;
+; Group bus channels in simulation results                                                   ; Off                ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On                 ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE         ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off                ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; Off                ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto               ; Auto          ;
++--------------------------------------------------------------------------------------------+--------------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II to view the waveform report data.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;      34.81 % ;
+; Total nodes checked                                 ; 99           ;
+; Total output ports checked                          ; 135          ;
+; Total output ports with complete 1/0-value coverage ; 47           ;
+; Total output ports with no 1/0-value coverage       ; 83           ;
+; Total output ports with no 1-value coverage         ; 83           ;
+; Total output ports with no 0-value coverage         ; 88           ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++--------------------------------------------------------------------------------+
+; Complete 1/0-Value Coverage                                                    ;
++----------------------------+--------------------------------+------------------+
+; Node Name                  ; Output Port Name               ; Output Port Type ;
++----------------------------+--------------------------------+------------------+
+; |FILTRO_BOTAO|cont[1]      ; |FILTRO_BOTAO|cont[1]          ; regout           ;
+; |FILTRO_BOTAO|cont[3]      ; |FILTRO_BOTAO|cont[3]          ; regout           ;
+; |FILTRO_BOTAO|cont[0]      ; |FILTRO_BOTAO|cont[0]          ; regout           ;
+; |FILTRO_BOTAO|cont[2]      ; |FILTRO_BOTAO|cont[2]          ; regout           ;
+; |FILTRO_BOTAO|Equal0~0     ; |FILTRO_BOTAO|Equal0~0         ; combout          ;
+; |FILTRO_BOTAO|cont[11]     ; |FILTRO_BOTAO|cont[11]         ; regout           ;
+; |FILTRO_BOTAO|cont[4]      ; |FILTRO_BOTAO|cont[4]          ; regout           ;
+; |FILTRO_BOTAO|cont[9]      ; |FILTRO_BOTAO|cont[9]          ; regout           ;
+; |FILTRO_BOTAO|cont[10]     ; |FILTRO_BOTAO|cont[10]         ; regout           ;
+; |FILTRO_BOTAO|Equal0~2     ; |FILTRO_BOTAO|Equal0~2         ; combout          ;
+; |FILTRO_BOTAO|cont[5]      ; |FILTRO_BOTAO|cont[5]          ; regout           ;
+; |FILTRO_BOTAO|cont[6]      ; |FILTRO_BOTAO|cont[6]          ; regout           ;
+; |FILTRO_BOTAO|cont[7]      ; |FILTRO_BOTAO|cont[7]          ; regout           ;
+; |FILTRO_BOTAO|cont[8]      ; |FILTRO_BOTAO|cont[8]          ; regout           ;
+; |FILTRO_BOTAO|LessThan0~1  ; |FILTRO_BOTAO|LessThan0~1      ; combout          ;
+; |FILTRO_BOTAO|Equal0~3     ; |FILTRO_BOTAO|Equal0~3         ; combout          ;
+; |FILTRO_BOTAO|LessThan0~6  ; |FILTRO_BOTAO|LessThan0~6      ; combout          ;
+; |FILTRO_BOTAO|LessThan0~7  ; |FILTRO_BOTAO|LessThan0~7      ; combout          ;
+; |FILTRO_BOTAO|LessThan0~8  ; |FILTRO_BOTAO|LessThan0~8      ; combout          ;
+; |FILTRO_BOTAO|LessThan0~10 ; |FILTRO_BOTAO|LessThan0~10     ; combout          ;
+; |FILTRO_BOTAO|Add0~0       ; |FILTRO_BOTAO|Add0~0           ; combout          ;
+; |FILTRO_BOTAO|Add0~0       ; |FILTRO_BOTAO|Add0~2COUT1_204  ; cout1            ;
+; |FILTRO_BOTAO|Add0~6       ; |FILTRO_BOTAO|Add0~6           ; combout          ;
+; |FILTRO_BOTAO|Add0~6       ; |FILTRO_BOTAO|Add0~8COUT1_208  ; cout1            ;
+; |FILTRO_BOTAO|Add0~12      ; |FILTRO_BOTAO|Add0~12          ; combout          ;
+; |FILTRO_BOTAO|Add0~12      ; |FILTRO_BOTAO|Add0~14          ; cout             ;
+; |FILTRO_BOTAO|Add0~18      ; |FILTRO_BOTAO|Add0~18          ; combout          ;
+; |FILTRO_BOTAO|Add0~18      ; |FILTRO_BOTAO|Add0~20COUT1_206 ; cout1            ;
+; |FILTRO_BOTAO|Add0~40      ; |FILTRO_BOTAO|Add0~40          ; combout          ;
+; |FILTRO_BOTAO|Add0~40      ; |FILTRO_BOTAO|Add0~42COUT1_220 ; cout1            ;
+; |FILTRO_BOTAO|Add0~46      ; |FILTRO_BOTAO|Add0~46          ; combout          ;
+; |FILTRO_BOTAO|Add0~46      ; |FILTRO_BOTAO|Add0~48COUT1_210 ; cout1            ;
+; |FILTRO_BOTAO|Add0~52      ; |FILTRO_BOTAO|Add0~52          ; combout          ;
+; |FILTRO_BOTAO|Add0~52      ; |FILTRO_BOTAO|Add0~54          ; cout0            ;
+; |FILTRO_BOTAO|Add0~58      ; |FILTRO_BOTAO|Add0~58          ; combout          ;
+; |FILTRO_BOTAO|Add0~58      ; |FILTRO_BOTAO|Add0~60          ; cout             ;
+; |FILTRO_BOTAO|Add0~64      ; |FILTRO_BOTAO|Add0~64          ; combout          ;
+; |FILTRO_BOTAO|Add0~94      ; |FILTRO_BOTAO|Add0~94          ; combout          ;
+; |FILTRO_BOTAO|Add0~94      ; |FILTRO_BOTAO|Add0~96          ; cout             ;
+; |FILTRO_BOTAO|Add0~100     ; |FILTRO_BOTAO|Add0~100         ; combout          ;
+; |FILTRO_BOTAO|Add0~100     ; |FILTRO_BOTAO|Add0~102         ; cout0            ;
+; |FILTRO_BOTAO|Add0~106     ; |FILTRO_BOTAO|Add0~106         ; combout          ;
+; |FILTRO_BOTAO|Add0~106     ; |FILTRO_BOTAO|Add0~108         ; cout0            ;
+; |FILTRO_BOTAO|Add0~112     ; |FILTRO_BOTAO|Add0~112         ; combout          ;
+; |FILTRO_BOTAO|Add0~112     ; |FILTRO_BOTAO|Add0~114         ; cout0            ;
+; |FILTRO_BOTAO|clk          ; |FILTRO_BOTAO|clk~corein       ; combout          ;
+; |FILTRO_BOTAO|botao        ; |FILTRO_BOTAO|botao~corein     ; combout          ;
++----------------------------+--------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++---------------------------------------------------------------------------------+
+; Missing 1-Value Coverage                                                        ;
++----------------------------+---------------------------------+------------------+
+; Node Name                  ; Output Port Name                ; Output Port Type ;
++----------------------------+---------------------------------+------------------+
+; |FILTRO_BOTAO|saida~0      ; |FILTRO_BOTAO|saida~0           ; combout          ;
+; |FILTRO_BOTAO|shift_reg[5] ; |FILTRO_BOTAO|shift_reg[5]      ; regout           ;
+; |FILTRO_BOTAO|shift_reg[7] ; |FILTRO_BOTAO|shift_reg[7]      ; regout           ;
+; |FILTRO_BOTAO|saida~1      ; |FILTRO_BOTAO|saida~1           ; combout          ;
+; |FILTRO_BOTAO|shift_reg[1] ; |FILTRO_BOTAO|shift_reg[1]      ; regout           ;
+; |FILTRO_BOTAO|shift_reg[2] ; |FILTRO_BOTAO|shift_reg[2]      ; regout           ;
+; |FILTRO_BOTAO|saida~2      ; |FILTRO_BOTAO|saida~2           ; combout          ;
+; |FILTRO_BOTAO|cont[16]     ; |FILTRO_BOTAO|cont[16]          ; regout           ;
+; |FILTRO_BOTAO|Equal0~1     ; |FILTRO_BOTAO|Equal0~1          ; combout          ;
+; |FILTRO_BOTAO|cont[13]     ; |FILTRO_BOTAO|cont[13]          ; regout           ;
+; |FILTRO_BOTAO|cont[14]     ; |FILTRO_BOTAO|cont[14]          ; regout           ;
+; |FILTRO_BOTAO|cont[15]     ; |FILTRO_BOTAO|cont[15]          ; regout           ;
+; |FILTRO_BOTAO|cont[17]     ; |FILTRO_BOTAO|cont[17]          ; regout           ;
+; |FILTRO_BOTAO|LessThan0~0  ; |FILTRO_BOTAO|LessThan0~0       ; combout          ;
+; |FILTRO_BOTAO|LessThan0~2  ; |FILTRO_BOTAO|LessThan0~2       ; combout          ;
+; |FILTRO_BOTAO|LessThan0~3  ; |FILTRO_BOTAO|LessThan0~3       ; combout          ;
+; |FILTRO_BOTAO|LessThan0~4  ; |FILTRO_BOTAO|LessThan0~4       ; combout          ;
+; |FILTRO_BOTAO|LessThan0~5  ; |FILTRO_BOTAO|LessThan0~5       ; combout          ;
+; |FILTRO_BOTAO|Equal0~4     ; |FILTRO_BOTAO|Equal0~4          ; combout          ;
+; |FILTRO_BOTAO|LessThan0~9  ; |FILTRO_BOTAO|LessThan0~9       ; combout          ;
+; |FILTRO_BOTAO|LessThan0~11 ; |FILTRO_BOTAO|LessThan0~11      ; combout          ;
+; |FILTRO_BOTAO|LessThan0~12 ; |FILTRO_BOTAO|LessThan0~12      ; combout          ;
+; |FILTRO_BOTAO|Add0~0       ; |FILTRO_BOTAO|Add0~2            ; cout0            ;
+; |FILTRO_BOTAO|Add0~6       ; |FILTRO_BOTAO|Add0~8            ; cout0            ;
+; |FILTRO_BOTAO|Add0~18      ; |FILTRO_BOTAO|Add0~20           ; cout0            ;
+; |FILTRO_BOTAO|Add0~24      ; |FILTRO_BOTAO|Add0~24           ; combout          ;
+; |FILTRO_BOTAO|Add0~29      ; |FILTRO_BOTAO|Add0~29           ; combout          ;
+; |FILTRO_BOTAO|Add0~29      ; |FILTRO_BOTAO|Add0~31           ; cout0            ;
+; |FILTRO_BOTAO|Add0~29      ; |FILTRO_BOTAO|Add0~31COUT1_228  ; cout1            ;
+; |FILTRO_BOTAO|Add0~35      ; |FILTRO_BOTAO|Add0~35           ; combout          ;
+; |FILTRO_BOTAO|Add0~35      ; |FILTRO_BOTAO|Add0~37           ; cout0            ;
+; |FILTRO_BOTAO|Add0~35      ; |FILTRO_BOTAO|Add0~37COUT1_232  ; cout1            ;
+; |FILTRO_BOTAO|Add0~40      ; |FILTRO_BOTAO|Add0~42           ; cout0            ;
+; |FILTRO_BOTAO|Add0~46      ; |FILTRO_BOTAO|Add0~48           ; cout0            ;
+; |FILTRO_BOTAO|Add0~52      ; |FILTRO_BOTAO|Add0~54COUT1_218  ; cout1            ;
+; |FILTRO_BOTAO|Add0~64      ; |FILTRO_BOTAO|Add0~66           ; cout0            ;
+; |FILTRO_BOTAO|Add0~70      ; |FILTRO_BOTAO|Add0~70           ; combout          ;
+; |FILTRO_BOTAO|Add0~70      ; |FILTRO_BOTAO|Add0~72           ; cout0            ;
+; |FILTRO_BOTAO|Add0~70      ; |FILTRO_BOTAO|Add0~72COUT1_224  ; cout1            ;
+; |FILTRO_BOTAO|Add0~76      ; |FILTRO_BOTAO|Add0~76           ; combout          ;
+; |FILTRO_BOTAO|Add0~76      ; |FILTRO_BOTAO|Add0~78           ; cout0            ;
+; |FILTRO_BOTAO|Add0~76      ; |FILTRO_BOTAO|Add0~78COUT1_226  ; cout1            ;
+; |FILTRO_BOTAO|Add0~82      ; |FILTRO_BOTAO|Add0~82           ; combout          ;
+; |FILTRO_BOTAO|Add0~82      ; |FILTRO_BOTAO|Add0~84           ; cout             ;
+; |FILTRO_BOTAO|Add0~88      ; |FILTRO_BOTAO|Add0~88           ; combout          ;
+; |FILTRO_BOTAO|Add0~88      ; |FILTRO_BOTAO|Add0~90           ; cout0            ;
+; |FILTRO_BOTAO|Add0~88      ; |FILTRO_BOTAO|Add0~90COUT1_230  ; cout1            ;
+; |FILTRO_BOTAO|Add0~100     ; |FILTRO_BOTAO|Add0~102COUT1_212 ; cout1            ;
+; |FILTRO_BOTAO|Add0~106     ; |FILTRO_BOTAO|Add0~108COUT1_214 ; cout1            ;
+; |FILTRO_BOTAO|Add0~112     ; |FILTRO_BOTAO|Add0~114COUT1_216 ; cout1            ;
+; |FILTRO_BOTAO|Add0~118     ; |FILTRO_BOTAO|Add0~118          ; combout          ;
+; |FILTRO_BOTAO|Add0~118     ; |FILTRO_BOTAO|Add0~120          ; cout0            ;
+; |FILTRO_BOTAO|Add0~118     ; |FILTRO_BOTAO|Add0~120COUT1_234 ; cout1            ;
+; |FILTRO_BOTAO|Add0~123     ; |FILTRO_BOTAO|Add0~123          ; combout          ;
+; |FILTRO_BOTAO|Add0~123     ; |FILTRO_BOTAO|Add0~125          ; cout             ;
+; |FILTRO_BOTAO|Add0~128     ; |FILTRO_BOTAO|Add0~128          ; combout          ;
+; |FILTRO_BOTAO|Add0~128     ; |FILTRO_BOTAO|Add0~130          ; cout0            ;
+; |FILTRO_BOTAO|Add0~128     ; |FILTRO_BOTAO|Add0~130COUT1_236 ; cout1            ;
+; |FILTRO_BOTAO|Add0~133     ; |FILTRO_BOTAO|Add0~133          ; combout          ;
+; |FILTRO_BOTAO|Add0~133     ; |FILTRO_BOTAO|Add0~135          ; cout0            ;
+; |FILTRO_BOTAO|Add0~133     ; |FILTRO_BOTAO|Add0~135COUT1_238 ; cout1            ;
+; |FILTRO_BOTAO|Add0~138     ; |FILTRO_BOTAO|Add0~138          ; combout          ;
+; |FILTRO_BOTAO|Add0~138     ; |FILTRO_BOTAO|Add0~140          ; cout0            ;
+; |FILTRO_BOTAO|Add0~138     ; |FILTRO_BOTAO|Add0~140COUT1_240 ; cout1            ;
+; |FILTRO_BOTAO|Add0~143     ; |FILTRO_BOTAO|Add0~143          ; combout          ;
+; |FILTRO_BOTAO|Add0~143     ; |FILTRO_BOTAO|Add0~145          ; cout0            ;
+; |FILTRO_BOTAO|Add0~143     ; |FILTRO_BOTAO|Add0~145COUT1_242 ; cout1            ;
+; |FILTRO_BOTAO|Add0~148     ; |FILTRO_BOTAO|Add0~148          ; combout          ;
+; |FILTRO_BOTAO|Add0~148     ; |FILTRO_BOTAO|Add0~150          ; cout             ;
+; |FILTRO_BOTAO|Add0~153     ; |FILTRO_BOTAO|Add0~153          ; combout          ;
+; |FILTRO_BOTAO|Add0~153     ; |FILTRO_BOTAO|Add0~155          ; cout0            ;
+; |FILTRO_BOTAO|Add0~153     ; |FILTRO_BOTAO|Add0~155COUT1_244 ; cout1            ;
+; |FILTRO_BOTAO|Add0~158     ; |FILTRO_BOTAO|Add0~158          ; combout          ;
+; |FILTRO_BOTAO|Add0~158     ; |FILTRO_BOTAO|Add0~160          ; cout0            ;
+; |FILTRO_BOTAO|Add0~158     ; |FILTRO_BOTAO|Add0~160COUT1_246 ; cout1            ;
+; |FILTRO_BOTAO|Add0~163     ; |FILTRO_BOTAO|Add0~163          ; combout          ;
+; |FILTRO_BOTAO|Add0~163     ; |FILTRO_BOTAO|Add0~165          ; cout0            ;
+; |FILTRO_BOTAO|Add0~163     ; |FILTRO_BOTAO|Add0~165COUT1_248 ; cout1            ;
+; |FILTRO_BOTAO|Add0~168     ; |FILTRO_BOTAO|Add0~168          ; combout          ;
+; |FILTRO_BOTAO|Add0~168     ; |FILTRO_BOTAO|Add0~170          ; cout0            ;
+; |FILTRO_BOTAO|Add0~168     ; |FILTRO_BOTAO|Add0~170COUT1_250 ; cout1            ;
+; |FILTRO_BOTAO|Add0~173     ; |FILTRO_BOTAO|Add0~173          ; combout          ;
+; |FILTRO_BOTAO|Add0~173     ; |FILTRO_BOTAO|Add0~175          ; cout             ;
++----------------------------+---------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++-----------------------------------------------------------------------------------+
+; Missing 0-Value Coverage                                                          ;
++------------------------------+---------------------------------+------------------+
+; Node Name                    ; Output Port Name                ; Output Port Type ;
++------------------------------+---------------------------------+------------------+
+; |FILTRO_BOTAO|saida~0        ; |FILTRO_BOTAO|saida~0           ; combout          ;
+; |FILTRO_BOTAO|shift_reg[5]   ; |FILTRO_BOTAO|shift_reg[5]      ; regout           ;
+; |FILTRO_BOTAO|shift_reg[7]   ; |FILTRO_BOTAO|shift_reg[7]      ; regout           ;
+; |FILTRO_BOTAO|saida~1        ; |FILTRO_BOTAO|saida~1           ; combout          ;
+; |FILTRO_BOTAO|shift_reg[1]   ; |FILTRO_BOTAO|shift_reg[1]      ; regout           ;
+; |FILTRO_BOTAO|shift_reg[2]   ; |FILTRO_BOTAO|shift_reg[2]      ; regout           ;
+; |FILTRO_BOTAO|saida~2        ; |FILTRO_BOTAO|saida~2           ; combout          ;
+; |FILTRO_BOTAO|state          ; |FILTRO_BOTAO|state             ; regout           ;
+; |FILTRO_BOTAO|cont[16]       ; |FILTRO_BOTAO|cont[16]          ; regout           ;
+; |FILTRO_BOTAO|Equal0~1       ; |FILTRO_BOTAO|Equal0~1          ; combout          ;
+; |FILTRO_BOTAO|cont[12]       ; |FILTRO_BOTAO|cont[12]          ; regout           ;
+; |FILTRO_BOTAO|cont[13]       ; |FILTRO_BOTAO|cont[13]          ; regout           ;
+; |FILTRO_BOTAO|cont[14]       ; |FILTRO_BOTAO|cont[14]          ; regout           ;
+; |FILTRO_BOTAO|cont[15]       ; |FILTRO_BOTAO|cont[15]          ; regout           ;
+; |FILTRO_BOTAO|cont[17]       ; |FILTRO_BOTAO|cont[17]          ; regout           ;
+; |FILTRO_BOTAO|LessThan0~0    ; |FILTRO_BOTAO|LessThan0~0       ; combout          ;
+; |FILTRO_BOTAO|LessThan0~2    ; |FILTRO_BOTAO|LessThan0~2       ; combout          ;
+; |FILTRO_BOTAO|LessThan0~3    ; |FILTRO_BOTAO|LessThan0~3       ; combout          ;
+; |FILTRO_BOTAO|LessThan0~4    ; |FILTRO_BOTAO|LessThan0~4       ; combout          ;
+; |FILTRO_BOTAO|LessThan0~5    ; |FILTRO_BOTAO|LessThan0~5       ; combout          ;
+; |FILTRO_BOTAO|Equal0~4       ; |FILTRO_BOTAO|Equal0~4          ; combout          ;
+; |FILTRO_BOTAO|LessThan0~9    ; |FILTRO_BOTAO|LessThan0~9       ; combout          ;
+; |FILTRO_BOTAO|LessThan0~11   ; |FILTRO_BOTAO|LessThan0~11      ; combout          ;
+; |FILTRO_BOTAO|LessThan0~12   ; |FILTRO_BOTAO|LessThan0~12      ; combout          ;
+; |FILTRO_BOTAO|Add0~0         ; |FILTRO_BOTAO|Add0~2            ; cout0            ;
+; |FILTRO_BOTAO|cont[0]~0      ; |FILTRO_BOTAO|cont[0]~0         ; combout          ;
+; |FILTRO_BOTAO|Add0~6         ; |FILTRO_BOTAO|Add0~8            ; cout0            ;
+; |FILTRO_BOTAO|Add0~18        ; |FILTRO_BOTAO|Add0~20           ; cout0            ;
+; |FILTRO_BOTAO|Add0~24        ; |FILTRO_BOTAO|Add0~24           ; combout          ;
+; |FILTRO_BOTAO|Add0~29        ; |FILTRO_BOTAO|Add0~29           ; combout          ;
+; |FILTRO_BOTAO|Add0~29        ; |FILTRO_BOTAO|Add0~31           ; cout0            ;
+; |FILTRO_BOTAO|Add0~29        ; |FILTRO_BOTAO|Add0~31COUT1_228  ; cout1            ;
+; |FILTRO_BOTAO|Add0~35        ; |FILTRO_BOTAO|Add0~35           ; combout          ;
+; |FILTRO_BOTAO|Add0~35        ; |FILTRO_BOTAO|Add0~37           ; cout0            ;
+; |FILTRO_BOTAO|Add0~35        ; |FILTRO_BOTAO|Add0~37COUT1_232  ; cout1            ;
+; |FILTRO_BOTAO|Add0~40        ; |FILTRO_BOTAO|Add0~42           ; cout0            ;
+; |FILTRO_BOTAO|Add0~46        ; |FILTRO_BOTAO|Add0~48           ; cout0            ;
+; |FILTRO_BOTAO|Add0~52        ; |FILTRO_BOTAO|Add0~54COUT1_218  ; cout1            ;
+; |FILTRO_BOTAO|Add0~64        ; |FILTRO_BOTAO|Add0~66           ; cout0            ;
+; |FILTRO_BOTAO|Add0~64        ; |FILTRO_BOTAO|Add0~66COUT1_222  ; cout1            ;
+; |FILTRO_BOTAO|Add0~70        ; |FILTRO_BOTAO|Add0~70           ; combout          ;
+; |FILTRO_BOTAO|Add0~70        ; |FILTRO_BOTAO|Add0~72           ; cout0            ;
+; |FILTRO_BOTAO|Add0~70        ; |FILTRO_BOTAO|Add0~72COUT1_224  ; cout1            ;
+; |FILTRO_BOTAO|Add0~76        ; |FILTRO_BOTAO|Add0~76           ; combout          ;
+; |FILTRO_BOTAO|Add0~76        ; |FILTRO_BOTAO|Add0~78           ; cout0            ;
+; |FILTRO_BOTAO|Add0~76        ; |FILTRO_BOTAO|Add0~78COUT1_226  ; cout1            ;
+; |FILTRO_BOTAO|Add0~82        ; |FILTRO_BOTAO|Add0~82           ; combout          ;
+; |FILTRO_BOTAO|Add0~82        ; |FILTRO_BOTAO|Add0~84           ; cout             ;
+; |FILTRO_BOTAO|Add0~88        ; |FILTRO_BOTAO|Add0~88           ; combout          ;
+; |FILTRO_BOTAO|Add0~88        ; |FILTRO_BOTAO|Add0~90           ; cout0            ;
+; |FILTRO_BOTAO|Add0~88        ; |FILTRO_BOTAO|Add0~90COUT1_230  ; cout1            ;
+; |FILTRO_BOTAO|Add0~100       ; |FILTRO_BOTAO|Add0~102COUT1_212 ; cout1            ;
+; |FILTRO_BOTAO|Add0~106       ; |FILTRO_BOTAO|Add0~108COUT1_214 ; cout1            ;
+; |FILTRO_BOTAO|Add0~112       ; |FILTRO_BOTAO|Add0~114COUT1_216 ; cout1            ;
+; |FILTRO_BOTAO|Add0~118       ; |FILTRO_BOTAO|Add0~118          ; combout          ;
+; |FILTRO_BOTAO|Add0~118       ; |FILTRO_BOTAO|Add0~120          ; cout0            ;
+; |FILTRO_BOTAO|Add0~118       ; |FILTRO_BOTAO|Add0~120COUT1_234 ; cout1            ;
+; |FILTRO_BOTAO|Add0~123       ; |FILTRO_BOTAO|Add0~123          ; combout          ;
+; |FILTRO_BOTAO|Add0~123       ; |FILTRO_BOTAO|Add0~125          ; cout             ;
+; |FILTRO_BOTAO|Add0~128       ; |FILTRO_BOTAO|Add0~128          ; combout          ;
+; |FILTRO_BOTAO|Add0~128       ; |FILTRO_BOTAO|Add0~130          ; cout0            ;
+; |FILTRO_BOTAO|Add0~128       ; |FILTRO_BOTAO|Add0~130COUT1_236 ; cout1            ;
+; |FILTRO_BOTAO|Add0~133       ; |FILTRO_BOTAO|Add0~133          ; combout          ;
+; |FILTRO_BOTAO|Add0~133       ; |FILTRO_BOTAO|Add0~135          ; cout0            ;
+; |FILTRO_BOTAO|Add0~133       ; |FILTRO_BOTAO|Add0~135COUT1_238 ; cout1            ;
+; |FILTRO_BOTAO|Add0~138       ; |FILTRO_BOTAO|Add0~138          ; combout          ;
+; |FILTRO_BOTAO|Add0~138       ; |FILTRO_BOTAO|Add0~140          ; cout0            ;
+; |FILTRO_BOTAO|Add0~138       ; |FILTRO_BOTAO|Add0~140COUT1_240 ; cout1            ;
+; |FILTRO_BOTAO|Add0~143       ; |FILTRO_BOTAO|Add0~143          ; combout          ;
+; |FILTRO_BOTAO|Add0~143       ; |FILTRO_BOTAO|Add0~145          ; cout0            ;
+; |FILTRO_BOTAO|Add0~143       ; |FILTRO_BOTAO|Add0~145COUT1_242 ; cout1            ;
+; |FILTRO_BOTAO|Add0~148       ; |FILTRO_BOTAO|Add0~148          ; combout          ;
+; |FILTRO_BOTAO|Add0~148       ; |FILTRO_BOTAO|Add0~150          ; cout             ;
+; |FILTRO_BOTAO|Add0~153       ; |FILTRO_BOTAO|Add0~153          ; combout          ;
+; |FILTRO_BOTAO|Add0~153       ; |FILTRO_BOTAO|Add0~155          ; cout0            ;
+; |FILTRO_BOTAO|Add0~153       ; |FILTRO_BOTAO|Add0~155COUT1_244 ; cout1            ;
+; |FILTRO_BOTAO|Add0~158       ; |FILTRO_BOTAO|Add0~158          ; combout          ;
+; |FILTRO_BOTAO|Add0~158       ; |FILTRO_BOTAO|Add0~160          ; cout0            ;
+; |FILTRO_BOTAO|Add0~158       ; |FILTRO_BOTAO|Add0~160COUT1_246 ; cout1            ;
+; |FILTRO_BOTAO|Add0~163       ; |FILTRO_BOTAO|Add0~163          ; combout          ;
+; |FILTRO_BOTAO|Add0~163       ; |FILTRO_BOTAO|Add0~165          ; cout0            ;
+; |FILTRO_BOTAO|Add0~163       ; |FILTRO_BOTAO|Add0~165COUT1_248 ; cout1            ;
+; |FILTRO_BOTAO|Add0~168       ; |FILTRO_BOTAO|Add0~168          ; combout          ;
+; |FILTRO_BOTAO|Add0~168       ; |FILTRO_BOTAO|Add0~170          ; cout0            ;
+; |FILTRO_BOTAO|Add0~168       ; |FILTRO_BOTAO|Add0~170COUT1_250 ; cout1            ;
+; |FILTRO_BOTAO|Add0~173       ; |FILTRO_BOTAO|Add0~173          ; combout          ;
+; |FILTRO_BOTAO|Add0~173       ; |FILTRO_BOTAO|Add0~175          ; cout             ;
+; |FILTRO_BOTAO|botao_filtrado ; |FILTRO_BOTAO|botao_filtrado    ; padio            ;
++------------------------------+---------------------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II Simulator
+    Info: Version 9.1 Build 304 01/25/2010 Service Pack 1 SJ Web Edition
+    Info: Processing started: Thu Nov 05 16:57:18 2015
+Info: Command: quartus_sim --read_settings_files=on --write_settings_files=off Alarme -c Circuito_alarme
+Info: Using vector source file "C:/Users/Raul/Desktop/ALARME/FILTRO_DIGITAL.vwf"
+Info: Inverted registers were found during simulation
+    Info: Register: |FILTRO_BOTAO|saida
+Info: Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info: Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Info: Simulation partitioned into 1 sub-simulations
+Info: Simulation coverage is      34.81 %
+Info: Number of transitions in simulation is 81285
+Info: Quartus II Simulator was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 150 megabytes
+    Info: Processing ended: Thu Nov 05 16:57:18 2015
+    Info: Elapsed time: 00:00:00
+    Info: Total CPU time (on all processors): 00:00:01
+
+

@@ -1,0 +1,25 @@
+Questão 1
+	Letra A)
+			Um código com muitas chamadas de função é menos eficiente, do ponto de vista do código de máquina do MIPS, do que um código com poucas chamadas de função. Isso ocorre pois, ao chamar uma função, o processador deve, em certos casos, acessar a memória principal do computador e fazer operações com a pilha ($sp), instruções que levam um longo tempo. Além disso, caso a função necessite de mais do que 4 parâmetros, deverão ser feitos ainda mais acessos à memória. Por conta disso, muitas chamadas de procedimentos requerem muitas instruções que levam muito tempo, e, por isso, quanto menos funções, maior será o desempenho do programa.
+
+			Para melhorar a eficiência do código de alto nível, pode ser realizado um número menor de chamadas de funções, e estas com o mínimo de parâmetros possível. Esse é um serviço para o programador. Já para melhorar a eficiência do código de máquina, o compilador deve tentar utilizar, dentro das funções, registradores temporários, para assim evitar ter que fazer acessos à memória para preservar valores antigos e operações com a pilha ($sp).
+
+	Letra B)
+
+			Velocidade Relativa = CI x CPI x Tempo de Ciclo(ignorado)
+
+			Opção1:
+
+				 100% dos ciclos - 25% dos ciclos = 75% dos ciclos
+				 0,75 x 1,3 = 0,975
+				 Velocidade = 97,5% da anterior (mais rápido)
+
+			Opção 2:
+
+				100% dos ciclos - (25%/2) = 87,5% dos ciclos
+				0,875 x 1,2 = 1,05
+				Velocidade = 105% da anterior (mais lento)
+
+			Resposta Final:
+
+				Eu escolheria a opção 1, pois esta de fato torna o programa mais rápido, fazendo sua velocidade ser 2,5% menor do que a anterior, enquanto que a opção 2 tornaria o programa mais lento, aumentando sua velocidade em 5% em relação à anterior.

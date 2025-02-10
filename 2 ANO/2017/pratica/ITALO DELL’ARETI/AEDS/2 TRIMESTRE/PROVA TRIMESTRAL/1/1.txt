@@ -1,0 +1,15 @@
+1)
+Meu grupo realizou o trabalho da Cola.
+
+Tivemos algumas dificuldades para implementar um programa que rearranjasse a sala de forma que ninguém
+colasse. Na primeira versão concluímos uma lógica bastante interessante, que
+todos aqueles que colassem deveriam sentar nas carteiras com índice ímpar.
+Como este algoritmo não contempla as exigências do trabalho tivemos que achar o algoritmo correspondente ao problema sendo outra dificuldade encontrada.
+
+O tempo de execução é uma exponencial, portanto a complexidade O(c^n), sendo que n é o número de alunos e c é igual a
+quantidade de cores que sempre será > 1.
+
+Nos lidamos com um problema NP-completo. Isso parece bastante comum aos programadores,
+sendo pergunta de 1 milhão de reais P=NP. A grosso modo, NP são problemas não
+polinomiais e P são problemas polinomiais, o problema de coloração de vértice é
+NP-completo.

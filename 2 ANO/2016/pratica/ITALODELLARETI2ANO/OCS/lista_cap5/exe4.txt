@@ -1,0 +1,32 @@
+A) cache representa o nível da hierarquia entre o processador e a memória principal. Elaé subdividida em blocos de memória que
+ armazenam palavras. Devido a memória RAMser muito mais lenta que o processador, surgiu a necessidade de uma comunicação mais 
+rápida com o mesmo, entrando em ação as memórias cache.A cache pode armazenar do conteúdo de diversas partes da memória e para
+ sabermos seos dados contidos nela correspondem a uma palavra requisitada, foi criado o campoTAG (contêm informações de endereço
+ necessárias para identificar se uma palavra nacache corresponde à palavra requisitada). Também há um índice utilizado para 
+achar aposição na tabela. Primeiro verifica-se o index para ver se o dado existe e depois oprocura pela tag.O offset block é 
+utilizado para indexar o bloco e selecionar a palavra correta do blocousando o multiplexador 16:1. O offset byte é utilizado para
+indexar o byte, achar o bytredentro da palavra.
+
+1-index: dado existe?
+2-tag: em qual bloco?
+3-offset block: em qual palavra?
+4-offset byte: qual byte?
+
+
+- Mapeamento direto: cada local na memória e mapeado diretamente para um local dacache. Tem que haver várias tags, identificando 
+cada bloco com um único elemento.
+
+- Associação por conjunto: os dados podem ser encontrados em determinados conjuntosde blocos de memória, fazendo com que seja 
+necessário verificar todos até achar oprocurado.- Totalmente associado: os dados podem estar em qualquer lugar, fazendo com que 
+hajaa necessidade de buscar os dados paralelamente. O circuito fica muito mais complexo.
+
+B)512 palavras = 2^9 palavras, índice apresenta 9 
+bitsTotal de entradas = 256Tamanho da cache = 512 x 256 = 131072 / 8 = 16384
+
+
+C)Cache Hit: Ocorre   quando   a   posição   acessada   da   memória   principal   éencontrada na cache.
+
+Cache Miss: Ocorre quando a posição acessada da memória principal não éencontrada na cache
+
+
+

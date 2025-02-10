@@ -1,0 +1,42 @@
+import java.util.Scanner;
+public class Fatorial {
+    public static void main(String[] args){
+        System.out.println("qual o numero ?");
+		int n = new Scanner(System.in).nextInt();
+        int fat = 1;
+        for(int i=1;i<=n;i++)
+     	    fat = fat * i;
+
+        System.out.println("fat = " + fat);
+    }           
+}
+
+public class Media {
+    public static void main(String[] args) {
+        double nota1=0;
+	double nota2=0;
+	double nota3=0;
+	double soma=0; 	
+	double media=0;       
+	
+	System.out.println("qual e a nota 1 ?");
+	nota1 = new Scanner(System.in).nextDouble();
+	
+	System.out.println("qual e a nota 2 ?");
+	nota2 = new Scanner(System.in).nextDouble();	
+
+	System.out.println("qual e a nota 3 ?");
+	nota3 = new Scanner(System.in).nextDouble();
+
+        soma = nota1 + nota2 + nota3;
+        double media = soma/3;
+        System.out.println("valor da media = "+ media);
+	
+    }    
+}
+
+A principal diferença, é que em C, o programa é executado diretamente na função principal, enquanto no programa em JAVA, a função principal é contida por uma classe principal, e é nesta função que é executada o código que realiza os cálculos.
+
+Se ve uma melhor estruturação do código em JAVA, já que está classe pode-se ser agora utilizada, e manipulada por outra classe com facilidade.
+
+Observa-se que o "imprimir na tela" de cada linguagem, e a leitura de dados, é diferente, já que em C, apenas chamamos uma função, e em JAVA, chamamos um método atribuído a uma classe. 

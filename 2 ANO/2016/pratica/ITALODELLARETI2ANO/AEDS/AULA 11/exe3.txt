@@ -1,0 +1,5 @@
+O que é ponteiro para função? Ponteiro para função nada mais é que um ponteiro – uma variável – que aponta para um espaço de
+ memória onde começa alguma função.
+
+Para que serve? Ponteiros de função podem ser bastante interessante. Pode-se substituir if’s e switches, fazer late-bindings
+e callbacks.

@@ -1,0 +1,39 @@
+
+
+1)
+Código:
+i1	add r5,r6,r7
+i2	lw r6,100(r2)
+i3	sub r7,r6,r8
+i4	sw r7,200(r2)
+
+		IF   ID   EX   MEM   WB
+		i1	 
+		i2	 i1
+		i3	 i2	  i1  
+			 *	  i2 	i1 
+		bolha	 
+		i4	i3 	  	    i2** i1
+			i4 	  i3***    	 i2
+				  i4    i3
+				  		i4   i3
+				  			 i4
+
+*A i3 precisa de um valor de reg que só estará pronto em **
+** faz forwarding pra i3
+*** faz forwarding pra i4
+
+
+10 ciclos de clock.
+
+
+2) Ambas as partes, caminho de dados e controle, agem em conjunto, para realizar as instruções. O caminho de dados é todo o hardware que faz as operações necesárias com os dados de uma instrução. Para estas operações ocorrem de acordo com o esperado, sinais de controle são necessários para controlar o hardware do caminho de dados. Estes sinais de controle são gerados a partir da decodificação da instrução desejada feita pelo controle.
+
+Para uma instrução ser executada, ela é decodificada, o controle gera sinais de controle, e a partir destes, os dados passarão por etapas específicas no caminho de dados, até serem concluídas estas etapas no hardware.
+
+
+3) Uma CPU monociclo tem uma frequência de clock específica, para todas as suas tarefas, ou seja, o péríodo do clock não se altera. Uma CPU multiciclo, tem frequências de clock alternadas para instruções diferentes da CPU. A CPU monociclo deve ter uma frequência que funcione a todas as instruções, que deve ser o tempo que a maior instruções leva para ser executada. Na CPU multicíclo, instruções podem ser executadas em frequências que se adequem a elas, fazendo assim, um trabalho mais rápido.
+
+CPUs monociclo e multiciclo não executam necesariamente suas instruções sequenciamente, elas podem ter sido implementadas com o recurso de pipelining, que executa instruções simultaneamente.
+
+

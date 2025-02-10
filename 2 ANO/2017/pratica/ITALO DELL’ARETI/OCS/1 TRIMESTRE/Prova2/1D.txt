@@ -1,0 +1,28 @@
+﻿O algorítimo de subtração em ponto flutuante funciona da seguinte maneira:
+
+1.Os expoentes dos números são primeiramente igualados, deslocando-se para a direita o número de menor expoente até que ele se iguale ao de maior expoente.
+
+2.A subtração é a mesma operação da soma, mas com um dos operandos negativos. Aplica-se o complemento de dois no número a ser subtraído, e realiza-se a soma entre os significandos.
+
+3. Normaliza-se a resultado obtido, deslocando o número para a direita e incrementado o expoente, ou deslocando o número para a esquerda e decrementado o expoente.
+
+4. Verifica-se as condições de underflow ou overflow(caso elas ocorram, entra-se em uma exceção).
+
+5. Arredonda o número obtido para o número correto de bits.
+
+6. Verifica se o número continua normalizado, caso não esteja, retorna-se a etapa 3. Caso esteja normalizado, a operação termina.
+
+
+Exemplo:
+
+	0.5 - 0.4375
+	1,0 * 2e-1   -  -1,110 * 2e-2 
+	Iguala-se os expoentes.
+	1,0 * 2e-1   -  -0,111 * 2e-1 
+	Soma os significandos com o complemento de dois do segundo.
+	0.001 * 2e-1
+	Normaliza-se e verifica underflow e overflow.
+	1.0 * 2e-4
+	Arredonda se necessário(o que não é o caso).
+
+	Então 	1,0 * 2e-1   -  -1,110 * 2e-2 = 	1.0 * 2e-4

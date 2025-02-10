@@ -1,0 +1,5 @@
+3) Existem dois hazards neste código, o primeiro, ocorre entre a primeira e a segunda instrução, já que a segunda instrução necessita do valor de $3 para realizar seu cálculo. Como o valor de $3 já está calculado na etapa EX da instrução 1, pode-se resolver este problema com um adiantamento(forwarding) para a próxima etapa da outra instrução que utilizará este dado, que é o início da etapa EX da outra instrução. 
+
+O segundo hazard ocorre entre a terceira e quarta instrução, já que a quarta instrução precisa do valor do registrador $6 para ser realizada. Porém, o valor de $6 só está disponível após a etapa MEM, da instrução 3, e não pode ser adiantada a tempo para a execução do add da instrução 4, então para resolver este problema, deve-se provocar uma parada na execução da instrução(stall), 
+enquanto a anterior(instrução 3), obtém o valor de $6 na próxima etapa(MEM). Então pode-se 
+realizar um adiantamento(forwarding) do MEM da instrução 3 para o EX da instrução 4, que poderá usar o real valor de $6, sem futuros problemas. 

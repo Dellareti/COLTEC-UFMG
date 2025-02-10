@@ -1,0 +1,21 @@
+DE
+
+add $3, $4, $2
+add $5, $3, $1
+
+
+Os dados estavam prontos mas não estavam escritos no registrador então se utiliza forwarding.
+
+DE
+
+add $3, $4, $2
+lw $6, 200($3)
+
+Os dados estavam prontos mas não estavam escritos no registrador então se utiliza forwarding.
+
+DE
+
+lw $6, 200($3)
+add $7, $3, $6
+
+Ocorre um bolha,pois o dado não fica pronto antes de EX .

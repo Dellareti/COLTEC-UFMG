@@ -1,0 +1,28 @@
+.text 
+   .global main
+	main:
+
+	#se x < y
+	
+	li $a0,4
+	li $a1,5
+	move $a3,$a0
+
+	jal loop
+   
+   .global loop
+	loop:
+	beq $a3,$a1,eMaior
+	beq $a3,0,eMenor
+	sub $a3,$a3,1
+	j loop
+
+   .global eMaior
+	eMaior:
+	li $ra,0
+	jr $ra
+
+  .global eMenor
+	eMenor:
+	li $ra,1
+	jr $ra

@@ -1,0 +1,33 @@
+Questão 2
+	Letra A)
+
+			010110 10001 10000 00000 00000 000100
+			op     rs    rt    rd    shamt funct
+
+			A palavra acima não é uma instrução MIPS, pois o campo "op”, de valor 22, não corresponde ao número de nenhuma instrução. Logo, o MIPS não conseguiria interpretá-la, e isso causaria um erro.
+
+	Letra B)
+
+			100011 01001 11010 0000000000000110
+			op     rs    rt    offset
+			35     9     26    6
+			Instrução de Load
+
+			lw rt, offset(rs)
+
+			lw $k0, 6($t1)
+
+			A instrução acima daria problema, pois o registrador $k0(26) é reservado para o uso de tratamento de interrupção, ou seja, ele não pode ser usado para guardar um valor qualquer, como está ocorrendo nesse caso. Além disso, o offset deve sempre ser múltiplo de 4, logo, o número 6 não pode ser usado. Para acessar a sexta posição, deveria utilizar o número 24.
+
+	Letra C)
+
+			000000 10011 10010 01000 00000 100000
+			op     rs    rt    rd    shamt funct
+			0      19    18    8     0     32
+			Instrução de Tipo-R (add)
+
+			add rd, rt, rs
+
+			add $t0, $s2, $s3
+
+			A instrução acima é de adição de dois registradores, em que o registrador $t0 recebe a soma dos valores contidos em $s2 e $s3. Ela não daria problemas, pois a sintaxe e os registradores estão corretos.

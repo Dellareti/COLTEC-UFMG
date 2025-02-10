@@ -1,0 +1,48 @@
+1) Sistema operacional é um programa que tem como função gerenciar todos os recursos que uma máquina computacional possui. Ele é um processo, que é executado no próprio processador, e é ele quem faz a interface entre o computador e o usuário. É iniciado pela bios em um um processo conhecido como boot. O próprio sistema operacional definirá quais processos são executados, ele gerencia a memória e manipula o sistema de arquivos do computador.
+
+
+
+2) Ele é iniciado por outro programa, a BIOS, que está aramazenada em uma memória não volátil (ROM). Este processo de início é chamado de bootstrapping, onde se inicia os componentes externos ao computador, e busca pelo sistema operacional que está armazenado em alguma unidade, e então o sistema operacional passa a ter o 	"controle", e gerencia então as tarefas e recursos de um computador.
+
+A BIOS(Basic Input/Output System) se assegurará que todos os componentes iniciem e funcionem em conjunto, os ativando e executando rotinas que farão a interface e testes para o funcionamento de tais componentes antes do SO tomar o controle.
+
+
+3) Existem atualmente diversos sistemas operacionais, empregados em diversas máquinas computacionais, como por exemplo:
+Servidores: Windows Server, Linux, Mac OS Server.
+Computadores Pessoais: Windows,Linux,Mac OS.
+Sistemas embarcados: Sistemas próprios, Linux.
+Mobile: iOS, Android, WindowsPhone.
+
+Apesar de tal diversidade e complexidade de sistemas, recursos como multiprogramação foram implementados depois de sistemas monoprogramáveis, que executavam uma tarefa de cada vez, desperdiçando recursos de hardware e tendo alto tempo de ociosidade. Com sistemas capazes de utilizar o hardware com multitarefa, as máquinas eram capazes de executar mais tarefas simultaneamente e de usar todo o seu potencial.
+
+
+4) Em sistemas multiprogramáveis ou multitarefas, várias aplicações podem ser executadas simultaneamente através de time-sharing, obtendo então redução de custos, e de tempo ocioso, já que a todo tempo a máquina estará executando alguma tarefa, a velocidades extremamente altas, e imperceptíveis ao usuário, dando a impressão de uma multitarefa verdadeira.
+
+
+5) Arquivo é um conjunto de dados, que contém informações obtidas e armazenadas através de processamento. Um arquivo deve conter nome, estrutura(de acordo com tipo), tipo, acessos, atributos e operações, para haver um bom funcionamento em um sistema de arquivos.
+
+Existem os seguintes tipos de arquivos:
+
+Arquivo regular - contém dados regulares e informações de usuários.
+Diretórios - mantém a estrutura do sistema de arquivos.
+Arquivos especiais de caracteres - estão relacionados a E/S e são usados na interface de dispositivos seriais de E/S.
+Arquivos especiais de bloco: representam unidades de disco ou partições.
+
+6) Tipos de alocação:
+FAT - possui uma tabela representativa para indicar o local de cada bloco e arquivo. Ocupa menos espaço, e é compatível com diversos sistemas operacionais. Foi aprimorado em FAT16,FAT32.
+Utiliza-se outra versão exFat, que é bem mais veloz. 
+
+
+NTFS - é capaz de reverter dados para condições anteriores a falhas. Aceita replicação de dados, como em sistemas RAID. Cria partições maiores que 32GB. Menos fragmentação de dados, com um melhor gerenciamento de dados.
+
+extFATs - olhar outro arquivo de exercício.
+
+
+7) Para evitar a fragmentação de disco existem estratégias, onde o tamanho dos dados é o fator importante na hora de escolher tal estratégia:
+
+Best-fit: o sistema operacional escolherá a melhor partição para o armazenamento, onde haverá menos espaço sem utilização. Deixa pequenas áreas inutilizadas, aumentando a fragmentação.
+
+Worst-fit: Escolhe a pior partição, onde há maior espaço sem utilização, evitando a fragmentação, e deixando que espaços livres estejam maiores para mais programas os utilizarem.
+
+First-fit: Escolherá a primeira partição livre com tamanho suficiente para os dados do programa. Mantém certa organização, já que as áreas livres estarão dispostas em ordem crescente. É a mais rápida e consome menos recursos do sistema.
+

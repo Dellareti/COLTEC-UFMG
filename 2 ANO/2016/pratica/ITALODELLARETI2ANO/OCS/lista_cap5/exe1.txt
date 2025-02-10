@@ -1,0 +1,13 @@
+A memória virtual foi desenvolvida no intuito permitir o compartilhamento seguro eeficiente da memória entre vários programas
+ e remover os transtornos de programaçãode uma quantidade pequena e limitada de memória principal. Trata-se de uma 
+“tabela detradução”   na   qual   os   endereços   virtuais   são   convertidos   para   endereços   físicoslocalizados na
+ memória principal. Essa tradução impõe uma proteção do espaço deendereçamento de um programa contra outros programas.
+ Mas como isso ocorre?Existem várias técnicas de inserção de elementos em uma memória virtual. A maiscomum se refere em 
+sobrescrever partes da memória RAM que não foram usadasrecentemente (LRU), levando os dados para o disco rígido.Devido a essa 
+escrita no HD, se um sistema depende periodicamente de uma memóriavirtual, seu desempenho é afetado, já que a velocidade de 
+acesso e bem menor.Em um sistema com endereçamento virtual, podem ocorrer faltas de páginas (blocos dememória), os quais levam 
+milhões de ciclos de clock para serem resolvidos. Essa faltaocorre devido à ausência da página na Tabela de Página e, 
+por consequência, não seencontra na cache. Deve-se buscar os dados corretos no disco e substituí-los na RAM.Por não saber se os
+dados a que foram substituídos na RAM seriam posteriormenteutilizados, um backup de todas as páginas de um processo é gerado
+assim que o mesmose inicia, chamado área de swap. Nele há uma estrutura para registrar onde cada páginavirtual está localizada
+no disco.

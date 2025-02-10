@@ -1,0 +1,60 @@
+PROCESSADORES MONOCICLOS
+
+
+
+São baseados em um único ciclo de clock, grande o suficiente para acomodar todas as instruções a serem consideradas. Toda a instrução começa sua execução em uma transição ativa
+do clock e completa a execução na próxima transição ativa do sinal do clock. Assim sendo, todas as instruções gastam o mesmo tempo para serem executadas, tempo este que 
+vaicorresponder ao tempo gasto na execução da instrução mais demorada, e que deve obrigatoriamente ser igual ao ciclo do clock.
+
+Apesar de muito simples de entender, este esquema não se revela prático, pois é muito mais lento do que uma outra implementação que permita que classes diferentes de instruções
+gastem exatamente o tempo necessário às suas execuções. A vantagem desse tipo de implementaçãoestá no fato de que os tempos de execução de cada classe de instrução variam
+substancialmente.
+
+
+
+ PROCESSADORES MULTICICLOS
+
+
+Neste tipo de implementação, cada passo de execução gasta um período do clock. A implementação multiciclo permite que uma unidade funcional seja utilizada mais de uma vez por
+instrução, uma vez que ela está sendo usada em ciclos diferentes do clock. Estapossibilidade de compartilhamento pode ajudar a reduzir a quantidade de hardware necessário à
+implementação. Em resumo, as principais vantagens da implementação multiciclo são a possibilidade de fazer com que instruções sejam executadas em quantidades diferentes de
+períodos do clock, e a capacidade de compartilhar unidades funcionais dentro do espaço de tempo necessário à execução de uma únicainstrução.
+
+Ao final de um ciclo de clock, todos os dados que precisarem ser usados em ciclos subseqüentes devem ser armazenados em um elemento de estado. Os dados a serem usados em 
+outras instruções devem ser armazenados em elementos de estado visíveis ao programador, ou seja, no banco de registradores, no PC ou na memória.
+
+-----------------------------------------------------------------------------------------
+
+Monociclo : São em série ,memória de instrução ,banco de registradores ,ALU,memória de dados ,banco de registradores.
+
+Multiciclica:É dividida em etapas que são correspondentes as operações das unidades funcionais e permite usar diferentes números de cliclo de clock e podem ser ter um melhor desempenho com o uso de pipelining.
+
+A utilização de processadores monociclicos e que o ciclo de clock e determinado pelo caminho mais longo possível na máquina.
+
+
+Implementação em que toda instrução opera em um ciclo de
+clock com duração ﬁxa :600 ps
+
+Implementação em que instrução é executada em um ciclo de
+clock usando um clock de duração variável: 200 ps até 600ps 
+
+Desempenhoclockfixo/Desempenhoclockvariavel =
+
+= 600=447,5 = 1,34
+
+O clock variavel é mais rapido aproximadamente 1,34 mais rapido.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,242 @@
+* Ângelo Augusto
+- Main dá um NullPointerException ao rodar o programa
+- São 6 ingredientes, não 4. O número máximo de ingredientes por bombom que é 4.
+- Não trata o fato de os ingredientes poderem ser repetidos
+- Dica: Se o método "adiciona tipo de bombom" que tal ela chamar adicionaTipoBombom? atdb é um nome ruim.
+- Não levou em consideração o número de série do bombom
+- Bombom deve controlar o array, não quem está fora... senão é C, não Java.
+- Idem sobre Fabricas.
+- Não fez a classe de relatório.
+- Gastou muito tempo na interface ao invés de trabalhar nas classes.
+- Classe "Funcoes" não deveria existir, pois um método deveria estar na fábrica e o outro no relatório.
+- Não utilizou nenhum modificador de visibilidade.
+
+* Arthur Moura
+- Utilizou os modificadores de visibilidade. Legal :-)
+- Trata o fato de os ingredientes poderem ser repetidos :-)
+- Classe Fábrica não utiliza o objeto Fabrica e sim um id que o identifica
+- Interface com o usuário não é intuitiva, mas ok.
+- Dica: O array foi aumentado corretamente, mais é muito custoso copiar tudo de um para o outro,
+  então não aumente de 1 em 1. Aumente um tanto de uma vez.
+
+* Bernardo Gomes
+- Construtor espera 4 ingredientes e pede "" pra menos. Essa solução não é legal. O ideial, nesse
+  caso é construir quatro construtores e cada um chamando o completo passando o "".
+- Dica: O array foi aumentado corretamente, mais é muito custoso copiar tudo de um para o outro,
+  então não aumente de 1 em 1. Aumente um tanto de uma vez.
+- Não trata o fato de os ingredientes poderem ser repetidos
+- Não utilizou nenhum modificador de visibilidade.
+- Não criou interface para interagir com o usuário e poder criar os bombons dinamicamente.
+- Não que esteja errado, mas acredito que os ingredientes não sejam de responsabilidade de fábrica...
+  Eles existem por existir, então deveriam estar fora da fábrica.
+
+* Bryan Santos (PROVA ZERADA)
+- Utilizou os modificadores de visibilidade. Legal :-)
+- Na classe Bombom tem um origem que não é explicado. Entendi que é a Fábrica, mas só analisando o código.
+- Método addIngrediente está com erro de sintaxe.
+- Trata o fato de os ingredientes poderem ser repetidos :-)
+- Dica: O loop infinito não precisa ser feito daquela forma. Se uma coisa só pode ter dois valores,
+  o tipo correto é Boolean.
+
+* Caio Lelis
+- Não utilizou nenhum modificador de visibilidade.
+- Classe Bombom faz nada.
+- Classe Ingrediente faz nada.
+- Classe Fabricas está com erro de sintaxe.
+- Não fez a classe de relatório.
+- Não criou interface para interagir com o usuário e poder criar os bombons dinamicamente.
+- Não trata o fato de os ingredientes poderem ser repetidos
+- Não levou em consideração o número de série do bombom. Além disso, deveria ser static.
+
+* Dener Vieira
+- Utilizou os modificadores de visibilidade. Legal :-)
+- A parte de interface está misturada com o negócio da classe... OK mas isso não é legal :-(
+- Não fez a classe de relatório.
+- Não que esteja errado para a prova, mas limitar os ingredientes por uma opção no menu não é legal.
+- Classe Fabrica faz nada
+- Não criou interface para interagir com o usuário e poder criar os bombons dinamicamente.
+- O controle do número de série do bombom deveria ser static e não ser passado como parâmetro.
+
+* Filipe Ferraz
+- Utilizou os modificadores de visibilidade. Legal :-)
+- O controle do número de série do bombom deveria ser static e não ser passado como parâmetro.
+- Classe FabricaDeChocolates possui erro de sintaxe
+- Não fez a classe de relatório.
+- Não criou interface para interagir com o usuário e poder criar os bombons dinamicamente.
+- Não trata o fato de os ingredientes poderem ser repetidos
+- Na classe Fabrica, o array de Bombom não é inicializado e é usado. Vai levantar exceção.
+- Fabrica e Ingrediente não deveria ter todos os membros públicos.
+
+* Gabriel Veazey
+- Utilizou os modificadores de visibilidade. Legal :-)
+- Controlou o ID corretamente, mas não utilizou a informação no objeto
+- A parte de interface está misturada com o negócio da classe... OK mas isso não é legal :-(
+- Bombom tudo é private e nenhum método acessa :-) Ficou protegido mesmo né!?
+- Classe Fabrica não faz nada.
+- Não fez a classe de relatório.
+- Não criou interface para interagir com o usuário e poder criar os bombons dinamicamente.
+- Não limita o número de ingredientes em 4.
+- Não que esteja errado para a prova, mas limitar os ingredientes por uma opção no menu não é legal.
+- Não trata o fato de os ingredientes poderem ser repetidos
+
+* Germano Barcelos
+- Utilizou os modificadores de visibilidade. Legal :-)
+- Cuidado ao retornar a referência de um vetor como na classe Sabores. Nesse caso não tem problema
+  por ser final e nada de errado, apenas um aviso.
+- A parte de interface está misturada com o negócio da classe... OK mas isso não é legal :-(
+- Bombom.verificaIngrediente não usa o parâmetro Ingredientes. E o atributo qtdIngredientes não
+  é utilizado.
+- Ingrediente "Leite em Pó" não consegue ser adicionado por diferença entre as codificações
+  de terminais. Cuidado ao utilizar acentos.
+
+* Guilherme Assis
+- Limitou em 1000 o número de bombons por Fábrica.
+- Não fez a classe de relatório, só um método.
+- Não utilizou nenhum modificador de visibilidade.
+- O controle do número de série do bombom deveria ser static e não ser adicionado fora da classe.
+- Classe Fabrica não faz o papel de um modelo de Fabrica... é só uma chamada de métodos.
+- Não criou interface para interagir com o usuário e poder criar os bombons dinamicamente escolhendo
+  os ingredientes... colocou fixo no código.
+- A classe Bombom não referencia a Fábrica e sim uma string com o nome dela.
+
+* Gustavo Henrique
+- Classe Bombom é só um container... não faz nada.
+- Não fez a classe de relatório
+- Não utilizou nenhum modificador de visibilidade.
+- O controle do número de série do bombom deveria ser static e não ser adicionado fora da classe.
+- Mecanismo de verificação dos ingredientes é muito ineficiente e não escala... imagina se fossem
+ até 50 ingredientes?
+- Os Ifs e Else Ifs utilizados daquela forma poderiam virar um Switch Case...
+- Na interface criada só é possível ir criando os bombons... nada além disso.
+- String com as informações muito grande... utilize \n para exibir as informações de uma
+  maneira mais legal para o usuário.
+- int contador = 10000239; ???  :-|
+
+* Henrique Anastácio
+- Classe Bombom é só um container... não faz nada.
+- Não utilizou nenhum modificador de visibilidade.
+- Classe Bombom no arquivo da Prova01...  :-(
+- Interface com o usuário dentro do Construtor. :-(
+- Não tem Fábrica
+- Não fez a classe de relatório
+- Não controla o número de séria
+- Interface com o usuário muito agressiva... "Por favor escolha!" Evite esse tipo de coisa.
+- Não tem iteração com o usuário. Simplesmente mostra uma opção e não é possível escolher.
+
+* Italo Dell'Areti
+- Não utilize o pacote padrão... crie uma pasta e coloque os arquivos. Direto dentro de source
+  não é legal.
+- Utilizou os modificadores de visibilidade. Legal :-)
+- O controle dos ingredientes utilizados está atrelado as informações de quantos ingredientes
+  existem. Não está errado na prova, mas não é legal... imagine se o número de ingredientes
+  mudasse ou se fossem 50?
+- Cuidado ao chamar um método não final no contrutor. No momento da prova vocês não sabiam disso,
+  mas é perigoso isso.
+- Em Bombom.mostraIng o If pode ser trocado por um Switch Case.
+- O controle do número de série do bombom deveria ser static e não ser adicionado fora da classe.
+- Fez para escrever no arquivo. Legal :-)
+- A interface pede para escolher o número da fábrica, mas não dá opções.
+
+* João Gabriel
+- Não utilizou nenhum modificador de visibilidade.
+- Classe Bombom é só um container
+- Controle do número de série do bombom ok.
+- Ingredientes são apenas números entre 1 e 6... não é legal isso.
+- Só é possível criar os bomboms na ordem das fábricas.
+- A classe Bombom não referencia a Fábrica e sim um int com o número dela.
+- Pede o número de ingredientes mas não fala que tem que ser entre 1 e 4
+- Levanta exceção se não criar nenhum bombom em uma determinada fábrica.
+- Não fez a classe de relatório
+- Não trata o fato de os ingredientes poderem ser repetidos
+
+* João Vitor
+- Controle do número de série do bombom ok.
+- Utilizou os modificadores de visibilidade. Legal :-)
+- Bombom.adicionaIngrediente tem iteração com usuário. Mas ok.
+- Fez para escrever no arquivo. Legal :-)
+- A classe Bombom não referencia a Fábrica e sim um int com o número dela.
+- A interação com o usuário está muito boa de uma maneira geral. Parabéns.
+- A classe Sabor faz mais o papel de armazenar as strings dos sabores do que de sabor propriamente
+  dito, mas ok.
+
+* Mariana Santos (PROVA ZERADA)
+- Nenhuma das classes compila. Todas tem erro de sintaxe.
+- Classe Bombom, os métodos gerados automaticamente mais uma classe dentro da outra impedem de compilar.
+- Classe Sabores, uma classe dentro da outra impede de compilar.
+
+* Mateus Bernardo
+- Classe Bombom é só um container fechado... não tem como ser utilizada.
+- Classe Empresa é só um container com o nome e não tem como ser recuperado depois.
+- Idem para Sabor.
+- Não fez a classe de relatório
+- Interação com o usuário está incompleta e só permite escolher a fábrica.
+
+* Mathias Oliveira
+- Classe Bombom não controla o número de séria adequadamente... deveria ser static.
+  O próprio Main de teste dela mostra isso.
+- Na classe Fabrica, a interação com o usuário pergunta a quantidade do Ingrediente. Que informação
+  é essa?
+- A forma como é solicitado os ingredientes não está errada mas não é legal. Imagina se fossem
+  50 ingredientes... vou dar Não para todos se só quiser usar o último?
+- Limitado em 1000 bombons a quantidade que uma fábrica pode criar.
+- Não fez a classe de relatório
+
+* Reinado Magalhães
+- Não utilizou nenhum modificador de visibilidade.
+- Classe Bombom não faz nada. Os ingredientes listados ficam se repetindo em todos os bombons
+  pois não são estáticos.
+- Classe Fabrica só pergunta o número de ingredientes... não tem lugar que informa quais.
+- Classe Fabrica não guarda os bombons
+- Levanta exceção depois de escolher a fábrica
+- Não fez a classe de relatório
+
+* Rita Rezende
+- Utilizou os modificadores de visibilidade. Legal :-) Até final usou. :-D
+- Classe ItensOpcionais só inicializa o array. Não tem muita utilidade da maneira como foi feito,
+  mas ok.
+- Classe Montadora muito boa.
+- A classe Veiculo não verifica se os itens são repetidos. Essa verificação deveria ser parte dele,
+  não da Main.
+- Classe Veiculo não controla o número de séria adequadamente... deveria ser static.
+  O próprio Main de teste mostra isso.
+- Mesmo pedindo para construir mais carros, só mostra um por montadora.
+
+* Willian Vitor
+- A classe Bombons pode chamar Bombons mesmo, não precisa ser Bombonsclass  :-)
+- int[][] ficha = new int[1][9]; Maneira esquisita de guardar 6 ingredientes e 3 fábricas.
+- Não utilizou nenhum modificador de visibilidade.
+- A classe Bombonsclass não compila por tipos incompatíveis.
+- A classe Fabricasclass faz nada.
+- A classe Ingredientesclass faz nada.
+- A classe Testador não compila.
+- Não fez a classe de relatório
+
+----------------------------------
+
+Notas sem o UML:                                8,0 *, **
+ANGELO AUGUSTO CAMPOS                           3,0
+ARTUR MOURA PARREIRAS E SILVA                   7,0
+BERNARDO GOMES NUNES                            5,0
+BRYAN SANTOS OLIVEIRA                           0,0
+CAIO LELIS PENIDO                               2,0
+CHRYSTIAN PAULO FERREIRA DE MELO                ---
+DENER VIEIRA RIBEIRO                            4,0
+FELIPE RODRIGUES FERRAZ DOS SANTOS              3,5
+GABRIEL VEAZEY MEIRA                            3,0
+GERMANO BARCELOS DOS SANTOS                     8,0
+GUILHERME DE ASSIS LIMA                         4,0
+GUSTAVO HENRIQUE CERCEAU PATRICIO               2,5
+HENRIQUE ANASTACIO PENA E SILVA                 1,5
+ICARO EMIDIO ADAO                               ---
+ITALO DELL’ARETI                                6,5 + 1,0 (plus a mais por escrever em arquivo)
+JOAO GABRIEL FERNANDES ZENOBIO                  3,5
+JOAO VITOR DA SILVA BRAGA                       7,0 + 1,0 (plus a mais por escrever em arquivo)
+MARIANA OLIVEIRA SANTOS                         0,0
+MATEUS BERNARDO DE OLIVEIRA                     1,0
+MATHIAS GONCALVES OLIVEIRA                      4,0
+REINALDO MAGALHAES SILVA                        2,0
+RITA REZENDE BORGES DE LIMA                     7,0
+WILLIAN VITOR ALVES                             1,0
+
+*  Não fazer a classe de relatório já implicou em -3,0 pontos.
+** Perfeito não tinha, então normalizei as notas em 5 e considerei a classe de relatório separadamente.

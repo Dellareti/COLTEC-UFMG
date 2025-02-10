@@ -1,0 +1,54 @@
+
+#include<stdio.h>
+
+int main void(){
+
+int fatorial;
+int numero;
+
+printf("\n Digite o fatorial desejado :");
+scanf("%d",numero);
+
+ for(int i = 2; i<= numero;i++){
+          fatorial *= i;
+        }
+            printf("o fatoral  e igual a : ",numero);
+      }
+    }
+
+
+------------------------------------------------------------------------------------------------------
+package Aula_14;
+
+import java.util.Scanner;
+public class exe5 {
+    public static void main(String[] args){
+        
+        Scanner input = new Scanner(System.in);
+        long fatorial = 1;
+        long numero = 0;
+        
+        System.out.println("\n Digite o fatorial desejado : ");
+        numero=input.nextLong();
+        
+        for(int i = 2; i<= numero;i++){
+          fatorial *= i;
+      }
+            System.out.println("o fatoral de " + numero + " e igual a : "+ fatorial);
+      }
+    }
+
+
+
+O programa em java é dividido em componentes e em C é em processos.
+
+É possível a reutilização de código  em C porém, em muitos casos você será obrigado a utilizar "copiar e colar". Com Java você pode elaborar um relacionamento entre diversos componentes,estabelecendo
+comunicação entre eles e facilitando a reutilização de código, além da facilidade de se poder herdar atributos e comportamentos de outros objetos.
+
+C e dividido em Dados Globais e em procedimentos ,já em java em Dados Objeto e metodos.
+
+O programa em java possiu mais linhas de código por se mais complexo.
+
+Em java temos que criar uma class.
+
+

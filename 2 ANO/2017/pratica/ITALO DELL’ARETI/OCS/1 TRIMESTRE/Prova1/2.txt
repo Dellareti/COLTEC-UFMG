@@ -1,0 +1,30 @@
+﻿a)
+
+0101	 1010	 0011	 0000	 0000	 0000	 0000	 0100
+
+                        010110 10001 10000 00000 00000 000100
+			op     rs    rt    rd    shamt funct
+
+A instrução acima não é uma das instruções MIPS, já que esse campo OP de valor 22 não se encontra nas instruções do MIPS.Assim causando um erro,pois o MIPS não poderia interpretá-la.
+
+
+b) 
+
+0000 	0010 	0111 	0010 	0100	 0000	 0010	 0000
+
+
+                000000	10011 	10010 	01000 	00000 	100000
+                 
+                 op     rs        rt    rd     shamt     funct
+                  0      19       18    8         0     32
+
+        add	$s3	 $s2	$t0
+
+Tipo Registador.
+
+A operação desta instrução é um adição de dois registradores, seguindo os campos op code e funct, e ela faz uso dos registradores $s3,$s2 e $t0.
+
+Instrução: add $t0,$s3,$s2
+Instrução ocorre sem problemas.
+
+

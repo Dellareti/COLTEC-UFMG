@@ -1,0 +1,8 @@
+Os pilares são as entidades do problema,então elas seram os vértices.Ele nos diz que cada
+vértice estará conectado a outros 3 vértices o que indica que ele possui grau 3.
+Para que possa existir um grafo de acordo com o Lema do aperto de mãos a soma dos graus
+deve ser um número par.
+
+7 vértices X 3(grau) - 21
+
+21 não e par então é impossível contruir essa escultura.

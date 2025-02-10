@@ -1,0 +1,106 @@
+ 4 A-FLOAT tempC,tempf;
+IMPRIMA(" DIGITE A TEMPERATURA EM CELCIUS");
+LER("tempC");
+IMPRIMA tempf=("9*C+160")/5;
+
+B-FLOAT raio,altura,volume;
+IMPRIMA ("DIGITE O RAIO");
+LER ("raio");
+IMPRIMA ("altura");
+LER ("altura");
+volume=raio*raio*3.14*altura;
+
+C-
+
+FLOAT comprimento,largura,altura,volume;
+IMPRIMA ("DIGITE O COMPRIMENTO");
+LER("comprimento");
+IMPRIMA("DIGITE A LAGURA");
+LER("largura");
+IMPRIMA("DIGITE A ALTURA");
+LER("altura");
+volume= comprimento*largura*comprimento;
+
+5
+A- 19
+B-100000001
+c-0000101010110011
+D-1A5
+
+6
+FLOAT n1,n2,n3,n4,n5,soma;
+IMPRIMA ("DIGITE O PRIMEIRO NUMERO INTEIRO");
+LER(n1);
+IMPRIMA("DIGITE O SEGUNDO  NUMERO INTEIRO");
+LER(n2);
+IMPRIMA("DIGITE O TERCEIRO NUMERO INTEIRO");
+LER(n3);
+IMPRIMA("DIGITE O QUARTO NUMERO INTEIRO");
+LER(n4);
+IMPRIMA("DIGITE O QUINTO NUMERO INTEIRO");
+LER(n5);
+soma=n1+n2+n3+n4+n5
+
+7
+FLOAT n1,n2,n3,n4,n5,n6,media_aritmetica;
+IMPRIMA ("DIGITE O PRIMEIRO NUMERO REAL");
+LER("n1");
+IMPRIMA("DIGITE O SEGUNDO  NUMERO REAL");
+LER(n2);
+IMPRIMA("DIGITE O TERCEIRO NUMERO REAL");
+LER(n3);
+IMPRIMA("DIGITE O QUARTO NUMERO REAL");
+LER(n4);
+IMPRIMA("DIGITE O QUINTO NUMERO REAL");
+LER(n5);
+IMPRIMA ("DIGITE O SEXTO NUMERO REAL");
+LER(n6);
+media_aritmetica=(n1+n2+n3+n4+n5+n6)/6
+
+8
+
+
+FLOAT H,n1,n2,n3,n4,n5;
+IMPRIMA(1);
+LER(n1);
+IMPRIMA(1/2);
+LER(n2);
+IMPRIMA(1/3);
+LER(n3);
+IMPRIMA(1/4);
+LER(n4);
+IMPRIMA(1/5);
+LER(n5);
+H=n1+n2+n3+n4+n5
+
+
+9
+
+FLOAT salario,novoSAL,aumento;
+IMPRIMA ("DIGITE O SALARIO");
+LER(salario);
+IMPRIMA("DIGITE O VALOR DE AUMENTO EM PORCENTAGEM");
+LER(aumento);
+aumento=salario*(aumento/100);
+novoSAL=aumento+salario
+
+10
+
+
+FLOAT n1,n2,n3,p1,p2,p3,mediaPON;
+IMPRIMA("DIGITE A PRIMEIRA NOTA");
+LER(n1);
+IMPRIMA("DIGITE A SEGUNDA NOTA");
+LER(n2);
+IMPRIMA("DIGITE A TERCEIRA NOTA");
+LER(n3);
+IMPRIMA(4);
+LER(p1);
+IMPRIMA(3);
+LER(p2);
+IMPRIMA(3);
+LER(p3);
+mediaPON=((n1*4)+(n2*3)+(n3*3))/(p1+p2+p3)
+
+
+

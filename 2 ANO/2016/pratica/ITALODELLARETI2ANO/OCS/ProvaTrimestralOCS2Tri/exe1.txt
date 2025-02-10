@@ -1,0 +1,62 @@
+S-Video
+
+	Abreviatura de Separate Video (vídeo separado).
+	Sínal de vídeo analógico
+	Resolução:
+
+		480i (NTSC)
+		576i (PAL)
+
+	Carrega dados de vídeo com dois sinais separados [brilho(Luminância) e cor(Crominância)]
+	Geralmente assimilado ao vídeo componente porém possui qualidade inferior.
+	Existem dois padrões:
+
+		4 pinos - Transmite apenas vídeo
+		7 pinos - Transmite áudio e vídeo (usado em equipamentos que precisam transmitir o vídeo composto e com áudio)
+---------------------------------------------------------------------------------------------------------------
+USB
+
+A USB 1.1 previa velocidades de 1,5 Mbps até 12 Mbps, dependendo da configuração de velocidade. Mesmo na época em que foi lançado, o USB 1.1 trazia velocidades já consideradas lentas em relação a outros barramentos, como o fireware e o SCSI, mas já era um grande avanço em ralação às portas seriais e paralelas e na universalização de um conector padrão para periféricos.
+
+USB 2.0 A atualização do padrão USB para a versão 2.0 em 2000 deu um grande passo em relação à sua popularização. Com a velocidade máxima teórica de 480 Mbps de transferência, ele começou a ser bastante utilizado por dispositivos que exigiam mais largura banda, como pendrives e discos rígidos externos e até monitores.
+
+USB 3.0 Ainda caminhando a passos lentos em relação à popularização, o USB 3.0 fornece uma taxa de transferência de dados (teórica) de até 4.8 Gbps, e um fornecimento de energia 80% maior em relação aos padrões  anteriores, o que o torna ideal para gadgets de alta performance como pendrives e discos rígidos mais velozes. 
+
+
+FAT32
+
+Compatibilidade: Funciona em todas as versões do Windows, MAC, Linux, consoles de games e com praticamente qualquer dispositivo que tenha uma porta USB.
+
+Limites: 4GB de tamanho máximo de um arquivo e 8TB de tamanho máximo para uma partição.
+
+Uso ideal: É ideal para drivers removíveis por causa da sua alta compatibilidade.
+
+NTFS
+
+Compatibilidade: Funciona com todas as versões do Windows. O MAC apenas ler as unidades NTFS. Algumas distribuições do Linux pode escrever nesse sistema de arquivos, outras podem apenas ler. Com exceção do Xbox One, outros consoles provavelmente não irão suportar o NTFS.
+
+Limites: Sem limites de tamanho de arquivos e partições.
+
+Uso ideal: É ideal para ser usando no sistema operacional Windows.
+
+---------------------------------------------------------------------------------------------------------------
+
+DVI
+
+O Digital Visual Interface (DVI) é um padrão de interface de vídeo criado para melhorar a qualidade dos dispositivos de vídeos digitais, como monitores LCD e projetores digitais.
+Taxa de transferência/Banda: Single - 3,7 Gbits/s
+							 Dual - 7,4 Gbits/s
+DVI analógico
+	Capacidade de transmissão pequena: informações tem que ser convertidas para modo analógico
+	Não consegue preencher a tela toda que é no formato de 16:9
+	Resolução máxima 800x600
+
+DVI Digital
+	Transporta informações de imagem digitais para a tela.
+	Suporta o formato 16:9
+	A conexão entre placa de vídeo e monitor pode ser com conectores 14 vias suportando resoluções de até 1920 X 1200 ou 20 vias suportando resoluções a partir 2560 X 1600.
+
+
+---------------------------------------------------------------------------------------------------------------
+
+

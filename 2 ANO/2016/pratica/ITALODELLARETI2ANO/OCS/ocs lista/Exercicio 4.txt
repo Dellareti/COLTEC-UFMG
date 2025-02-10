@@ -1,0 +1,40 @@
+
+A multiplicação pode ser feita direta e simples, mas
+pode ser melhorada nos seguintes aspectos:
+
+inteiros sem sinal
+
+* Armazenamento dos produtos parciais em um único
+registrador;
+
+* Na multiplicação pelo bit 1, é necessário, apenas realizar uma
+operação de soma e um deslocamento;
+
+* Na multiplicação pelo bit 0, é necessário, apenas o
+deslocamento
+
+			1010
+			1001  x
+		       ------
+			1010
+                       0000
+		      0000
+		     1010
+		   ----------
+		     1011010
+
+Como antes, multiplicador e multiplicando são armazenados nos registradores
+
+O registrador de 1 bit é
+posicionado logicamente à direita do bit menos significativo  do registrador  designado como n-1;
+
+Ao analisar cada bit do multiplicador, o bit à sua direita Q-1 também é analisado; Se esse dois bits forem iguais (1-1 ou 0-0)
+
+Então todos os bits dos registradores A, Q e Q-1 são deslocados 1 bit para a direita; Se esse dois bits forem diferentes:
+
+ O multiplicando será somado (01) do registrador A;  ou subtraído (10) do registrador A;
+
+ Em seguida, ocorre o deslocamento de um bit para a direita, porém:
+
+O bit mais a esquerda de A (An-1), é deslocado para An-2 mas também permanece em
+An-1;

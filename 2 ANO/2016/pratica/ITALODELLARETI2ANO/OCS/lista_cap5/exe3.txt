@@ -1,0 +1,6 @@
+Em   sistemas   que   utilizam   memória   virtual,   nos   deparamos   constantemente   comsituações nas quais endereços da memória principal precisam ser escritos. Devido autilização do sistema de escrita write-back, temos a
+ utilização de um processo caro emquestão de desempenho (acesso ao disco para armazenar a página), sendo necessáriosaber se a página precisa ser copiada de volta quando for substituída. Para monitorar se uma página foi escrita 
+desde que foi lida para a memória, um bit demodificação (dirty bit) é adicionado à tabela de páginas. Ele é ligado quando qualquerpalavra em uma página é escrita. Com isso, ele indica se a página precisa ser escrita nodisco 
+antes que seu local na memória possa ser cedido a outra página, melhorando odesempenho nos casos não necessários.O dirty bit representa quando o endereço será escrito, marcando quando deve ocorrer owrite-back dos dados. Se não 
+houvesse esse bit, não teria como saber qual dadoprecisaria de ser gravado no HD, fazendo com que todos os dados tenham que serescritos e reduzindo o desempenho. Com isso só precisamos escrever as páginas queprecisam ser 
+substituídas. 

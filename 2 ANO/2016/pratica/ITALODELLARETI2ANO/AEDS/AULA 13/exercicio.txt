@@ -1,0 +1,29 @@
+1)	Classes: grupo,clientes
+		Grupo: pedidos, num de pessoas
+		Clientes: dinheiro,pedidos
+
+	Procedimentos:Fazer pedidos,Escolhe opção(dividir ou não), realizar pagamento;
+
+
+2) Classes: Lampada
+	 Lampada: potencia,preço,cor,avaliação,fabricante,vendido;
+	 Método:venda-me;
+
+3)
+	Classe Lampada3estados
+		Lampada3estados: estado;
+	Método: mudar estado da lâmpada
+
+
+4) Método: Lampada3estadoscheck
+
+
+5) classe: livro
+		livro: titulo, autor, ano;
+
+
+6) classe: livro_livraria
+	livro_livraria: preço;
+
+7) classe: livro_bib
+	livro_bib: reservado,data_devolução;

@@ -1,0 +1,128 @@
+﻿Lista 1 OCS-LAB
+
+1) 
+
+1. A simplicidade favorece a regularidade.
+Seguindo um formato simples de instruções, sem se estender a casos específicos, favorece o desempenho de um hardware.
+
+
+2.Menor significa mais rápido
+Aumentar o hardware nem sempre significa torná-lo mais rápido, já que o tempo necessário para utilizaod pode ser maior, reduzindo o desempenho.
+
+
+
+3.Agilize os casos mais comuns.
+Se os casos que ocorrem frequentemente forem otimizados, o desempenho geral aumentará.
+
+
+4.Um bom projeto exige bons compromissos.
+Deve-se, para a realização de um bom projeto, seguir regularidades, por exemplo, no formato e tamanho de instruções.
+
+
+Lei de Amdhal
+O desempenho de um processador aumenta, se o projeto de hardware for otimizado, seguindo os princípios, como por exemplo, mantê-lo menor, simples, e rápido em casos frequentes.
+
+
+
+Lei de Moore
+Com todos estes princípios de projeto sendo seguidos ao decorrer dos anos, conseguimos cumprir a estimativa de Moore, que dizia que o número de transistors nos chips iriam dobrar a cada dois anos, um progresso absurdamente grande.
+
+
+2) A arquitetura MIPS32 bits apresenta 3 formatos de instruções padrão:
+
+Tipo: R - Intruções entre registradores
+op - operação : 6 bits
+rs - primeiro regist operando: 5 bits
+rt - segundo  regist operando: 5 bits
+rd - regist destino operação : 5 bits
+shamt - shift amount : 5 bits
+funct- código de função : 6 bits
+
+
+Tipo: I - Instruções com constantes
+op - operação : 6 bits
+rs - regist base: 5 bits
+rt - regist dest: 5 bits
+constante - endereço ou constante numérica : 16 bits
+
+Tipo: J - Instruções com endereços para saltos
+op - operação : 6 bits
+constante - endereço do salto : 26 bits
+
+Ela é feita desta forma para que as instruções sempre tenham 32 bits, para facilitar sua manipulação e controle no hardware.
+
+3)
+
+1- Endereço imediato: instruções onde usam uma constante dentro da instrução como o endereço.
+Ex: 
+
+2-Endereço em registrador: a instrução contém o endereço de um registrador que tem o endereço de 32 bits a ser usado.
+Ex: add $s0,$t0,$t1
+
+3-Enderço de base ou deslocamento: endereço de um registrador somado a um offset.
+Ex: lw $s0,4($s1)
+
+4-Endereço relativo ao PC(contador): O endereço é uma soma do registrador PC mais uma constante.
+Ex:
+
+5-Endereçamento pseudodireto: endereço de um salto incondicional(26 bits) mais os bits mais significativos do PC.
+Ex: j label_x
+ 
+
+4) O MIPS a partir de instruções como o jal(jump and link), consegue saltar para uma porção específica de código, e retornar a partir de um registrador que salva o endereço da próxima instrução($ra).
+O MIPS oferece 4 registradores para a passagem de parâmetros($a0-$a3) e 2 para retorno de valores($v0-$v1). Quando uma subrotina/função requer mais do que estes registradores, o MIPS salva valores na pilha de execução na memória, para um posterior acesso.
+A pilha pode ser acessada a partir do registrador $sp, que aponta para o topo da pilha.
+
+A pilha é manipulável, e pode tanto aumentar, quanto diminuir antes, durante, ou após uma determinada função ser executada.
+A pilha tem um limite determinado de espaço na memória.
+6 etapas que um procedimento segue:
+1.Coloca os parâmetros na pilha de execução.
+2.Transfere o controle para as instruções do procedimento.
+3.Adquire recursos necessários para o procedimento.
+4.Realiza as instruções.
+5.Coloca o retorno na pilha de execução.
+6.Retorna para o ponto de chamada do procedimento.
+
+
+PILHA ANTES DA CHAMADA					PILHA DURANTE A EXECUÇÃO		PILHA APÓS O RETORNO
+
+xx12	$sp						xx12	parametro x			xx12	retorno z
+xx08							xx08	parametro y			xx08	$sp
+xx04							xx04	$sp				xx04
+xx00							xx00					xx00
+
+
+5) sw  $s0,2($t0)
+   addiu $a0,$s2,18724
+	
+6)Memória volátil: É um dos tipos de mémoria mais rápidos, mas são geralmente caras, tem baixa densidade, e não salva os dados na falta de corrente elétrica.
+Ex: RAM.
+
+Memória não-volátil: É uma memória com velocidade menor, é mais barata, tem maior densidade, e armazena os dados sem energia elétrica.
+Ex: Dísco rígido. 
+
+7) 
+# endereço do vetor x está em $s0
+# endereço do vetor y está em $s1
+# $s2 = var a
+
+# $t1 = x[10]
+
+li $t0,10
+sll $t0,$t0,2 # mult por 4
+add $t1,$t0,$s3
+
+# $t3 = y[3]
+
+li $t2,3
+sll $t2,$t2,2 # mult por 4
+add $t3,$t2,$s1
+
+# $t4 = x[y[3]]
+
+sll $t3,$t3,2 # mult por 4
+add $t4,$t3,$s0
+
+# a = x[10] + x[y[3]]
+
+add $s2,$t4,$t3

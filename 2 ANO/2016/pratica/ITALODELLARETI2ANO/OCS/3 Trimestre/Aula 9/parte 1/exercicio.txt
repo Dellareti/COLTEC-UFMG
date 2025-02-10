@@ -1,0 +1,95 @@
+					Alocação contígua
+
+ Consiste em armazenar um arquivo em blocos contíguos
+ Implementação bem simples
+ Endereço do bloco onde inicia o arquivo
+ Número de blocos que são empregados
+
+ Problemas
+
+ Alocação de novos arquivos em espaços livres
+o Pode gerar fragmentação externa
+ E se o tamanho de arquivo armazenado precisar ser estendido.
+
+---------------------------------------------------------------------------------------------------------------
+					Lista encadeada	
+
+Só é preciso conhecer o 1o. Bloco
+ Primeira palavra utilizada como ponteiro para próximo bloco
+ Último bloco aponta para endereço nulo
+ Não causa fragmentação externa
+
+ Problemas
+
+ Acesso aleatório é lento pois os blocos tem de ser sequencialmente buscados
+ Para se chegar ao bloco n, deve-se passar por n-1 blocos antes
+ Vinculo está armazenado em disco
+ Bloco não é usado somente para dados
+
+ Exemplo
+
+	o Bloco de 1kbytes e endereçamento de 16 bits
+	
+	• 1022 bytes armazenam informações
+	• 2 bytes endereçam o próximo bloco.
+
+---------------------------------------------------------------------------------------------------------------
+			    Lista encadeada com tabela na memória(FAT)
+
+Otimização do método baseado em lista encadeada
+
+ Cria tabela em memória (FAT: File Allocation Table)
+o Cada entrada da tabela contem o apontador de blocos de disco
+ Acelera o acesso aleatório
+ Identificação de um bloco não requer acesso a disco
+
+ Problemas
+
+ Para acesso, a FAT deve estar presente em memória a todo tempo
+ Dependendo do disco
+
+	o A tabela pode ser muito grande para ser mantida em memória
+	
+	• Disco de 200GB, blocos de 1K, exige tabela com 200Mega entradas
+	• Requer ao 28 bits para endereçar todas entradas (ocupará 4 bytes)
+	
+	 MS-DOS trata o problema usando blocos grandes (até 32K)
+
+---------------------------------------------------------------------------------------------------------------
+						I-nodes
+
+ Composição de um i-node
+ Atributos do arquivo
+
+	o Nome
+	o Permissões
+	o Tamanho
+	o Momento de: 
+
+	• Criação/acesso/alteração
+	o Proprietário ...
+
+		 Endereçamento dos dados
+		o Endereçamento direto
+
+	• Define a quantidade de dados diretamente alcançáveis pela estrutura o Endereçamento indireto direto
+
+	• Utiliza de blocos de dados como blocos de endereçamento de dados.
+
+
+	 Exemplo
+ se 
+ Bloco possui 1K e 
+ Bloco é endereçado com 4 bytes
+
+ e
+
+ Uma estrutura de inode possui
+ Oito entradas de endereçamento direto
+ Uma de endereçamento indireto simples
+ Uma de endereçamento indireto duplo
+ Uma de endereçamento indireto triplo
+
+
+
+

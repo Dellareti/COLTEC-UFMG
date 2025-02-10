@@ -1,0 +1,52 @@
+
+			Programação orientada a objetos x Programação estruturada.
+
+* Ambas as formas de programação possuem seus altos e baixos.
+
+* Ambas possuem vantagens e desvantagens.
+
+
+Um sistema orientado a objetos é dividido em componentes e não mais em processos.Ex : Sistema financeiro.
+
+
+POO: Teríamos um objeto de fornecedores, por exemplo, onde todas as funções estariam agrupadas no objeto e em nenhum outro lugar.
+
+Estruturada: As rotinas e funções de fornecedores estariam espalhadas em todo o sistema, como em contas a pagar,contas a receber, cadastro, etc.
+
+
+Imagine agora o cadastro de fornecedores, com todas as suas rotinas e funções:
+
+Estruturada: Se você futuramente precisar alterar algum dado, função ou propriedade, o que em seu programa será afetado? O que terá que ser reestruturado? Imagine você
+voltando à fase de testes e analisando todo o seu sistema até ter certeza que a alteração que você fez não desencadeou listas de alterações que você terá que fazer em todo o sistema...
+
+POO: as propriedades, funções e rotinas do objeto fornecedores estão todas em um único objeto, encapsulados,facilitando essa necessidade futura de alterações e atualizações.
+
+
+Reutilização de código:
+
+Estruturada: É possível a reutilização de código na programação estruturada porém, em muitos casos você será obrigado a utilizar o famoso "copiar e colar".
+
+POO: Com a POO você é capaz de elaborar um relacionamento entre diversos componentes, estabelecendo
+comunicação entre eles e facilitando assim, e muito a reutilização de código, além da facilidade de se poder herdar atributos e comportamentos de outros objetos.
+
+
+
+
+			Poo vantagens
+
+* Mais interessante em aplicações modernas.
+
+* Como o desempenho não é uma das grandes preocupações na maioria das aplicações (devido ao poder de  processamento dos computadores atuais), a programação orientada a objetos se tornou muito difundida.
+
+* Facilidade na reutilização de códigos.
+
+
+			Progamação estruturada
+
+* A linguagem C é a principal representante da programação estruturada: baixo nível.
+
+* A programação estruturada, quando bem feita, possui um desempenho superior ao que vemos na programação orientada a objetos.
+
+
+ 
+

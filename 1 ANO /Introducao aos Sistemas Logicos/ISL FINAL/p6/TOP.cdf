@@ -1,0 +1,13 @@
+/* Quartus II Version 9.1 Build 304 01/25/2010 Service Pack 1 SJ Web Edition */
+JedecChain;
+	FileRevision(JESD32A);
+	DefaultMfr(6E);
+
+	P ActionCode(Cfg)
+		Device PartName(EPM1270F256) Path("C:/Users/Aluno-Isl/Desktop/P6 RAUL E ITALO/") File("TOP.pof") MfrSpec(OpMask(3) SEC_Device(EPM1270F256) Child_OpMask(2 0 0));
+
+ChainEnd;
+
+AlteraBegin;
+	ChainType(JTAG);
+AlteraEnd;

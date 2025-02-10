@@ -1,0 +1,53 @@
+
+a)
+	Árvore binaria
+	
+Pré-ordem: raiz,subárvore da esquerdae,subárvore da direita;
+
+Ordem simétrica(in-order):subárvore da esquerda,raiz,subárvore da direita;
+
+Pós-ordem:subárvore da esquerda,subárvore da direita,raiz.
+
+
+	Árvore com número variável de filhos
+
+Pré-ordem: raiz,subárvore da esquerdae,subárvore da direita;
+
+Pós-ordem:subárvore da esquerda,subárvore da direita,raiz.
+
+Ordem simétrica não faz sentido ser utilizada nesses casos
+
+b) 	Filas 
+
+first in first out
+
+exemplo :fila de impressão.
+
+fila com lista
+fila com vator
+
+fila dupla :insere novos elementos nas duas extremidades .
+
+E uma fila como temos em qualquer lugar,vai inserindo elementos e armazenando,o primeiro a entrar 
+e o primeiro a sair 
+
+	Pilhas 
+
+last in first out
+exemplo :armazenar dados.
+
+
+Na pilha basicamente você vai acumulando dados uns em cima dos outros,a retirada e no topo da pilha
+o ultimo a entrar e o primeiro a sair,
+
+
+	Árvores
+
+exemplo:avaliação de expressões.
+
+é uma estrutura de dados para representar dados de forma 
+hierárquica.
+
+árvore binaria:2 filhos no maximo
+árvore var:n filhos
+

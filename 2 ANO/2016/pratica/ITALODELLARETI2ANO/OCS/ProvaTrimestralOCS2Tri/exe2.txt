@@ -1,0 +1,28 @@
+i) Entrada e saída programada:
+
+A desvantagem do polling é que ele pode desperdiçar muito tempo de processador, pois os
+processadores são muito mais rápidos do que os dispositivos E/S. O processador pode ler o
+registrador status muitas vezes para descobrir se uma operação foi ou não concluída. Quando a
+operação estiver completa, o processador ainda terá que verificar o registrador status para
+determinar se ele teve sucesso.
+Devido a vantagem de ser um sistema simples, o polling pode ser empregado em dispositivos em
+que o overhead é mais previsível, o que é útil para tempo real.
+
+ii) E/S por Interrupções:
+
+O conjunto de despesas operacionais (overhead) em uma interface polling foi reconhecido há muito
+tempo, levando a invenção de interrupções para notificar o processador quando um dispositivo E/S
+exigir atenção do processador.
+A E/S controlada por interrupção libera o processador de ter de esperar por cada evento de E/S,
+embora, se usássemos esse método para transferir dados de ou para um disco rígido, o overhead
+ainda poderia ser intolerável, pois isso poderia consumir uma grande fração do processador
+enquanto o disco estivesse transferindo.
+
+iii) DMA:
+
+Ao contrário do polling ou da E/S controlada por interrupção, o DMA pode ser usado para realizar
+interface de um disco rígido sem consumir todos os ciclos de processador para uma única E/S.
+As dificuldades de ter DMA em um sistema de memória virtual surgem porque as páginas possuem
+um endereço físico e um virtual. O DMA também cria problemas para sistemas para sistemas com
+caches, pois podem haver duas cópias de um item de dados: uma na cache e uma na memória,
+gerando problemas de incoerência de dados.

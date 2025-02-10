@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Aula16">
+  <ClassDiagramComponents>
+    <Class name="Casa" package="" visibility="public" xPosition="20.0" yPosition="20.0">
+      <Fields>
+        <Field name="cor" type="String" visibility="package"/>
+        <Field name="totalDePortas" type="int" visibility="package"/>
+        <Field name="portas" type="Porta[]" visibility="package"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="pinta" returnType="void" visibility="package">
+          <Argument type="String" name="cor"/>
+        </Method>
+        <Method name="abre" returnType="void" visibility="package">
+          <Argument type="int" name="x"/>
+        </Method>
+        <Method name="portasAbertas" returnType="int" visibility="package"/>
+        <Method name="add" returnType="void" visibility="package">
+          <Argument type="Porta" name="p"/>
+        </Method>
+        <Method name="total" returnType="int" visibility="package"/>
+      </Methods>
+    </Class>
+    <Class name="Ex1" package="" visibility="public" xPosition="320.0" yPosition="20.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Porta" package="" visibility="public" xPosition="620.0" yPosition="20.0">
+      <Fields>
+        <Field name="aberta" type="int" visibility="package"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <UseRelation source="Casa" target="Porta" sourceCardinality="1..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

@@ -1,0 +1,27 @@
+
+	
+	Busca em profundidade
+ 
+ * Parte de um vértice inicial,ela explora o máximo possível de cada um dos seus 
+ramos antes de retroceder.
+
+ * Pode ser usado para
+
+-- Encontar componentes conectados e fortemente conectados
+-- Ordenação topológica de um grafo
+-- Resolver quebra-cabeças 
+
+EXEMPLO:Labirinto.  
+
+
+	Busca em largura
+
+ * Parte de um vértice inicial,ela explora todos os vértices vizinhos.Em seguida,
+para cada vértice vizinho,ela repete esse processo,visitando os vértices ainda inexplorados
+
+ * Pode ser usado para 
+
+-- Achar componentes conectados
+-- Achar todos os vértices conectados a apenas componente
+-- Achar o menor caminho entre dois vértices
+-- Testar bipartição em grafos

@@ -1,0 +1,55 @@
+Hierarquia de Memória:Reduzir o tempo de acesso aos dados e instruções.
+
+A “velocidade” de memória aumenta muito menos rapidamente que a dos processadores (Lei de Moore)
+
+Para máquinas mais rápidas, é necessário projetar um sistema de memória de forma a não desperdiçar os ganhos adquiridos com o processador.
+
+Solução: Hierarquia de memória e caches
+
+É desejável que o usuário “acredite” que ele tem um espaço de memória enorme, mesmo se a quantidade de memória é sabidamente limitada.
+
+O SO precisa suprir o mesmo espaço de memória para vários usuários sem que haja conflito
+
+Solução: Memória Virtual
+
+
+Três tecnologias para construção de hierarquias de memória:
+DRAM, SRAM e disco magnético.
+
+
+Objetivo: Dividir o espaço de memória em níveis com tamanhos, velocidades e custos diferentes por nível.
+
+O princípio da localidade pode ser aplicado diretamente à hierarquia de memória: quanto mais rápida a memória, mais próxima ao processador.
+
+
+ velocidade	CPU	Tamanho		Custo	  tecnologia	          
+
+ + Rapida      memória   menor          + alto      SRAM
+
+	       memória                              DRAM
+  
+ + Lenta       memória   maior          + Baixo     Disco Magnético
+
+
+Pode conter diversos níveis porém, a gerência é feita entre apenas entre níveis adjacentes.
+
+Se a informação solicitada pela CPU estiver presente no nível superior da hierarquia, ocorre um “acerto” (hit)
+
+Se a informação não puder ser encontrada nesse nível, ocorre uma “falha” (miss) e um nível mais baixo é acessado para que o bloco desejado seja recuperado
+
+Medida de desempenho da hierarquia: taxa de acertos dos acessos, i.e. a fração dos acessos à memória encontrados no nível superior.
+
+Outra forma: taxa de falhas = 1 – taxa de acertos 
+
+
+Desempenho ,tempo de acesso à memória:
+
+Tempo de acerto (ta): tempo para acessar o nível superior da hierarquia  + tempo necessário para se determinar se o acesso é ou não um acerto
+
+Penalidade por falta (tf): tempo para substituir um dos blocos do nível superior pelo bloco do nível inferior com a informação desejada + tempo para enviar o dado ao processador
+	 
+	 ta << tf: tempo de acesso ao nível inferior é muito maior
+
+Hierarquia de memória tem influência direta na gerência de memória feita pelo SO, no código gerado pelo compilador e até mesmo no tipo de aplicação a ser executada na máquina.
+
+       

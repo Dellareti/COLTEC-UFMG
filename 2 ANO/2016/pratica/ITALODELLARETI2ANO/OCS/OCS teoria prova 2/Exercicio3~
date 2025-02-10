@@ -1,0 +1,50 @@
+Hazards
+
+São três tipos:
+
+Hazards Estruturais
+Hazards de Dados 
+Hazards de Controle
+
+
+	Hazards estruturais
+
+O Hardware não pode admitir a combinação de instruções que queremos executar no mesmo 
+ciclo de clock.
+
+ex:	sub $2,$1,$3
+	and $12,$2,$5
+
+
+	Hazards de Dados
+
+O Pipeline precisa ser interrompido porque os dados para executar a instrução não estão disponíveis.Para problemas como esses não precisamos esperar a instrução terminar podemos utilizar forwarding(adiantamento) ou bypassing.
+
+ex:	sub $s0,$t0,$t1
+	add $t2,$s0,$t3
+
+	
+	Hazards de controle
+
+É um desvio que é necessário ,baseado nos resultados de uma instrução enquanto outras estão sendo executadas,ele possui 3 opções
+ 
+
+Primeira Opção: Causar stall no pipeline imediatamente após a buscarmos um desvio
+Esperar até que o pipeline determine resultado do desvio
+
+Endereço então disponível para determinar próxima instrução
+Supondo hardware extra para testar registradores, calcular
+endereço do destino e atualizar PC no segundo estágio.
+
+
+Segunda Opção: Previsão para tratar desvios
+Técnica simples: prever que os desvios não serão tomados 
+
+
+Terceira opção: Desvio adiado
+Sempre executa a próxima instrução seqüencial, com desvio
+ocorrendo após esse atraso de uma instrução
+
+
+ex:     sub $2,$3,$4
+	beq $1,$2,40

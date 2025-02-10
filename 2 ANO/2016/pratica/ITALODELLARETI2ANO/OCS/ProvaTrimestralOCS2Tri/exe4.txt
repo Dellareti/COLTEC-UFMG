@@ -1,0 +1,27 @@
+
+O DMA, caso trate com endereços virtuais, terá que traduzi-los para endereços físicos. O problema
+ao tratar com endereços físicos em uma transferência de DMA é que a transferência não pode
+cruzar com facilidade um limite de página. Se uma solicitação de E/S cruzasse um limite de página,
+então os locais de memória para os quais ela ela estava sendo transferida não necessariamente
+seriam contíguos na memória virtual. Por outro lado, se usarmos endereços físicos, teremos que
+restringir todas as transferências de DMA para permanecerem dentro de uma página.
+
+Um método para ultrapassar esse limite, a alternativa é trabalhar com uma DMA que funcione em
+endereços virtuais, possuindo um pequeno número de entradas de mapa que oferecem mapeamento
+virtual para físico para uma transferência.
+Outra técnica é que o sistema operacional divida a transferência de DMA em uma série de
+transferências, cada uma confinada dentro de uma única página física. As transferências são
+encadeadas e entregues a um processador de E/S ou unidades de DMA, que executa a sequência
+inteira de transferências.
+
+Qualquer que seja a alternativa escolhida, será necessário a cooperação do sistema operacional.O problema de coerência para dados de E/S é evitado pelo uso de três técnicas:
+
+- Rotear a atividade de E/S por meio da cache: garante que teremos o dado mais recente em
+detrimento do desempenho do processador.
+
+- Invalidar a cache seletivamente: forçar a ocorrência de write-backs para uma escrita de E/S
+(flush). Exige um suporte de hardware.
+
+- Oferecer um mecanismo de flush: fazer um flush seletivamente às entradas de cache. A
+invalidação do hardware para garantir coerência da cache é comum em sistemas multiprocessador, e
+a mesma técnica pode ser usada para E/S.

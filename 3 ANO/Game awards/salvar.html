@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Salvar</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/salvar.css">
+    <link rel="stylesheet" type="text/css" href="css/jquery.bracket.min.css"/>
+  </head>
+          
+<body>
+
+  <nav class="navbar navbar-inverse ">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+          <a class="navbar-brand " href="#"><p>The Game</p></a>
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+  
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse " id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav navbar left  nav-fill w-100 align-items-start">
+          <li class="active"><a href="index.html">Home</a></li>           
+        </ul>						
+    
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+  </nav>
+
+
+  <div class="container">        
+
+    <h1> Game Awards bracket challenge</h1>
+      <div class="container bracket">
+        <center>
+        <table summary="Tournament Bracket" class="tournamentBracket">
+          <tr>
+            <th>Chave de 16</th>
+            <th>Quartas de finals</th>
+            <th>Semi finais</th>
+            <th>Finais</th>
+            <th>Campeões</th>
+          </tr>
+          <tr>
+            <td><p class="A1"></p></td>
+            <td rowspan="2"><p class="quarter1"></p></td>
+            <td rowspan="4"><p class="semi1"></p></td>
+            <td rowspan="8"><p class="final1"></p></td>
+            <td rowspan="16"><p class="champion"></p></td>
+          </tr>
+          <tr>
+            <td><p class="B2"></p></td>
+          </tr>
+          <tr>
+            <td><p class="C1"></p></td>
+            <td rowspan="2"><p class="quarter2"></p></td>
+          </tr>
+          <tr>
+            <td><p class="D2"></p></td>
+          </tr>
+          <tr>
+            <td><p class="E1"></p></td>
+            <td rowspan="2"><p class="quarter3"></p></td>
+            <td rowspan="4"><p class="semi2"></p></td>
+          </tr>
+          <tr>
+            <td><p class="F2"></p></td>
+          </tr>
+          <tr>
+            <td><p class="G1"></p></td>
+            <td rowspan="2"><p class="quarter4"></p></td>
+          </tr>
+          <tr>
+            <td><p class="H2"></p></td>
+          </tr>
+          <tr>
+            <td><p class="D1"></p></td>
+            <td rowspan="2"><p class="quarter5"></p></td>
+            <td rowspan="4"><p class="semi3"></p></td>
+            <td rowspan="8"><p class="final2"></p></td>
+          </tr>
+          <tr>
+            <td><p class="C2"></p></td>
+          </tr>
+          <tr>
+            <td><p class="B1"></p></td>
+            <td rowspan="2"><p class="quarter6"></p></td>
+          </tr>
+          <tr>
+            <td><p class="A2"></p></td>
+          </tr>
+          <tr>
+            <td><p class="F1"></p></td>
+            <td rowspan="2"><p class="quarter7"></p></td>
+            <td rowspan="4"><p class="semi4"></p></td>
+          </tr>
+          <tr>
+            <td><p class="E2"></p></td>
+          </tr>
+          <tr>
+            <td><p class="H1"></p></td>
+            <td rowspan="2"><p class="quarter8"></p></td>
+          </tr>
+          <tr>
+            <td><p class="G2"></p></td>
+          </tr>
+        </table>
+
+        <br>
+        <br>
+        
+        <button type="button" class="btn btn-primary btn-lg share initial" >
+          <span class="glyphicon glyphicon-share"></span> Compartilhar
+        </button>
+
+        </center>
+      </div>
+  </div>
+
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="https://code.jquery.com/jquery.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script>
+    $(document).ready(function(){
+      var teams = [];
+      var locations = [];
+      var spots = [];
+      var names =[];
+
+      teams = localStorage.getItem('bracketList');
+      locations = localStorage.getItem('listClass');
+      names = localStorage.getItem('idName');
+
+      var key = JSON.parse(names);
+      //alert(key);
+      var keyLength = key.length;
+
+      var loc = JSON.parse(locations);
+      var loclength = loc.length;
+      var recover = JSON.parse(teams);
+      var teamlength = recover.length;
+      //var spotsAssign = JSON.parse(spots);
+      //var spotsLength = spotsAssign.length;
+
+      console.log(teamlength);
+      $(".tournamentBracket p").each(function(){
+        spots.push($(this).attr('class'));
+      });
+
+      console.log(recover);
+      console.log(loc);
+      console.log(spots);
+      
+      for(var i=0;i<teamlength;i++){
+        $(".tournamentBracket p").each(function(){
+          if($(this).attr('class') === spots[i]){
+            $(this).append(recover[i]);
+          }
+        });
+      }
+
+      var newItem = document.createElement("li");
+      newItem.innerHTML = key;
+      //alert(bracketName);
+      $(".nav-justified>.dropdown .dropdown-menu").append(newItem);
+      $(".nav-justified>.dropdown .dropdown-menu li").each(function(){
+        $(this).addClass("list-group-item");
+      });
+
+
+    });
+  </script>
+</body>
+
+</html>

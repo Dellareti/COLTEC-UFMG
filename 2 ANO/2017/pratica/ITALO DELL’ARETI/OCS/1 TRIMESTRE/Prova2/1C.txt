@@ -1,0 +1,38 @@
+﻿O algorítimo de multiplicação, funciona de maneira similar ao processo que conhecemos por multiplicação.
+Temos os seguintes operandos: multiplicando, multiplicador e produto.
+
+Como a multiplicação é binária, o resultado de cada multiplicação é sempre o próprio 
+multiplicando, ou zero.
+
+Então, segue-se os seguintes passos:
+
+1.Verifica-se o multiplicador é 0 ou 1.
+
+2.Caso seja zero, pula-se para a próxima etapa, caso seja um, soma-se ao produto o valor do multiplicando.
+
+3- Desloca-se o multiplicando para a esquerda, e o multiplicador para a direita, pegando o próximo valor a ser multiplicado.
+
+4. São feitas então, 32 iterações, numa multiplicação de dois números de 32 bits, para se obter um produto de no máximo 64 bits.
+
+Multiplica-se apenas os números positivos, ou seja, se um operando for negativo, aplica-se o complemento de dois nele, e realiza-se a multiplicação.
+No final, é verificado se os números originais tinham sinais iguais ou diferentes, e se necessário, aplica-se o complemento de dois no produto obtido.
+
+Ex:
+		9 * 3
+	
+		01001  == 9
+		x 011  == 3
+		Produto = 01001 == 9
+		Soma = 01001 == 9
+
+		010010  == 18
+		x   01  == 1
+		Produto = 010010  == 18
+		Soma = 011011   == 27
+
+		0100100  == 36
+		x     0  == 0
+		Próxima iteração. 
+
+		Produto 011011 = 01001 * 011
+		27 = 9 * 3

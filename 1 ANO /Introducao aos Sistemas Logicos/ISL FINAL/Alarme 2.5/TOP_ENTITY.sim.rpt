@@ -1,0 +1,552 @@
+Simulator report for TOP_ENTITY
+Fri Nov 13 16:41:34 2015
+Quartus II Version 9.1 Build 304 01/25/2010 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. Coverage Summary
+  6. Complete 1/0-Value Coverage
+  7. Missing 1-Value Coverage
+  8. Missing 0-Value Coverage
+  9. Simulator INI Usage
+ 10. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2010 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++---------------------------------------------+
+; Simulator Summary                           ;
++-----------------------------+---------------+
+; Type                        ; Value         ;
++-----------------------------+---------------+
+; Simulation Start Time       ; 0 ps          ;
+; Simulation End Time         ; 100.0 us      ;
+; Simulation Netlist Size     ; 195 nodes     ;
+; Simulation Coverage         ;      43.37 %  ;
+; Total Number of Transitions ; 151583        ;
+; Simulation Breakpoints      ; 0             ;
+; Family                      ; MAX II        ;
+; Device                      ; EPM1270F256C5 ;
++-----------------------------+---------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                                    ;
++--------------------------------------------------------------------------------------------+--------------------------+---------------+
+; Option                                                                                     ; Setting                  ; Default Value ;
++--------------------------------------------------------------------------------------------+--------------------------+---------------+
+; Simulation mode                                                                            ; Timing                   ; Timing        ;
+; Start time                                                                                 ; 0 ns                     ; 0 ns          ;
+; Simulation results format                                                                  ; CVWF                     ;               ;
+; Vector input source                                                                        ; FOUR_DISPLAYS_TO_ONE.vwf ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On                       ; On            ;
+; Check outputs                                                                              ; Off                      ; Off           ;
+; Report simulation coverage                                                                 ; On                       ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On                       ; On            ;
+; Display missing 1-value coverage report                                                    ; On                       ; On            ;
+; Display missing 0-value coverage report                                                    ; On                       ; On            ;
+; Detect setup and hold time violations                                                      ; Off                      ; Off           ;
+; Detect glitches                                                                            ; Off                      ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off                      ; Off           ;
+; Generate Signal Activity File                                                              ; Off                      ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off                      ; Off           ;
+; Group bus channels in simulation results                                                   ; Off                      ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On                       ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE               ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off                      ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; Off                      ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto                     ; Auto          ;
++--------------------------------------------------------------------------------------------+--------------------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II to view the waveform report data.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;      43.37 % ;
+; Total nodes checked                                 ; 195          ;
+; Total output ports checked                          ; 249          ;
+; Total output ports with complete 1/0-value coverage ; 108          ;
+; Total output ports with no 1/0-value coverage       ; 141          ;
+; Total output ports with no 1-value coverage         ; 141          ;
+; Total output ports with no 0-value coverage         ; 141          ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++--------------------------------------------------------------------------------------------------+
+; Complete 1/0-Value Coverage                                                                      ;
++--------------------------------------+----------------------------------------+------------------+
+; Node Name                            ; Output Port Name                       ; Output Port Type ;
++--------------------------------------+----------------------------------------+------------------+
+; |FOUR_DISPLAYS_TO_ONE|B~reg0         ; |FOUR_DISPLAYS_TO_ONE|B~reg0           ; regout           ;
+; |FOUR_DISPLAYS_TO_ONE|controle1~reg0 ; |FOUR_DISPLAYS_TO_ONE|controle1~reg0   ; regout           ;
+; |FOUR_DISPLAYS_TO_ONE|controle2~reg0 ; |FOUR_DISPLAYS_TO_ONE|controle2~reg0   ; regout           ;
+; |FOUR_DISPLAYS_TO_ONE|controle4~reg0 ; |FOUR_DISPLAYS_TO_ONE|controle4~reg0   ; regout           ;
+; |FOUR_DISPLAYS_TO_ONE|Add0~10        ; |FOUR_DISPLAYS_TO_ONE|Add0~10          ; combout          ;
+; |FOUR_DISPLAYS_TO_ONE|Add0~10        ; |FOUR_DISPLAYS_TO_ONE|Add0~12          ; cout0            ;
+; |FOUR_DISPLAYS_TO_ONE|Add0~15        ; |FOUR_DISPLAYS_TO_ONE|Add0~15          ; combout          ;
+; |FOUR_DISPLAYS_TO_ONE|Add0~15        ; |FOUR_DISPLAYS_TO_ONE|Add0~17          ; cout0            ;
+; |FOUR_DISPLAYS_TO_ONE|Add0~20        ; |FOUR_DISPLAYS_TO_ONE|Add0~20          ; combout          ;
+; |FOUR_DISPLAYS_TO_ONE|Add0~20        ; |FOUR_DISPLAYS_TO_ONE|Add0~22          ; cout             ;
+; |FOUR_DISPLAYS_TO_ONE|Add0~25        ; |FOUR_DISPLAYS_TO_ONE|Add0~25          ; combout          ;
+; |FOUR_DISPLAYS_TO_ONE|Add0~25        ; |FOUR_DISPLAYS_TO_ONE|Add0~27COUT1_192 ; cout1            ;
+; |FOUR_DISPLAYS_TO_ONE|Add0~30        ; |FOUR_DISPLAYS_TO_ONE|Add0~30          ; combout          ;
+; |FOUR_DISPLAYS_TO_ONE|Add0~30        ; |FOUR_DISPLAYS_TO_ONE|Add0~32COUT1_190 ; cout1            ;
+; |FOUR_DISPLAYS_TO_ONE|LessThan4~2    ; |FOUR_DISPLAYS_TO_ONE|LessThan4~2      ; combout          ;
+; |FOUR_DISPLAYS_TO_ONE|Add0~35        ; |FOUR_DISPLAYS_TO_ONE|Add0~35          ; combout          ;
+; |FOUR_DISPLAYS_TO_ONE|Add0~35        ; |FOUR_DISPLAYS_TO_ONE|Add0~37          ; cout             ;
+; |FOUR_DISPLAYS_TO_ONE|Add0~40        ; |FOUR_DISPLAYS_TO_ONE|Add0~40          ; combout          ;
+; |FOUR_DISPLAYS_TO_ONE|Add0~40        ; |FOUR_DISPLAYS_TO_ONE|Add0~42COUT1_186 ; cout1            ;
+; |FOUR_DISPLAYS_TO_ONE|Add0~45        ; |FOUR_DISPLAYS_TO_ONE|Add0~45          ; combout          ;
+; |FOUR_DISPLAYS_TO_ONE|Add0~45        ; |FOUR_DISPLAYS_TO_ONE|Add0~47COUT1_188 ; cout1            ;
+; |FOUR_DISPLAYS_TO_ONE|LessThan6~0    ; |FOUR_DISPLAYS_TO_ONE|LessThan6~0      ; combout          ;
+; |FOUR_DISPLAYS_TO_ONE|LessThan4~3    ; |FOUR_DISPLAYS_TO_ONE|LessThan4~3      ; combout          ;
+; |FOUR_DISPLAYS_TO_ONE|Add0~140       ; |FOUR_DISPLAYS_TO_ONE|Add0~140         ; combout          ;
+; |FOUR_DISPLAYS_TO_ONE|Add0~140       ; |FOUR_DISPLAYS_TO_ONE|Add0~142         ; cout0            ;
+; |FOUR_DISPLAYS_TO_ONE|Add0~145       ; |FOUR_DISPLAYS_TO_ONE|Add0~145         ; combout          ;
+; |FOUR_DISPLAYS_TO_ONE|Add0~145       ; |FOUR_DISPLAYS_TO_ONE|Add0~147         ; cout0            ;
+; |FOUR_DISPLAYS_TO_ONE|cont[31]~0     ; |FOUR_DISPLAYS_TO_ONE|cont[31]~0       ; combout          ;
+; |FOUR_DISPLAYS_TO_ONE|LessThan4~4    ; |FOUR_DISPLAYS_TO_ONE|LessThan4~4      ; combout          ;
+; |FOUR_DISPLAYS_TO_ONE|LessThan15~1   ; |FOUR_DISPLAYS_TO_ONE|LessThan15~1     ; combout          ;
+; |FOUR_DISPLAYS_TO_ONE|LessThan15~2   ; |FOUR_DISPLAYS_TO_ONE|LessThan15~2     ; combout          ;
+; |FOUR_DISPLAYS_TO_ONE|LessThan15~3   ; |FOUR_DISPLAYS_TO_ONE|LessThan15~3     ; combout          ;
+; |FOUR_DISPLAYS_TO_ONE|LessThan2~0    ; |FOUR_DISPLAYS_TO_ONE|LessThan2~0      ; combout          ;
+; |FOUR_DISPLAYS_TO_ONE|process_0~0    ; |FOUR_DISPLAYS_TO_ONE|process_0~0      ; combout          ;
+; |FOUR_DISPLAYS_TO_ONE|LessThan6~1    ; |FOUR_DISPLAYS_TO_ONE|LessThan6~1      ; combout          ;
+; |FOUR_DISPLAYS_TO_ONE|LessThan6~2    ; |FOUR_DISPLAYS_TO_ONE|LessThan6~2      ; combout          ;
+; |FOUR_DISPLAYS_TO_ONE|LessThan6~3    ; |FOUR_DISPLAYS_TO_ONE|LessThan6~3      ; combout          ;
+; |FOUR_DISPLAYS_TO_ONE|LessThan4~5    ; |FOUR_DISPLAYS_TO_ONE|LessThan4~5      ; combout          ;
+; |FOUR_DISPLAYS_TO_ONE|LessThan10~0   ; |FOUR_DISPLAYS_TO_ONE|LessThan10~0     ; combout          ;
+; |FOUR_DISPLAYS_TO_ONE|LessThan8~0    ; |FOUR_DISPLAYS_TO_ONE|LessThan8~0      ; combout          ;
+; |FOUR_DISPLAYS_TO_ONE|LessThan8~1    ; |FOUR_DISPLAYS_TO_ONE|LessThan8~1      ; combout          ;
+; |FOUR_DISPLAYS_TO_ONE|A~2            ; |FOUR_DISPLAYS_TO_ONE|A~2              ; combout          ;
+; |FOUR_DISPLAYS_TO_ONE|LessThan10~1   ; |FOUR_DISPLAYS_TO_ONE|LessThan10~1     ; combout          ;
+; |FOUR_DISPLAYS_TO_ONE|LessThan10~2   ; |FOUR_DISPLAYS_TO_ONE|LessThan10~2     ; combout          ;
+; |FOUR_DISPLAYS_TO_ONE|LessThan15~4   ; |FOUR_DISPLAYS_TO_ONE|LessThan15~4     ; combout          ;
+; |FOUR_DISPLAYS_TO_ONE|LessThan12~0   ; |FOUR_DISPLAYS_TO_ONE|LessThan12~0     ; combout          ;
+; |FOUR_DISPLAYS_TO_ONE|LessThan12~1   ; |FOUR_DISPLAYS_TO_ONE|LessThan12~1     ; combout          ;
+; |FOUR_DISPLAYS_TO_ONE|LessThan12~2   ; |FOUR_DISPLAYS_TO_ONE|LessThan12~2     ; combout          ;
+; |FOUR_DISPLAYS_TO_ONE|process_0~1    ; |FOUR_DISPLAYS_TO_ONE|process_0~1      ; combout          ;
+; |FOUR_DISPLAYS_TO_ONE|A~4            ; |FOUR_DISPLAYS_TO_ONE|A~4              ; combout          ;
+; |FOUR_DISPLAYS_TO_ONE|A~5            ; |FOUR_DISPLAYS_TO_ONE|A~5              ; combout          ;
+; |FOUR_DISPLAYS_TO_ONE|process_0~2    ; |FOUR_DISPLAYS_TO_ONE|process_0~2      ; combout          ;
+; |FOUR_DISPLAYS_TO_ONE|process_0~3    ; |FOUR_DISPLAYS_TO_ONE|process_0~3      ; combout          ;
+; |FOUR_DISPLAYS_TO_ONE|LessThan6~4    ; |FOUR_DISPLAYS_TO_ONE|LessThan6~4      ; combout          ;
+; |FOUR_DISPLAYS_TO_ONE|A~8            ; |FOUR_DISPLAYS_TO_ONE|A~8              ; combout          ;
+; |FOUR_DISPLAYS_TO_ONE|A~9            ; |FOUR_DISPLAYS_TO_ONE|A~9              ; combout          ;
+; |FOUR_DISPLAYS_TO_ONE|LessThan15~5   ; |FOUR_DISPLAYS_TO_ONE|LessThan15~5     ; combout          ;
+; |FOUR_DISPLAYS_TO_ONE|LessThan12~3   ; |FOUR_DISPLAYS_TO_ONE|LessThan12~3     ; combout          ;
+; |FOUR_DISPLAYS_TO_ONE|LessThan14~0   ; |FOUR_DISPLAYS_TO_ONE|LessThan14~0     ; combout          ;
+; |FOUR_DISPLAYS_TO_ONE|LessThan14~1   ; |FOUR_DISPLAYS_TO_ONE|LessThan14~1     ; combout          ;
+; |FOUR_DISPLAYS_TO_ONE|LessThan15~6   ; |FOUR_DISPLAYS_TO_ONE|LessThan15~6     ; combout          ;
+; |FOUR_DISPLAYS_TO_ONE|process_0~4    ; |FOUR_DISPLAYS_TO_ONE|process_0~4      ; combout          ;
+; |FOUR_DISPLAYS_TO_ONE|A~10           ; |FOUR_DISPLAYS_TO_ONE|A~10             ; combout          ;
+; |FOUR_DISPLAYS_TO_ONE|A~11           ; |FOUR_DISPLAYS_TO_ONE|A~11             ; combout          ;
+; |FOUR_DISPLAYS_TO_ONE|B~0            ; |FOUR_DISPLAYS_TO_ONE|B~0              ; combout          ;
+; |FOUR_DISPLAYS_TO_ONE|C~0            ; |FOUR_DISPLAYS_TO_ONE|C~0              ; combout          ;
+; |FOUR_DISPLAYS_TO_ONE|D~0            ; |FOUR_DISPLAYS_TO_ONE|D~0              ; combout          ;
+; |FOUR_DISPLAYS_TO_ONE|E~0            ; |FOUR_DISPLAYS_TO_ONE|E~0              ; combout          ;
+; |FOUR_DISPLAYS_TO_ONE|F~0            ; |FOUR_DISPLAYS_TO_ONE|F~0              ; combout          ;
+; |FOUR_DISPLAYS_TO_ONE|G~0            ; |FOUR_DISPLAYS_TO_ONE|G~0              ; combout          ;
+; |FOUR_DISPLAYS_TO_ONE|controle1~0    ; |FOUR_DISPLAYS_TO_ONE|controle1~0      ; combout          ;
+; |FOUR_DISPLAYS_TO_ONE|controle1~1    ; |FOUR_DISPLAYS_TO_ONE|controle1~1      ; combout          ;
+; |FOUR_DISPLAYS_TO_ONE|cont[31]~2     ; |FOUR_DISPLAYS_TO_ONE|cont[31]~2       ; combout          ;
+; |FOUR_DISPLAYS_TO_ONE|controle3~8    ; |FOUR_DISPLAYS_TO_ONE|controle3~8      ; combout          ;
+; |FOUR_DISPLAYS_TO_ONE|controle2~2    ; |FOUR_DISPLAYS_TO_ONE|controle2~2      ; combout          ;
+; |FOUR_DISPLAYS_TO_ONE|controle2~3    ; |FOUR_DISPLAYS_TO_ONE|controle2~3      ; combout          ;
+; |FOUR_DISPLAYS_TO_ONE|controle3~9    ; |FOUR_DISPLAYS_TO_ONE|controle3~9      ; combout          ;
+; |FOUR_DISPLAYS_TO_ONE|controle3~10   ; |FOUR_DISPLAYS_TO_ONE|controle3~10     ; combout          ;
+; |FOUR_DISPLAYS_TO_ONE|controle4~0    ; |FOUR_DISPLAYS_TO_ONE|controle4~0      ; combout          ;
+; |FOUR_DISPLAYS_TO_ONE|controle4~1    ; |FOUR_DISPLAYS_TO_ONE|controle4~1      ; combout          ;
+; |FOUR_DISPLAYS_TO_ONE|controle4~2    ; |FOUR_DISPLAYS_TO_ONE|controle4~2      ; combout          ;
+; |FOUR_DISPLAYS_TO_ONE|controle4~3    ; |FOUR_DISPLAYS_TO_ONE|controle4~3      ; combout          ;
+; |FOUR_DISPLAYS_TO_ONE|cont[7]        ; |FOUR_DISPLAYS_TO_ONE|cont[7]          ; regout           ;
+; |FOUR_DISPLAYS_TO_ONE|cont[6]        ; |FOUR_DISPLAYS_TO_ONE|cont[6]          ; regout           ;
+; |FOUR_DISPLAYS_TO_ONE|cont[5]        ; |FOUR_DISPLAYS_TO_ONE|cont[5]          ; regout           ;
+; |FOUR_DISPLAYS_TO_ONE|cont[4]        ; |FOUR_DISPLAYS_TO_ONE|cont[4]          ; regout           ;
+; |FOUR_DISPLAYS_TO_ONE|cont[3]        ; |FOUR_DISPLAYS_TO_ONE|cont[3]          ; regout           ;
+; |FOUR_DISPLAYS_TO_ONE|cont[0]        ; |FOUR_DISPLAYS_TO_ONE|cont[0]          ; regout           ;
+; |FOUR_DISPLAYS_TO_ONE|cont[1]        ; |FOUR_DISPLAYS_TO_ONE|cont[1]          ; regout           ;
+; |FOUR_DISPLAYS_TO_ONE|cont[2]        ; |FOUR_DISPLAYS_TO_ONE|cont[2]          ; regout           ;
+; |FOUR_DISPLAYS_TO_ONE|cont[8]        ; |FOUR_DISPLAYS_TO_ONE|cont[8]          ; regout           ;
+; |FOUR_DISPLAYS_TO_ONE|cont[9]        ; |FOUR_DISPLAYS_TO_ONE|cont[9]          ; regout           ;
+; |FOUR_DISPLAYS_TO_ONE|LessThan2~1    ; |FOUR_DISPLAYS_TO_ONE|LessThan2~1      ; combout          ;
+; |FOUR_DISPLAYS_TO_ONE|cont[31]~3     ; |FOUR_DISPLAYS_TO_ONE|cont[31]~3       ; combout          ;
+; |FOUR_DISPLAYS_TO_ONE|cont[31]~4     ; |FOUR_DISPLAYS_TO_ONE|cont[31]~4       ; combout          ;
+; |FOUR_DISPLAYS_TO_ONE|cont[31]~5     ; |FOUR_DISPLAYS_TO_ONE|cont[31]~5       ; combout          ;
+; |FOUR_DISPLAYS_TO_ONE|cont[31]~6     ; |FOUR_DISPLAYS_TO_ONE|cont[31]~6       ; combout          ;
+; |FOUR_DISPLAYS_TO_ONE|cont[31]~7     ; |FOUR_DISPLAYS_TO_ONE|cont[31]~7       ; combout          ;
+; |FOUR_DISPLAYS_TO_ONE|cont[31]~8     ; |FOUR_DISPLAYS_TO_ONE|cont[31]~8       ; combout          ;
+; |FOUR_DISPLAYS_TO_ONE|A~12           ; |FOUR_DISPLAYS_TO_ONE|A~12             ; combout          ;
+; |FOUR_DISPLAYS_TO_ONE|LessThan4~6    ; |FOUR_DISPLAYS_TO_ONE|LessThan4~6      ; combout          ;
+; |FOUR_DISPLAYS_TO_ONE|controle2~5    ; |FOUR_DISPLAYS_TO_ONE|controle2~5      ; combout          ;
+; |FOUR_DISPLAYS_TO_ONE|clk            ; |FOUR_DISPLAYS_TO_ONE|clk~corein       ; combout          ;
+; |FOUR_DISPLAYS_TO_ONE|B              ; |FOUR_DISPLAYS_TO_ONE|B                ; padio            ;
+; |FOUR_DISPLAYS_TO_ONE|controle1      ; |FOUR_DISPLAYS_TO_ONE|controle1        ; padio            ;
+; |FOUR_DISPLAYS_TO_ONE|controle2      ; |FOUR_DISPLAYS_TO_ONE|controle2        ; padio            ;
+; |FOUR_DISPLAYS_TO_ONE|controle3      ; |FOUR_DISPLAYS_TO_ONE|controle3        ; padio            ;
+; |FOUR_DISPLAYS_TO_ONE|controle4      ; |FOUR_DISPLAYS_TO_ONE|controle4        ; padio            ;
++--------------------------------------+----------------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++-------------------------------------------------------------------------------------------------+
+; Missing 1-Value Coverage                                                                        ;
++------------------------------------+-----------------------------------------+------------------+
+; Node Name                          ; Output Port Name                        ; Output Port Type ;
++------------------------------------+-----------------------------------------+------------------+
+; |FOUR_DISPLAYS_TO_ONE|A~reg0       ; |FOUR_DISPLAYS_TO_ONE|A~reg0            ; regout           ;
+; |FOUR_DISPLAYS_TO_ONE|C~reg0       ; |FOUR_DISPLAYS_TO_ONE|C~reg0            ; regout           ;
+; |FOUR_DISPLAYS_TO_ONE|D~reg0       ; |FOUR_DISPLAYS_TO_ONE|D~reg0            ; regout           ;
+; |FOUR_DISPLAYS_TO_ONE|E~reg0       ; |FOUR_DISPLAYS_TO_ONE|E~reg0            ; regout           ;
+; |FOUR_DISPLAYS_TO_ONE|F~reg0       ; |FOUR_DISPLAYS_TO_ONE|F~reg0            ; regout           ;
+; |FOUR_DISPLAYS_TO_ONE|G~reg0       ; |FOUR_DISPLAYS_TO_ONE|G~reg0            ; regout           ;
+; |FOUR_DISPLAYS_TO_ONE|Add0~0       ; |FOUR_DISPLAYS_TO_ONE|Add0~0            ; combout          ;
+; |FOUR_DISPLAYS_TO_ONE|Add0~0       ; |FOUR_DISPLAYS_TO_ONE|Add0~2            ; cout0            ;
+; |FOUR_DISPLAYS_TO_ONE|Add0~0       ; |FOUR_DISPLAYS_TO_ONE|Add0~2COUT1_232   ; cout1            ;
+; |FOUR_DISPLAYS_TO_ONE|Add0~5       ; |FOUR_DISPLAYS_TO_ONE|Add0~5            ; combout          ;
+; |FOUR_DISPLAYS_TO_ONE|Add0~5       ; |FOUR_DISPLAYS_TO_ONE|Add0~7            ; cout0            ;
+; |FOUR_DISPLAYS_TO_ONE|Add0~5       ; |FOUR_DISPLAYS_TO_ONE|Add0~7COUT1_230   ; cout1            ;
+; |FOUR_DISPLAYS_TO_ONE|Add0~10      ; |FOUR_DISPLAYS_TO_ONE|Add0~12COUT1_196  ; cout1            ;
+; |FOUR_DISPLAYS_TO_ONE|Add0~15      ; |FOUR_DISPLAYS_TO_ONE|Add0~17COUT1_194  ; cout1            ;
+; |FOUR_DISPLAYS_TO_ONE|Add0~25      ; |FOUR_DISPLAYS_TO_ONE|Add0~27           ; cout0            ;
+; |FOUR_DISPLAYS_TO_ONE|Add0~30      ; |FOUR_DISPLAYS_TO_ONE|Add0~32           ; cout0            ;
+; |FOUR_DISPLAYS_TO_ONE|Add0~40      ; |FOUR_DISPLAYS_TO_ONE|Add0~42           ; cout0            ;
+; |FOUR_DISPLAYS_TO_ONE|Add0~45      ; |FOUR_DISPLAYS_TO_ONE|Add0~47           ; cout0            ;
+; |FOUR_DISPLAYS_TO_ONE|Add0~50      ; |FOUR_DISPLAYS_TO_ONE|Add0~50           ; combout          ;
+; |FOUR_DISPLAYS_TO_ONE|Add0~50      ; |FOUR_DISPLAYS_TO_ONE|Add0~52           ; cout             ;
+; |FOUR_DISPLAYS_TO_ONE|Add0~55      ; |FOUR_DISPLAYS_TO_ONE|Add0~55           ; combout          ;
+; |FOUR_DISPLAYS_TO_ONE|Add0~55      ; |FOUR_DISPLAYS_TO_ONE|Add0~57           ; cout0            ;
+; |FOUR_DISPLAYS_TO_ONE|Add0~55      ; |FOUR_DISPLAYS_TO_ONE|Add0~57COUT1_202  ; cout1            ;
+; |FOUR_DISPLAYS_TO_ONE|Add0~60      ; |FOUR_DISPLAYS_TO_ONE|Add0~60           ; combout          ;
+; |FOUR_DISPLAYS_TO_ONE|Add0~60      ; |FOUR_DISPLAYS_TO_ONE|Add0~62           ; cout0            ;
+; |FOUR_DISPLAYS_TO_ONE|Add0~60      ; |FOUR_DISPLAYS_TO_ONE|Add0~62COUT1_204  ; cout1            ;
+; |FOUR_DISPLAYS_TO_ONE|Add0~65      ; |FOUR_DISPLAYS_TO_ONE|Add0~65           ; combout          ;
+; |FOUR_DISPLAYS_TO_ONE|Add0~65      ; |FOUR_DISPLAYS_TO_ONE|Add0~67           ; cout0            ;
+; |FOUR_DISPLAYS_TO_ONE|Add0~65      ; |FOUR_DISPLAYS_TO_ONE|Add0~67COUT1_206  ; cout1            ;
+; |FOUR_DISPLAYS_TO_ONE|controle3~0  ; |FOUR_DISPLAYS_TO_ONE|controle3~0       ; combout          ;
+; |FOUR_DISPLAYS_TO_ONE|Add0~70      ; |FOUR_DISPLAYS_TO_ONE|Add0~70           ; combout          ;
+; |FOUR_DISPLAYS_TO_ONE|Add0~70      ; |FOUR_DISPLAYS_TO_ONE|Add0~72           ; cout0            ;
+; |FOUR_DISPLAYS_TO_ONE|Add0~70      ; |FOUR_DISPLAYS_TO_ONE|Add0~72COUT1_208  ; cout1            ;
+; |FOUR_DISPLAYS_TO_ONE|Add0~75      ; |FOUR_DISPLAYS_TO_ONE|Add0~75           ; combout          ;
+; |FOUR_DISPLAYS_TO_ONE|Add0~75      ; |FOUR_DISPLAYS_TO_ONE|Add0~77           ; cout             ;
+; |FOUR_DISPLAYS_TO_ONE|controle3~1  ; |FOUR_DISPLAYS_TO_ONE|controle3~1       ; combout          ;
+; |FOUR_DISPLAYS_TO_ONE|Add0~80      ; |FOUR_DISPLAYS_TO_ONE|Add0~80           ; combout          ;
+; |FOUR_DISPLAYS_TO_ONE|Add0~80      ; |FOUR_DISPLAYS_TO_ONE|Add0~82           ; cout0            ;
+; |FOUR_DISPLAYS_TO_ONE|Add0~80      ; |FOUR_DISPLAYS_TO_ONE|Add0~82COUT1_210  ; cout1            ;
+; |FOUR_DISPLAYS_TO_ONE|Add0~85      ; |FOUR_DISPLAYS_TO_ONE|Add0~85           ; combout          ;
+; |FOUR_DISPLAYS_TO_ONE|Add0~85      ; |FOUR_DISPLAYS_TO_ONE|Add0~87           ; cout0            ;
+; |FOUR_DISPLAYS_TO_ONE|Add0~85      ; |FOUR_DISPLAYS_TO_ONE|Add0~87COUT1_212  ; cout1            ;
+; |FOUR_DISPLAYS_TO_ONE|controle3~2  ; |FOUR_DISPLAYS_TO_ONE|controle3~2       ; combout          ;
+; |FOUR_DISPLAYS_TO_ONE|Add0~90      ; |FOUR_DISPLAYS_TO_ONE|Add0~90           ; combout          ;
+; |FOUR_DISPLAYS_TO_ONE|Add0~90      ; |FOUR_DISPLAYS_TO_ONE|Add0~92           ; cout0            ;
+; |FOUR_DISPLAYS_TO_ONE|Add0~90      ; |FOUR_DISPLAYS_TO_ONE|Add0~92COUT1_214  ; cout1            ;
+; |FOUR_DISPLAYS_TO_ONE|Add0~95      ; |FOUR_DISPLAYS_TO_ONE|Add0~95           ; combout          ;
+; |FOUR_DISPLAYS_TO_ONE|Add0~95      ; |FOUR_DISPLAYS_TO_ONE|Add0~97           ; cout0            ;
+; |FOUR_DISPLAYS_TO_ONE|Add0~95      ; |FOUR_DISPLAYS_TO_ONE|Add0~97COUT1_216  ; cout1            ;
+; |FOUR_DISPLAYS_TO_ONE|Add0~100     ; |FOUR_DISPLAYS_TO_ONE|Add0~100          ; combout          ;
+; |FOUR_DISPLAYS_TO_ONE|Add0~100     ; |FOUR_DISPLAYS_TO_ONE|Add0~102          ; cout             ;
+; |FOUR_DISPLAYS_TO_ONE|Add0~105     ; |FOUR_DISPLAYS_TO_ONE|Add0~105          ; combout          ;
+; |FOUR_DISPLAYS_TO_ONE|Add0~105     ; |FOUR_DISPLAYS_TO_ONE|Add0~107          ; cout0            ;
+; |FOUR_DISPLAYS_TO_ONE|Add0~105     ; |FOUR_DISPLAYS_TO_ONE|Add0~107COUT1_218 ; cout1            ;
+; |FOUR_DISPLAYS_TO_ONE|controle3~3  ; |FOUR_DISPLAYS_TO_ONE|controle3~3       ; combout          ;
+; |FOUR_DISPLAYS_TO_ONE|Add0~110     ; |FOUR_DISPLAYS_TO_ONE|Add0~110          ; combout          ;
+; |FOUR_DISPLAYS_TO_ONE|Add0~110     ; |FOUR_DISPLAYS_TO_ONE|Add0~112          ; cout0            ;
+; |FOUR_DISPLAYS_TO_ONE|Add0~110     ; |FOUR_DISPLAYS_TO_ONE|Add0~112COUT1_220 ; cout1            ;
+; |FOUR_DISPLAYS_TO_ONE|Add0~115     ; |FOUR_DISPLAYS_TO_ONE|Add0~115          ; combout          ;
+; |FOUR_DISPLAYS_TO_ONE|Add0~115     ; |FOUR_DISPLAYS_TO_ONE|Add0~117          ; cout0            ;
+; |FOUR_DISPLAYS_TO_ONE|Add0~115     ; |FOUR_DISPLAYS_TO_ONE|Add0~117COUT1_222 ; cout1            ;
+; |FOUR_DISPLAYS_TO_ONE|Add0~120     ; |FOUR_DISPLAYS_TO_ONE|Add0~120          ; combout          ;
+; |FOUR_DISPLAYS_TO_ONE|Add0~120     ; |FOUR_DISPLAYS_TO_ONE|Add0~122          ; cout0            ;
+; |FOUR_DISPLAYS_TO_ONE|Add0~120     ; |FOUR_DISPLAYS_TO_ONE|Add0~122COUT1_224 ; cout1            ;
+; |FOUR_DISPLAYS_TO_ONE|Add0~125     ; |FOUR_DISPLAYS_TO_ONE|Add0~125          ; combout          ;
+; |FOUR_DISPLAYS_TO_ONE|Add0~125     ; |FOUR_DISPLAYS_TO_ONE|Add0~127          ; cout             ;
+; |FOUR_DISPLAYS_TO_ONE|controle3~4  ; |FOUR_DISPLAYS_TO_ONE|controle3~4       ; combout          ;
+; |FOUR_DISPLAYS_TO_ONE|controle3~5  ; |FOUR_DISPLAYS_TO_ONE|controle3~5       ; combout          ;
+; |FOUR_DISPLAYS_TO_ONE|Add0~130     ; |FOUR_DISPLAYS_TO_ONE|Add0~130          ; combout          ;
+; |FOUR_DISPLAYS_TO_ONE|Add0~130     ; |FOUR_DISPLAYS_TO_ONE|Add0~132          ; cout0            ;
+; |FOUR_DISPLAYS_TO_ONE|Add0~130     ; |FOUR_DISPLAYS_TO_ONE|Add0~132COUT1_228 ; cout1            ;
+; |FOUR_DISPLAYS_TO_ONE|Add0~135     ; |FOUR_DISPLAYS_TO_ONE|Add0~135          ; combout          ;
+; |FOUR_DISPLAYS_TO_ONE|Add0~135     ; |FOUR_DISPLAYS_TO_ONE|Add0~137          ; cout0            ;
+; |FOUR_DISPLAYS_TO_ONE|Add0~135     ; |FOUR_DISPLAYS_TO_ONE|Add0~137COUT1_226 ; cout1            ;
+; |FOUR_DISPLAYS_TO_ONE|LessThan15~0 ; |FOUR_DISPLAYS_TO_ONE|LessThan15~0      ; combout          ;
+; |FOUR_DISPLAYS_TO_ONE|Add0~140     ; |FOUR_DISPLAYS_TO_ONE|Add0~142COUT1_198 ; cout1            ;
+; |FOUR_DISPLAYS_TO_ONE|Add0~145     ; |FOUR_DISPLAYS_TO_ONE|Add0~147COUT1_200 ; cout1            ;
+; |FOUR_DISPLAYS_TO_ONE|Add0~150     ; |FOUR_DISPLAYS_TO_ONE|Add0~150          ; combout          ;
+; |FOUR_DISPLAYS_TO_ONE|Add0~150     ; |FOUR_DISPLAYS_TO_ONE|Add0~152          ; cout             ;
+; |FOUR_DISPLAYS_TO_ONE|Add0~155     ; |FOUR_DISPLAYS_TO_ONE|Add0~155          ; combout          ;
+; |FOUR_DISPLAYS_TO_ONE|A~3          ; |FOUR_DISPLAYS_TO_ONE|A~3               ; combout          ;
+; |FOUR_DISPLAYS_TO_ONE|cont[31]~1   ; |FOUR_DISPLAYS_TO_ONE|cont[31]~1        ; combout          ;
+; |FOUR_DISPLAYS_TO_ONE|controle3~6  ; |FOUR_DISPLAYS_TO_ONE|controle3~6       ; combout          ;
+; |FOUR_DISPLAYS_TO_ONE|A~7          ; |FOUR_DISPLAYS_TO_ONE|A~7               ; combout          ;
+; |FOUR_DISPLAYS_TO_ONE|controle3~7  ; |FOUR_DISPLAYS_TO_ONE|controle3~7       ; combout          ;
+; |FOUR_DISPLAYS_TO_ONE|cont[29]     ; |FOUR_DISPLAYS_TO_ONE|cont[29]          ; regout           ;
+; |FOUR_DISPLAYS_TO_ONE|cont[28]     ; |FOUR_DISPLAYS_TO_ONE|cont[28]          ; regout           ;
+; |FOUR_DISPLAYS_TO_ONE|cont[10]     ; |FOUR_DISPLAYS_TO_ONE|cont[10]          ; regout           ;
+; |FOUR_DISPLAYS_TO_ONE|cont[11]     ; |FOUR_DISPLAYS_TO_ONE|cont[11]          ; regout           ;
+; |FOUR_DISPLAYS_TO_ONE|cont[12]     ; |FOUR_DISPLAYS_TO_ONE|cont[12]          ; regout           ;
+; |FOUR_DISPLAYS_TO_ONE|cont[13]     ; |FOUR_DISPLAYS_TO_ONE|cont[13]          ; regout           ;
+; |FOUR_DISPLAYS_TO_ONE|cont[14]     ; |FOUR_DISPLAYS_TO_ONE|cont[14]          ; regout           ;
+; |FOUR_DISPLAYS_TO_ONE|cont[15]     ; |FOUR_DISPLAYS_TO_ONE|cont[15]          ; regout           ;
+; |FOUR_DISPLAYS_TO_ONE|cont[16]     ; |FOUR_DISPLAYS_TO_ONE|cont[16]          ; regout           ;
+; |FOUR_DISPLAYS_TO_ONE|cont[17]     ; |FOUR_DISPLAYS_TO_ONE|cont[17]          ; regout           ;
+; |FOUR_DISPLAYS_TO_ONE|cont[18]     ; |FOUR_DISPLAYS_TO_ONE|cont[18]          ; regout           ;
+; |FOUR_DISPLAYS_TO_ONE|cont[19]     ; |FOUR_DISPLAYS_TO_ONE|cont[19]          ; regout           ;
+; |FOUR_DISPLAYS_TO_ONE|cont[20]     ; |FOUR_DISPLAYS_TO_ONE|cont[20]          ; regout           ;
+; |FOUR_DISPLAYS_TO_ONE|cont[21]     ; |FOUR_DISPLAYS_TO_ONE|cont[21]          ; regout           ;
+; |FOUR_DISPLAYS_TO_ONE|cont[22]     ; |FOUR_DISPLAYS_TO_ONE|cont[22]          ; regout           ;
+; |FOUR_DISPLAYS_TO_ONE|cont[23]     ; |FOUR_DISPLAYS_TO_ONE|cont[23]          ; regout           ;
+; |FOUR_DISPLAYS_TO_ONE|cont[24]     ; |FOUR_DISPLAYS_TO_ONE|cont[24]          ; regout           ;
+; |FOUR_DISPLAYS_TO_ONE|cont[25]     ; |FOUR_DISPLAYS_TO_ONE|cont[25]          ; regout           ;
+; |FOUR_DISPLAYS_TO_ONE|cont[27]     ; |FOUR_DISPLAYS_TO_ONE|cont[27]          ; regout           ;
+; |FOUR_DISPLAYS_TO_ONE|cont[26]     ; |FOUR_DISPLAYS_TO_ONE|cont[26]          ; regout           ;
+; |FOUR_DISPLAYS_TO_ONE|cont[30]     ; |FOUR_DISPLAYS_TO_ONE|cont[30]          ; regout           ;
+; |FOUR_DISPLAYS_TO_ONE|cont[31]     ; |FOUR_DISPLAYS_TO_ONE|cont[31]          ; regout           ;
+; |FOUR_DISPLAYS_TO_ONE|a3           ; |FOUR_DISPLAYS_TO_ONE|a3~corein         ; combout          ;
+; |FOUR_DISPLAYS_TO_ONE|a4           ; |FOUR_DISPLAYS_TO_ONE|a4~corein         ; combout          ;
+; |FOUR_DISPLAYS_TO_ONE|a2           ; |FOUR_DISPLAYS_TO_ONE|a2~corein         ; combout          ;
+; |FOUR_DISPLAYS_TO_ONE|a1           ; |FOUR_DISPLAYS_TO_ONE|a1~corein         ; combout          ;
+; |FOUR_DISPLAYS_TO_ONE|b4           ; |FOUR_DISPLAYS_TO_ONE|b4~corein         ; combout          ;
+; |FOUR_DISPLAYS_TO_ONE|b3           ; |FOUR_DISPLAYS_TO_ONE|b3~corein         ; combout          ;
+; |FOUR_DISPLAYS_TO_ONE|b2           ; |FOUR_DISPLAYS_TO_ONE|b2~corein         ; combout          ;
+; |FOUR_DISPLAYS_TO_ONE|b1           ; |FOUR_DISPLAYS_TO_ONE|b1~corein         ; combout          ;
+; |FOUR_DISPLAYS_TO_ONE|c3           ; |FOUR_DISPLAYS_TO_ONE|c3~corein         ; combout          ;
+; |FOUR_DISPLAYS_TO_ONE|c4           ; |FOUR_DISPLAYS_TO_ONE|c4~corein         ; combout          ;
+; |FOUR_DISPLAYS_TO_ONE|c2           ; |FOUR_DISPLAYS_TO_ONE|c2~corein         ; combout          ;
+; |FOUR_DISPLAYS_TO_ONE|c1           ; |FOUR_DISPLAYS_TO_ONE|c1~corein         ; combout          ;
+; |FOUR_DISPLAYS_TO_ONE|d4           ; |FOUR_DISPLAYS_TO_ONE|d4~corein         ; combout          ;
+; |FOUR_DISPLAYS_TO_ONE|d3           ; |FOUR_DISPLAYS_TO_ONE|d3~corein         ; combout          ;
+; |FOUR_DISPLAYS_TO_ONE|d2           ; |FOUR_DISPLAYS_TO_ONE|d2~corein         ; combout          ;
+; |FOUR_DISPLAYS_TO_ONE|d1           ; |FOUR_DISPLAYS_TO_ONE|d1~corein         ; combout          ;
+; |FOUR_DISPLAYS_TO_ONE|e3           ; |FOUR_DISPLAYS_TO_ONE|e3~corein         ; combout          ;
+; |FOUR_DISPLAYS_TO_ONE|e4           ; |FOUR_DISPLAYS_TO_ONE|e4~corein         ; combout          ;
+; |FOUR_DISPLAYS_TO_ONE|e2           ; |FOUR_DISPLAYS_TO_ONE|e2~corein         ; combout          ;
+; |FOUR_DISPLAYS_TO_ONE|e1           ; |FOUR_DISPLAYS_TO_ONE|e1~corein         ; combout          ;
+; |FOUR_DISPLAYS_TO_ONE|f4           ; |FOUR_DISPLAYS_TO_ONE|f4~corein         ; combout          ;
+; |FOUR_DISPLAYS_TO_ONE|f3           ; |FOUR_DISPLAYS_TO_ONE|f3~corein         ; combout          ;
+; |FOUR_DISPLAYS_TO_ONE|f2           ; |FOUR_DISPLAYS_TO_ONE|f2~corein         ; combout          ;
+; |FOUR_DISPLAYS_TO_ONE|f1           ; |FOUR_DISPLAYS_TO_ONE|f1~corein         ; combout          ;
+; |FOUR_DISPLAYS_TO_ONE|g3           ; |FOUR_DISPLAYS_TO_ONE|g3~corein         ; combout          ;
+; |FOUR_DISPLAYS_TO_ONE|g4           ; |FOUR_DISPLAYS_TO_ONE|g4~corein         ; combout          ;
+; |FOUR_DISPLAYS_TO_ONE|g2           ; |FOUR_DISPLAYS_TO_ONE|g2~corein         ; combout          ;
+; |FOUR_DISPLAYS_TO_ONE|g1           ; |FOUR_DISPLAYS_TO_ONE|g1~corein         ; combout          ;
+; |FOUR_DISPLAYS_TO_ONE|A            ; |FOUR_DISPLAYS_TO_ONE|A                 ; padio            ;
+; |FOUR_DISPLAYS_TO_ONE|C            ; |FOUR_DISPLAYS_TO_ONE|C                 ; padio            ;
+; |FOUR_DISPLAYS_TO_ONE|D            ; |FOUR_DISPLAYS_TO_ONE|D                 ; padio            ;
+; |FOUR_DISPLAYS_TO_ONE|E            ; |FOUR_DISPLAYS_TO_ONE|E                 ; padio            ;
+; |FOUR_DISPLAYS_TO_ONE|F            ; |FOUR_DISPLAYS_TO_ONE|F                 ; padio            ;
+; |FOUR_DISPLAYS_TO_ONE|G            ; |FOUR_DISPLAYS_TO_ONE|G                 ; padio            ;
++------------------------------------+-----------------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++-------------------------------------------------------------------------------------------------+
+; Missing 0-Value Coverage                                                                        ;
++------------------------------------+-----------------------------------------+------------------+
+; Node Name                          ; Output Port Name                        ; Output Port Type ;
++------------------------------------+-----------------------------------------+------------------+
+; |FOUR_DISPLAYS_TO_ONE|A~reg0       ; |FOUR_DISPLAYS_TO_ONE|A~reg0            ; regout           ;
+; |FOUR_DISPLAYS_TO_ONE|C~reg0       ; |FOUR_DISPLAYS_TO_ONE|C~reg0            ; regout           ;
+; |FOUR_DISPLAYS_TO_ONE|D~reg0       ; |FOUR_DISPLAYS_TO_ONE|D~reg0            ; regout           ;
+; |FOUR_DISPLAYS_TO_ONE|E~reg0       ; |FOUR_DISPLAYS_TO_ONE|E~reg0            ; regout           ;
+; |FOUR_DISPLAYS_TO_ONE|F~reg0       ; |FOUR_DISPLAYS_TO_ONE|F~reg0            ; regout           ;
+; |FOUR_DISPLAYS_TO_ONE|G~reg0       ; |FOUR_DISPLAYS_TO_ONE|G~reg0            ; regout           ;
+; |FOUR_DISPLAYS_TO_ONE|Add0~0       ; |FOUR_DISPLAYS_TO_ONE|Add0~0            ; combout          ;
+; |FOUR_DISPLAYS_TO_ONE|Add0~0       ; |FOUR_DISPLAYS_TO_ONE|Add0~2            ; cout0            ;
+; |FOUR_DISPLAYS_TO_ONE|Add0~0       ; |FOUR_DISPLAYS_TO_ONE|Add0~2COUT1_232   ; cout1            ;
+; |FOUR_DISPLAYS_TO_ONE|Add0~5       ; |FOUR_DISPLAYS_TO_ONE|Add0~5            ; combout          ;
+; |FOUR_DISPLAYS_TO_ONE|Add0~5       ; |FOUR_DISPLAYS_TO_ONE|Add0~7            ; cout0            ;
+; |FOUR_DISPLAYS_TO_ONE|Add0~5       ; |FOUR_DISPLAYS_TO_ONE|Add0~7COUT1_230   ; cout1            ;
+; |FOUR_DISPLAYS_TO_ONE|Add0~10      ; |FOUR_DISPLAYS_TO_ONE|Add0~12COUT1_196  ; cout1            ;
+; |FOUR_DISPLAYS_TO_ONE|Add0~15      ; |FOUR_DISPLAYS_TO_ONE|Add0~17COUT1_194  ; cout1            ;
+; |FOUR_DISPLAYS_TO_ONE|Add0~25      ; |FOUR_DISPLAYS_TO_ONE|Add0~27           ; cout0            ;
+; |FOUR_DISPLAYS_TO_ONE|Add0~30      ; |FOUR_DISPLAYS_TO_ONE|Add0~32           ; cout0            ;
+; |FOUR_DISPLAYS_TO_ONE|Add0~40      ; |FOUR_DISPLAYS_TO_ONE|Add0~42           ; cout0            ;
+; |FOUR_DISPLAYS_TO_ONE|Add0~45      ; |FOUR_DISPLAYS_TO_ONE|Add0~47           ; cout0            ;
+; |FOUR_DISPLAYS_TO_ONE|Add0~50      ; |FOUR_DISPLAYS_TO_ONE|Add0~50           ; combout          ;
+; |FOUR_DISPLAYS_TO_ONE|Add0~50      ; |FOUR_DISPLAYS_TO_ONE|Add0~52           ; cout             ;
+; |FOUR_DISPLAYS_TO_ONE|Add0~55      ; |FOUR_DISPLAYS_TO_ONE|Add0~55           ; combout          ;
+; |FOUR_DISPLAYS_TO_ONE|Add0~55      ; |FOUR_DISPLAYS_TO_ONE|Add0~57           ; cout0            ;
+; |FOUR_DISPLAYS_TO_ONE|Add0~55      ; |FOUR_DISPLAYS_TO_ONE|Add0~57COUT1_202  ; cout1            ;
+; |FOUR_DISPLAYS_TO_ONE|Add0~60      ; |FOUR_DISPLAYS_TO_ONE|Add0~60           ; combout          ;
+; |FOUR_DISPLAYS_TO_ONE|Add0~60      ; |FOUR_DISPLAYS_TO_ONE|Add0~62           ; cout0            ;
+; |FOUR_DISPLAYS_TO_ONE|Add0~60      ; |FOUR_DISPLAYS_TO_ONE|Add0~62COUT1_204  ; cout1            ;
+; |FOUR_DISPLAYS_TO_ONE|Add0~65      ; |FOUR_DISPLAYS_TO_ONE|Add0~65           ; combout          ;
+; |FOUR_DISPLAYS_TO_ONE|Add0~65      ; |FOUR_DISPLAYS_TO_ONE|Add0~67           ; cout0            ;
+; |FOUR_DISPLAYS_TO_ONE|Add0~65      ; |FOUR_DISPLAYS_TO_ONE|Add0~67COUT1_206  ; cout1            ;
+; |FOUR_DISPLAYS_TO_ONE|controle3~0  ; |FOUR_DISPLAYS_TO_ONE|controle3~0       ; combout          ;
+; |FOUR_DISPLAYS_TO_ONE|Add0~70      ; |FOUR_DISPLAYS_TO_ONE|Add0~70           ; combout          ;
+; |FOUR_DISPLAYS_TO_ONE|Add0~70      ; |FOUR_DISPLAYS_TO_ONE|Add0~72           ; cout0            ;
+; |FOUR_DISPLAYS_TO_ONE|Add0~70      ; |FOUR_DISPLAYS_TO_ONE|Add0~72COUT1_208  ; cout1            ;
+; |FOUR_DISPLAYS_TO_ONE|Add0~75      ; |FOUR_DISPLAYS_TO_ONE|Add0~75           ; combout          ;
+; |FOUR_DISPLAYS_TO_ONE|Add0~75      ; |FOUR_DISPLAYS_TO_ONE|Add0~77           ; cout             ;
+; |FOUR_DISPLAYS_TO_ONE|controle3~1  ; |FOUR_DISPLAYS_TO_ONE|controle3~1       ; combout          ;
+; |FOUR_DISPLAYS_TO_ONE|Add0~80      ; |FOUR_DISPLAYS_TO_ONE|Add0~80           ; combout          ;
+; |FOUR_DISPLAYS_TO_ONE|Add0~80      ; |FOUR_DISPLAYS_TO_ONE|Add0~82           ; cout0            ;
+; |FOUR_DISPLAYS_TO_ONE|Add0~80      ; |FOUR_DISPLAYS_TO_ONE|Add0~82COUT1_210  ; cout1            ;
+; |FOUR_DISPLAYS_TO_ONE|Add0~85      ; |FOUR_DISPLAYS_TO_ONE|Add0~85           ; combout          ;
+; |FOUR_DISPLAYS_TO_ONE|Add0~85      ; |FOUR_DISPLAYS_TO_ONE|Add0~87           ; cout0            ;
+; |FOUR_DISPLAYS_TO_ONE|Add0~85      ; |FOUR_DISPLAYS_TO_ONE|Add0~87COUT1_212  ; cout1            ;
+; |FOUR_DISPLAYS_TO_ONE|controle3~2  ; |FOUR_DISPLAYS_TO_ONE|controle3~2       ; combout          ;
+; |FOUR_DISPLAYS_TO_ONE|Add0~90      ; |FOUR_DISPLAYS_TO_ONE|Add0~90           ; combout          ;
+; |FOUR_DISPLAYS_TO_ONE|Add0~90      ; |FOUR_DISPLAYS_TO_ONE|Add0~92           ; cout0            ;
+; |FOUR_DISPLAYS_TO_ONE|Add0~90      ; |FOUR_DISPLAYS_TO_ONE|Add0~92COUT1_214  ; cout1            ;
+; |FOUR_DISPLAYS_TO_ONE|Add0~95      ; |FOUR_DISPLAYS_TO_ONE|Add0~95           ; combout          ;
+; |FOUR_DISPLAYS_TO_ONE|Add0~95      ; |FOUR_DISPLAYS_TO_ONE|Add0~97           ; cout0            ;
+; |FOUR_DISPLAYS_TO_ONE|Add0~95      ; |FOUR_DISPLAYS_TO_ONE|Add0~97COUT1_216  ; cout1            ;
+; |FOUR_DISPLAYS_TO_ONE|Add0~100     ; |FOUR_DISPLAYS_TO_ONE|Add0~100          ; combout          ;
+; |FOUR_DISPLAYS_TO_ONE|Add0~100     ; |FOUR_DISPLAYS_TO_ONE|Add0~102          ; cout             ;
+; |FOUR_DISPLAYS_TO_ONE|Add0~105     ; |FOUR_DISPLAYS_TO_ONE|Add0~105          ; combout          ;
+; |FOUR_DISPLAYS_TO_ONE|Add0~105     ; |FOUR_DISPLAYS_TO_ONE|Add0~107          ; cout0            ;
+; |FOUR_DISPLAYS_TO_ONE|Add0~105     ; |FOUR_DISPLAYS_TO_ONE|Add0~107COUT1_218 ; cout1            ;
+; |FOUR_DISPLAYS_TO_ONE|controle3~3  ; |FOUR_DISPLAYS_TO_ONE|controle3~3       ; combout          ;
+; |FOUR_DISPLAYS_TO_ONE|Add0~110     ; |FOUR_DISPLAYS_TO_ONE|Add0~110          ; combout          ;
+; |FOUR_DISPLAYS_TO_ONE|Add0~110     ; |FOUR_DISPLAYS_TO_ONE|Add0~112          ; cout0            ;
+; |FOUR_DISPLAYS_TO_ONE|Add0~110     ; |FOUR_DISPLAYS_TO_ONE|Add0~112COUT1_220 ; cout1            ;
+; |FOUR_DISPLAYS_TO_ONE|Add0~115     ; |FOUR_DISPLAYS_TO_ONE|Add0~115          ; combout          ;
+; |FOUR_DISPLAYS_TO_ONE|Add0~115     ; |FOUR_DISPLAYS_TO_ONE|Add0~117          ; cout0            ;
+; |FOUR_DISPLAYS_TO_ONE|Add0~115     ; |FOUR_DISPLAYS_TO_ONE|Add0~117COUT1_222 ; cout1            ;
+; |FOUR_DISPLAYS_TO_ONE|Add0~120     ; |FOUR_DISPLAYS_TO_ONE|Add0~120          ; combout          ;
+; |FOUR_DISPLAYS_TO_ONE|Add0~120     ; |FOUR_DISPLAYS_TO_ONE|Add0~122          ; cout0            ;
+; |FOUR_DISPLAYS_TO_ONE|Add0~120     ; |FOUR_DISPLAYS_TO_ONE|Add0~122COUT1_224 ; cout1            ;
+; |FOUR_DISPLAYS_TO_ONE|Add0~125     ; |FOUR_DISPLAYS_TO_ONE|Add0~125          ; combout          ;
+; |FOUR_DISPLAYS_TO_ONE|Add0~125     ; |FOUR_DISPLAYS_TO_ONE|Add0~127          ; cout             ;
+; |FOUR_DISPLAYS_TO_ONE|controle3~4  ; |FOUR_DISPLAYS_TO_ONE|controle3~4       ; combout          ;
+; |FOUR_DISPLAYS_TO_ONE|controle3~5  ; |FOUR_DISPLAYS_TO_ONE|controle3~5       ; combout          ;
+; |FOUR_DISPLAYS_TO_ONE|Add0~130     ; |FOUR_DISPLAYS_TO_ONE|Add0~130          ; combout          ;
+; |FOUR_DISPLAYS_TO_ONE|Add0~130     ; |FOUR_DISPLAYS_TO_ONE|Add0~132          ; cout0            ;
+; |FOUR_DISPLAYS_TO_ONE|Add0~130     ; |FOUR_DISPLAYS_TO_ONE|Add0~132COUT1_228 ; cout1            ;
+; |FOUR_DISPLAYS_TO_ONE|Add0~135     ; |FOUR_DISPLAYS_TO_ONE|Add0~135          ; combout          ;
+; |FOUR_DISPLAYS_TO_ONE|Add0~135     ; |FOUR_DISPLAYS_TO_ONE|Add0~137          ; cout0            ;
+; |FOUR_DISPLAYS_TO_ONE|Add0~135     ; |FOUR_DISPLAYS_TO_ONE|Add0~137COUT1_226 ; cout1            ;
+; |FOUR_DISPLAYS_TO_ONE|LessThan15~0 ; |FOUR_DISPLAYS_TO_ONE|LessThan15~0      ; combout          ;
+; |FOUR_DISPLAYS_TO_ONE|Add0~140     ; |FOUR_DISPLAYS_TO_ONE|Add0~142COUT1_198 ; cout1            ;
+; |FOUR_DISPLAYS_TO_ONE|Add0~145     ; |FOUR_DISPLAYS_TO_ONE|Add0~147COUT1_200 ; cout1            ;
+; |FOUR_DISPLAYS_TO_ONE|Add0~150     ; |FOUR_DISPLAYS_TO_ONE|Add0~150          ; combout          ;
+; |FOUR_DISPLAYS_TO_ONE|Add0~150     ; |FOUR_DISPLAYS_TO_ONE|Add0~152          ; cout             ;
+; |FOUR_DISPLAYS_TO_ONE|Add0~155     ; |FOUR_DISPLAYS_TO_ONE|Add0~155          ; combout          ;
+; |FOUR_DISPLAYS_TO_ONE|A~3          ; |FOUR_DISPLAYS_TO_ONE|A~3               ; combout          ;
+; |FOUR_DISPLAYS_TO_ONE|cont[31]~1   ; |FOUR_DISPLAYS_TO_ONE|cont[31]~1        ; combout          ;
+; |FOUR_DISPLAYS_TO_ONE|controle3~6  ; |FOUR_DISPLAYS_TO_ONE|controle3~6       ; combout          ;
+; |FOUR_DISPLAYS_TO_ONE|A~7          ; |FOUR_DISPLAYS_TO_ONE|A~7               ; combout          ;
+; |FOUR_DISPLAYS_TO_ONE|controle3~7  ; |FOUR_DISPLAYS_TO_ONE|controle3~7       ; combout          ;
+; |FOUR_DISPLAYS_TO_ONE|cont[29]     ; |FOUR_DISPLAYS_TO_ONE|cont[29]          ; regout           ;
+; |FOUR_DISPLAYS_TO_ONE|cont[28]     ; |FOUR_DISPLAYS_TO_ONE|cont[28]          ; regout           ;
+; |FOUR_DISPLAYS_TO_ONE|cont[10]     ; |FOUR_DISPLAYS_TO_ONE|cont[10]          ; regout           ;
+; |FOUR_DISPLAYS_TO_ONE|cont[11]     ; |FOUR_DISPLAYS_TO_ONE|cont[11]          ; regout           ;
+; |FOUR_DISPLAYS_TO_ONE|cont[12]     ; |FOUR_DISPLAYS_TO_ONE|cont[12]          ; regout           ;
+; |FOUR_DISPLAYS_TO_ONE|cont[13]     ; |FOUR_DISPLAYS_TO_ONE|cont[13]          ; regout           ;
+; |FOUR_DISPLAYS_TO_ONE|cont[14]     ; |FOUR_DISPLAYS_TO_ONE|cont[14]          ; regout           ;
+; |FOUR_DISPLAYS_TO_ONE|cont[15]     ; |FOUR_DISPLAYS_TO_ONE|cont[15]          ; regout           ;
+; |FOUR_DISPLAYS_TO_ONE|cont[16]     ; |FOUR_DISPLAYS_TO_ONE|cont[16]          ; regout           ;
+; |FOUR_DISPLAYS_TO_ONE|cont[17]     ; |FOUR_DISPLAYS_TO_ONE|cont[17]          ; regout           ;
+; |FOUR_DISPLAYS_TO_ONE|cont[18]     ; |FOUR_DISPLAYS_TO_ONE|cont[18]          ; regout           ;
+; |FOUR_DISPLAYS_TO_ONE|cont[19]     ; |FOUR_DISPLAYS_TO_ONE|cont[19]          ; regout           ;
+; |FOUR_DISPLAYS_TO_ONE|cont[20]     ; |FOUR_DISPLAYS_TO_ONE|cont[20]          ; regout           ;
+; |FOUR_DISPLAYS_TO_ONE|cont[21]     ; |FOUR_DISPLAYS_TO_ONE|cont[21]          ; regout           ;
+; |FOUR_DISPLAYS_TO_ONE|cont[22]     ; |FOUR_DISPLAYS_TO_ONE|cont[22]          ; regout           ;
+; |FOUR_DISPLAYS_TO_ONE|cont[23]     ; |FOUR_DISPLAYS_TO_ONE|cont[23]          ; regout           ;
+; |FOUR_DISPLAYS_TO_ONE|cont[24]     ; |FOUR_DISPLAYS_TO_ONE|cont[24]          ; regout           ;
+; |FOUR_DISPLAYS_TO_ONE|cont[25]     ; |FOUR_DISPLAYS_TO_ONE|cont[25]          ; regout           ;
+; |FOUR_DISPLAYS_TO_ONE|cont[27]     ; |FOUR_DISPLAYS_TO_ONE|cont[27]          ; regout           ;
+; |FOUR_DISPLAYS_TO_ONE|cont[26]     ; |FOUR_DISPLAYS_TO_ONE|cont[26]          ; regout           ;
+; |FOUR_DISPLAYS_TO_ONE|cont[30]     ; |FOUR_DISPLAYS_TO_ONE|cont[30]          ; regout           ;
+; |FOUR_DISPLAYS_TO_ONE|cont[31]     ; |FOUR_DISPLAYS_TO_ONE|cont[31]          ; regout           ;
+; |FOUR_DISPLAYS_TO_ONE|a3           ; |FOUR_DISPLAYS_TO_ONE|a3~corein         ; combout          ;
+; |FOUR_DISPLAYS_TO_ONE|a4           ; |FOUR_DISPLAYS_TO_ONE|a4~corein         ; combout          ;
+; |FOUR_DISPLAYS_TO_ONE|a2           ; |FOUR_DISPLAYS_TO_ONE|a2~corein         ; combout          ;
+; |FOUR_DISPLAYS_TO_ONE|a1           ; |FOUR_DISPLAYS_TO_ONE|a1~corein         ; combout          ;
+; |FOUR_DISPLAYS_TO_ONE|b4           ; |FOUR_DISPLAYS_TO_ONE|b4~corein         ; combout          ;
+; |FOUR_DISPLAYS_TO_ONE|b3           ; |FOUR_DISPLAYS_TO_ONE|b3~corein         ; combout          ;
+; |FOUR_DISPLAYS_TO_ONE|b2           ; |FOUR_DISPLAYS_TO_ONE|b2~corein         ; combout          ;
+; |FOUR_DISPLAYS_TO_ONE|b1           ; |FOUR_DISPLAYS_TO_ONE|b1~corein         ; combout          ;
+; |FOUR_DISPLAYS_TO_ONE|c3           ; |FOUR_DISPLAYS_TO_ONE|c3~corein         ; combout          ;
+; |FOUR_DISPLAYS_TO_ONE|c4           ; |FOUR_DISPLAYS_TO_ONE|c4~corein         ; combout          ;
+; |FOUR_DISPLAYS_TO_ONE|c2           ; |FOUR_DISPLAYS_TO_ONE|c2~corein         ; combout          ;
+; |FOUR_DISPLAYS_TO_ONE|c1           ; |FOUR_DISPLAYS_TO_ONE|c1~corein         ; combout          ;
+; |FOUR_DISPLAYS_TO_ONE|d4           ; |FOUR_DISPLAYS_TO_ONE|d4~corein         ; combout          ;
+; |FOUR_DISPLAYS_TO_ONE|d3           ; |FOUR_DISPLAYS_TO_ONE|d3~corein         ; combout          ;
+; |FOUR_DISPLAYS_TO_ONE|d2           ; |FOUR_DISPLAYS_TO_ONE|d2~corein         ; combout          ;
+; |FOUR_DISPLAYS_TO_ONE|d1           ; |FOUR_DISPLAYS_TO_ONE|d1~corein         ; combout          ;
+; |FOUR_DISPLAYS_TO_ONE|e3           ; |FOUR_DISPLAYS_TO_ONE|e3~corein         ; combout          ;
+; |FOUR_DISPLAYS_TO_ONE|e4           ; |FOUR_DISPLAYS_TO_ONE|e4~corein         ; combout          ;
+; |FOUR_DISPLAYS_TO_ONE|e2           ; |FOUR_DISPLAYS_TO_ONE|e2~corein         ; combout          ;
+; |FOUR_DISPLAYS_TO_ONE|e1           ; |FOUR_DISPLAYS_TO_ONE|e1~corein         ; combout          ;
+; |FOUR_DISPLAYS_TO_ONE|f4           ; |FOUR_DISPLAYS_TO_ONE|f4~corein         ; combout          ;
+; |FOUR_DISPLAYS_TO_ONE|f3           ; |FOUR_DISPLAYS_TO_ONE|f3~corein         ; combout          ;
+; |FOUR_DISPLAYS_TO_ONE|f2           ; |FOUR_DISPLAYS_TO_ONE|f2~corein         ; combout          ;
+; |FOUR_DISPLAYS_TO_ONE|f1           ; |FOUR_DISPLAYS_TO_ONE|f1~corein         ; combout          ;
+; |FOUR_DISPLAYS_TO_ONE|g3           ; |FOUR_DISPLAYS_TO_ONE|g3~corein         ; combout          ;
+; |FOUR_DISPLAYS_TO_ONE|g4           ; |FOUR_DISPLAYS_TO_ONE|g4~corein         ; combout          ;
+; |FOUR_DISPLAYS_TO_ONE|g2           ; |FOUR_DISPLAYS_TO_ONE|g2~corein         ; combout          ;
+; |FOUR_DISPLAYS_TO_ONE|g1           ; |FOUR_DISPLAYS_TO_ONE|g1~corein         ; combout          ;
+; |FOUR_DISPLAYS_TO_ONE|A            ; |FOUR_DISPLAYS_TO_ONE|A                 ; padio            ;
+; |FOUR_DISPLAYS_TO_ONE|C            ; |FOUR_DISPLAYS_TO_ONE|C                 ; padio            ;
+; |FOUR_DISPLAYS_TO_ONE|D            ; |FOUR_DISPLAYS_TO_ONE|D                 ; padio            ;
+; |FOUR_DISPLAYS_TO_ONE|E            ; |FOUR_DISPLAYS_TO_ONE|E                 ; padio            ;
+; |FOUR_DISPLAYS_TO_ONE|F            ; |FOUR_DISPLAYS_TO_ONE|F                 ; padio            ;
+; |FOUR_DISPLAYS_TO_ONE|G            ; |FOUR_DISPLAYS_TO_ONE|G                 ; padio            ;
++------------------------------------+-----------------------------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II Simulator
+    Info: Version 9.1 Build 304 01/25/2010 Service Pack 1 SJ Web Edition
+    Info: Processing started: Fri Nov 13 16:41:33 2015
+Info: Command: quartus_sim --read_settings_files=on --write_settings_files=off Alarme_de_casa -c TOP_ENTITY
+Info: Using vector source file "C:/Users/Aluno-Isl/Desktop/Alarme 2.5/FOUR_DISPLAYS_TO_ONE.vwf"
+Info: Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info: Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Info: Simulation partitioned into 1 sub-simulations
+Info: Simulation coverage is      43.37 %
+Info: Number of transitions in simulation is 151583
+Info: Quartus II Simulator was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 151 megabytes
+    Info: Processing ended: Fri Nov 13 16:41:35 2015
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:01
+
+

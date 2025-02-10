@@ -1,0 +1,808 @@
+Analysis & Synthesis report for TOP_ENTITY
+Wed Nov 18 17:17:26 2015
+Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Registers Removed During Synthesis
+  9. General Register Statistics
+ 10. Inverted Register Statistics
+ 11. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 12. Parameter Settings for User Entity Instance: CONVERSOR_COMPLETO:CONVERSAO|DIVISOR_DE_FREQUENCIA:CONV_P_SEG
+ 13. Parameter Settings for User Entity Instance: CONVERSOR_COMPLETO:CONVERSAO|DIVISOR_DE_FREQUENCIA:GERADOR_260KHz
+ 14. Parameter Settings for User Entity Instance: FILTRO_BOTAO:FILTRO_B0
+ 15. Parameter Settings for User Entity Instance: FILTRO_BOTAO:FILTRO_B1
+ 16. Parameter Settings for User Entity Instance: FILTRO_BOTAO:FILTRO_B2
+ 17. Parameter Settings for User Entity Instance: FILTRO_BOTAO:FILTRO_B3
+ 18. Parameter Settings for User Entity Instance: FILTRO_BOTAO:FILTRO_B4
+ 19. Parameter Settings for User Entity Instance: FILTRO_BOTAO:FILTRO_B5
+ 20. Parameter Settings for User Entity Instance: BEEP:BEEP_BOTAO
+ 21. Parameter Settings for User Entity Instance: FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|DIVISOR_DE_FREQUENCIA:DIV_FREQ
+ 22. Parameter Settings for User Entity Instance: MONITORADOR:MONITORADOR_DISTANCIA|DIVISOR_DE_FREQUENCIA:CLKS
+ 23. Parameter Settings for User Entity Instance: FREQ_ALARME:ALARME
+ 24. Port Connectivity Checks: "MONITORADOR:MONITORADOR_DISTANCIA"
+ 25. Port Connectivity Checks: "CONVERSOR_COMPLETO:CONVERSAO|PULSO_24:PUL_24"
+ 26. Port Connectivity Checks: "CONVERSOR_COMPLETO:CONVERSAO|ADC_INTERFACE:ADC"
+ 27. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2010 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                               ;
++-----------------------------+----------------------------------------------+
+; Analysis & Synthesis Status ; Successful - Wed Nov 18 17:17:26 2015        ;
+; Quartus II Version          ; 9.1 Build 350 03/24/2010 SP 2 SJ Web Edition ;
+; Revision Name               ; TOP_ENTITY                                   ;
+; Top-level Entity Name       ; TOP_ENTITY                                   ;
+; Family                      ; MAX II                                       ;
+; Total logic elements        ; 1,275                                        ;
+; Total pins                  ; 45                                           ;
+; Total virtual pins          ; 0                                            ;
+; UFM blocks                  ; 0 / 1 ( 0 % )                                ;
++-----------------------------+----------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                        ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                     ; Setting            ; Default Value      ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                     ; EPM1270F256C5      ;                    ;
+; Top-level entity name                                                      ; TOP_ENTITY         ; TOP_ENTITY         ;
+; Family name                                                                ; MAX II             ; Stratix II         ;
+; Use Generated Physical Constraints File                                    ; Off                ;                    ;
+; Use smart compilation                                                      ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                                ; Off                ; Off                ;
+; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
+; Preserve fewer node names                                                  ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                  ; Off                ; Off                ;
+; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                   ; Auto               ; Auto               ;
+; Safe State Machine                                                         ; Off                ; Off                ;
+; Extract Verilog State Machines                                             ; On                 ; On                 ;
+; Extract VHDL State Machines                                                ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                 ;
+; Parallel Synthesis                                                         ; On                 ; On                 ;
+; NOT Gate Push-Back                                                         ; On                 ; On                 ;
+; Power-Up Don't Care                                                        ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off                ; Off                ;
+; Remove Duplicate Registers                                                 ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                ;
+; Optimization Technique                                                     ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                         ; 70                 ; 70                 ;
+; Auto Carry Chains                                                          ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
+; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
+; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
+; Auto Resource Sharing                                                      ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
+; Show Parameter Settings Tables in Synthesis Report                         ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
+; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
+; PowerPlay Power Optimization                                               ; Normal compilation ; Normal compilation ;
+; HDL message level                                                          ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                ;
+; Clock MUX Protection                                                       ; On                 ; On                 ;
+; Block Design Naming                                                        ; Auto               ; Auto               ;
+; Synthesis Effort                                                           ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
+; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 4      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                            ;
++----------------------------------+-----------------+-----------------+--------------------------------------------------------------------------------------------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                               ;
++----------------------------------+-----------------+-----------------+--------------------------------------------------------------------------------------------+
+; FILTRO_DIGITAL.vhd               ; yes             ; User VHDL File  ; C:/Users/Aluno-Isl/Desktop/ALARME 3.5 (POSSÍVEL FUNCIONAMENTO)/FILTRO_DIGITAL.vhd          ;
+; CIRCUITO_FINAL.vhd               ; yes             ; User VHDL File  ; C:/Users/Aluno-Isl/Desktop/ALARME 3.5 (POSSÍVEL FUNCIONAMENTO)/CIRCUITO_FINAL.vhd          ;
+; COMPONENTES.vhd                  ; yes             ; User VHDL File  ; C:/Users/Aluno-Isl/Desktop/ALARME 3.5 (POSSÍVEL FUNCIONAMENTO)/COMPONENTES.vhd             ;
+; BUZZER_RELATED.vhd               ; yes             ; User VHDL File  ; C:/Users/Aluno-Isl/Desktop/ALARME 3.5 (POSSÍVEL FUNCIONAMENTO)/BUZZER_RELATED.vhd          ;
+; VERIFICADOR_SENHA.vhd            ; yes             ; User VHDL File  ; C:/Users/Aluno-Isl/Desktop/ALARME 3.5 (POSSÍVEL FUNCIONAMENTO)/VERIFICADOR_SENHA.vhd       ;
+; TROCA_ESTADO.vhd                 ; yes             ; User VHDL File  ; C:/Users/Aluno-Isl/Desktop/ALARME 3.5 (POSSÍVEL FUNCIONAMENTO)/TROCA_ESTADO.vhd            ;
+; CONTADORES_RELATED.vhd           ; yes             ; User VHDL File  ; C:/Users/Aluno-Isl/Desktop/ALARME 3.5 (POSSÍVEL FUNCIONAMENTO)/CONTADORES_RELATED.vhd      ;
+; REGISTRADOR.vhd                  ; yes             ; User VHDL File  ; C:/Users/Aluno-Isl/Desktop/ALARME 3.5 (POSSÍVEL FUNCIONAMENTO)/REGISTRADOR.vhd             ;
+; TROCA_SENHA.vhd                  ; yes             ; User VHDL File  ; C:/Users/Aluno-Isl/Desktop/ALARME 3.5 (POSSÍVEL FUNCIONAMENTO)/TROCA_SENHA.vhd             ;
+; MONITORADOR.vhd                  ; yes             ; User VHDL File  ; C:/Users/Aluno-Isl/Desktop/ALARME 3.5 (POSSÍVEL FUNCIONAMENTO)/MONITORADOR.vhd             ;
+; SELETOR.vhd                      ; yes             ; User VHDL File  ; C:/Users/Aluno-Isl/Desktop/ALARME 3.5 (POSSÍVEL FUNCIONAMENTO)/SELETOR.vhd                 ;
+; DECODIFICADOR_BCD_7_SEG.vhd      ; yes             ; User VHDL File  ; C:/Users/Aluno-Isl/Desktop/ALARME 3.5 (POSSÍVEL FUNCIONAMENTO)/DECODIFICADOR_BCD_7_SEG.vhd ;
+; FOUR_DISPLAYS_TO_ONE.vhd         ; yes             ; User VHDL File  ; C:/Users/Aluno-Isl/Desktop/ALARME 3.5 (POSSÍVEL FUNCIONAMENTO)/FOUR_DISPLAYS_TO_ONE.vhd    ;
+; INTERFACE_CONVERSOR_AD.vhd       ; yes             ; User VHDL File  ; C:/Users/Aluno-Isl/Desktop/ALARME 3.5 (POSSÍVEL FUNCIONAMENTO)/INTERFACE_CONVERSOR_AD.vhd  ;
+; DIVISOR_DE_FREQUENCIA.vhd        ; yes             ; User VHDL File  ; C:/Users/Aluno-Isl/Desktop/ALARME 3.5 (POSSÍVEL FUNCIONAMENTO)/DIVISOR_DE_FREQUENCIA.vhd   ;
+; PULSOS_24.vhd                    ; yes             ; User VHDL File  ; C:/Users/Aluno-Isl/Desktop/ALARME 3.5 (POSSÍVEL FUNCIONAMENTO)/PULSOS_24.vhd               ;
+; CONVERSOR_COMPLETO.vhd           ; yes             ; User VHDL File  ; C:/Users/Aluno-Isl/Desktop/ALARME 3.5 (POSSÍVEL FUNCIONAMENTO)/CONVERSOR_COMPLETO.vhd      ;
++----------------------------------+-----------------+-----------------+--------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary         ;
++---------------------------------------------+-------+
+; Resource                                    ; Usage ;
++---------------------------------------------+-------+
+; Total logic elements                        ; 1275  ;
+;     -- Combinational with no register       ; 740   ;
+;     -- Register only                        ; 270   ;
+;     -- Combinational with a register        ; 265   ;
+;                                             ;       ;
+; Logic element usage by number of LUT inputs ;       ;
+;     -- 4 input functions                    ; 382   ;
+;     -- 3 input functions                    ; 155   ;
+;     -- 2 input functions                    ; 455   ;
+;     -- 1 input functions                    ; 13    ;
+;     -- 0 input functions                    ; 0     ;
+;                                             ;       ;
+; Logic elements by mode                      ;       ;
+;     -- normal mode                          ; 931   ;
+;     -- arithmetic mode                      ; 344   ;
+;     -- qfbk mode                            ; 0     ;
+;     -- register cascade mode                ; 0     ;
+;     -- synchronous clear/load mode          ; 5     ;
+;     -- asynchronous clear/load mode         ; 25    ;
+;                                             ;       ;
+; Total registers                             ; 535   ;
+; Total logic cells in carry chains           ; 356   ;
+; I/O pins                                    ; 45    ;
+; Maximum fan-out node                        ; clk66 ;
+; Maximum fan-out                             ; 413   ;
+; Total fan-out                               ; 3954  ;
+; Average fan-out                             ; 3.00  ;
++---------------------------------------------+-------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                   ;
++----------------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+------------------------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node                   ; Logic Cells ; LC Registers ; UFM Blocks ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name                                                                ; Library Name ;
++----------------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+------------------------------------------------------------------------------------+--------------+
+; |TOP_ENTITY                                  ; 1275 (2)    ; 535          ; 0          ; 45   ; 0            ; 740 (2)      ; 270 (0)           ; 265 (0)          ; 356 (0)         ; 0 (0)      ; |TOP_ENTITY                                                                        ; work         ;
+;    |BEEP:BEEP_BOTAO|                         ; 82 (82)     ; 34           ; 0          ; 0    ; 0            ; 48 (48)      ; 19 (19)           ; 15 (15)          ; 32 (32)         ; 0 (0)      ; |TOP_ENTITY|BEEP:BEEP_BOTAO                                                        ; work         ;
+;    |CONTADOR_30SEG:TIMER|                    ; 97 (97)     ; 40           ; 0          ; 0    ; 0            ; 57 (57)      ; 0 (0)             ; 40 (40)          ; 32 (32)         ; 0 (0)      ; |TOP_ENTITY|CONTADOR_30SEG:TIMER                                                   ; work         ;
+;    |CONTADOR_ANEL_3BITS:TROCA_DISTANCIA|     ; 5 (5)       ; 4            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 4 (4)            ; 0 (0)           ; 0 (0)      ; |TOP_ENTITY|CONTADOR_ANEL_3BITS:TROCA_DISTANCIA                                    ; work         ;
+;    |CONVERSOR_COMPLETO:CONVERSAO|            ; 273 (0)     ; 135          ; 0          ; 0    ; 0            ; 138 (0)      ; 115 (0)           ; 20 (0)           ; 100 (0)         ; 0 (0)      ; |TOP_ENTITY|CONVERSOR_COMPLETO:CONVERSAO                                           ; work         ;
+;       |ADC_INTERFACE:ADC|                    ; 43 (43)     ; 32           ; 0          ; 0    ; 0            ; 11 (11)      ; 29 (29)           ; 3 (3)            ; 4 (4)           ; 0 (0)      ; |TOP_ENTITY|CONVERSOR_COMPLETO:CONVERSAO|ADC_INTERFACE:ADC                         ; work         ;
+;       |DIVISOR_DE_FREQUENCIA:CONV_P_SEG|     ; 72 (72)     ; 30           ; 0          ; 0    ; 0            ; 42 (42)      ; 19 (19)           ; 11 (11)          ; 32 (32)         ; 0 (0)      ; |TOP_ENTITY|CONVERSOR_COMPLETO:CONVERSAO|DIVISOR_DE_FREQUENCIA:CONV_P_SEG          ; work         ;
+;       |DIVISOR_DE_FREQUENCIA:GERADOR_260KHz| ; 75 (75)     ; 33           ; 0          ; 0    ; 0            ; 42 (42)      ; 31 (31)           ; 2 (2)            ; 32 (32)         ; 0 (0)      ; |TOP_ENTITY|CONVERSOR_COMPLETO:CONVERSAO|DIVISOR_DE_FREQUENCIA:GERADOR_260KHz      ; work         ;
+;       |PULSO_24:PUL_24|                      ; 83 (83)     ; 40           ; 0          ; 0    ; 0            ; 43 (43)      ; 36 (36)           ; 4 (4)            ; 32 (32)         ; 0 (0)      ; |TOP_ENTITY|CONVERSOR_COMPLETO:CONVERSAO|PULSO_24:PUL_24                           ; work         ;
+;    |DECODIFICADOR_BCD_7SEG:DECODER0|         ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |TOP_ENTITY|DECODIFICADOR_BCD_7SEG:DECODER0                                        ; work         ;
+;    |DECODIFICADOR_BCD_7SEG:DECODER1|         ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |TOP_ENTITY|DECODIFICADOR_BCD_7SEG:DECODER1                                        ; work         ;
+;    |DECODIFICADOR_BCD_7SEG:DECODER2|         ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |TOP_ENTITY|DECODIFICADOR_BCD_7SEG:DECODER2                                        ; work         ;
+;    |FILTRO_BOTAO:FILTRO_B0|                  ; 95 (95)     ; 41           ; 0          ; 0    ; 0            ; 54 (54)      ; 0 (0)             ; 41 (41)          ; 32 (32)         ; 0 (0)      ; |TOP_ENTITY|FILTRO_BOTAO:FILTRO_B0                                                 ; work         ;
+;    |FILTRO_BOTAO:FILTRO_B1|                  ; 12 (12)     ; 9            ; 0          ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 9 (9)            ; 0 (0)           ; 0 (0)      ; |TOP_ENTITY|FILTRO_BOTAO:FILTRO_B1                                                 ; work         ;
+;    |FILTRO_BOTAO:FILTRO_B2|                  ; 12 (12)     ; 9            ; 0          ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 9 (9)            ; 0 (0)           ; 0 (0)      ; |TOP_ENTITY|FILTRO_BOTAO:FILTRO_B2                                                 ; work         ;
+;    |FILTRO_BOTAO:FILTRO_B3|                  ; 12 (12)     ; 9            ; 0          ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 9 (9)            ; 0 (0)           ; 0 (0)      ; |TOP_ENTITY|FILTRO_BOTAO:FILTRO_B3                                                 ; work         ;
+;    |FILTRO_BOTAO:FILTRO_B4|                  ; 12 (12)     ; 9            ; 0          ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 9 (9)            ; 0 (0)           ; 0 (0)      ; |TOP_ENTITY|FILTRO_BOTAO:FILTRO_B4                                                 ; work         ;
+;    |FILTRO_BOTAO:FILTRO_B5|                  ; 13 (13)     ; 10           ; 0          ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 10 (10)          ; 0 (0)           ; 0 (0)      ; |TOP_ENTITY|FILTRO_BOTAO:FILTRO_B5                                                 ; work         ;
+;    |FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER| ; 275 (200)   ; 76           ; 0          ; 0    ; 0            ; 199 (157)    ; 59 (29)           ; 17 (14)          ; 64 (32)         ; 0 (0)      ; |TOP_ENTITY|FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER                                ; work         ;
+;       |DIVISOR_DE_FREQUENCIA:DIV_FREQ|       ; 75 (75)     ; 33           ; 0          ; 0    ; 0            ; 42 (42)      ; 30 (30)           ; 3 (3)            ; 32 (32)         ; 0 (0)      ; |TOP_ENTITY|FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|DIVISOR_DE_FREQUENCIA:DIV_FREQ ; work         ;
+;    |FREQ_ALARME:ALARME|                      ; 84 (84)     ; 33           ; 0          ; 0    ; 0            ; 51 (51)      ; 0 (0)             ; 33 (33)          ; 32 (32)         ; 0 (0)      ; |TOP_ENTITY|FREQ_ALARME:ALARME                                                     ; work         ;
+;    |MONITORADOR:MONITORADOR_DISTANCIA|       ; 140 (26)    ; 53           ; 0          ; 0    ; 0            ; 87 (16)      ; 37 (9)            ; 16 (1)           ; 32 (0)          ; 0 (0)      ; |TOP_ENTITY|MONITORADOR:MONITORADOR_DISTANCIA                                      ; work         ;
+;       |DIVISOR_DE_FREQUENCIA:CLKS|           ; 71 (71)     ; 29           ; 0          ; 0    ; 0            ; 42 (42)      ; 25 (25)           ; 4 (4)            ; 32 (32)         ; 0 (0)      ; |TOP_ENTITY|MONITORADOR:MONITORADOR_DISTANCIA|DIVISOR_DE_FREQUENCIA:CLKS           ; work         ;
+;       |VERIFICADOR_SENHA:VERIF|              ; 43 (43)     ; 14           ; 0          ; 0    ; 0            ; 29 (29)      ; 3 (3)             ; 11 (11)          ; 0 (0)           ; 0 (0)      ; |TOP_ENTITY|MONITORADOR:MONITORADOR_DISTANCIA|VERIFICADOR_SENHA:VERIF              ; work         ;
+;    |REGISTRADOR_8BITS_SENHA:REG_SENHA|       ; 10 (10)     ; 9            ; 0          ; 0    ; 0            ; 1 (1)        ; 8 (8)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |TOP_ENTITY|REGISTRADOR_8BITS_SENHA:REG_SENHA                                      ; work         ;
+;    |SELETOR:DISPLAY_SELECT|                  ; 18 (18)     ; 8            ; 0          ; 0    ; 0            ; 10 (10)      ; 0 (0)             ; 8 (8)            ; 0 (0)           ; 0 (0)      ; |TOP_ENTITY|SELETOR:DISPLAY_SELECT                                                 ; work         ;
+;    |TROCA_ESTADO:ESTADO|                     ; 3 (3)       ; 2            ; 0          ; 0    ; 0            ; 1 (1)        ; 1 (1)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |TOP_ENTITY|TROCA_ESTADO:ESTADO                                                    ; work         ;
+;    |TROCA_SENHA:TROCA_A_SENHA|               ; 91 (91)     ; 43           ; 0          ; 0    ; 0            ; 48 (48)      ; 30 (30)           ; 13 (13)          ; 32 (32)         ; 0 (0)      ; |TOP_ENTITY|TROCA_SENHA:TROCA_A_SENHA                                              ; work         ;
+;    |VERIFICADOR_SENHA:VERIFICADOR_GERAL|     ; 35 (35)     ; 11           ; 0          ; 0    ; 0            ; 24 (24)      ; 1 (1)             ; 10 (10)          ; 0 (0)           ; 0 (0)      ; |TOP_ENTITY|VERIFICADOR_SENHA:VERIFICADOR_GERAL                                    ; work         ;
++----------------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+------------------------------------------------------------------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                                                                      ;
++--------------------------------------------------------------------+------------------------------------------------------------------------------------+
+; Register name                                                      ; Reason for Removal                                                                 ;
++--------------------------------------------------------------------+------------------------------------------------------------------------------------+
+; TROCA_ESTADO:ESTADO|ultimo_monit                                   ; Merged with MONITORADOR:MONITORADOR_DISTANCIA|ultimo_confirmacao                   ;
+; BEEP:BEEP_BOTAO|ultimo_b3                                          ; Merged with MONITORADOR:MONITORADOR_DISTANCIA|VERIFICADOR_SENHA:VERIF|ultimob3     ;
+; VERIFICADOR_SENHA:VERIFICADOR_GERAL|ultimob3                       ; Merged with MONITORADOR:MONITORADOR_DISTANCIA|VERIFICADOR_SENHA:VERIF|ultimob3     ;
+; TROCA_SENHA:TROCA_A_SENHA|ultimob3                                 ; Merged with MONITORADOR:MONITORADOR_DISTANCIA|VERIFICADOR_SENHA:VERIF|ultimob3     ;
+; BEEP:BEEP_BOTAO|ultimo_b2                                          ; Merged with MONITORADOR:MONITORADOR_DISTANCIA|VERIFICADOR_SENHA:VERIF|ultimob2     ;
+; VERIFICADOR_SENHA:VERIFICADOR_GERAL|ultimob2                       ; Merged with MONITORADOR:MONITORADOR_DISTANCIA|VERIFICADOR_SENHA:VERIF|ultimob2     ;
+; TROCA_SENHA:TROCA_A_SENHA|ultimob2                                 ; Merged with MONITORADOR:MONITORADOR_DISTANCIA|VERIFICADOR_SENHA:VERIF|ultimob2     ;
+; BEEP:BEEP_BOTAO|ultimo_b1                                          ; Merged with MONITORADOR:MONITORADOR_DISTANCIA|VERIFICADOR_SENHA:VERIF|ultimob1     ;
+; VERIFICADOR_SENHA:VERIFICADOR_GERAL|ultimob1                       ; Merged with MONITORADOR:MONITORADOR_DISTANCIA|VERIFICADOR_SENHA:VERIF|ultimob1     ;
+; TROCA_SENHA:TROCA_A_SENHA|ultimob1                                 ; Merged with MONITORADOR:MONITORADOR_DISTANCIA|VERIFICADOR_SENHA:VERIF|ultimob1     ;
+; BEEP:BEEP_BOTAO|ultimo_b4                                          ; Merged with TROCA_SENHA:TROCA_A_SENHA|ultimob4                                     ;
+; BEEP:BEEP_BOTAO|ultimo_b0                                          ; Merged with VERIFICADOR_SENHA:VERIFICADOR_GERAL|ultimob0                           ;
+; FILTRO_BOTAO:FILTRO_B5|cont[0..31]                                 ; Lost fanout                                                                        ;
+; FILTRO_BOTAO:FILTRO_B4|cont[0..31]                                 ; Lost fanout                                                                        ;
+; FILTRO_BOTAO:FILTRO_B3|cont[0..31]                                 ; Lost fanout                                                                        ;
+; FILTRO_BOTAO:FILTRO_B2|cont[0..31]                                 ; Lost fanout                                                                        ;
+; FILTRO_BOTAO:FILTRO_B1|cont[0..31]                                 ; Lost fanout                                                                        ;
+; FILTRO_BOTAO:FILTRO_B0|state                                       ; Merged with FILTRO_BOTAO:FILTRO_B5|state                                           ;
+; FILTRO_BOTAO:FILTRO_B1|state                                       ; Merged with FILTRO_BOTAO:FILTRO_B5|state                                           ;
+; FILTRO_BOTAO:FILTRO_B2|state                                       ; Merged with FILTRO_BOTAO:FILTRO_B5|state                                           ;
+; FILTRO_BOTAO:FILTRO_B3|state                                       ; Merged with FILTRO_BOTAO:FILTRO_B5|state                                           ;
+; FILTRO_BOTAO:FILTRO_B4|state                                       ; Merged with FILTRO_BOTAO:FILTRO_B5|state                                           ;
+; CONVERSOR_COMPLETO:CONVERSAO|DIVISOR_DE_FREQUENCIA:CONV_P_SEG|c[0] ; Merged with CONVERSOR_COMPLETO:CONVERSAO|DIVISOR_DE_FREQUENCIA:GERADOR_260KHz|c[0] ;
+; MONITORADOR:MONITORADOR_DISTANCIA|DIVISOR_DE_FREQUENCIA:CLKS|c[0]  ; Merged with CONVERSOR_COMPLETO:CONVERSAO|DIVISOR_DE_FREQUENCIA:GERADOR_260KHz|c[0] ;
+; CONVERSOR_COMPLETO:CONVERSAO|DIVISOR_DE_FREQUENCIA:CONV_P_SEG|c[1] ; Merged with CONVERSOR_COMPLETO:CONVERSAO|DIVISOR_DE_FREQUENCIA:GERADOR_260KHz|c[1] ;
+; MONITORADOR:MONITORADOR_DISTANCIA|DIVISOR_DE_FREQUENCIA:CLKS|c[1]  ; Merged with CONVERSOR_COMPLETO:CONVERSAO|DIVISOR_DE_FREQUENCIA:GERADOR_260KHz|c[1] ;
+; CONVERSOR_COMPLETO:CONVERSAO|DIVISOR_DE_FREQUENCIA:CONV_P_SEG|c[2] ; Merged with MONITORADOR:MONITORADOR_DISTANCIA|DIVISOR_DE_FREQUENCIA:CLKS|c[2]      ;
+; MONITORADOR:MONITORADOR_DISTANCIA|DIVISOR_DE_FREQUENCIA:CLKS|c[2]  ; Merged with CONVERSOR_COMPLETO:CONVERSAO|DIVISOR_DE_FREQUENCIA:GERADOR_260KHz|c[2] ;
+; MONITORADOR:MONITORADOR_DISTANCIA|DIVISOR_DE_FREQUENCIA:CLKS|c[3]  ; Merged with CONVERSOR_COMPLETO:CONVERSAO|DIVISOR_DE_FREQUENCIA:GERADOR_260KHz|c[3] ;
+; CONTADOR_30SEG:TIMER|a2[3]                                         ; Stuck at GND due to stuck port data_in                                             ;
+; Total Number of Removed Registers = 185                            ;                                                                                    ;
++--------------------------------------------------------------------+------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 535   ;
+; Number of registers using Synchronous Clear  ; 2     ;
+; Number of registers using Synchronous Load   ; 3     ;
+; Number of registers using Asynchronous Clear ; 24    ;
+; Number of registers using Asynchronous Load  ; 1     ;
+; Number of registers using Clock Enable       ; 170   ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++------------------------------------------------------------------------------+
+; Inverted Register Statistics                                                 ;
++--------------------------------------------------------------------+---------+
+; Inverted Register                                                  ; Fan out ;
++--------------------------------------------------------------------+---------+
+; CONTADOR_ANEL_3BITS:TROCA_DISTANCIA|s0                             ; 8       ;
+; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|control1                   ; 2       ;
+; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|control2                   ; 2       ;
+; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|control3                   ; 2       ;
+; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|control4                   ; 2       ;
+; FILTRO_BOTAO:FILTRO_B1|saida                                       ; 8       ;
+; MONITORADOR:MONITORADOR_DISTANCIA|VERIFICADOR_SENHA:VERIF|ultimob1 ; 4       ;
+; FILTRO_BOTAO:FILTRO_B2|saida                                       ; 9       ;
+; MONITORADOR:MONITORADOR_DISTANCIA|VERIFICADOR_SENHA:VERIF|ultimob2 ; 5       ;
+; FILTRO_BOTAO:FILTRO_B3|saida                                       ; 6       ;
+; MONITORADOR:MONITORADOR_DISTANCIA|VERIFICADOR_SENHA:VERIF|ultimob3 ; 2       ;
+; FILTRO_BOTAO:FILTRO_B5|saida                                       ; 7       ;
+; FILTRO_BOTAO:FILTRO_B4|saida                                       ; 6       ;
+; BEEP:BEEP_BOTAO|ultimo_b5                                          ; 1       ;
+; TROCA_SENHA:TROCA_A_SENHA|ultimob4                                 ; 2       ;
+; FILTRO_BOTAO:FILTRO_B0|saida                                       ; 6       ;
+; VERIFICADOR_SENHA:VERIFICADOR_GERAL|ultimob0                       ; 2       ;
+; CONTADOR_30SEG:TIMER|a2[1]                                         ; 10      ;
+; CONTADOR_30SEG:TIMER|a2[0]                                         ; 11      ;
+; MONITORADOR:MONITORADOR_DISTANCIA|VERIFICADOR_SENHA:VERIF|ultimob0 ; 1       ;
+; CONTADOR_ANEL_3BITS:TROCA_DISTANCIA|ultimo                         ; 2       ;
+; FILTRO_BOTAO:FILTRO_B1|shift_reg[4]                                ; 4       ;
+; FILTRO_BOTAO:FILTRO_B1|shift_reg[6]                                ; 3       ;
+; FILTRO_BOTAO:FILTRO_B1|shift_reg[3]                                ; 3       ;
+; FILTRO_BOTAO:FILTRO_B1|shift_reg[5]                                ; 3       ;
+; FILTRO_BOTAO:FILTRO_B1|shift_reg[7]                                ; 3       ;
+; FILTRO_BOTAO:FILTRO_B1|shift_reg[0]                                ; 2       ;
+; FILTRO_BOTAO:FILTRO_B1|shift_reg[1]                                ; 3       ;
+; FILTRO_BOTAO:FILTRO_B1|shift_reg[2]                                ; 3       ;
+; FILTRO_BOTAO:FILTRO_B2|shift_reg[4]                                ; 4       ;
+; FILTRO_BOTAO:FILTRO_B2|shift_reg[6]                                ; 3       ;
+; FILTRO_BOTAO:FILTRO_B2|shift_reg[3]                                ; 3       ;
+; FILTRO_BOTAO:FILTRO_B2|shift_reg[5]                                ; 3       ;
+; FILTRO_BOTAO:FILTRO_B2|shift_reg[7]                                ; 3       ;
+; FILTRO_BOTAO:FILTRO_B2|shift_reg[0]                                ; 2       ;
+; FILTRO_BOTAO:FILTRO_B2|shift_reg[1]                                ; 3       ;
+; FILTRO_BOTAO:FILTRO_B2|shift_reg[2]                                ; 3       ;
+; FILTRO_BOTAO:FILTRO_B3|shift_reg[4]                                ; 4       ;
+; FILTRO_BOTAO:FILTRO_B3|shift_reg[6]                                ; 3       ;
+; FILTRO_BOTAO:FILTRO_B3|shift_reg[3]                                ; 3       ;
+; FILTRO_BOTAO:FILTRO_B3|shift_reg[5]                                ; 3       ;
+; FILTRO_BOTAO:FILTRO_B3|shift_reg[7]                                ; 3       ;
+; FILTRO_BOTAO:FILTRO_B3|shift_reg[0]                                ; 2       ;
+; FILTRO_BOTAO:FILTRO_B3|shift_reg[1]                                ; 3       ;
+; FILTRO_BOTAO:FILTRO_B3|shift_reg[2]                                ; 3       ;
+; FILTRO_BOTAO:FILTRO_B5|shift_reg[4]                                ; 4       ;
+; FILTRO_BOTAO:FILTRO_B5|shift_reg[6]                                ; 3       ;
+; FILTRO_BOTAO:FILTRO_B5|shift_reg[3]                                ; 3       ;
+; FILTRO_BOTAO:FILTRO_B5|shift_reg[5]                                ; 3       ;
+; FILTRO_BOTAO:FILTRO_B5|shift_reg[7]                                ; 3       ;
+; FILTRO_BOTAO:FILTRO_B5|shift_reg[0]                                ; 2       ;
+; FILTRO_BOTAO:FILTRO_B5|shift_reg[1]                                ; 3       ;
+; FILTRO_BOTAO:FILTRO_B5|shift_reg[2]                                ; 3       ;
+; FILTRO_BOTAO:FILTRO_B4|shift_reg[4]                                ; 4       ;
+; FILTRO_BOTAO:FILTRO_B4|shift_reg[6]                                ; 3       ;
+; FILTRO_BOTAO:FILTRO_B4|shift_reg[3]                                ; 3       ;
+; FILTRO_BOTAO:FILTRO_B4|shift_reg[5]                                ; 3       ;
+; FILTRO_BOTAO:FILTRO_B4|shift_reg[7]                                ; 3       ;
+; FILTRO_BOTAO:FILTRO_B4|shift_reg[0]                                ; 2       ;
+; FILTRO_BOTAO:FILTRO_B4|shift_reg[1]                                ; 3       ;
+; FILTRO_BOTAO:FILTRO_B4|shift_reg[2]                                ; 3       ;
+; FILTRO_BOTAO:FILTRO_B0|shift_reg[4]                                ; 4       ;
+; FILTRO_BOTAO:FILTRO_B0|shift_reg[6]                                ; 3       ;
+; FILTRO_BOTAO:FILTRO_B0|shift_reg[3]                                ; 3       ;
+; FILTRO_BOTAO:FILTRO_B0|shift_reg[5]                                ; 3       ;
+; FILTRO_BOTAO:FILTRO_B0|shift_reg[7]                                ; 3       ;
+; FILTRO_BOTAO:FILTRO_B0|shift_reg[0]                                ; 2       ;
+; FILTRO_BOTAO:FILTRO_B0|shift_reg[1]                                ; 3       ;
+; FILTRO_BOTAO:FILTRO_B0|shift_reg[2]                                ; 3       ;
+; REGISTRADOR_8BITS_SENHA:REG_SENHA|ultimo                           ; 1       ;
+; Total number of inverted registers = 70                            ;         ;
++--------------------------------------------------------------------+---------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                             ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                   ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------+
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |TOP_ENTITY|FREQ_ALARME:ALARME|cont[19]                      ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |TOP_ENTITY|CONTADOR_30SEG:TIMER|a2[2]                       ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |TOP_ENTITY|CONTADOR_30SEG:TIMER|cont[8]                     ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |TOP_ENTITY|TROCA_SENHA:TROCA_A_SENHA|senha1[2]              ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |TOP_ENTITY|TROCA_SENHA:TROCA_A_SENHA|senha2[1]              ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |TOP_ENTITY|FILTRO_BOTAO:FILTRO_B0|cont[1]                   ;
+; 8:1                ; 8 bits    ; 40 LEs        ; 24 LEs               ; 16 LEs                 ; Yes        ; |TOP_ENTITY|SELETOR:DISPLAY_SELECT|disp1[3]                  ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |TOP_ENTITY|CONTADOR_30SEG:TIMER|a1[3]                       ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |TOP_ENTITY|CONTADOR_ANEL_3BITS:TROCA_DISTANCIA|s2           ;
+; 10:1               ; 32 bits   ; 192 LEs       ; 32 LEs               ; 160 LEs                ; Yes        ; |TOP_ENTITY|FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[29] ;
+; 24:1               ; 2 bits    ; 32 LEs        ; 20 LEs               ; 12 LEs                 ; Yes        ; |TOP_ENTITY|FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|F        ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |TOP_ENTITY|CONTADOR_30SEG:TIMER|a2[0]                       ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: CONVERSOR_COMPLETO:CONVERSAO|DIVISOR_DE_FREQUENCIA:CONV_P_SEG ;
++----------------+--------+----------------------------------------------------------------------------------+
+; Parameter Name ; Value  ; Type                                                                             ;
++----------------+--------+----------------------------------------------------------------------------------+
+; cont           ; 666600 ; Signed Integer                                                                   ;
++----------------+--------+----------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: CONVERSOR_COMPLETO:CONVERSAO|DIVISOR_DE_FREQUENCIA:GERADOR_260KHz ;
++----------------+-------+---------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                  ;
++----------------+-------+---------------------------------------------------------------------------------------+
+; cont           ; 128   ; Signed Integer                                                                        ;
++----------------+-------+---------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: FILTRO_BOTAO:FILTRO_B0 ;
++----------------+--------+-------------------------------------------+
+; Parameter Name ; Value  ; Type                                      ;
++----------------+--------+-------------------------------------------+
+; frequencia     ; 333333 ; Signed Integer                            ;
++----------------+--------+-------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: FILTRO_BOTAO:FILTRO_B1 ;
++----------------+--------+-------------------------------------------+
+; Parameter Name ; Value  ; Type                                      ;
++----------------+--------+-------------------------------------------+
+; frequencia     ; 333333 ; Signed Integer                            ;
++----------------+--------+-------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: FILTRO_BOTAO:FILTRO_B2 ;
++----------------+--------+-------------------------------------------+
+; Parameter Name ; Value  ; Type                                      ;
++----------------+--------+-------------------------------------------+
+; frequencia     ; 333333 ; Signed Integer                            ;
++----------------+--------+-------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: FILTRO_BOTAO:FILTRO_B3 ;
++----------------+--------+-------------------------------------------+
+; Parameter Name ; Value  ; Type                                      ;
++----------------+--------+-------------------------------------------+
+; frequencia     ; 333333 ; Signed Integer                            ;
++----------------+--------+-------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: FILTRO_BOTAO:FILTRO_B4 ;
++----------------+--------+-------------------------------------------+
+; Parameter Name ; Value  ; Type                                      ;
++----------------+--------+-------------------------------------------+
+; frequencia     ; 333333 ; Signed Integer                            ;
++----------------+--------+-------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: FILTRO_BOTAO:FILTRO_B5 ;
++----------------+--------+-------------------------------------------+
+; Parameter Name ; Value  ; Type                                      ;
++----------------+--------+-------------------------------------------+
+; frequencia     ; 333333 ; Signed Integer                            ;
++----------------+--------+-------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: BEEP:BEEP_BOTAO ;
++----------------+----------+----------------------------------+
+; Parameter Name ; Value    ; Type                             ;
++----------------+----------+----------------------------------+
+; tempo          ; 13333333 ; Signed Integer                   ;
++----------------+----------+----------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|DIVISOR_DE_FREQUENCIA:DIV_FREQ ;
++----------------+-------+--------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                       ;
++----------------+-------+--------------------------------------------------------------------------------------------+
+; cont           ; 5     ; Signed Integer                                                                             ;
++----------------+-------+--------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: MONITORADOR:MONITORADOR_DISTANCIA|DIVISOR_DE_FREQUENCIA:CLKS ;
++----------------+-------+----------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                             ;
++----------------+-------+----------------------------------------------------------------------------------+
+; cont           ; 400   ; Signed Integer                                                                   ;
++----------------+-------+----------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: FREQ_ALARME:ALARME ;
++----------------+----------+-------------------------------------+
+; Parameter Name ; Value    ; Type                                ;
++----------------+----------+-------------------------------------+
+; frequencia     ; 33333333 ; Signed Integer                      ;
++----------------+----------+-------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "MONITORADOR:MONITORADOR_DISTANCIA"                                                  ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; b0   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------+
+; Port Connectivity Checks: "CONVERSOR_COMPLETO:CONVERSAO|PULSO_24:PUL_24" ;
++------+-------+----------+------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                        ;
++------+-------+----------+------------------------------------------------+
+; conv ; Input ; Info     ; Stuck at VCC                                   ;
++------+-------+----------+------------------------------------------------+
+
+
++----------------------------------------------------------------------------+
+; Port Connectivity Checks: "CONVERSOR_COMPLETO:CONVERSAO|ADC_INTERFACE:ADC" ;
++------------+-------+----------+--------------------------------------------+
+; Port       ; Type  ; Severity ; Details                                    ;
++------------+-------+----------+--------------------------------------------+
+; mod_enable ; Input ; Info     ; Stuck at VCC                               ;
++------------+-------+----------+--------------------------------------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II Analysis & Synthesis
+    Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
+    Info: Processing started: Wed Nov 18 17:17:17 2015
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Alarme_de_casa -c TOP_ENTITY
+Info: Found 2 design units, including 1 entities, in source file filtro_digital.vhd
+    Info: Found design unit 1: FILTRO_BOTAO-arc
+    Info: Found entity 1: FILTRO_BOTAO
+Info: Found 2 design units, including 1 entities, in source file circuito_final.vhd
+    Info: Found design unit 1: TOP_ENTITY-arc
+    Info: Found entity 1: TOP_ENTITY
+Info: Found 1 design units, including 0 entities, in source file componentes.vhd
+    Info: Found design unit 1: COMPONENTES
+Info: Found 4 design units, including 2 entities, in source file buzzer_related.vhd
+    Info: Found design unit 1: BEEP-arc
+    Info: Found design unit 2: FREQ_ALARME-arc
+    Info: Found entity 1: BEEP
+    Info: Found entity 2: FREQ_ALARME
+Info: Found 2 design units, including 1 entities, in source file verificador_senha.vhd
+    Info: Found design unit 1: VERIFICADOR_SENHA-arc
+    Info: Found entity 1: VERIFICADOR_SENHA
+Info: Found 2 design units, including 1 entities, in source file troca_estado.vhd
+    Info: Found design unit 1: TROCA_ESTADO-arc
+    Info: Found entity 1: TROCA_ESTADO
+Info: Found 4 design units, including 2 entities, in source file contadores_related.vhd
+    Info: Found design unit 1: CONTADOR_30SEG-arc
+    Info: Found design unit 2: CONTADOR_ANEL_3BITS-arc
+    Info: Found entity 1: CONTADOR_30SEG
+    Info: Found entity 2: CONTADOR_ANEL_3BITS
+Info: Found 2 design units, including 1 entities, in source file registrador.vhd
+    Info: Found design unit 1: REGISTRADOR_8BITS_SENHA-arc
+    Info: Found entity 1: REGISTRADOR_8BITS_SENHA
+Info: Found 2 design units, including 1 entities, in source file troca_senha.vhd
+    Info: Found design unit 1: TROCA_SENHA-arc
+    Info: Found entity 1: TROCA_SENHA
+Info: Found 2 design units, including 1 entities, in source file monitorador.vhd
+    Info: Found design unit 1: MONITORADOR-arc
+    Info: Found entity 1: MONITORADOR
+Info: Found 2 design units, including 1 entities, in source file seletor.vhd
+    Info: Found design unit 1: SELETOR-arc
+    Info: Found entity 1: SELETOR
+Info: Found 2 design units, including 1 entities, in source file decodificador_bcd_7_seg.vhd
+    Info: Found design unit 1: DECODIFICADOR_BCD_7SEG-decoder
+    Info: Found entity 1: DECODIFICADOR_BCD_7SEG
+Info: Found 2 design units, including 1 entities, in source file four_displays_to_one.vhd
+    Info: Found design unit 1: FOUR_DISPLAYS_TO_ONE-arc
+    Info: Found entity 1: FOUR_DISPLAYS_TO_ONE
+Info: Found 2 design units, including 1 entities, in source file interface_conversor_ad.vhd
+    Info: Found design unit 1: ADC_INTERFACE-ADC_CONT
+    Info: Found entity 1: ADC_INTERFACE
+Info: Found 2 design units, including 1 entities, in source file divisor_de_frequencia.vhd
+    Info: Found design unit 1: DIVISOR_DE_FREQUENCIA-arc
+    Info: Found entity 1: DIVISOR_DE_FREQUENCIA
+Info: Found 2 design units, including 1 entities, in source file pulsos_24.vhd
+    Info: Found design unit 1: PULSO_24-arc
+    Info: Found entity 1: PULSO_24
+Info: Found 2 design units, including 1 entities, in source file conversor_completo.vhd
+    Info: Found design unit 1: CONVERSOR_COMPLETO-arc
+    Info: Found entity 1: CONVERSOR_COMPLETO
+Info: Elaborating entity "TOP_ENTITY" for the top level hierarchy
+Info: Elaborating entity "CONVERSOR_COMPLETO" for hierarchy "CONVERSOR_COMPLETO:CONVERSAO"
+Info: Elaborating entity "ADC_INTERFACE" for hierarchy "CONVERSOR_COMPLETO:CONVERSAO|ADC_INTERFACE:ADC"
+Info: Elaborating entity "PULSO_24" for hierarchy "CONVERSOR_COMPLETO:CONVERSAO|PULSO_24:PUL_24"
+Warning (10036): Verilog HDL or VHDL warning at PULSOS_24.vhd(13): object "enable" assigned a value but never read
+Info: Elaborating entity "DIVISOR_DE_FREQUENCIA" for hierarchy "CONVERSOR_COMPLETO:CONVERSAO|DIVISOR_DE_FREQUENCIA:CONV_P_SEG"
+Info: Elaborating entity "DIVISOR_DE_FREQUENCIA" for hierarchy "CONVERSOR_COMPLETO:CONVERSAO|DIVISOR_DE_FREQUENCIA:GERADOR_260KHz"
+Info: Elaborating entity "FILTRO_BOTAO" for hierarchy "FILTRO_BOTAO:FILTRO_B0"
+Info: Elaborating entity "BEEP" for hierarchy "BEEP:BEEP_BOTAO"
+Info: Elaborating entity "SELETOR" for hierarchy "SELETOR:DISPLAY_SELECT"
+Info: Elaborating entity "DECODIFICADOR_BCD_7SEG" for hierarchy "DECODIFICADOR_BCD_7SEG:DECODER0"
+Info: Elaborating entity "FOUR_DISPLAYS_TO_ONE" for hierarchy "FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER"
+Info: Elaborating entity "DIVISOR_DE_FREQUENCIA" for hierarchy "FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|DIVISOR_DE_FREQUENCIA:DIV_FREQ"
+Info: Elaborating entity "VERIFICADOR_SENHA" for hierarchy "VERIFICADOR_SENHA:VERIFICADOR_GERAL"
+Info: Elaborating entity "TROCA_ESTADO" for hierarchy "TROCA_ESTADO:ESTADO"
+Info: Elaborating entity "CONTADOR_ANEL_3BITS" for hierarchy "CONTADOR_ANEL_3BITS:TROCA_DISTANCIA"
+Info: Elaborating entity "TROCA_SENHA" for hierarchy "TROCA_SENHA:TROCA_A_SENHA"
+Info: Elaborating entity "REGISTRADOR_8BITS_SENHA" for hierarchy "REGISTRADOR_8BITS_SENHA:REG_SENHA"
+Info: Elaborating entity "MONITORADOR" for hierarchy "MONITORADOR:MONITORADOR_DISTANCIA"
+Info: Elaborating entity "DIVISOR_DE_FREQUENCIA" for hierarchy "MONITORADOR:MONITORADOR_DISTANCIA|DIVISOR_DE_FREQUENCIA:CLKS"
+Info: Elaborating entity "CONTADOR_30SEG" for hierarchy "CONTADOR_30SEG:TIMER"
+Info: Elaborating entity "FREQ_ALARME" for hierarchy "FREQ_ALARME:ALARME"
+Warning: Output pins are stuck at VCC or GND
+    Warning (13410): Pin "ADC_CSN" is stuck at GND
+    Warning (13410): Pin "ADC_SHDN" is stuck at VCC
+    Warning (13410): Pin "sc_ena" is stuck at VCC
+Info: 160 registers lost all their fanouts during netlist optimizations. The first 160 are displayed below.
+    Info: Register "FILTRO_BOTAO:FILTRO_B5|cont[31]" lost all its fanouts during netlist optimizations.
+    Info: Register "FILTRO_BOTAO:FILTRO_B5|cont[30]" lost all its fanouts during netlist optimizations.
+    Info: Register "FILTRO_BOTAO:FILTRO_B5|cont[29]" lost all its fanouts during netlist optimizations.
+    Info: Register "FILTRO_BOTAO:FILTRO_B5|cont[28]" lost all its fanouts during netlist optimizations.
+    Info: Register "FILTRO_BOTAO:FILTRO_B5|cont[27]" lost all its fanouts during netlist optimizations.
+    Info: Register "FILTRO_BOTAO:FILTRO_B5|cont[26]" lost all its fanouts during netlist optimizations.
+    Info: Register "FILTRO_BOTAO:FILTRO_B5|cont[25]" lost all its fanouts during netlist optimizations.
+    Info: Register "FILTRO_BOTAO:FILTRO_B5|cont[24]" lost all its fanouts during netlist optimizations.
+    Info: Register "FILTRO_BOTAO:FILTRO_B5|cont[23]" lost all its fanouts during netlist optimizations.
+    Info: Register "FILTRO_BOTAO:FILTRO_B5|cont[22]" lost all its fanouts during netlist optimizations.
+    Info: Register "FILTRO_BOTAO:FILTRO_B5|cont[21]" lost all its fanouts during netlist optimizations.
+    Info: Register "FILTRO_BOTAO:FILTRO_B5|cont[20]" lost all its fanouts during netlist optimizations.
+    Info: Register "FILTRO_BOTAO:FILTRO_B5|cont[19]" lost all its fanouts during netlist optimizations.
+    Info: Register "FILTRO_BOTAO:FILTRO_B5|cont[18]" lost all its fanouts during netlist optimizations.
+    Info: Register "FILTRO_BOTAO:FILTRO_B5|cont[17]" lost all its fanouts during netlist optimizations.
+    Info: Register "FILTRO_BOTAO:FILTRO_B5|cont[16]" lost all its fanouts during netlist optimizations.
+    Info: Register "FILTRO_BOTAO:FILTRO_B5|cont[15]" lost all its fanouts during netlist optimizations.
+    Info: Register "FILTRO_BOTAO:FILTRO_B5|cont[14]" lost all its fanouts during netlist optimizations.
+    Info: Register "FILTRO_BOTAO:FILTRO_B5|cont[13]" lost all its fanouts during netlist optimizations.
+    Info: Register "FILTRO_BOTAO:FILTRO_B5|cont[12]" lost all its fanouts during netlist optimizations.
+    Info: Register "FILTRO_BOTAO:FILTRO_B5|cont[11]" lost all its fanouts during netlist optimizations.
+    Info: Register "FILTRO_BOTAO:FILTRO_B5|cont[10]" lost all its fanouts during netlist optimizations.
+    Info: Register "FILTRO_BOTAO:FILTRO_B5|cont[9]" lost all its fanouts during netlist optimizations.
+    Info: Register "FILTRO_BOTAO:FILTRO_B5|cont[8]" lost all its fanouts during netlist optimizations.
+    Info: Register "FILTRO_BOTAO:FILTRO_B5|cont[7]" lost all its fanouts during netlist optimizations.
+    Info: Register "FILTRO_BOTAO:FILTRO_B5|cont[6]" lost all its fanouts during netlist optimizations.
+    Info: Register "FILTRO_BOTAO:FILTRO_B5|cont[5]" lost all its fanouts during netlist optimizations.
+    Info: Register "FILTRO_BOTAO:FILTRO_B5|cont[4]" lost all its fanouts during netlist optimizations.
+    Info: Register "FILTRO_BOTAO:FILTRO_B5|cont[3]" lost all its fanouts during netlist optimizations.
+    Info: Register "FILTRO_BOTAO:FILTRO_B5|cont[2]" lost all its fanouts during netlist optimizations.
+    Info: Register "FILTRO_BOTAO:FILTRO_B5|cont[1]" lost all its fanouts during netlist optimizations.
+    Info: Register "FILTRO_BOTAO:FILTRO_B5|cont[0]" lost all its fanouts during netlist optimizations.
+    Info: Register "FILTRO_BOTAO:FILTRO_B4|cont[31]" lost all its fanouts during netlist optimizations.
+    Info: Register "FILTRO_BOTAO:FILTRO_B4|cont[30]" lost all its fanouts during netlist optimizations.
+    Info: Register "FILTRO_BOTAO:FILTRO_B4|cont[29]" lost all its fanouts during netlist optimizations.
+    Info: Register "FILTRO_BOTAO:FILTRO_B4|cont[28]" lost all its fanouts during netlist optimizations.
+    Info: Register "FILTRO_BOTAO:FILTRO_B4|cont[27]" lost all its fanouts during netlist optimizations.
+    Info: Register "FILTRO_BOTAO:FILTRO_B4|cont[26]" lost all its fanouts during netlist optimizations.
+    Info: Register "FILTRO_BOTAO:FILTRO_B4|cont[25]" lost all its fanouts during netlist optimizations.
+    Info: Register "FILTRO_BOTAO:FILTRO_B4|cont[24]" lost all its fanouts during netlist optimizations.
+    Info: Register "FILTRO_BOTAO:FILTRO_B4|cont[23]" lost all its fanouts during netlist optimizations.
+    Info: Register "FILTRO_BOTAO:FILTRO_B4|cont[22]" lost all its fanouts during netlist optimizations.
+    Info: Register "FILTRO_BOTAO:FILTRO_B4|cont[21]" lost all its fanouts during netlist optimizations.
+    Info: Register "FILTRO_BOTAO:FILTRO_B4|cont[20]" lost all its fanouts during netlist optimizations.
+    Info: Register "FILTRO_BOTAO:FILTRO_B4|cont[19]" lost all its fanouts during netlist optimizations.
+    Info: Register "FILTRO_BOTAO:FILTRO_B4|cont[18]" lost all its fanouts during netlist optimizations.
+    Info: Register "FILTRO_BOTAO:FILTRO_B4|cont[17]" lost all its fanouts during netlist optimizations.
+    Info: Register "FILTRO_BOTAO:FILTRO_B4|cont[16]" lost all its fanouts during netlist optimizations.
+    Info: Register "FILTRO_BOTAO:FILTRO_B4|cont[15]" lost all its fanouts during netlist optimizations.
+    Info: Register "FILTRO_BOTAO:FILTRO_B4|cont[14]" lost all its fanouts during netlist optimizations.
+    Info: Register "FILTRO_BOTAO:FILTRO_B4|cont[13]" lost all its fanouts during netlist optimizations.
+    Info: Register "FILTRO_BOTAO:FILTRO_B4|cont[12]" lost all its fanouts during netlist optimizations.
+    Info: Register "FILTRO_BOTAO:FILTRO_B4|cont[11]" lost all its fanouts during netlist optimizations.
+    Info: Register "FILTRO_BOTAO:FILTRO_B4|cont[10]" lost all its fanouts during netlist optimizations.
+    Info: Register "FILTRO_BOTAO:FILTRO_B4|cont[9]" lost all its fanouts during netlist optimizations.
+    Info: Register "FILTRO_BOTAO:FILTRO_B4|cont[8]" lost all its fanouts during netlist optimizations.
+    Info: Register "FILTRO_BOTAO:FILTRO_B4|cont[7]" lost all its fanouts during netlist optimizations.
+    Info: Register "FILTRO_BOTAO:FILTRO_B4|cont[6]" lost all its fanouts during netlist optimizations.
+    Info: Register "FILTRO_BOTAO:FILTRO_B4|cont[5]" lost all its fanouts during netlist optimizations.
+    Info: Register "FILTRO_BOTAO:FILTRO_B4|cont[4]" lost all its fanouts during netlist optimizations.
+    Info: Register "FILTRO_BOTAO:FILTRO_B4|cont[3]" lost all its fanouts during netlist optimizations.
+    Info: Register "FILTRO_BOTAO:FILTRO_B4|cont[2]" lost all its fanouts during netlist optimizations.
+    Info: Register "FILTRO_BOTAO:FILTRO_B4|cont[1]" lost all its fanouts during netlist optimizations.
+    Info: Register "FILTRO_BOTAO:FILTRO_B4|cont[0]" lost all its fanouts during netlist optimizations.
+    Info: Register "FILTRO_BOTAO:FILTRO_B3|cont[31]" lost all its fanouts during netlist optimizations.
+    Info: Register "FILTRO_BOTAO:FILTRO_B3|cont[30]" lost all its fanouts during netlist optimizations.
+    Info: Register "FILTRO_BOTAO:FILTRO_B3|cont[29]" lost all its fanouts during netlist optimizations.
+    Info: Register "FILTRO_BOTAO:FILTRO_B3|cont[28]" lost all its fanouts during netlist optimizations.
+    Info: Register "FILTRO_BOTAO:FILTRO_B3|cont[27]" lost all its fanouts during netlist optimizations.
+    Info: Register "FILTRO_BOTAO:FILTRO_B3|cont[26]" lost all its fanouts during netlist optimizations.
+    Info: Register "FILTRO_BOTAO:FILTRO_B3|cont[25]" lost all its fanouts during netlist optimizations.
+    Info: Register "FILTRO_BOTAO:FILTRO_B3|cont[24]" lost all its fanouts during netlist optimizations.
+    Info: Register "FILTRO_BOTAO:FILTRO_B3|cont[23]" lost all its fanouts during netlist optimizations.
+    Info: Register "FILTRO_BOTAO:FILTRO_B3|cont[22]" lost all its fanouts during netlist optimizations.
+    Info: Register "FILTRO_BOTAO:FILTRO_B3|cont[21]" lost all its fanouts during netlist optimizations.
+    Info: Register "FILTRO_BOTAO:FILTRO_B3|cont[20]" lost all its fanouts during netlist optimizations.
+    Info: Register "FILTRO_BOTAO:FILTRO_B3|cont[19]" lost all its fanouts during netlist optimizations.
+    Info: Register "FILTRO_BOTAO:FILTRO_B3|cont[18]" lost all its fanouts during netlist optimizations.
+    Info: Register "FILTRO_BOTAO:FILTRO_B3|cont[17]" lost all its fanouts during netlist optimizations.
+    Info: Register "FILTRO_BOTAO:FILTRO_B3|cont[16]" lost all its fanouts during netlist optimizations.
+    Info: Register "FILTRO_BOTAO:FILTRO_B3|cont[15]" lost all its fanouts during netlist optimizations.
+    Info: Register "FILTRO_BOTAO:FILTRO_B3|cont[14]" lost all its fanouts during netlist optimizations.
+    Info: Register "FILTRO_BOTAO:FILTRO_B3|cont[13]" lost all its fanouts during netlist optimizations.
+    Info: Register "FILTRO_BOTAO:FILTRO_B3|cont[12]" lost all its fanouts during netlist optimizations.
+    Info: Register "FILTRO_BOTAO:FILTRO_B3|cont[11]" lost all its fanouts during netlist optimizations.
+    Info: Register "FILTRO_BOTAO:FILTRO_B3|cont[10]" lost all its fanouts during netlist optimizations.
+    Info: Register "FILTRO_BOTAO:FILTRO_B3|cont[9]" lost all its fanouts during netlist optimizations.
+    Info: Register "FILTRO_BOTAO:FILTRO_B3|cont[8]" lost all its fanouts during netlist optimizations.
+    Info: Register "FILTRO_BOTAO:FILTRO_B3|cont[7]" lost all its fanouts during netlist optimizations.
+    Info: Register "FILTRO_BOTAO:FILTRO_B3|cont[6]" lost all its fanouts during netlist optimizations.
+    Info: Register "FILTRO_BOTAO:FILTRO_B3|cont[5]" lost all its fanouts during netlist optimizations.
+    Info: Register "FILTRO_BOTAO:FILTRO_B3|cont[4]" lost all its fanouts during netlist optimizations.
+    Info: Register "FILTRO_BOTAO:FILTRO_B3|cont[3]" lost all its fanouts during netlist optimizations.
+    Info: Register "FILTRO_BOTAO:FILTRO_B3|cont[2]" lost all its fanouts during netlist optimizations.
+    Info: Register "FILTRO_BOTAO:FILTRO_B3|cont[1]" lost all its fanouts during netlist optimizations.
+    Info: Register "FILTRO_BOTAO:FILTRO_B3|cont[0]" lost all its fanouts during netlist optimizations.
+    Info: Register "FILTRO_BOTAO:FILTRO_B2|cont[31]" lost all its fanouts during netlist optimizations.
+    Info: Register "FILTRO_BOTAO:FILTRO_B2|cont[30]" lost all its fanouts during netlist optimizations.
+    Info: Register "FILTRO_BOTAO:FILTRO_B2|cont[29]" lost all its fanouts during netlist optimizations.
+    Info: Register "FILTRO_BOTAO:FILTRO_B2|cont[28]" lost all its fanouts during netlist optimizations.
+    Info: Register "FILTRO_BOTAO:FILTRO_B2|cont[27]" lost all its fanouts during netlist optimizations.
+    Info: Register "FILTRO_BOTAO:FILTRO_B2|cont[26]" lost all its fanouts during netlist optimizations.
+    Info: Register "FILTRO_BOTAO:FILTRO_B2|cont[25]" lost all its fanouts during netlist optimizations.
+    Info: Register "FILTRO_BOTAO:FILTRO_B2|cont[24]" lost all its fanouts during netlist optimizations.
+    Info: Register "FILTRO_BOTAO:FILTRO_B2|cont[23]" lost all its fanouts during netlist optimizations.
+    Info: Register "FILTRO_BOTAO:FILTRO_B2|cont[22]" lost all its fanouts during netlist optimizations.
+    Info: Register "FILTRO_BOTAO:FILTRO_B2|cont[21]" lost all its fanouts during netlist optimizations.
+    Info: Register "FILTRO_BOTAO:FILTRO_B2|cont[20]" lost all its fanouts during netlist optimizations.
+    Info: Register "FILTRO_BOTAO:FILTRO_B2|cont[19]" lost all its fanouts during netlist optimizations.
+    Info: Register "FILTRO_BOTAO:FILTRO_B2|cont[18]" lost all its fanouts during netlist optimizations.
+    Info: Register "FILTRO_BOTAO:FILTRO_B2|cont[17]" lost all its fanouts during netlist optimizations.
+    Info: Register "FILTRO_BOTAO:FILTRO_B2|cont[16]" lost all its fanouts during netlist optimizations.
+    Info: Register "FILTRO_BOTAO:FILTRO_B2|cont[15]" lost all its fanouts during netlist optimizations.
+    Info: Register "FILTRO_BOTAO:FILTRO_B2|cont[14]" lost all its fanouts during netlist optimizations.
+    Info: Register "FILTRO_BOTAO:FILTRO_B2|cont[13]" lost all its fanouts during netlist optimizations.
+    Info: Register "FILTRO_BOTAO:FILTRO_B2|cont[12]" lost all its fanouts during netlist optimizations.
+    Info: Register "FILTRO_BOTAO:FILTRO_B2|cont[11]" lost all its fanouts during netlist optimizations.
+    Info: Register "FILTRO_BOTAO:FILTRO_B2|cont[10]" lost all its fanouts during netlist optimizations.
+    Info: Register "FILTRO_BOTAO:FILTRO_B2|cont[9]" lost all its fanouts during netlist optimizations.
+    Info: Register "FILTRO_BOTAO:FILTRO_B2|cont[8]" lost all its fanouts during netlist optimizations.
+    Info: Register "FILTRO_BOTAO:FILTRO_B2|cont[7]" lost all its fanouts during netlist optimizations.
+    Info: Register "FILTRO_BOTAO:FILTRO_B2|cont[6]" lost all its fanouts during netlist optimizations.
+    Info: Register "FILTRO_BOTAO:FILTRO_B2|cont[5]" lost all its fanouts during netlist optimizations.
+    Info: Register "FILTRO_BOTAO:FILTRO_B2|cont[4]" lost all its fanouts during netlist optimizations.
+    Info: Register "FILTRO_BOTAO:FILTRO_B2|cont[3]" lost all its fanouts during netlist optimizations.
+    Info: Register "FILTRO_BOTAO:FILTRO_B2|cont[2]" lost all its fanouts during netlist optimizations.
+    Info: Register "FILTRO_BOTAO:FILTRO_B2|cont[1]" lost all its fanouts during netlist optimizations.
+    Info: Register "FILTRO_BOTAO:FILTRO_B2|cont[0]" lost all its fanouts during netlist optimizations.
+    Info: Register "FILTRO_BOTAO:FILTRO_B1|cont[31]" lost all its fanouts during netlist optimizations.
+    Info: Register "FILTRO_BOTAO:FILTRO_B1|cont[30]" lost all its fanouts during netlist optimizations.
+    Info: Register "FILTRO_BOTAO:FILTRO_B1|cont[29]" lost all its fanouts during netlist optimizations.
+    Info: Register "FILTRO_BOTAO:FILTRO_B1|cont[28]" lost all its fanouts during netlist optimizations.
+    Info: Register "FILTRO_BOTAO:FILTRO_B1|cont[27]" lost all its fanouts during netlist optimizations.
+    Info: Register "FILTRO_BOTAO:FILTRO_B1|cont[26]" lost all its fanouts during netlist optimizations.
+    Info: Register "FILTRO_BOTAO:FILTRO_B1|cont[25]" lost all its fanouts during netlist optimizations.
+    Info: Register "FILTRO_BOTAO:FILTRO_B1|cont[24]" lost all its fanouts during netlist optimizations.
+    Info: Register "FILTRO_BOTAO:FILTRO_B1|cont[23]" lost all its fanouts during netlist optimizations.
+    Info: Register "FILTRO_BOTAO:FILTRO_B1|cont[22]" lost all its fanouts during netlist optimizations.
+    Info: Register "FILTRO_BOTAO:FILTRO_B1|cont[21]" lost all its fanouts during netlist optimizations.
+    Info: Register "FILTRO_BOTAO:FILTRO_B1|cont[20]" lost all its fanouts during netlist optimizations.
+    Info: Register "FILTRO_BOTAO:FILTRO_B1|cont[19]" lost all its fanouts during netlist optimizations.
+    Info: Register "FILTRO_BOTAO:FILTRO_B1|cont[18]" lost all its fanouts during netlist optimizations.
+    Info: Register "FILTRO_BOTAO:FILTRO_B1|cont[17]" lost all its fanouts during netlist optimizations.
+    Info: Register "FILTRO_BOTAO:FILTRO_B1|cont[16]" lost all its fanouts during netlist optimizations.
+    Info: Register "FILTRO_BOTAO:FILTRO_B1|cont[15]" lost all its fanouts during netlist optimizations.
+    Info: Register "FILTRO_BOTAO:FILTRO_B1|cont[14]" lost all its fanouts during netlist optimizations.
+    Info: Register "FILTRO_BOTAO:FILTRO_B1|cont[13]" lost all its fanouts during netlist optimizations.
+    Info: Register "FILTRO_BOTAO:FILTRO_B1|cont[12]" lost all its fanouts during netlist optimizations.
+    Info: Register "FILTRO_BOTAO:FILTRO_B1|cont[11]" lost all its fanouts during netlist optimizations.
+    Info: Register "FILTRO_BOTAO:FILTRO_B1|cont[10]" lost all its fanouts during netlist optimizations.
+    Info: Register "FILTRO_BOTAO:FILTRO_B1|cont[9]" lost all its fanouts during netlist optimizations.
+    Info: Register "FILTRO_BOTAO:FILTRO_B1|cont[8]" lost all its fanouts during netlist optimizations.
+    Info: Register "FILTRO_BOTAO:FILTRO_B1|cont[7]" lost all its fanouts during netlist optimizations.
+    Info: Register "FILTRO_BOTAO:FILTRO_B1|cont[6]" lost all its fanouts during netlist optimizations.
+    Info: Register "FILTRO_BOTAO:FILTRO_B1|cont[5]" lost all its fanouts during netlist optimizations.
+    Info: Register "FILTRO_BOTAO:FILTRO_B1|cont[4]" lost all its fanouts during netlist optimizations.
+    Info: Register "FILTRO_BOTAO:FILTRO_B1|cont[3]" lost all its fanouts during netlist optimizations.
+    Info: Register "FILTRO_BOTAO:FILTRO_B1|cont[2]" lost all its fanouts during netlist optimizations.
+    Info: Register "FILTRO_BOTAO:FILTRO_B1|cont[1]" lost all its fanouts during netlist optimizations.
+    Info: Register "FILTRO_BOTAO:FILTRO_B1|cont[0]" lost all its fanouts during netlist optimizations.
+Info: Implemented 1320 device resources after synthesis - the final resource count might be different
+    Info: Implemented 9 input pins
+    Info: Implemented 36 output pins
+    Info: Implemented 1275 logic cells
+Info: Quartus II Analysis & Synthesis was successful. 0 errors, 5 warnings
+    Info: Peak virtual memory: 233 megabytes
+    Info: Processing ended: Wed Nov 18 17:17:26 2015
+    Info: Elapsed time: 00:00:09
+    Info: Total CPU time (on all processors): 00:00:06
+
+

@@ -1,0 +1,54 @@
+
+	Deadlock é um impasse gerado quando vários processos estão em disputa por recursos e
+acabaram gerando uma dependência circular.Um conjunto de processos está em situação de deadlock se todo processo pertencente ao conjunto estiver esperando por um evento que somente outro processo desse mesmo conjunto poderá fazer acontecer.
+
+	Os deadlocks podem ocorrer quando solicitamos dispositivos dedicados de E/S. Em banco de dados, um programa pode precisar travar vários registros que ele está utilizando para evitar condição de corrida. Se o processo A trava o registro R1 e o processo B trava o registro R2, e cada processo tenta travar o registro do outro também ocorre um deadlock.
+
+Os deadlocks ocorrem tanto em hardware como em software.
+
+Em geral, deadlocks envolvem recursos não-preemptíveis. A seqüência de eventos requerida para utilizar um recurso é:
+
+	- Solicitar o recurso;
+	- Utilizar o recurso;
+	- Liberar o recurso.
+
+Se o recurso requerido não está disponível, duas situações podem ocorrer:
+
+	- Processo que requisitou o recurso fica bloqueado até que o recurso seja liberado, ou;
+	- Processo que requisitou o recurso falha, e depois de certo tempo tenta novamente
+requisitar o recurso;
+
+	Condições para Deadlock:
+
+1. Condição de exclusão mútua: Um recurso só pode estar alocado para um processo
+em um determinado momento;
+
+2. Condição de posse e espera ( hold and wait ): Processos que já possuem algum
+recurso podem solicitar novos recursos;
+
+3. Condição de não preempção: Recursos já alocados não podem ser retirados do
+processo que os alocou; Somente o processo que alocou o recurso pode liberá-lo;
+
+
+
+	Prevenção de Deadlock
+
+Espera circular: Evitável.
+
+Para forçar que o grafo de dependências seja acíclico podemos ordenar todos os recursos (ex. numerando-os)
+Todos os recursos são adquiridos em ordem crescente na ordenação.
+
+Exemplo: jantar dos filósofos
+
+
+Algoritmo do Banqueiro.
+
+Usado para determinar se um processo pode executar de maneira segura ou não:
+
+Todos os processos declaram o máximo de recursos que vão usar durante a execução.
+A execução é permitida se a soma dos recursos requisitados é menor que os recursos disponíveis no sistema.
+
+
+
+É possível matar algum dos filósofos se não utilizar o método de prevenção de deadlock,se todos os filosófos pegarem os Hashis ao mesmo tempo ,algum deles vai morrer de fome, para evitar isso basta numerar cada um deles e fazer uma espera circular.
+

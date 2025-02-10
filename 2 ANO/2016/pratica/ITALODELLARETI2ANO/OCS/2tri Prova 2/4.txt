@@ -1,0 +1,28 @@
+
+Não são tão simples em se tratando de caches (hierarquia de memória):
+
+Problema 1: Store na cache: E o valor na memória?
+Deve-se assegurar que o dado escrito na cache também será escrito na memória. Do contrário, memória e cache podem se tornar inconsistentes
+
+Problema 2: Falhas na escrita (write miss)
+
+(1) Buscar o bloco na memória e colocá-lo na cache
+(2) Reescrever o bloco que causou a falha de cache e 
+(3) Recopiar o bloco alterado para a memória principal
+
+
+Solução mais simples: write-through    #teamIronMan
+
+Memória e cache escritas ao mesmo tempo
+Mas se for necessário uma espera para isso, os valores da cache serão perdidos!
+
+Usar uma fila no caminho de escrita para a memória
+Buffers de escrita permitem “equalizar” o serviço quando a taxa de chegada de requisições é variável (cadeiras num banco para os clientes esperarem atendimento)
+
+Outra solução.
+
+escrita apenas no retorno:Copy-back (ou write-back)    #teamCap
+
+Atualização quando o bloco for substituído e se houver ocorrido alteração
+O bloco é reescrito no nível inferior da hierarquia quando é trocado na cache.
+

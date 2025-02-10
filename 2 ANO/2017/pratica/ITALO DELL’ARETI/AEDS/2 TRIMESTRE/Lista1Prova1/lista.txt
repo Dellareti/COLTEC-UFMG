@@ -1,0 +1,58 @@
+1)
+a) O problema pode ser representado da seguinte maneira: cada componente é um vértice de um grafo não orientado, e suas arestas, são as conexões entre cada componente. As conexões mais curtas, dependerão do número de conexões que cada chip fará com outros (grau de cada vértice). Caso todos os componentes estejam interligados de alguma maneira, pode-se representar este problema com um grafo hamiltoniano, em que existam um ciclo que contenha todos os vértices do grafo, o que é plausível para um chip eletrônico, e pode determinar através de formulações combinatórias, e não por algoritimos polinomiais, os caminhos mais curtos possíveis.
+
+
+b) Matriz de adjacencias de grafos simples, e não orientados, são sempre simétricas, já que não existe orientação, e então vértices adjacentes estão ligados de ambas as maneiras um com o outro, e caso represente um grafo simples, que não pode possuir lacetes, ou seja, arestas que conectam o próprio vértice, a diagonal principal desta matriz de adjacências, será composta apenas por 0s, exatamente o que o problema requer.
+
+
+
+2) Busca em largura: é realizada de forma seus vértices são percorridos uniformemente entre si, ou seja, através de um vértice, são descobertos seus vértices adjacêntes no mesmo ritmo em que são descobertos os próximos adjacentes.
+Ex: Procurar um caminho mais curto, ou resolver problemas com grafos infinitos, já que busca em profundidade não retornará a vértices anteriores facilmente.
+
+Busca em profundidade: os vértices são percorridos de forma em que se repete o vértice percorrido, apenas caso próximo vértice não tenha mais adjacentes, ou seja, as arestas são exploradas a partir do vértice recentemente percorrido.
+Ex: É utilizado busca em profundidade para resolver labirintos, problemas de coloração, em que não pode-se repetir vértices com propriedades iguais e vizinhos.
+
+
+
+3) É impossível criar um grafo euleriano, o que é descrito no problema, um grafo com um caminho que contém todos os arestas sem se repetirem, com vértices de grau ímpar, a menos que o grafo contenha apenas dois vértice de grau ímpar, o que não é o caso. O artista não conseguirá unir os pilares sem repetir ligações.
+
+
+4)
+	J	L	D	M
+J	0	1	1	1
+L	1	0	1	1
+D	1	1	0	0
+M	1	1	0	0
+
+Grafo representado por matriz de adjacências, onde um turista pode falar com outro e este outro falar com ele (grafo não orientado). 0 para onde não há comunicação, e 1 para onde há.
+
+
+
+5) É Impossível criar um grafo simples com tais condições, já que o primeiro vértice, faz ligações com todos os outros, realizando ligações com o 9º e o 10º, que só podem ligar com 1. O segundo vértice então não pode estabelecer ligações com os últimos, já que necessita de 7, e só têm 8 disponíveis.
+A soma de todos os graus de um grafo simples deve sempre ser par, o que não é o caso.
+
+
+6)ABCDE - 01234
+
+	0	1	2	3	4
+0	0	1	1	0	0
+1	1	0	1	0	1
+2	1	1	0	1	0
+3	0	0	1	0	1
+4	0	1	0	1	0
+Adjacência.
+
+	0	1	2	3	4	5
+0	1	1	0	0	0	0
+1	1	0	1	0	1	0
+2	0	1	1	1	0	0
+3	0	0	0	1	0	1
+4	0	0	0	0	1	1
+Incidência.
+
+a)0-2-3-4-1-0
+b)0-1-4-3
+c)1-2-3-4-1-0
+d)1-2-3-4-1
+e)E=2-1-4-3-2-0-1
+H=0-1-4-3-2

@@ -1,0 +1,525 @@
+Classic Timing Analyzer report for TOP_ENTITY
+Tue Nov 17 01:00:04 2015
+Quartus II Version 9.1 Build 304 01/25/2010 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Timing Analyzer Summary
+  3. Timing Analyzer Settings
+  4. Clock Settings Summary
+  5. Parallel Compilation
+  6. Clock Setup: 'clk66'
+  7. Clock Hold: 'clk66'
+  8. tsu
+  9. tco
+ 10. th
+ 11. Timing Analyzer Messages
+ 12. Timing Analyzer Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2010 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Summary                                                                                                                                                                                                                                          ;
++------------------------------+------------------------------------------+---------------+----------------------------------+--------------------------------------------------+-------------------------------------------+------------+----------+--------------+
+; Type                         ; Slack                                    ; Required Time ; Actual Time                      ; From                                             ; To                                        ; From Clock ; To Clock ; Failed Paths ;
++------------------------------+------------------------------------------+---------------+----------------------------------+--------------------------------------------------+-------------------------------------------+------------+----------+--------------+
+; Worst-case tsu               ; N/A                                      ; None          ; 1.900 ns                         ; botao4                                           ; FILTRO_BOTAO:FILTRO_B4|shift_reg[7]       ; --         ; clk66    ; 0            ;
+; Worst-case tco               ; N/A                                      ; None          ; 13.079 ns                        ; PULSO_24:PUL_24|sensor_data[4]                   ; sens[4]                                   ; clk66      ; --       ; 0            ;
+; Worst-case th                ; N/A                                      ; None          ; 2.369 ns                         ; ADC_SSTRB                                        ; ADC_INTERFACE:ADC|SR_CAPTURE[1]           ; --         ; clk66    ; 0            ;
+; Clock Setup: 'clk66'         ; N/A                                      ; None          ; 43.62 MHz ( period = 22.925 ns ) ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[13] ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|B ; clk66      ; clk66    ; 0            ;
+; Clock Hold: 'clk66'          ; Not operational: Clock Skew > Data Delay ; None          ; N/A                              ; MONITORADOR:MONITORADOR_DISTANCIA|cont30seg      ; CONTADOR_30SEG:TIMER|a2[0]                ; clk66      ; clk66    ; 6            ;
+; Total number of failed paths ;                                          ;               ;                                  ;                                                  ;                                           ;            ;          ; 6            ;
++------------------------------+------------------------------------------+---------------+----------------------------------+--------------------------------------------------+-------------------------------------------+------------+----------+--------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Settings                                                                                                                            ;
++------------------------------------------------------------------------------------------------------+--------------------+------+----+-------------+
+; Option                                                                                               ; Setting            ; From ; To ; Entity Name ;
++------------------------------------------------------------------------------------------------------+--------------------+------+----+-------------+
+; Device Name                                                                                          ; EPM1270F256C5      ;      ;    ;             ;
+; Timing Models                                                                                        ; Final              ;      ;    ;             ;
+; Default hold multicycle                                                                              ; Same as Multicycle ;      ;    ;             ;
+; Cut paths between unrelated clock domains                                                            ; On                 ;      ;    ;             ;
+; Cut off read during write signal paths                                                               ; On                 ;      ;    ;             ;
+; Cut off feedback from I/O pins                                                                       ; On                 ;      ;    ;             ;
+; Report Combined Fast/Slow Timing                                                                     ; Off                ;      ;    ;             ;
+; Ignore Clock Settings                                                                                ; Off                ;      ;    ;             ;
+; Analyze latches as synchronous elements                                                              ; On                 ;      ;    ;             ;
+; Enable Recovery/Removal analysis                                                                     ; Off                ;      ;    ;             ;
+; Enable Clock Latency                                                                                 ; Off                ;      ;    ;             ;
+; Use TimeQuest Timing Analyzer                                                                        ; Off                ;      ;    ;             ;
+; Minimum Core Junction Temperature                                                                    ; 0                  ;      ;    ;             ;
+; Maximum Core Junction Temperature                                                                    ; 85                 ;      ;    ;             ;
+; Number of source nodes to report per destination node                                                ; 10                 ;      ;    ;             ;
+; Number of destination nodes to report                                                                ; 10                 ;      ;    ;             ;
+; Number of paths to report                                                                            ; 200                ;      ;    ;             ;
+; Report Minimum Timing Checks                                                                         ; Off                ;      ;    ;             ;
+; Use Fast Timing Models                                                                               ; Off                ;      ;    ;             ;
+; Report IO Paths Separately                                                                           ; Off                ;      ;    ;             ;
+; Perform Multicorner Analysis                                                                         ; Off                ;      ;    ;             ;
+; Reports the worst-case path for each clock domain and analysis                                       ; Off                ;      ;    ;             ;
+; Reports worst-case timing paths for each clock domain and analysis                                   ; On                 ;      ;    ;             ;
+; Specifies the maximum number of worst-case timing paths to report for each clock domain and analysis ; 100                ;      ;    ;             ;
+; Removes common clock path pessimism (CCPP) during slack computation                                  ; Off                ;      ;    ;             ;
+; Output I/O Timing Endpoint                                                                           ; Near End           ;      ;    ;             ;
++------------------------------------------------------------------------------------------------------+--------------------+------+----+-------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Settings Summary                                                                                                                                                             ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+; Clock Node Name ; Clock Setting Name ; Type     ; Fmax Requirement ; Early Latency ; Late Latency ; Based on ; Multiply Base Fmax by ; Divide Base Fmax by ; Offset ; Phase offset ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+; clk66           ;                    ; User Pin ; None             ; 0.000 ns      ; 0.000 ns     ; --       ; N/A                   ; N/A                 ; N/A    ;              ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 2      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Setup: 'clk66'                                                                                                                                                                                                                                                                                             ;
++-----------------------------------------+-----------------------------------------------------+--------------------------------------------------+---------------------------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; Slack                                   ; Actual fmax (period)                                ; From                                             ; To                                                ; From Clock ; To Clock ; Required Setup Relationship ; Required Longest P2P Time ; Actual Longest P2P Time ;
++-----------------------------------------+-----------------------------------------------------+--------------------------------------------------+---------------------------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; N/A                                     ; 43.62 MHz ( period = 22.925 ns )                    ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[13] ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|B         ; clk66      ; clk66    ; None                        ; None                      ; 22.216 ns               ;
+; N/A                                     ; 43.68 MHz ( period = 22.895 ns )                    ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[2]  ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|B         ; clk66      ; clk66    ; None                        ; None                      ; 22.186 ns               ;
+; N/A                                     ; 43.69 MHz ( period = 22.887 ns )                    ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[3]  ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|B         ; clk66      ; clk66    ; None                        ; None                      ; 22.178 ns               ;
+; N/A                                     ; 43.89 MHz ( period = 22.783 ns )                    ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[6]  ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|B         ; clk66      ; clk66    ; None                        ; None                      ; 22.074 ns               ;
+; N/A                                     ; 44.10 MHz ( period = 22.677 ns )                    ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[7]  ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|B         ; clk66      ; clk66    ; None                        ; None                      ; 21.968 ns               ;
+; N/A                                     ; 44.12 MHz ( period = 22.667 ns )                    ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[8]  ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|B         ; clk66      ; clk66    ; None                        ; None                      ; 21.958 ns               ;
+; N/A                                     ; 44.22 MHz ( period = 22.613 ns )                    ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[11] ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|B         ; clk66      ; clk66    ; None                        ; None                      ; 21.904 ns               ;
+; N/A                                     ; 44.35 MHz ( period = 22.546 ns )                    ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[17] ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|B         ; clk66      ; clk66    ; None                        ; None                      ; 21.837 ns               ;
+; N/A                                     ; 44.37 MHz ( period = 22.537 ns )                    ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[9]  ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|B         ; clk66      ; clk66    ; None                        ; None                      ; 21.828 ns               ;
+; N/A                                     ; 44.49 MHz ( period = 22.475 ns )                    ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[13] ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|D         ; clk66      ; clk66    ; None                        ; None                      ; 21.766 ns               ;
+; N/A                                     ; 44.50 MHz ( period = 22.474 ns )                    ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[13] ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|C         ; clk66      ; clk66    ; None                        ; None                      ; 21.765 ns               ;
+; N/A                                     ; 44.55 MHz ( period = 22.445 ns )                    ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[2]  ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|D         ; clk66      ; clk66    ; None                        ; None                      ; 21.736 ns               ;
+; N/A                                     ; 44.56 MHz ( period = 22.444 ns )                    ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[2]  ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|C         ; clk66      ; clk66    ; None                        ; None                      ; 21.735 ns               ;
+; N/A                                     ; 44.57 MHz ( period = 22.437 ns )                    ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[3]  ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|D         ; clk66      ; clk66    ; None                        ; None                      ; 21.728 ns               ;
+; N/A                                     ; 44.57 MHz ( period = 22.436 ns )                    ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[3]  ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|C         ; clk66      ; clk66    ; None                        ; None                      ; 21.727 ns               ;
+; N/A                                     ; 44.70 MHz ( period = 22.370 ns )                    ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[12] ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|B         ; clk66      ; clk66    ; None                        ; None                      ; 21.661 ns               ;
+; N/A                                     ; 44.78 MHz ( period = 22.333 ns )                    ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[6]  ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|D         ; clk66      ; clk66    ; None                        ; None                      ; 21.624 ns               ;
+; N/A                                     ; 44.78 MHz ( period = 22.332 ns )                    ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[6]  ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|C         ; clk66      ; clk66    ; None                        ; None                      ; 21.623 ns               ;
+; N/A                                     ; 44.86 MHz ( period = 22.293 ns )                    ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[10] ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|B         ; clk66      ; clk66    ; None                        ; None                      ; 21.584 ns               ;
+; N/A                                     ; 44.99 MHz ( period = 22.227 ns )                    ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[7]  ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|D         ; clk66      ; clk66    ; None                        ; None                      ; 21.518 ns               ;
+; N/A                                     ; 44.99 MHz ( period = 22.226 ns )                    ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[7]  ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|C         ; clk66      ; clk66    ; None                        ; None                      ; 21.517 ns               ;
+; N/A                                     ; 45.01 MHz ( period = 22.217 ns )                    ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[8]  ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|D         ; clk66      ; clk66    ; None                        ; None                      ; 21.508 ns               ;
+; N/A                                     ; 45.01 MHz ( period = 22.216 ns )                    ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[8]  ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|C         ; clk66      ; clk66    ; None                        ; None                      ; 21.507 ns               ;
+; N/A                                     ; 45.03 MHz ( period = 22.208 ns )                    ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[13] ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|E         ; clk66      ; clk66    ; None                        ; None                      ; 21.499 ns               ;
+; N/A                                     ; 45.07 MHz ( period = 22.187 ns )                    ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[1]  ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|B         ; clk66      ; clk66    ; None                        ; None                      ; 21.478 ns               ;
+; N/A                                     ; 45.09 MHz ( period = 22.178 ns )                    ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[2]  ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|E         ; clk66      ; clk66    ; None                        ; None                      ; 21.469 ns               ;
+; N/A                                     ; 45.11 MHz ( period = 22.170 ns )                    ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[3]  ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|E         ; clk66      ; clk66    ; None                        ; None                      ; 21.461 ns               ;
+; N/A                                     ; 45.12 MHz ( period = 22.163 ns )                    ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[11] ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|D         ; clk66      ; clk66    ; None                        ; None                      ; 21.454 ns               ;
+; N/A                                     ; 45.12 MHz ( period = 22.162 ns )                    ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[11] ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|C         ; clk66      ; clk66    ; None                        ; None                      ; 21.453 ns               ;
+; N/A                                     ; 45.17 MHz ( period = 22.137 ns )                    ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[13] ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|G         ; clk66      ; clk66    ; None                        ; None                      ; 21.428 ns               ;
+; N/A                                     ; 45.21 MHz ( period = 22.118 ns )                    ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[14] ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|B         ; clk66      ; clk66    ; None                        ; None                      ; 21.409 ns               ;
+; N/A                                     ; 45.23 MHz ( period = 22.107 ns )                    ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[2]  ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|G         ; clk66      ; clk66    ; None                        ; None                      ; 21.398 ns               ;
+; N/A                                     ; 45.25 MHz ( period = 22.099 ns )                    ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[3]  ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|G         ; clk66      ; clk66    ; None                        ; None                      ; 21.390 ns               ;
+; N/A                                     ; 45.26 MHz ( period = 22.096 ns )                    ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[17] ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|D         ; clk66      ; clk66    ; None                        ; None                      ; 21.387 ns               ;
+; N/A                                     ; 45.26 MHz ( period = 22.095 ns )                    ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[17] ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|C         ; clk66      ; clk66    ; None                        ; None                      ; 21.386 ns               ;
+; N/A                                     ; 45.28 MHz ( period = 22.087 ns )                    ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[9]  ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|D         ; clk66      ; clk66    ; None                        ; None                      ; 21.378 ns               ;
+; N/A                                     ; 45.28 MHz ( period = 22.086 ns )                    ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[9]  ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|C         ; clk66      ; clk66    ; None                        ; None                      ; 21.377 ns               ;
+; N/A                                     ; 45.32 MHz ( period = 22.066 ns )                    ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[6]  ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|E         ; clk66      ; clk66    ; None                        ; None                      ; 21.357 ns               ;
+; N/A                                     ; 45.39 MHz ( period = 22.033 ns )                    ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[15] ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|B         ; clk66      ; clk66    ; None                        ; None                      ; 21.324 ns               ;
+; N/A                                     ; 45.46 MHz ( period = 21.995 ns )                    ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[6]  ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|G         ; clk66      ; clk66    ; None                        ; None                      ; 21.286 ns               ;
+; N/A                                     ; 45.54 MHz ( period = 21.960 ns )                    ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[7]  ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|E         ; clk66      ; clk66    ; None                        ; None                      ; 21.251 ns               ;
+; N/A                                     ; 45.55 MHz ( period = 21.953 ns )                    ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[13] ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|controle1 ; clk66      ; clk66    ; None                        ; None                      ; 21.244 ns               ;
+; N/A                                     ; 45.56 MHz ( period = 21.950 ns )                    ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[8]  ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|E         ; clk66      ; clk66    ; None                        ; None                      ; 21.241 ns               ;
+; N/A                                     ; 45.56 MHz ( period = 21.948 ns )                    ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[13] ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|controle4 ; clk66      ; clk66    ; None                        ; None                      ; 21.239 ns               ;
+; N/A                                     ; 45.60 MHz ( period = 21.928 ns )                    ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[16] ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|B         ; clk66      ; clk66    ; None                        ; None                      ; 21.219 ns               ;
+; N/A                                     ; 45.61 MHz ( period = 21.923 ns )                    ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[2]  ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|controle1 ; clk66      ; clk66    ; None                        ; None                      ; 21.214 ns               ;
+; N/A                                     ; 45.62 MHz ( period = 21.920 ns )                    ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[12] ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|D         ; clk66      ; clk66    ; None                        ; None                      ; 21.211 ns               ;
+; N/A                                     ; 45.62 MHz ( period = 21.919 ns )                    ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[12] ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|C         ; clk66      ; clk66    ; None                        ; None                      ; 21.210 ns               ;
+; N/A                                     ; 45.62 MHz ( period = 21.918 ns )                    ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[2]  ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|controle4 ; clk66      ; clk66    ; None                        ; None                      ; 21.209 ns               ;
+; N/A                                     ; 45.63 MHz ( period = 21.915 ns )                    ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[3]  ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|controle1 ; clk66      ; clk66    ; None                        ; None                      ; 21.206 ns               ;
+; N/A                                     ; 45.64 MHz ( period = 21.910 ns )                    ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[3]  ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|controle4 ; clk66      ; clk66    ; None                        ; None                      ; 21.201 ns               ;
+; N/A                                     ; 45.67 MHz ( period = 21.896 ns )                    ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[11] ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|E         ; clk66      ; clk66    ; None                        ; None                      ; 21.187 ns               ;
+; N/A                                     ; 45.69 MHz ( period = 21.889 ns )                    ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[7]  ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|G         ; clk66      ; clk66    ; None                        ; None                      ; 21.180 ns               ;
+; N/A                                     ; 45.71 MHz ( period = 21.879 ns )                    ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[8]  ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|G         ; clk66      ; clk66    ; None                        ; None                      ; 21.170 ns               ;
+; N/A                                     ; 45.78 MHz ( period = 21.843 ns )                    ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[10] ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|D         ; clk66      ; clk66    ; None                        ; None                      ; 21.134 ns               ;
+; N/A                                     ; 45.78 MHz ( period = 21.842 ns )                    ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[10] ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|C         ; clk66      ; clk66    ; None                        ; None                      ; 21.133 ns               ;
+; N/A                                     ; 45.81 MHz ( period = 21.829 ns )                    ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[17] ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|E         ; clk66      ; clk66    ; None                        ; None                      ; 21.120 ns               ;
+; N/A                                     ; 45.82 MHz ( period = 21.825 ns )                    ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[11] ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|G         ; clk66      ; clk66    ; None                        ; None                      ; 21.116 ns               ;
+; N/A                                     ; 45.83 MHz ( period = 21.820 ns )                    ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[9]  ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|E         ; clk66      ; clk66    ; None                        ; None                      ; 21.111 ns               ;
+; N/A                                     ; 45.85 MHz ( period = 21.811 ns )                    ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[6]  ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|controle1 ; clk66      ; clk66    ; None                        ; None                      ; 21.102 ns               ;
+; N/A                                     ; 45.86 MHz ( period = 21.806 ns )                    ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[6]  ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|controle4 ; clk66      ; clk66    ; None                        ; None                      ; 21.097 ns               ;
+; N/A                                     ; 45.96 MHz ( period = 21.758 ns )                    ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[17] ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|G         ; clk66      ; clk66    ; None                        ; None                      ; 21.049 ns               ;
+; N/A                                     ; 45.98 MHz ( period = 21.750 ns )                    ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[0]  ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|B         ; clk66      ; clk66    ; None                        ; None                      ; 21.041 ns               ;
+; N/A                                     ; 45.98 MHz ( period = 21.749 ns )                    ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[9]  ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|G         ; clk66      ; clk66    ; None                        ; None                      ; 21.040 ns               ;
+; N/A                                     ; 46.00 MHz ( period = 21.737 ns )                    ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[1]  ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|D         ; clk66      ; clk66    ; None                        ; None                      ; 21.028 ns               ;
+; N/A                                     ; 46.01 MHz ( period = 21.736 ns )                    ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[1]  ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|C         ; clk66      ; clk66    ; None                        ; None                      ; 21.027 ns               ;
+; N/A                                     ; 46.07 MHz ( period = 21.705 ns )                    ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[7]  ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|controle1 ; clk66      ; clk66    ; None                        ; None                      ; 20.996 ns               ;
+; N/A                                     ; 46.08 MHz ( period = 21.700 ns )                    ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[7]  ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|controle4 ; clk66      ; clk66    ; None                        ; None                      ; 20.991 ns               ;
+; N/A                                     ; 46.09 MHz ( period = 21.695 ns )                    ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[8]  ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|controle1 ; clk66      ; clk66    ; None                        ; None                      ; 20.986 ns               ;
+; N/A                                     ; 46.10 MHz ( period = 21.690 ns )                    ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[8]  ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|controle4 ; clk66      ; clk66    ; None                        ; None                      ; 20.981 ns               ;
+; N/A                                     ; 46.15 MHz ( period = 21.669 ns )                    ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[13] ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|F         ; clk66      ; clk66    ; None                        ; None                      ; 20.960 ns               ;
+; N/A                                     ; 46.15 MHz ( period = 21.668 ns )                    ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[14] ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|D         ; clk66      ; clk66    ; None                        ; None                      ; 20.959 ns               ;
+; N/A                                     ; 46.15 MHz ( period = 21.667 ns )                    ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[14] ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|C         ; clk66      ; clk66    ; None                        ; None                      ; 20.958 ns               ;
+; N/A                                     ; 46.18 MHz ( period = 21.653 ns )                    ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[12] ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|E         ; clk66      ; clk66    ; None                        ; None                      ; 20.944 ns               ;
+; N/A                                     ; 46.21 MHz ( period = 21.641 ns )                    ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[11] ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|controle1 ; clk66      ; clk66    ; None                        ; None                      ; 20.932 ns               ;
+; N/A                                     ; 46.21 MHz ( period = 21.639 ns )                    ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[2]  ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|F         ; clk66      ; clk66    ; None                        ; None                      ; 20.930 ns               ;
+; N/A                                     ; 46.22 MHz ( period = 21.636 ns )                    ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[11] ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|controle4 ; clk66      ; clk66    ; None                        ; None                      ; 20.927 ns               ;
+; N/A                                     ; 46.23 MHz ( period = 21.631 ns )                    ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[3]  ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|F         ; clk66      ; clk66    ; None                        ; None                      ; 20.922 ns               ;
+; N/A                                     ; 46.26 MHz ( period = 21.615 ns )                    ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[4]  ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|B         ; clk66      ; clk66    ; None                        ; None                      ; 20.906 ns               ;
+; N/A                                     ; 46.33 MHz ( period = 21.583 ns )                    ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[15] ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|D         ; clk66      ; clk66    ; None                        ; None                      ; 20.874 ns               ;
+; N/A                                     ; 46.33 MHz ( period = 21.582 ns )                    ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[15] ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|C         ; clk66      ; clk66    ; None                        ; None                      ; 20.873 ns               ;
+; N/A                                     ; 46.33 MHz ( period = 21.582 ns )                    ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[12] ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|G         ; clk66      ; clk66    ; None                        ; None                      ; 20.873 ns               ;
+; N/A                                     ; 46.35 MHz ( period = 21.576 ns )                    ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[10] ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|E         ; clk66      ; clk66    ; None                        ; None                      ; 20.867 ns               ;
+; N/A                                     ; 46.35 MHz ( period = 21.574 ns )                    ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[17] ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|controle1 ; clk66      ; clk66    ; None                        ; None                      ; 20.865 ns               ;
+; N/A                                     ; 46.36 MHz ( period = 21.569 ns )                    ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[17] ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|controle4 ; clk66      ; clk66    ; None                        ; None                      ; 20.860 ns               ;
+; N/A                                     ; 46.37 MHz ( period = 21.566 ns )                    ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[5]  ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|B         ; clk66      ; clk66    ; None                        ; None                      ; 20.857 ns               ;
+; N/A                                     ; 46.37 MHz ( period = 21.565 ns )                    ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[9]  ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|controle1 ; clk66      ; clk66    ; None                        ; None                      ; 20.856 ns               ;
+; N/A                                     ; 46.38 MHz ( period = 21.563 ns )                    ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[19] ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|B         ; clk66      ; clk66    ; None                        ; None                      ; 20.854 ns               ;
+; N/A                                     ; 46.38 MHz ( period = 21.560 ns )                    ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[9]  ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|controle4 ; clk66      ; clk66    ; None                        ; None                      ; 20.851 ns               ;
+; N/A                                     ; 46.45 MHz ( period = 21.527 ns )                    ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[6]  ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|F         ; clk66      ; clk66    ; None                        ; None                      ; 20.818 ns               ;
+; N/A                                     ; 46.46 MHz ( period = 21.525 ns )                    ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[13] ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|A         ; clk66      ; clk66    ; None                        ; None                      ; 20.816 ns               ;
+; N/A                                     ; 46.49 MHz ( period = 21.509 ns )                    ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[21] ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|B         ; clk66      ; clk66    ; None                        ; None                      ; 20.800 ns               ;
+; N/A                                     ; 46.50 MHz ( period = 21.505 ns )                    ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[10] ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|G         ; clk66      ; clk66    ; None                        ; None                      ; 20.796 ns               ;
+; N/A                                     ; 46.52 MHz ( period = 21.495 ns )                    ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[2]  ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|A         ; clk66      ; clk66    ; None                        ; None                      ; 20.786 ns               ;
+; N/A                                     ; 46.54 MHz ( period = 21.487 ns )                    ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[3]  ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|A         ; clk66      ; clk66    ; None                        ; None                      ; 20.778 ns               ;
+; N/A                                     ; 46.56 MHz ( period = 21.478 ns )                    ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[16] ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|D         ; clk66      ; clk66    ; None                        ; None                      ; 20.769 ns               ;
+; N/A                                     ; 46.56 MHz ( period = 21.477 ns )                    ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[16] ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|C         ; clk66      ; clk66    ; None                        ; None                      ; 20.768 ns               ;
+; N/A                                     ; 46.58 MHz ( period = 21.470 ns )                    ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[1]  ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|E         ; clk66      ; clk66    ; None                        ; None                      ; 20.761 ns               ;
+; N/A                                     ; 46.68 MHz ( period = 21.421 ns )                    ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[7]  ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|F         ; clk66      ; clk66    ; None                        ; None                      ; 20.712 ns               ;
+; N/A                                     ; 46.70 MHz ( period = 21.411 ns )                    ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[8]  ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|F         ; clk66      ; clk66    ; None                        ; None                      ; 20.702 ns               ;
+; N/A                                     ; 46.73 MHz ( period = 21.401 ns )                    ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[14] ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|E         ; clk66      ; clk66    ; None                        ; None                      ; 20.692 ns               ;
+; N/A                                     ; 46.73 MHz ( period = 21.399 ns )                    ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[1]  ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|G         ; clk66      ; clk66    ; None                        ; None                      ; 20.690 ns               ;
+; N/A                                     ; 46.73 MHz ( period = 21.398 ns )                    ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[12] ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|controle1 ; clk66      ; clk66    ; None                        ; None                      ; 20.689 ns               ;
+; N/A                                     ; 46.74 MHz ( period = 21.393 ns )                    ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[12] ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|controle4 ; clk66      ; clk66    ; None                        ; None                      ; 20.684 ns               ;
+; N/A                                     ; 46.77 MHz ( period = 21.383 ns )                    ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[6]  ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|A         ; clk66      ; clk66    ; None                        ; None                      ; 20.674 ns               ;
+; N/A                                     ; 46.77 MHz ( period = 21.383 ns )                    ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[13] ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[0]   ; clk66      ; clk66    ; None                        ; None                      ; 20.674 ns               ;
+; N/A                                     ; 46.77 MHz ( period = 21.382 ns )                    ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[13] ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[4]   ; clk66      ; clk66    ; None                        ; None                      ; 20.673 ns               ;
+; N/A                                     ; 46.77 MHz ( period = 21.381 ns )                    ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[13] ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[5]   ; clk66      ; clk66    ; None                        ; None                      ; 20.672 ns               ;
+; N/A                                     ; 46.77 MHz ( period = 21.380 ns )                    ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[13] ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[1]   ; clk66      ; clk66    ; None                        ; None                      ; 20.671 ns               ;
+; N/A                                     ; 46.81 MHz ( period = 21.361 ns )                    ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[18] ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|B         ; clk66      ; clk66    ; None                        ; None                      ; 20.652 ns               ;
+; N/A                                     ; 46.82 MHz ( period = 21.357 ns )                    ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[11] ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|F         ; clk66      ; clk66    ; None                        ; None                      ; 20.648 ns               ;
+; N/A                                     ; 46.83 MHz ( period = 21.353 ns )                    ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[2]  ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[0]   ; clk66      ; clk66    ; None                        ; None                      ; 20.644 ns               ;
+; N/A                                     ; 46.83 MHz ( period = 21.352 ns )                    ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[2]  ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[4]   ; clk66      ; clk66    ; None                        ; None                      ; 20.643 ns               ;
+; N/A                                     ; 46.84 MHz ( period = 21.351 ns )                    ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[2]  ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[5]   ; clk66      ; clk66    ; None                        ; None                      ; 20.642 ns               ;
+; N/A                                     ; 46.84 MHz ( period = 21.350 ns )                    ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[2]  ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[1]   ; clk66      ; clk66    ; None                        ; None                      ; 20.641 ns               ;
+; N/A                                     ; 46.85 MHz ( period = 21.345 ns )                    ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[3]  ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[0]   ; clk66      ; clk66    ; None                        ; None                      ; 20.636 ns               ;
+; N/A                                     ; 46.85 MHz ( period = 21.344 ns )                    ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[3]  ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[4]   ; clk66      ; clk66    ; None                        ; None                      ; 20.635 ns               ;
+; N/A                                     ; 46.85 MHz ( period = 21.343 ns )                    ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[3]  ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[5]   ; clk66      ; clk66    ; None                        ; None                      ; 20.634 ns               ;
+; N/A                                     ; 46.86 MHz ( period = 21.342 ns )                    ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[3]  ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[1]   ; clk66      ; clk66    ; None                        ; None                      ; 20.633 ns               ;
+; N/A                                     ; 46.88 MHz ( period = 21.330 ns )                    ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[14] ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|G         ; clk66      ; clk66    ; None                        ; None                      ; 20.621 ns               ;
+; N/A                                     ; 46.90 MHz ( period = 21.321 ns )                    ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[10] ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|controle1 ; clk66      ; clk66    ; None                        ; None                      ; 20.612 ns               ;
+; N/A                                     ; 46.91 MHz ( period = 21.316 ns )                    ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[15] ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|E         ; clk66      ; clk66    ; None                        ; None                      ; 20.607 ns               ;
+; N/A                                     ; 46.91 MHz ( period = 21.316 ns )                    ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[10] ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|controle4 ; clk66      ; clk66    ; None                        ; None                      ; 20.607 ns               ;
+; N/A                                     ; 46.95 MHz ( period = 21.300 ns )                    ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[0]  ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|D         ; clk66      ; clk66    ; None                        ; None                      ; 20.591 ns               ;
+; N/A                                     ; 46.95 MHz ( period = 21.299 ns )                    ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[0]  ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|C         ; clk66      ; clk66    ; None                        ; None                      ; 20.590 ns               ;
+; N/A                                     ; 46.96 MHz ( period = 21.295 ns )                    ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[20] ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|B         ; clk66      ; clk66    ; None                        ; None                      ; 20.586 ns               ;
+; N/A                                     ; 46.97 MHz ( period = 21.290 ns )                    ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[17] ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|F         ; clk66      ; clk66    ; None                        ; None                      ; 20.581 ns               ;
+; N/A                                     ; 46.99 MHz ( period = 21.282 ns )                    ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[23] ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|B         ; clk66      ; clk66    ; None                        ; None                      ; 20.573 ns               ;
+; N/A                                     ; 46.99 MHz ( period = 21.281 ns )                    ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[9]  ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|F         ; clk66      ; clk66    ; None                        ; None                      ; 20.572 ns               ;
+; N/A                                     ; 47.00 MHz ( period = 21.277 ns )                    ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[7]  ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|A         ; clk66      ; clk66    ; None                        ; None                      ; 20.568 ns               ;
+; N/A                                     ; 47.02 MHz ( period = 21.267 ns )                    ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[8]  ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|A         ; clk66      ; clk66    ; None                        ; None                      ; 20.558 ns               ;
+; N/A                                     ; 47.07 MHz ( period = 21.245 ns )                    ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[15] ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|G         ; clk66      ; clk66    ; None                        ; None                      ; 20.536 ns               ;
+; N/A                                     ; 47.08 MHz ( period = 21.241 ns )                    ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[6]  ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[0]   ; clk66      ; clk66    ; None                        ; None                      ; 20.532 ns               ;
+; N/A                                     ; 47.08 MHz ( period = 21.240 ns )                    ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[6]  ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[4]   ; clk66      ; clk66    ; None                        ; None                      ; 20.531 ns               ;
+; N/A                                     ; 47.08 MHz ( period = 21.239 ns )                    ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[6]  ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[5]   ; clk66      ; clk66    ; None                        ; None                      ; 20.530 ns               ;
+; N/A                                     ; 47.09 MHz ( period = 21.238 ns )                    ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[6]  ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[1]   ; clk66      ; clk66    ; None                        ; None                      ; 20.529 ns               ;
+; N/A                                     ; 47.14 MHz ( period = 21.215 ns )                    ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[1]  ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|controle1 ; clk66      ; clk66    ; None                        ; None                      ; 20.506 ns               ;
+; N/A                                     ; 47.14 MHz ( period = 21.213 ns )                    ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[11] ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|A         ; clk66      ; clk66    ; None                        ; None                      ; 20.504 ns               ;
+; N/A                                     ; 47.15 MHz ( period = 21.211 ns )                    ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[16] ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|E         ; clk66      ; clk66    ; None                        ; None                      ; 20.502 ns               ;
+; N/A                                     ; 47.15 MHz ( period = 21.210 ns )                    ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[1]  ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|controle4 ; clk66      ; clk66    ; None                        ; None                      ; 20.501 ns               ;
+; N/A                                     ; 47.23 MHz ( period = 21.174 ns )                    ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[22] ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|B         ; clk66      ; clk66    ; None                        ; None                      ; 20.465 ns               ;
+; N/A                                     ; 47.25 MHz ( period = 21.165 ns )                    ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[4]  ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|D         ; clk66      ; clk66    ; None                        ; None                      ; 20.456 ns               ;
+; N/A                                     ; 47.25 MHz ( period = 21.164 ns )                    ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[4]  ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|C         ; clk66      ; clk66    ; None                        ; None                      ; 20.455 ns               ;
+; N/A                                     ; 47.29 MHz ( period = 21.146 ns )                    ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[17] ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|A         ; clk66      ; clk66    ; None                        ; None                      ; 20.437 ns               ;
+; N/A                                     ; 47.29 MHz ( period = 21.146 ns )                    ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[14] ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|controle1 ; clk66      ; clk66    ; None                        ; None                      ; 20.437 ns               ;
+; N/A                                     ; 47.30 MHz ( period = 21.141 ns )                    ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[14] ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|controle4 ; clk66      ; clk66    ; None                        ; None                      ; 20.432 ns               ;
+; N/A                                     ; 47.30 MHz ( period = 21.140 ns )                    ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[16] ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|G         ; clk66      ; clk66    ; None                        ; None                      ; 20.431 ns               ;
+; N/A                                     ; 47.31 MHz ( period = 21.137 ns )                    ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[9]  ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|A         ; clk66      ; clk66    ; None                        ; None                      ; 20.428 ns               ;
+; N/A                                     ; 47.31 MHz ( period = 21.135 ns )                    ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[7]  ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[0]   ; clk66      ; clk66    ; None                        ; None                      ; 20.426 ns               ;
+; N/A                                     ; 47.32 MHz ( period = 21.134 ns )                    ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[7]  ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[4]   ; clk66      ; clk66    ; None                        ; None                      ; 20.425 ns               ;
+; N/A                                     ; 47.32 MHz ( period = 21.133 ns )                    ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[7]  ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[5]   ; clk66      ; clk66    ; None                        ; None                      ; 20.424 ns               ;
+; N/A                                     ; 47.32 MHz ( period = 21.132 ns )                    ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[7]  ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[1]   ; clk66      ; clk66    ; None                        ; None                      ; 20.423 ns               ;
+; N/A                                     ; 47.34 MHz ( period = 21.125 ns )                    ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[8]  ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[0]   ; clk66      ; clk66    ; None                        ; None                      ; 20.416 ns               ;
+; N/A                                     ; 47.34 MHz ( period = 21.124 ns )                    ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[8]  ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[4]   ; clk66      ; clk66    ; None                        ; None                      ; 20.415 ns               ;
+; N/A                                     ; 47.34 MHz ( period = 21.123 ns )                    ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[8]  ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[5]   ; clk66      ; clk66    ; None                        ; None                      ; 20.414 ns               ;
+; N/A                                     ; 47.34 MHz ( period = 21.122 ns )                    ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[8]  ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[1]   ; clk66      ; clk66    ; None                        ; None                      ; 20.413 ns               ;
+; N/A                                     ; 47.36 MHz ( period = 21.116 ns )                    ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[5]  ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|D         ; clk66      ; clk66    ; None                        ; None                      ; 20.407 ns               ;
+; N/A                                     ; 47.36 MHz ( period = 21.115 ns )                    ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[5]  ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|C         ; clk66      ; clk66    ; None                        ; None                      ; 20.406 ns               ;
+; N/A                                     ; 47.36 MHz ( period = 21.114 ns )                    ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[12] ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|F         ; clk66      ; clk66    ; None                        ; None                      ; 20.405 ns               ;
+; N/A                                     ; 47.36 MHz ( period = 21.113 ns )                    ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[19] ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|D         ; clk66      ; clk66    ; None                        ; None                      ; 20.404 ns               ;
+; N/A                                     ; 47.37 MHz ( period = 21.112 ns )                    ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[19] ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|C         ; clk66      ; clk66    ; None                        ; None                      ; 20.403 ns               ;
+; N/A                                     ; 47.46 MHz ( period = 21.071 ns )                    ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[11] ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[0]   ; clk66      ; clk66    ; None                        ; None                      ; 20.362 ns               ;
+; N/A                                     ; 47.46 MHz ( period = 21.070 ns )                    ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[11] ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[4]   ; clk66      ; clk66    ; None                        ; None                      ; 20.361 ns               ;
+; N/A                                     ; 47.46 MHz ( period = 21.069 ns )                    ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[11] ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[5]   ; clk66      ; clk66    ; None                        ; None                      ; 20.360 ns               ;
+; N/A                                     ; 47.47 MHz ( period = 21.068 ns )                    ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[11] ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[1]   ; clk66      ; clk66    ; None                        ; None                      ; 20.359 ns               ;
+; N/A                                     ; 47.48 MHz ( period = 21.061 ns )                    ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[15] ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|controle1 ; clk66      ; clk66    ; None                        ; None                      ; 20.352 ns               ;
+; N/A                                     ; 47.49 MHz ( period = 21.059 ns )                    ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[21] ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|D         ; clk66      ; clk66    ; None                        ; None                      ; 20.350 ns               ;
+; N/A                                     ; 47.49 MHz ( period = 21.058 ns )                    ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[21] ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|C         ; clk66      ; clk66    ; None                        ; None                      ; 20.349 ns               ;
+; N/A                                     ; 47.49 MHz ( period = 21.056 ns )                    ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[15] ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|controle4 ; clk66      ; clk66    ; None                        ; None                      ; 20.347 ns               ;
+; N/A                                     ; 47.54 MHz ( period = 21.037 ns )                    ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[10] ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|F         ; clk66      ; clk66    ; None                        ; None                      ; 20.328 ns               ;
+; N/A                                     ; 47.54 MHz ( period = 21.033 ns )                    ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[0]  ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|E         ; clk66      ; clk66    ; None                        ; None                      ; 20.324 ns               ;
+; N/A                                     ; 47.61 MHz ( period = 21.004 ns )                    ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[24] ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|B         ; clk66      ; clk66    ; None                        ; None                      ; 20.295 ns               ;
+; N/A                                     ; 47.61 MHz ( period = 21.004 ns )                    ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[17] ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[0]   ; clk66      ; clk66    ; None                        ; None                      ; 20.295 ns               ;
+; N/A                                     ; 47.61 MHz ( period = 21.003 ns )                    ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[17] ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[4]   ; clk66      ; clk66    ; None                        ; None                      ; 20.294 ns               ;
+; N/A                                     ; 47.61 MHz ( period = 21.002 ns )                    ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[17] ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[5]   ; clk66      ; clk66    ; None                        ; None                      ; 20.293 ns               ;
+; N/A                                     ; 47.62 MHz ( period = 21.001 ns )                    ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[17] ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[1]   ; clk66      ; clk66    ; None                        ; None                      ; 20.292 ns               ;
+; N/A                                     ; 47.63 MHz ( period = 20.995 ns )                    ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[9]  ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[0]   ; clk66      ; clk66    ; None                        ; None                      ; 20.286 ns               ;
+; N/A                                     ; 47.63 MHz ( period = 20.994 ns )                    ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[9]  ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[4]   ; clk66      ; clk66    ; None                        ; None                      ; 20.285 ns               ;
+; N/A                                     ; 47.63 MHz ( period = 20.993 ns )                    ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[9]  ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[5]   ; clk66      ; clk66    ; None                        ; None                      ; 20.284 ns               ;
+; N/A                                     ; 47.64 MHz ( period = 20.992 ns )                    ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[9]  ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[1]   ; clk66      ; clk66    ; None                        ; None                      ; 20.283 ns               ;
+; N/A                                     ; 47.69 MHz ( period = 20.970 ns )                    ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[12] ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|A         ; clk66      ; clk66    ; None                        ; None                      ; 20.261 ns               ;
+; N/A                                     ; 47.71 MHz ( period = 20.962 ns )                    ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[0]  ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|G         ; clk66      ; clk66    ; None                        ; None                      ; 20.253 ns               ;
+; N/A                                     ; 47.72 MHz ( period = 20.956 ns )                    ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[16] ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|controle1 ; clk66      ; clk66    ; None                        ; None                      ; 20.247 ns               ;
+; N/A                                     ; 47.73 MHz ( period = 20.951 ns )                    ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[16] ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|controle4 ; clk66      ; clk66    ; None                        ; None                      ; 20.242 ns               ;
+; N/A                                     ; 47.78 MHz ( period = 20.931 ns )                    ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[1]  ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|F         ; clk66      ; clk66    ; None                        ; None                      ; 20.222 ns               ;
+; N/A                                     ; 47.82 MHz ( period = 20.911 ns )                    ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[18] ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|D         ; clk66      ; clk66    ; None                        ; None                      ; 20.202 ns               ;
+; N/A                                     ; 47.82 MHz ( period = 20.910 ns )                    ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[18] ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|C         ; clk66      ; clk66    ; None                        ; None                      ; 20.201 ns               ;
+; N/A                                     ; 47.85 MHz ( period = 20.898 ns )                    ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[4]  ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|E         ; clk66      ; clk66    ; None                        ; None                      ; 20.189 ns               ;
+; N/A                                     ; 47.86 MHz ( period = 20.893 ns )                    ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[10] ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|A         ; clk66      ; clk66    ; None                        ; None                      ; 20.184 ns               ;
+; N/A                                     ; 47.89 MHz ( period = 20.881 ns )                    ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[13] ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[15]  ; clk66      ; clk66    ; None                        ; None                      ; 20.172 ns               ;
+; N/A                                     ; 47.90 MHz ( period = 20.879 ns )                    ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[13] ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[11]  ; clk66      ; clk66    ; None                        ; None                      ; 20.170 ns               ;
+; N/A                                     ; 47.90 MHz ( period = 20.878 ns )                    ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[13] ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[13]  ; clk66      ; clk66    ; None                        ; None                      ; 20.169 ns               ;
+; N/A                                     ; 47.91 MHz ( period = 20.873 ns )                    ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[13] ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[17]  ; clk66      ; clk66    ; None                        ; None                      ; 20.164 ns               ;
+; N/A                                     ; 47.93 MHz ( period = 20.862 ns )                    ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[14] ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|F         ; clk66      ; clk66    ; None                        ; None                      ; 20.153 ns               ;
+; N/A                                     ; 47.93 MHz ( period = 20.862 ns )                    ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[13] ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[16]  ; clk66      ; clk66    ; None                        ; None                      ; 20.153 ns               ;
+; N/A                                     ; 47.96 MHz ( period = 20.851 ns )                    ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[2]  ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[15]  ; clk66      ; clk66    ; None                        ; None                      ; 20.142 ns               ;
+; N/A                                     ; 47.96 MHz ( period = 20.849 ns )                    ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[5]  ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|E         ; clk66      ; clk66    ; None                        ; None                      ; 20.140 ns               ;
+; N/A                                     ; 47.96 MHz ( period = 20.849 ns )                    ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[2]  ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[11]  ; clk66      ; clk66    ; None                        ; None                      ; 20.140 ns               ;
+; N/A                                     ; 47.97 MHz ( period = 20.848 ns )                    ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[2]  ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[13]  ; clk66      ; clk66    ; None                        ; None                      ; 20.139 ns               ;
+; N/A                                     ; 47.97 MHz ( period = 20.846 ns )                    ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[19] ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|E         ; clk66      ; clk66    ; None                        ; None                      ; 20.137 ns               ;
+; Timing analysis restricted to 200 rows. ; To change the limit use Settings (Assignments menu) ;                                                  ;                                                   ;            ;          ;                             ;                           ;                         ;
++-----------------------------------------+-----------------------------------------------------+--------------------------------------------------+---------------------------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Hold: 'clk66'                                                                                                                                                                                                              ;
++------------------------------------------+---------------------------------------------+----------------------------+------------+----------+----------------------------+----------------------------+--------------------------+
+; Minimum Slack                            ; From                                        ; To                         ; From Clock ; To Clock ; Required Hold Relationship ; Required Shortest P2P Time ; Actual Shortest P2P Time ;
++------------------------------------------+---------------------------------------------+----------------------------+------------+----------+----------------------------+----------------------------+--------------------------+
+; Not operational: Clock Skew > Data Delay ; MONITORADOR:MONITORADOR_DISTANCIA|cont30seg ; CONTADOR_30SEG:TIMER|a2[0] ; clk66      ; clk66    ; None                       ; None                       ; 4.217 ns                 ;
+; Not operational: Clock Skew > Data Delay ; MONITORADOR:MONITORADOR_DISTANCIA|cont30seg ; CONTADOR_30SEG:TIMER|a1[3] ; clk66      ; clk66    ; None                       ; None                       ; 4.528 ns                 ;
+; Not operational: Clock Skew > Data Delay ; MONITORADOR:MONITORADOR_DISTANCIA|cont30seg ; CONTADOR_30SEG:TIMER|a1[0] ; clk66      ; clk66    ; None                       ; None                       ; 4.602 ns                 ;
+; Not operational: Clock Skew > Data Delay ; MONITORADOR:MONITORADOR_DISTANCIA|cont30seg ; CONTADOR_30SEG:TIMER|a2[1] ; clk66      ; clk66    ; None                       ; None                       ; 4.610 ns                 ;
+; Not operational: Clock Skew > Data Delay ; MONITORADOR:MONITORADOR_DISTANCIA|cont30seg ; CONTADOR_30SEG:TIMER|a2[2] ; clk66      ; clk66    ; None                       ; None                       ; 4.612 ns                 ;
+; Not operational: Clock Skew > Data Delay ; DIVISOR_DE_FREQUENCIA:CONVERSOES_P_SEG|clk  ; PULSO_24:PUL_24|l          ; clk66      ; clk66    ; None                       ; None                       ; 3.830 ns                 ;
++------------------------------------------+---------------------------------------------+----------------------------+------------+----------+----------------------------+----------------------------+--------------------------+
+
+
++------------------------------------------------------------------------------------------------+
+; tsu                                                                                            ;
++-------+--------------+------------+-----------+-------------------------------------+----------+
+; Slack ; Required tsu ; Actual tsu ; From      ; To                                  ; To Clock ;
++-------+--------------+------------+-----------+-------------------------------------+----------+
+; N/A   ; None         ; 1.900 ns   ; botao4    ; FILTRO_BOTAO:FILTRO_B4|shift_reg[7] ; clk66    ;
+; N/A   ; None         ; 1.844 ns   ; botao2    ; FILTRO_BOTAO:FILTRO_B2|shift_reg[7] ; clk66    ;
+; N/A   ; None         ; 1.842 ns   ; botao1    ; FILTRO_BOTAO:FILTRO_B1|shift_reg[7] ; clk66    ;
+; N/A   ; None         ; 1.814 ns   ; botao5    ; FILTRO_BOTAO:FILTRO_B5|shift_reg[7] ; clk66    ;
+; N/A   ; None         ; 1.712 ns   ; botao0    ; FILTRO_BOTAO:FILTRO_B0|shift_reg[7] ; clk66    ;
+; N/A   ; None         ; 1.364 ns   ; botao3    ; FILTRO_BOTAO:FILTRO_B3|shift_reg[7] ; clk66    ;
+; N/A   ; None         ; -1.699 ns  ; ADC_DATA  ; ADC_INTERFACE:ADC|DIG_RESULT[0]     ; clk66    ;
+; N/A   ; None         ; -1.811 ns  ; ADC_SSTRB ; ADC_INTERFACE:ADC|SR_CAPTURE[0]     ; clk66    ;
+; N/A   ; None         ; -1.815 ns  ; ADC_SSTRB ; ADC_INTERFACE:ADC|SR_CAPTURE[1]     ; clk66    ;
++-------+--------------+------------+-----------+-------------------------------------+----------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------+
+; tco                                                                                                                                        ;
++-------+--------------+------------+------------------------------------------------------------------+------------------------+------------+
+; Slack ; Required tco ; Actual tco ; From                                                             ; To                     ; From Clock ;
++-------+--------------+------------+------------------------------------------------------------------+------------------------+------------+
+; N/A   ; None         ; 13.079 ns  ; PULSO_24:PUL_24|sensor_data[4]                                   ; sens[4]                ; clk66      ;
+; N/A   ; None         ; 12.992 ns  ; PULSO_24:PUL_24|sensor_data[6]                                   ; sens[6]                ; clk66      ;
+; N/A   ; None         ; 12.896 ns  ; PULSO_24:PUL_24|sensor_data[2]                                   ; sens[2]                ; clk66      ;
+; N/A   ; None         ; 12.892 ns  ; PULSO_24:PUL_24|sensor_data[3]                                   ; sens[3]                ; clk66      ;
+; N/A   ; None         ; 12.891 ns  ; PULSO_24:PUL_24|sensor_data[1]                                   ; sens[1]                ; clk66      ;
+; N/A   ; None         ; 12.877 ns  ; PULSO_24:PUL_24|sensor_data[5]                                   ; sens[5]                ; clk66      ;
+; N/A   ; None         ; 12.705 ns  ; ADC_INTERFACE:ADC|ADC_CNTRL_DATA                                 ; ADC_CNTRL_DATA         ; clk66      ;
+; N/A   ; None         ; 11.636 ns  ; PULSO_24:PUL_24|sensor_data[7]                                   ; sens[7]                ; clk66      ;
+; N/A   ; None         ; 11.624 ns  ; PULSO_24:PUL_24|sensor_data[0]                                   ; sens[0]                ; clk66      ;
+; N/A   ; None         ; 11.350 ns  ; MONITORADOR:MONITORADOR_DISTANCIA|VERIFICADOR_SENHA:VERIF|enable ; led_requerimento_senha ; clk66      ;
+; N/A   ; None         ; 10.979 ns  ; TROCA_SENHA:TROCA_A_SENHA|enable                                 ; led_requerimento_senha ; clk66      ;
+; N/A   ; None         ; 10.810 ns  ; VERIFICADOR_SENHA:VERIFICADOR_GERAL|enable                       ; led_requerimento_senha ; clk66      ;
+; N/A   ; None         ; 10.416 ns  ; FREQ_ALARME:ALARME|saida                                         ; led_alarme             ; clk66      ;
+; N/A   ; None         ; 10.416 ns  ; FREQ_ALARME:ALARME|saida                                         ; buzzer                 ; clk66      ;
+; N/A   ; None         ; 10.042 ns  ; BEEP:BEEP_BOTAO|enable                                           ; led_alarme             ; clk66      ;
+; N/A   ; None         ; 10.042 ns  ; BEEP:BEEP_BOTAO|enable                                           ; buzzer                 ; clk66      ;
+; N/A   ; None         ; 9.938 ns   ; TROCA_ESTADO:ESTADO|aux                                          ; led_vermelho           ; clk66      ;
+; N/A   ; None         ; 9.934 ns   ; DIVISOR_DE_FREQUENCIA:GERADOR_260KHz|clk                         ; clk260khz              ; clk66      ;
+; N/A   ; None         ; 9.922 ns   ; TROCA_ESTADO:ESTADO|aux                                          ; led_verde              ; clk66      ;
+; N/A   ; None         ; 9.683 ns   ; DIVISOR_DE_FREQUENCIA:CONVERSOES_P_SEG|clk                       ; t1                     ; clk66      ;
+; N/A   ; None         ; 9.207 ns   ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|A                        ; A                      ; clk66      ;
+; N/A   ; None         ; 9.202 ns   ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|controle2                ; controle2              ; clk66      ;
+; N/A   ; None         ; 9.161 ns   ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|controle3                ; controle3              ; clk66      ;
+; N/A   ; None         ; 8.616 ns   ; CONTADOR_ANEL_3BITS:TROCA_DISTANCIA|s0                           ; leds_distancia[0]      ; clk66      ;
+; N/A   ; None         ; 8.615 ns   ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|E                        ; E                      ; clk66      ;
+; N/A   ; None         ; 8.585 ns   ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|controle4                ; controle4              ; clk66      ;
+; N/A   ; None         ; 8.551 ns   ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|D                        ; D                      ; clk66      ;
+; N/A   ; None         ; 8.538 ns   ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|F                        ; F                      ; clk66      ;
+; N/A   ; None         ; 8.530 ns   ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|C                        ; C                      ; clk66      ;
+; N/A   ; None         ; 8.448 ns   ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|G                        ; G                      ; clk66      ;
+; N/A   ; None         ; 7.295 ns   ; CONTADOR_ANEL_3BITS:TROCA_DISTANCIA|s2                           ; leds_distancia[2]      ; clk66      ;
+; N/A   ; None         ; 7.290 ns   ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|controle1                ; controle1              ; clk66      ;
+; N/A   ; None         ; 7.290 ns   ; FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|B                        ; B                      ; clk66      ;
+; N/A   ; None         ; 7.290 ns   ; CONTADOR_ANEL_3BITS:TROCA_DISTANCIA|s1                           ; leds_distancia[1]      ; clk66      ;
++-------+--------------+------------+------------------------------------------------------------------+------------------------+------------+
+
+
++------------------------------------------------------------------------------------------------------+
+; th                                                                                                   ;
++---------------+-------------+-----------+-----------+-------------------------------------+----------+
+; Minimum Slack ; Required th ; Actual th ; From      ; To                                  ; To Clock ;
++---------------+-------------+-----------+-----------+-------------------------------------+----------+
+; N/A           ; None        ; 2.369 ns  ; ADC_SSTRB ; ADC_INTERFACE:ADC|SR_CAPTURE[1]     ; clk66    ;
+; N/A           ; None        ; 2.365 ns  ; ADC_SSTRB ; ADC_INTERFACE:ADC|SR_CAPTURE[0]     ; clk66    ;
+; N/A           ; None        ; 2.253 ns  ; ADC_DATA  ; ADC_INTERFACE:ADC|DIG_RESULT[0]     ; clk66    ;
+; N/A           ; None        ; -0.810 ns ; botao3    ; FILTRO_BOTAO:FILTRO_B3|shift_reg[7] ; clk66    ;
+; N/A           ; None        ; -1.158 ns ; botao0    ; FILTRO_BOTAO:FILTRO_B0|shift_reg[7] ; clk66    ;
+; N/A           ; None        ; -1.260 ns ; botao5    ; FILTRO_BOTAO:FILTRO_B5|shift_reg[7] ; clk66    ;
+; N/A           ; None        ; -1.288 ns ; botao1    ; FILTRO_BOTAO:FILTRO_B1|shift_reg[7] ; clk66    ;
+; N/A           ; None        ; -1.290 ns ; botao2    ; FILTRO_BOTAO:FILTRO_B2|shift_reg[7] ; clk66    ;
+; N/A           ; None        ; -1.346 ns ; botao4    ; FILTRO_BOTAO:FILTRO_B4|shift_reg[7] ; clk66    ;
++---------------+-------------+-----------+-----------+-------------------------------------+----------+
+
+
++--------------------------+
+; Timing Analyzer Messages ;
++--------------------------+
+Info: *******************************************************************
+Info: Running Quartus II Classic Timing Analyzer
+    Info: Version 9.1 Build 304 01/25/2010 Service Pack 1 SJ Web Edition
+    Info: Processing started: Tue Nov 17 00:59:52 2015
+Info: Command: quartus_tan --read_settings_files=off --write_settings_files=off Alarme_de_casa -c TOP_ENTITY
+Info: Started post-fitting delay annotation
+Info: Delay annotation completed successfully
+Warning: Found 2 node(s) in clock paths which may be acting as ripple and/or gated clocks -- node(s) analyzed as buffer(s) resulting in clock skew
+    Info: Detected ripple clock "CONTADOR_30SEG:TIMER|clk1s" as buffer
+    Info: Detected ripple clock "DIVISOR_DE_FREQUENCIA:GERADOR_260KHz|clk" as buffer
+Info: Clock "clk66" has Internal fmax of 43.62 MHz between source register "FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[13]" and destination register "FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|B" (period= 22.925 ns)
+    Info: + Longest register to register delay is 22.216 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LC_X2_Y4_N4; Fanout = 3; REG Node = 'FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[13]'
+        Info: 2: + IC(2.468 ns) + CELL(0.978 ns) = 3.446 ns; Loc. = LC_X2_Y5_N7; Fanout = 2; COMB Node = 'FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|Add0~17'
+        Info: 3: + IC(0.000 ns) + CELL(0.123 ns) = 3.569 ns; Loc. = LC_X2_Y5_N8; Fanout = 2; COMB Node = 'FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|Add0~22'
+        Info: 4: + IC(0.000 ns) + CELL(0.399 ns) = 3.968 ns; Loc. = LC_X2_Y5_N9; Fanout = 6; COMB Node = 'FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|Add0~27'
+        Info: 5: + IC(0.000 ns) + CELL(1.234 ns) = 5.202 ns; Loc. = LC_X3_Y5_N4; Fanout = 2; COMB Node = 'FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|Add0~50'
+        Info: 6: + IC(2.849 ns) + CELL(0.200 ns) = 8.251 ns; Loc. = LC_X3_Y4_N5; Fanout = 1; COMB Node = 'FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[12]~3'
+        Info: 7: + IC(0.770 ns) + CELL(0.511 ns) = 9.532 ns; Loc. = LC_X3_Y4_N4; Fanout = 2; COMB Node = 'FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[12]~5'
+        Info: 8: + IC(0.768 ns) + CELL(0.511 ns) = 10.811 ns; Loc. = LC_X3_Y4_N7; Fanout = 12; COMB Node = 'FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|controle3~3'
+        Info: 9: + IC(0.829 ns) + CELL(0.511 ns) = 12.151 ns; Loc. = LC_X3_Y4_N1; Fanout = 4; COMB Node = 'FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|LessThan2~0'
+        Info: 10: + IC(2.150 ns) + CELL(0.511 ns) = 14.812 ns; Loc. = LC_X4_Y7_N7; Fanout = 12; COMB Node = 'FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|LessThan2~1'
+        Info: 11: + IC(2.020 ns) + CELL(0.914 ns) = 17.746 ns; Loc. = LC_X3_Y6_N5; Fanout = 1; COMB Node = 'FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|B~4'
+        Info: 12: + IC(0.771 ns) + CELL(0.511 ns) = 19.028 ns; Loc. = LC_X3_Y6_N2; Fanout = 3; COMB Node = 'FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|B~5'
+        Info: 13: + IC(2.384 ns) + CELL(0.804 ns) = 22.216 ns; Loc. = LC_X1_Y7_N4; Fanout = 2; REG Node = 'FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|B'
+        Info: Total cell delay = 7.207 ns ( 32.44 % )
+        Info: Total interconnect delay = 15.009 ns ( 67.56 % )
+    Info: - Smallest clock skew is 0.000 ns
+        Info: + Shortest clock path from clock "clk66" to destination register is 3.819 ns
+            Info: 1: + IC(0.000 ns) + CELL(1.163 ns) = 1.163 ns; Loc. = PIN_H5; Fanout = 428; CLK Node = 'clk66'
+            Info: 2: + IC(1.738 ns) + CELL(0.918 ns) = 3.819 ns; Loc. = LC_X1_Y7_N4; Fanout = 2; REG Node = 'FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|B'
+            Info: Total cell delay = 2.081 ns ( 54.49 % )
+            Info: Total interconnect delay = 1.738 ns ( 45.51 % )
+        Info: - Longest clock path from clock "clk66" to source register is 3.819 ns
+            Info: 1: + IC(0.000 ns) + CELL(1.163 ns) = 1.163 ns; Loc. = PIN_H5; Fanout = 428; CLK Node = 'clk66'
+            Info: 2: + IC(1.738 ns) + CELL(0.918 ns) = 3.819 ns; Loc. = LC_X2_Y4_N4; Fanout = 3; REG Node = 'FOUR_DISPLAYS_TO_ONE:DISPLAY_CONTROLLER|cont[13]'
+            Info: Total cell delay = 2.081 ns ( 54.49 % )
+            Info: Total interconnect delay = 1.738 ns ( 45.51 % )
+    Info: + Micro clock to output delay of source is 0.376 ns
+    Info: + Micro setup delay of destination is 0.333 ns
+Warning: Circuit may not operate. Detected 6 non-operational path(s) clocked by clock "clk66" with clock skew larger than data delay. See Compilation Report for details.
+Info: Found hold time violation between source  pin or register "MONITORADOR:MONITORADOR_DISTANCIA|cont30seg" and destination pin or register "CONTADOR_30SEG:TIMER|a2[0]" for clock "clk66" (Hold time is 792 ps)
+    Info: + Largest clock skew is 5.164 ns
+        Info: + Longest clock path from clock "clk66" to destination register is 8.983 ns
+            Info: 1: + IC(0.000 ns) + CELL(1.163 ns) = 1.163 ns; Loc. = PIN_H5; Fanout = 428; CLK Node = 'clk66'
+            Info: 2: + IC(1.738 ns) + CELL(1.294 ns) = 4.195 ns; Loc. = LC_X12_Y1_N1; Fanout = 8; REG Node = 'CONTADOR_30SEG:TIMER|clk1s'
+            Info: 3: + IC(3.870 ns) + CELL(0.918 ns) = 8.983 ns; Loc. = LC_X6_Y8_N3; Fanout = 11; REG Node = 'CONTADOR_30SEG:TIMER|a2[0]'
+            Info: Total cell delay = 3.375 ns ( 37.57 % )
+            Info: Total interconnect delay = 5.608 ns ( 62.43 % )
+        Info: - Shortest clock path from clock "clk66" to source register is 3.819 ns
+            Info: 1: + IC(0.000 ns) + CELL(1.163 ns) = 1.163 ns; Loc. = PIN_H5; Fanout = 428; CLK Node = 'clk66'
+            Info: 2: + IC(1.738 ns) + CELL(0.918 ns) = 3.819 ns; Loc. = LC_X1_Y9_N4; Fanout = 8; REG Node = 'MONITORADOR:MONITORADOR_DISTANCIA|cont30seg'
+            Info: Total cell delay = 2.081 ns ( 54.49 % )
+            Info: Total interconnect delay = 1.738 ns ( 45.51 % )
+    Info: - Micro clock to output delay of source is 0.376 ns
+    Info: - Shortest register to register delay is 4.217 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LC_X1_Y9_N4; Fanout = 8; REG Node = 'MONITORADOR:MONITORADOR_DISTANCIA|cont30seg'
+        Info: 2: + IC(3.413 ns) + CELL(0.804 ns) = 4.217 ns; Loc. = LC_X6_Y8_N3; Fanout = 11; REG Node = 'CONTADOR_30SEG:TIMER|a2[0]'
+        Info: Total cell delay = 0.804 ns ( 19.07 % )
+        Info: Total interconnect delay = 3.413 ns ( 80.93 % )
+    Info: + Micro hold delay of destination is 0.221 ns
+Info: tsu for register "FILTRO_BOTAO:FILTRO_B4|shift_reg[7]" (data pin = "botao4", clock pin = "clk66") is 1.900 ns
+    Info: + Longest pin to register delay is 5.386 ns
+        Info: 1: + IC(0.000 ns) + CELL(1.132 ns) = 1.132 ns; Loc. = PIN_G3; Fanout = 1; PIN Node = 'botao4'
+        Info: 2: + IC(3.071 ns) + CELL(1.183 ns) = 5.386 ns; Loc. = LC_X2_Y9_N6; Fanout = 3; REG Node = 'FILTRO_BOTAO:FILTRO_B4|shift_reg[7]'
+        Info: Total cell delay = 2.315 ns ( 42.98 % )
+        Info: Total interconnect delay = 3.071 ns ( 57.02 % )
+    Info: + Micro setup delay of destination is 0.333 ns
+    Info: - Shortest clock path from clock "clk66" to destination register is 3.819 ns
+        Info: 1: + IC(0.000 ns) + CELL(1.163 ns) = 1.163 ns; Loc. = PIN_H5; Fanout = 428; CLK Node = 'clk66'
+        Info: 2: + IC(1.738 ns) + CELL(0.918 ns) = 3.819 ns; Loc. = LC_X2_Y9_N6; Fanout = 3; REG Node = 'FILTRO_BOTAO:FILTRO_B4|shift_reg[7]'
+        Info: Total cell delay = 2.081 ns ( 54.49 % )
+        Info: Total interconnect delay = 1.738 ns ( 45.51 % )
+Info: tco from clock "clk66" to destination pin "sens[4]" through register "PULSO_24:PUL_24|sensor_data[4]" is 13.079 ns
+    Info: + Longest clock path from clock "clk66" to source register is 8.152 ns
+        Info: 1: + IC(0.000 ns) + CELL(1.163 ns) = 1.163 ns; Loc. = PIN_H5; Fanout = 428; CLK Node = 'clk66'
+        Info: 2: + IC(1.738 ns) + CELL(1.294 ns) = 4.195 ns; Loc. = LC_X12_Y3_N1; Fanout = 76; REG Node = 'DIVISOR_DE_FREQUENCIA:GERADOR_260KHz|clk'
+        Info: 3: + IC(3.039 ns) + CELL(0.918 ns) = 8.152 ns; Loc. = LC_X6_Y7_N0; Fanout = 4; REG Node = 'PULSO_24:PUL_24|sensor_data[4]'
+        Info: Total cell delay = 3.375 ns ( 41.40 % )
+        Info: Total interconnect delay = 4.777 ns ( 58.60 % )
+    Info: + Micro clock to output delay of source is 0.376 ns
+    Info: + Longest register to pin delay is 4.551 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LC_X6_Y7_N0; Fanout = 4; REG Node = 'PULSO_24:PUL_24|sensor_data[4]'
+        Info: 2: + IC(2.229 ns) + CELL(2.322 ns) = 4.551 ns; Loc. = PIN_B6; Fanout = 0; PIN Node = 'sens[4]'
+        Info: Total cell delay = 2.322 ns ( 51.02 % )
+        Info: Total interconnect delay = 2.229 ns ( 48.98 % )
+Info: th for register "ADC_INTERFACE:ADC|SR_CAPTURE[1]" (data pin = "ADC_SSTRB", clock pin = "clk66") is 2.369 ns
+    Info: + Longest clock path from clock "clk66" to destination register is 8.152 ns
+        Info: 1: + IC(0.000 ns) + CELL(1.163 ns) = 1.163 ns; Loc. = PIN_H5; Fanout = 428; CLK Node = 'clk66'
+        Info: 2: + IC(1.738 ns) + CELL(1.294 ns) = 4.195 ns; Loc. = LC_X12_Y3_N1; Fanout = 76; REG Node = 'DIVISOR_DE_FREQUENCIA:GERADOR_260KHz|clk'
+        Info: 3: + IC(3.039 ns) + CELL(0.918 ns) = 8.152 ns; Loc. = LC_X14_Y10_N4; Fanout = 1; REG Node = 'ADC_INTERFACE:ADC|SR_CAPTURE[1]'
+        Info: Total cell delay = 3.375 ns ( 41.40 % )
+        Info: Total interconnect delay = 4.777 ns ( 58.60 % )
+    Info: + Micro hold delay of destination is 0.221 ns
+    Info: - Shortest pin to register delay is 6.004 ns
+        Info: 1: + IC(0.000 ns) + CELL(1.132 ns) = 1.132 ns; Loc. = PIN_A12; Fanout = 2; PIN Node = 'ADC_SSTRB'
+        Info: 2: + IC(4.281 ns) + CELL(0.591 ns) = 6.004 ns; Loc. = LC_X14_Y10_N4; Fanout = 1; REG Node = 'ADC_INTERFACE:ADC|SR_CAPTURE[1]'
+        Info: Total cell delay = 1.723 ns ( 28.70 % )
+        Info: Total interconnect delay = 4.281 ns ( 71.30 % )
+Info: Generated suppressed messages file C:/Users/Raul/Desktop/ALARME 3.0 (WITH BUGS)/TOP_ENTITY.tan.smsg
+Info: Quartus II Classic Timing Analyzer was successful. 0 errors, 2 warnings
+    Info: Peak virtual memory: 179 megabytes
+    Info: Processing ended: Tue Nov 17 01:00:05 2015
+    Info: Elapsed time: 00:00:13
+    Info: Total CPU time (on all processors): 00:00:13
+
+
++-------------------------------------+
+; Timing Analyzer Suppressed Messages ;
++-------------------------------------+
+The suppressed messages can be found in C:/Users/Raul/Desktop/ALARME 3.0 (WITH BUGS)/TOP_ENTITY.tan.smsg.
+
+

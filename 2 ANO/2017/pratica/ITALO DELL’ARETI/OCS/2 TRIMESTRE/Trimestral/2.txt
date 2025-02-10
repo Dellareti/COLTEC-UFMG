@@ -1,0 +1,25 @@
+2)
+
+Dispositivos de Entrada/Saída (E/S) são periféricos do Computador que servem 
+para a comunicação do computador com o meio externo.Sendo a Entrada responsavel pela inserção de 
+dados por meio de algum código e a Saída retornando os dados como o resultado de alguma operação 
+de algum programa.
+
+Cada módulo de E/S se conecta ao barramento central e controla um ou mais periféricos como teclados e mouses.Um módulo de E/S possui uma lógica e a função de comunicação entre o periférico e o barramento.
+
+Além dos barramentos de sistema (CPU-Memória), temos os barramentos de E/S que são mais longos
+podendo possuir muitos dispositivos conectados a ele,necessitando atender uma ampla faixa de banda
+passante e não obrigatoriamente possuindo interface direta com a memória.A interface com o processador e a memória é por meio do barramento do sistema ou comutador central.
+
+Outras funções:
+
+Controle e Temporização: Coordenar o fluxo de tráfego entre
+os recursos internos e os dispositivos externos.
+
+Comunicação com o processador: Comunicação entre o
+processador e o dispositivo externo.
+Comunicação com dispositivos: Comunicação envolvecomandos, informação de estado e dados.
+
+Área de armazenamento temporário de dados (buffering):Necessária devido à diferença de taxas de transferência.
+
+Detecção de erros: Relatar erros ao processador defeitos mecânicos e elétricos, erros de transferência de bits entre outros.

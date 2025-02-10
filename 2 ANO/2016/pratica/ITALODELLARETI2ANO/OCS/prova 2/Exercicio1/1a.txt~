@@ -1,0 +1,21 @@
+1 - Microprocessador
+
+Há vários fabricantes e modelos, como o Pentium da Intel, o Athlon da AMD e o PowerPC da IBM. Cada microprocessador possui um conjunto de instruções, que são executadas a 
+uma determinada freqüência. As freqüências comuns atualmente giram entre 2 e 4 GHz (giga hertz).
+
+2 - Memória
+
+A memória pode ser classificada em 2 grupos, as memórias voláteis e não voláteis (ou permanentes). As memórias voláteis (memórias do tipo RAM - Random Access Memory) 
+precisam de energia para manter seu conteúdo (ou seja, só funcionam quando o computador está ligado). Quando desligamos o computador, as informações importantes são 
+armazenadas nos dispositivos de memória não voláteis (como o disco rígido ou HD - Hard Drive). Os dispositivos de memória volátil são mais caros e de menor capacidade, 
+porém são muito mais rápidos, tornando possível ao computador realizar o processamento de forma mais eficiente.
+
+
+3 - Dispositivos de Entrada e Saída
+
+Tornam a interação com o usuário (e/ou outras máquinas) possível, como por exemplo: teclado, mouse, monitor, modem, impressora, etc.
+Esses componentes se comunicam através de um barramento ou via de comunicação. O processador executa uma instrução por vez. Um programa é uma seqüência de instruções, 
+armazenado na memória.
+
+Em geral, o conjunto de instruções que o microprocessador é capaz de executar é bastante limitado, e podem ser agrupados em:
+Instruções lógicas e aritméticas: permitem a execução de cálculos através de operadores como adição, multiplicação, etc.

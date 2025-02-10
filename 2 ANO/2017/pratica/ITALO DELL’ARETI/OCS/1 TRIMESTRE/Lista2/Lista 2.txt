@@ -1,0 +1,81 @@
+1)
+	slt $t0,$s0,$s1
+
+loop:
+	addi $s1,$s1,-1
+	beq $s1,-2147483648,negg
+	bne $s1,$s0,loop
+	li $t0,1
+	j quit
+	
+	negg:
+	bne $s1,$s0,n
+	li $t0,1
+	j quit
+	n: 
+	li $t0,0
+	j quit
+quit:
+
+
+
+2)
+
+	1010 1101 0001 0000 0000 0000 0000 0010
+  	sw $s0,2($t0)
+	unsigned = 2903506946
+	signed   = -1391460350
+	PF papel = -1.5 * 10e-37
+ 	PF calc  = -8.185454E-12
+
+
+	0010 0100 1001 0010 0100 1001 0010 0100
+	addiu $s2, $a0, 18724
+	unsigned = 613566756
+	signed   = 613566756
+	PF papel = 1.142 * 10e-54
+	PF calc  = 6.344131E-17
+
+
+3)  C/  = 3.806 * 10e2
+	S/  = 3,805  * 10e2
+
+
+4)
+	Multiplicação entre inteiros:
+	Verifica o sinal dos dois;
+	Realiza os complementos de dois;
+
+	inicio:
+	Se mult2 for = 1{
+		soma o mult1 ao produto;
+	}
+	Se mult2 for = 0{
+		keep going;
+	}
+	shift mult1 esquerda
+	
+	repetiu 32 vezes ? termina : volta pro inicio
+
+
+5)
+	Pega-se o menor número e o desloca até que ele esteja no mesmo expoente que o outro;
+
+	faz a soma sem os expoentes;
+
+N:	normaliza o resultado;
+
+	underflow ou overflow ? bugou : keep going;
+
+	arredonda caso tenha mais que o numero de bits significativos;
+
+	Está normalizado? termina : goto N;
+
+
+6)
+
+	Os computadores basicamente tem como principais componentes os seguintes: memória primária,secundária, processador,dispositivos de I/O.
+
+	Computadores funcionam a base de instruções simples, que são geradas em um processo de compilação, montagem e linkagem de um programa, ou mesmo pedidas pelos sistema operacional.
+	
+Instruções que são pedidas para serem realizadas por um sistema operacional, ou um programa, vão ao processador, onde são interpretadas, e realizadas, utilizando a memória primária, e registrando dados necessários a memória secundária (HardDisk). Dados e instruções podem ser obtidas e mostradas, pelos dispositivos I/O, como teclados e monitores.

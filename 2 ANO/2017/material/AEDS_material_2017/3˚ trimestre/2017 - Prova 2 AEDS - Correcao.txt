@@ -1,0 +1,184 @@
+* Ângelo Augusto
+- Fez iteração com o usuário. Era desnecessário, mas não perde ponto por isso. Mas não ganha também. :-)
+- Classe Interna? Qual a necessidade disso?
+- Não utilizou modificadores de visibilidade.
+- Classe funções que tem as funções, não as classes relativas aos objetos.
+- Não gerou o UML.
+
+* Arthur Moura
+- Não fez.
+
+* Bernardo Gomes
+- Utilizou os modificadores de visibilidade adequadamente.
+- A classe de Comanda consegue fazer conta sem ter nenhum cliente o que faz gerar uma exceção.
+  Como pelo menos um cliente é obrigatório, deveria ser pedido no construtor para garantir que
+  ele existe.
+- Não gerou o UML.
+
+* Bryan Santos
+- Classe Comanda não relaciona Cliente e Mesa.
+- Classe Comanda imprime na tela  :-|
+- Utilizou os modificadores de visibilidade adequadamente.
+- Não gerou o UML.
+
+* Caio Lelis
+- Mesa só deveria tem relação com o cliente através da Comanda.
+- Classe Comanda não relaciona Cliente e Mesa.
+- Classe Bar não tem relação com as Mesas.
+- Fez a classe de teste, mas testou tudo no ProvaAEDS2.
+- Não gerou o UML.
+
+* Chrystian Paulo
+- Tudo em um único arquivo .java. Terrível isso. :-(
+- Iteração com o usuário dentro dos métodos :-|
+- Classe Comanda não tem relação com Mesa e Cliente.
+- Bar só tem uma mesa. Bem do Seu Zé mesmo esse bar ehm?!
+- Não gerou o UML.
+
+* Dener Vieira
+- Utilizou os modificadores de visibilidade adequadamente.
+- Classes tem iteração com o usuário, mas nos métodos não listados no UML. +/- OK, mas ali não é o lugar correto.
+- Classe Comanda só tem relação com os Clientes. A informação da Comanda está na mesa.
+  Não é uma representação ruim já que Cliente<->Mesa é N:1, mas não é a correta, pois a mesa não tem
+  cliente.
+- Não gerou o UML.
+
+* Filipe Ferraz
+- Utilizou os modificadores de visibilidade adequadamente.
+- A classe Mesa não deveria ter uma lista de clientes.
+- Classe Comando não relaciona Cliente e Mesa.
+- Classe Bar só cria uma mesa com reserva e data. Não existe esse conceito em um bar.
+- Não gerou o UML.
+
+* Gabriel Veazey
+- Utilizou os modificadores de visibilidade adequadamente.
+- Classe Comanda imprime na tela  :-|
+- Classe Comando incompleta.
+- Classe Mesa criou uma restrição de ter até 6 pessoas. Não existe essa restrição na prova.
+  Além disso, não usa essa restrição em lugar nenhum.
+- Classe Bar criou uma restrição de ter até 20 mesas. Não existe essa restrição na prova.
+  Além disso, não usa essa restrição em lugar nenhum.
+- A modificação na questão 03 não está legal.
+- Não gerou o UML.
+
+* Germano Barcelos
+- Criou a classe Menu para representar um item do cardápio, fazendo o par <Item,Valor>. Legal.
+- A relação de Bar<->Mesa é 1:N, corretamente mapeada na classe de Mesa.
+- Comanda mapeia corretamente a relação de Mesa e Cliente, mas deixa ter uma comanda sem cliente.
+  É possível fazer conta sem ter nenhum cliente, o que faz gerar uma exceção.
+  Como pelo menos um cliente é obrigatório, deveria ser pedido no construtor para garantir que
+  ele existe.
+- Não gerou o UML.
+
+* Guilherme Assis
+- 
+
+* Gustavo Henrique
+- Não utilizou os modificadores de visibilidade.
+- Classe Mesa bem incompleta.
+- Classe Comanda bem incompleta.
+- Classe Bar tem nada.
+- Classe Cliente bem incompleta.
+- Não gerou o UML.
+
+* Henrique Anastácio
+- Classe Cliente possui a comanda. A relação deveria estar na Comanda.
+- A relação de Bar<->Mesa é 1:N, corretamente mapeada na classe de Mesa.
+- Classe Bar criou uma restrição de ter até 20 mesas. Não existe essa restrição na prova.
+  Além disso, não usa essa restrição em lugar nenhum.
+- Classe Comanda possui Mesa e Cliente como membos, mas eles não são utilizados.
+- Utilizou parcialmente os modificadores de visibilidade.
+- Não gerou o UML.
+
+* Ícaro Emídio
+- Classe Bar tem iteração com o usuário para criar as mesas.
+- Classe Mesa tem como membro cliente e comanda, mas não são utilizados.
+- Classe Comanda não faz a relação entre Cliente e Mesa.
+- Não gerou o UML.
+
+* Italo Dell'Areti
+- Classe Mesa possui uma restrição de 10 pessoas. Não existe essa restrição na prova.
+- Classe Mesa tem iteração com o usuário para adicionar clientes.
+- Classe Utils com Regex era desnecessária na prova. Mas ok. Não ganha, mas não perde também.
+- Classe Restaurante (que deveria ser Bar) possui uma restrição de 50 mesas. Não existe essa restrição na prova.
+- Imprime na tela o tempo inteiro :-|
+- Classe Comanda não relaciona Cliente com a Mesa.
+- Gerou o UML.
+
+* João Zenóbio
+- Classe Bar adiciona uma mesa apenas com Data. Não existe essa restrição na prova.
+- A classe Mesa não deveria ter uma lista de clientes.
+- A iteração da comanda é apenas com o Cliente, não com a Mesa.
+- Classe Cliente tem a informação da Mesa. Essa relação deveria estar apenas na Comanda.
+- Gerou o UML.
+
+* João Vitor
+- 
+
+* Mariana Santos
+- Classe Bar não possui as Mesas, nem em Mesas tem a relação com Bar.
+- Classe Comanda não faz relação entre Cliente e Mesa.
+- Todas as classes são basicamente containers.
+- Não gerou o UML.
+
+* Mateus Bernardo
+- Classe Bar possui membro Mesas que não é utilizado em nenhum lugar.
+- Comanda não relaciona Cliente com Mesa.
+- Todas as classes são basicamente containers.
+- Não gerou o UML.
+
+* Mathias Oliveira
+- Utilizou os modificadores de visibilidade adequadamente.
+- Classe Bar possui como membros clientes, mesas e comandas. E não utiliza nenhum deles.
+- Classe Comanda faz a relação de Clientes com Mesa, mas não ficou legal.
+- Não gerou o UML.
+
+* Reinado Magalhães
+- Classe Bar possui nada.
+- Classe Cliente possui nada.
+- Bem incompleto.
+- Não gerou o UML.
+
+* Rita Rezende
+- A relação de Bar<->Mesa é 1:N, corretamente mapeada na classe de Mesa.
+- A classe Mesa possui uma lista de Clientes. Ok desde que seja apenas um conhecimento, mas não
+  nesse caso, pois a informação só está completa se olhar a Comanda, pois nela não possui a
+  informação da Mesa.
+- A classe Mesa só faz relação com os Clientes, não com a Mesa.
+- Fez toda uma iteração com o usuário que não era necessário na prova, mas OK. Ficou bem feita.
+  Bar em Nárnia? Difícil chegar lá, não?!
+- Criou uma classe de exceção \o/ A única prova que teve isso. Vai ganhar um plus-a-mais.
+- Não gerou o UML.
+
+* Willian Vitor
+- Classe Comanda não faz relação entre Cliente e Mesa.
+- Todas as classes são basicamente containers.
+- Não gerou o UML.
+
+----------------------------------
+                                                Q.1 Q.2 Q.3
+Notas:                                          8,0 2,0 2,0 | 10,00
+ANGELO AUGUSTO CAMPOS                           2,0 0,0 0,0 |  2,00
+ARTUR MOURA PARREIRAS E SILVA                   --- --- --- |  0,00
+BERNARDO GOMES NUNES                            7,0 1,5 0,0 |  8,5
+BRYAN SANTOS OLIVEIRA                           5,0 1,5 0,0 |  6,5
+CAIO LELIS PENIDO                               5,0 1,5 1,0 |  7,5
+CHRYSTIAN PAULO FERREIRA DE MELO                2,0 0,0 0,0 |  2,0
+DENER VIEIRA RIBEIRO                            7,5 2,0 0,0 |  9,5
+FELIPE RODRIGUES FERRAZ DOS SANTOS              4,0 1,5 0,0 |  5,5
+GABRIEL VEAZEY MEIRA                            3,5 1,5 0,5 |  5,5
+GERMANO BARCELOS DOS SANTOS                     7,8 1,5 0,0 |  9,3
+GUILHERME DE ASSIS LIMA                         --- --- --- |  0,0
+GUSTAVO HENRIQUE CERCEAU PATRICIO               0,5 0,5 0,0 |  1,0
+HENRIQUE ANASTACIO PENA E SILVA                 4,5 1,0 0,0 |  5,5
+ICARO EMIDIO ADAO                               2,0 0,0 0,0 |  2,0
+ITALO DELL’ARETI                                3,5 0,5 1,0 |  5,0
+JOAO GABRIEL FERNANDES ZENOBIO                  4,5 1,5 1,0 |  7,0
+JOAO VITOR DA SILVA BRAGA                          
+MARIANA OLIVEIRA SANTOS                         2,0 1,0 0,0 |  3,0
+MATEUS BERNARDO DE OLIVEIRA                     2,0 0,0 0,0 |  2,0
+MATHIAS GONCALVES OLIVEIRA                      3,0 0,5 0,0 |  3,5
+REINALDO MAGALHAES SILVA                        0,5 0,0 0,0 |  0,5
+RITA REZENDE BORGES DE LIMA                     6,5 1,0 0,0 |  7,5
+WILLIAN VITOR ALVES                             2,0 0,0 0,0 |  2,0
+

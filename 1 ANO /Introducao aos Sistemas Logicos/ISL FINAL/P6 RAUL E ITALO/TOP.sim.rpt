@@ -1,0 +1,702 @@
+Simulator report for TOP
+Tue Oct 27 15:03:40 2015
+Quartus II Version 9.1 Build 304 01/25/2010 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. Coverage Summary
+  6. Complete 1/0-Value Coverage
+  7. Missing 1-Value Coverage
+  8. Missing 0-Value Coverage
+  9. Simulator INI Usage
+ 10. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2010 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++---------------------------------------------+
+; Simulator Summary                           ;
++-----------------------------+---------------+
+; Type                        ; Value         ;
++-----------------------------+---------------+
+; Simulation Start Time       ; 0 ps          ;
+; Simulation End Time         ; 500.0 us      ;
+; Simulation Netlist Size     ; 201 nodes     ;
+; Simulation Coverage         ;      25.87 %  ;
+; Total Number of Transitions ; 413583        ;
+; Simulation Breakpoints      ; 0             ;
+; Family                      ; MAX II        ;
+; Device                      ; EPM1270F256C5 ;
++-----------------------------+---------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                          ;
++--------------------------------------------------------------------------------------------+----------------+---------------+
+; Option                                                                                     ; Setting        ; Default Value ;
++--------------------------------------------------------------------------------------------+----------------+---------------+
+; Simulation mode                                                                            ; Timing         ; Timing        ;
+; Start time                                                                                 ; 0 ns           ; 0 ns          ;
+; Simulation results format                                                                  ; CVWF           ;               ;
+; Vector input source                                                                        ; simulation.vwf ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On             ; On            ;
+; Check outputs                                                                              ; Off            ; Off           ;
+; Report simulation coverage                                                                 ; On             ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On             ; On            ;
+; Display missing 1-value coverage report                                                    ; On             ; On            ;
+; Display missing 0-value coverage report                                                    ; On             ; On            ;
+; Detect setup and hold time violations                                                      ; Off            ; Off           ;
+; Detect glitches                                                                            ; Off            ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off            ; Off           ;
+; Generate Signal Activity File                                                              ; Off            ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off            ; Off           ;
+; Group bus channels in simulation results                                                   ; Off            ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On             ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE     ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off            ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; Off            ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto           ; Auto          ;
++--------------------------------------------------------------------------------------------+----------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II to view the waveform report data.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;      25.87 % ;
+; Total nodes checked                                 ; 201          ;
+; Total output ports checked                          ; 317          ;
+; Total output ports with complete 1/0-value coverage ; 82           ;
+; Total output ports with no 1/0-value coverage       ; 223          ;
+; Total output ports with no 1-value coverage         ; 223          ;
+; Total output ports with no 0-value coverage         ; 235          ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++--------------------------------------------------------------------------------------------------+
+; Complete 1/0-Value Coverage                                                                      ;
++--------------------------------------+----------------------------------------+------------------+
+; Node Name                            ; Output Port Name                       ; Output Port Type ;
++--------------------------------------+----------------------------------------+------------------+
+; |TOP|PULSOS:DIV_FREQ|Add0~0          ; |TOP|PULSOS:DIV_FREQ|Add0~0            ; combout          ;
+; |TOP|PULSOS:DIV_FREQ|Add0~0          ; |TOP|PULSOS:DIV_FREQ|Add0~2            ; cout             ;
+; |TOP|PULSOS:DIV_FREQ|Add0~5          ; |TOP|PULSOS:DIV_FREQ|Add0~5            ; combout          ;
+; |TOP|PULSOS:DIV_FREQ|Add0~5          ; |TOP|PULSOS:DIV_FREQ|Add0~7COUT1_186   ; cout1            ;
+; |TOP|PULSOS:DIV_FREQ|Add0~10         ; |TOP|PULSOS:DIV_FREQ|Add0~10           ; combout          ;
+; |TOP|PULSOS:DIV_FREQ|Add0~10         ; |TOP|PULSOS:DIV_FREQ|Add0~12COUT1_188  ; cout1            ;
+; |TOP|PULSOS:DIV_FREQ|Add0~15         ; |TOP|PULSOS:DIV_FREQ|Add0~15           ; combout          ;
+; |TOP|PULSOS:DIV_FREQ|Add0~15         ; |TOP|PULSOS:DIV_FREQ|Add0~17COUT1_190  ; cout1            ;
+; |TOP|PULSOS:DIV_FREQ|Equal0~0        ; |TOP|PULSOS:DIV_FREQ|Equal0~0          ; combout          ;
+; |TOP|PULSOS:DIV_FREQ|Add0~20         ; |TOP|PULSOS:DIV_FREQ|Add0~20           ; combout          ;
+; |TOP|PULSOS:DIV_FREQ|Add0~25         ; |TOP|PULSOS:DIV_FREQ|Add0~25           ; combout          ;
+; |TOP|PULSOS:DIV_FREQ|Add0~25         ; |TOP|PULSOS:DIV_FREQ|Add0~27COUT1_192  ; cout1            ;
+; |TOP|PULSOS:DIV_FREQ|Add0~30         ; |TOP|PULSOS:DIV_FREQ|Add0~30           ; combout          ;
+; |TOP|PULSOS:DIV_FREQ|Add0~30         ; |TOP|PULSOS:DIV_FREQ|Add0~32           ; cout             ;
+; |TOP|PULSOS:DIV_FREQ|Add0~35         ; |TOP|PULSOS:DIV_FREQ|Add0~35           ; combout          ;
+; |TOP|PULSOS:DIV_FREQ|Add0~35         ; |TOP|PULSOS:DIV_FREQ|Add0~37           ; cout0            ;
+; |TOP|PULSOS:DIV_FREQ|Equal0~1        ; |TOP|PULSOS:DIV_FREQ|Equal0~1          ; combout          ;
+; |TOP|PULSOS:DIV_FREQ|Equal0~4        ; |TOP|PULSOS:DIV_FREQ|Equal0~4          ; combout          ;
+; |TOP|ADC_INTERFACE:ADC|Mux0~0        ; |TOP|ADC_INTERFACE:ADC|Mux0~0          ; combout          ;
+; |TOP|ADC_INTERFACE:ADC|ADC_STATE[1]  ; |TOP|ADC_INTERFACE:ADC|Mux0~1          ; combout          ;
+; |TOP|ADC_INTERFACE:ADC|ADC_STATE[1]  ; |TOP|ADC_INTERFACE:ADC|ADC_STATE[1]    ; regout           ;
+; |TOP|ADC_INTERFACE:ADC|Add0~0        ; |TOP|ADC_INTERFACE:ADC|Add0~0          ; combout          ;
+; |TOP|ADC_INTERFACE:ADC|Add0~0        ; |TOP|ADC_INTERFACE:ADC|Add0~2          ; cout0            ;
+; |TOP|ADC_INTERFACE:ADC|Add0~0        ; |TOP|ADC_INTERFACE:ADC|Add0~2COUT1_25  ; cout1            ;
+; |TOP|ADC_INTERFACE:ADC|Mux0~2        ; |TOP|ADC_INTERFACE:ADC|Mux0~2          ; combout          ;
+; |TOP|ADC_INTERFACE:ADC|ADC_STATE[2]  ; |TOP|ADC_INTERFACE:ADC|Mux0~3          ; combout          ;
+; |TOP|ADC_INTERFACE:ADC|ADC_STATE[2]  ; |TOP|ADC_INTERFACE:ADC|ADC_STATE[2]    ; regout           ;
+; |TOP|ADC_INTERFACE:ADC|Mux0~4        ; |TOP|ADC_INTERFACE:ADC|Mux0~4          ; combout          ;
+; |TOP|Add0~0                          ; |TOP|Add0~0                            ; combout          ;
+; |TOP|Add0~0                          ; |TOP|Add0~2COUT1_190                   ; cout1            ;
+; |TOP|Add0~5                          ; |TOP|Add0~5                            ; combout          ;
+; |TOP|Add0~5                          ; |TOP|Add0~7                            ; cout             ;
+; |TOP|Add0~10                         ; |TOP|Add0~10                           ; combout          ;
+; |TOP|Add0~10                         ; |TOP|Add0~12COUT1_186                  ; cout1            ;
+; |TOP|Add0~15                         ; |TOP|Add0~15                           ; combout          ;
+; |TOP|Add0~15                         ; |TOP|Add0~17COUT1_188                  ; cout1            ;
+; |TOP|Equal0~0                        ; |TOP|Equal0~0                          ; combout          ;
+; |TOP|Add0~20                         ; |TOP|Add0~20                           ; combout          ;
+; |TOP|Equal0~1                        ; |TOP|Equal0~1                          ; combout          ;
+; |TOP|Equal0~4                        ; |TOP|Equal0~4                          ; combout          ;
+; |TOP|Equal0~10                       ; |TOP|Equal0~10                         ; combout          ;
+; |TOP|PULSOS:DIV_FREQ|cont[0]         ; |TOP|PULSOS:DIV_FREQ|cont[0]           ; regout           ;
+; |TOP|PULSOS:DIV_FREQ|cont[1]         ; |TOP|PULSOS:DIV_FREQ|cont[1]           ; regout           ;
+; |TOP|PULSOS:DIV_FREQ|cont[2]         ; |TOP|PULSOS:DIV_FREQ|cont[2]           ; regout           ;
+; |TOP|PULSOS:DIV_FREQ|cont[3]         ; |TOP|PULSOS:DIV_FREQ|cont[3]           ; regout           ;
+; |TOP|PULSOS:DIV_FREQ|cont[4]         ; |TOP|PULSOS:DIV_FREQ|cont[4]           ; regout           ;
+; |TOP|PULSOS:DIV_FREQ|cont[5]         ; |TOP|PULSOS:DIV_FREQ|cont[5]           ; regout           ;
+; |TOP|PULSOS:DIV_FREQ|cont[6]         ; |TOP|PULSOS:DIV_FREQ|cont[6]           ; regout           ;
+; |TOP|ADC_INTERFACE:ADC|ADC_STATE[3]  ; |TOP|ADC_INTERFACE:ADC|LessThan0~0     ; combout          ;
+; |TOP|ADC_INTERFACE:ADC|ADC_STATE[3]  ; |TOP|ADC_INTERFACE:ADC|ADC_STATE[3]    ; regout           ;
+; |TOP|ADC_INTERFACE:ADC|Add0~5        ; |TOP|ADC_INTERFACE:ADC|Add0~5          ; combout          ;
+; |TOP|ADC_INTERFACE:ADC|Add0~10       ; |TOP|ADC_INTERFACE:ADC|Add0~10         ; combout          ;
+; |TOP|ADC_INTERFACE:ADC|Add0~10       ; |TOP|ADC_INTERFACE:ADC|Add0~12         ; cout0            ;
+; |TOP|ADC_INTERFACE:ADC|Add0~10       ; |TOP|ADC_INTERFACE:ADC|Add0~12COUT1_27 ; cout1            ;
+; |TOP|ADC_INTERFACE:ADC|DIG_RESULT[7] ; |TOP|ADC_INTERFACE:ADC|DIG_RESULT[7]   ; regout           ;
+; |TOP|ADC_INTERFACE:ADC|SR_CAPTURE[9] ; |TOP|ADC_INTERFACE:ADC|DATA[7]~0       ; combout          ;
+; |TOP|c[3]                            ; |TOP|c[3]                              ; regout           ;
+; |TOP|c[0]                            ; |TOP|c[0]                              ; regout           ;
+; |TOP|c[1]                            ; |TOP|c[1]                              ; regout           ;
+; |TOP|c[2]                            ; |TOP|c[2]                              ; regout           ;
+; |TOP|c[4]                            ; |TOP|c[4]                              ; regout           ;
+; |TOP|ADC_INTERFACE:ADC|DIG_RESULT[6] ; |TOP|ADC_INTERFACE:ADC|DIG_RESULT[6]   ; regout           ;
+; |TOP|ADC_INTERFACE:ADC|DIG_RESULT[5] ; |TOP|ADC_INTERFACE:ADC|DIG_RESULT[5]   ; regout           ;
+; |TOP|ADC_INTERFACE:ADC|DIG_RESULT[4] ; |TOP|ADC_INTERFACE:ADC|DIG_RESULT[4]   ; regout           ;
+; |TOP|ADC_INTERFACE:ADC|SR_CAPTURE[8] ; |TOP|ADC_INTERFACE:ADC|SR_CAPTURE[8]   ; regout           ;
+; |TOP|ADC_INTERFACE:ADC|DIG_RESULT[3] ; |TOP|ADC_INTERFACE:ADC|DIG_RESULT[3]   ; regout           ;
+; |TOP|ADC_INTERFACE:ADC|SR_CAPTURE[7] ; |TOP|ADC_INTERFACE:ADC|SR_CAPTURE[7]   ; regout           ;
+; |TOP|ADC_INTERFACE:ADC|DIG_RESULT[2] ; |TOP|ADC_INTERFACE:ADC|DIG_RESULT[2]   ; regout           ;
+; |TOP|ADC_INTERFACE:ADC|SR_CAPTURE[6] ; |TOP|ADC_INTERFACE:ADC|SR_CAPTURE[6]   ; regout           ;
+; |TOP|ADC_INTERFACE:ADC|DIG_RESULT[1] ; |TOP|ADC_INTERFACE:ADC|DIG_RESULT[1]   ; regout           ;
+; |TOP|ADC_INTERFACE:ADC|SR_CAPTURE[5] ; |TOP|ADC_INTERFACE:ADC|SR_CAPTURE[5]   ; regout           ;
+; |TOP|ADC_INTERFACE:ADC|DIG_RESULT[0] ; |TOP|ADC_INTERFACE:ADC|DIG_RESULT[0]   ; regout           ;
+; |TOP|ADC_INTERFACE:ADC|SR_CAPTURE[4] ; |TOP|ADC_INTERFACE:ADC|SR_CAPTURE[4]   ; regout           ;
+; |TOP|ADC_INTERFACE:ADC|SR_CAPTURE[3] ; |TOP|ADC_INTERFACE:ADC|SR_CAPTURE[3]   ; regout           ;
+; |TOP|ADC_INTERFACE:ADC|SR_CAPTURE[2] ; |TOP|ADC_INTERFACE:ADC|SR_CAPTURE[2]   ; regout           ;
+; |TOP|ADC_INTERFACE:ADC|SR_CAPTURE[1] ; |TOP|ADC_INTERFACE:ADC|SR_CAPTURE[1]   ; regout           ;
+; |TOP|ADC_INTERFACE:ADC|SR_CAPTURE[0] ; |TOP|ADC_INTERFACE:ADC|SR_CAPTURE[0]   ; regout           ;
+; |TOP|clk66                           ; |TOP|clk66~corein                      ; combout          ;
+; |TOP|botao                           ; |TOP|botao~corein                      ; combout          ;
+; |TOP|ADC_SSTRB                       ; |TOP|ADC_SSTRB~corein                  ; combout          ;
+; |TOP|clk260khz                       ; |TOP|clk260khz                         ; padio            ;
+; |TOP|ADC_CNTRL_DATA                  ; |TOP|ADC_CNTRL_DATA                    ; padio            ;
++--------------------------------------+----------------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++-------------------------------------------------------------------------------------------------+
+; Missing 1-Value Coverage                                                                        ;
++-------------------------------------+----------------------------------------+------------------+
+; Node Name                           ; Output Port Name                       ; Output Port Type ;
++-------------------------------------+----------------------------------------+------------------+
+; |TOP|PULSOS:DIV_FREQ|Add0~5         ; |TOP|PULSOS:DIV_FREQ|Add0~7            ; cout0            ;
+; |TOP|PULSOS:DIV_FREQ|Add0~10        ; |TOP|PULSOS:DIV_FREQ|Add0~12           ; cout0            ;
+; |TOP|PULSOS:DIV_FREQ|Add0~15        ; |TOP|PULSOS:DIV_FREQ|Add0~17           ; cout0            ;
+; |TOP|PULSOS:DIV_FREQ|Add0~20        ; |TOP|PULSOS:DIV_FREQ|Add0~22           ; cout0            ;
+; |TOP|PULSOS:DIV_FREQ|Add0~20        ; |TOP|PULSOS:DIV_FREQ|Add0~22COUT1_196  ; cout1            ;
+; |TOP|PULSOS:DIV_FREQ|Add0~25        ; |TOP|PULSOS:DIV_FREQ|Add0~27           ; cout0            ;
+; |TOP|PULSOS:DIV_FREQ|Add0~35        ; |TOP|PULSOS:DIV_FREQ|Add0~37COUT1_194  ; cout1            ;
+; |TOP|PULSOS:DIV_FREQ|Add0~40        ; |TOP|PULSOS:DIV_FREQ|Add0~40           ; combout          ;
+; |TOP|PULSOS:DIV_FREQ|Add0~40        ; |TOP|PULSOS:DIV_FREQ|Add0~42           ; cout0            ;
+; |TOP|PULSOS:DIV_FREQ|Add0~40        ; |TOP|PULSOS:DIV_FREQ|Add0~42COUT1_198  ; cout1            ;
+; |TOP|PULSOS:DIV_FREQ|Add0~45        ; |TOP|PULSOS:DIV_FREQ|Add0~45           ; combout          ;
+; |TOP|PULSOS:DIV_FREQ|Add0~45        ; |TOP|PULSOS:DIV_FREQ|Add0~47           ; cout0            ;
+; |TOP|PULSOS:DIV_FREQ|Add0~45        ; |TOP|PULSOS:DIV_FREQ|Add0~47COUT1_200  ; cout1            ;
+; |TOP|PULSOS:DIV_FREQ|Add0~50        ; |TOP|PULSOS:DIV_FREQ|Add0~50           ; combout          ;
+; |TOP|PULSOS:DIV_FREQ|Add0~50        ; |TOP|PULSOS:DIV_FREQ|Add0~52           ; cout             ;
+; |TOP|PULSOS:DIV_FREQ|Add0~55        ; |TOP|PULSOS:DIV_FREQ|Add0~55           ; combout          ;
+; |TOP|PULSOS:DIV_FREQ|Add0~55        ; |TOP|PULSOS:DIV_FREQ|Add0~57           ; cout0            ;
+; |TOP|PULSOS:DIV_FREQ|Add0~55        ; |TOP|PULSOS:DIV_FREQ|Add0~57COUT1_202  ; cout1            ;
+; |TOP|PULSOS:DIV_FREQ|Equal0~2       ; |TOP|PULSOS:DIV_FREQ|Equal0~2          ; combout          ;
+; |TOP|PULSOS:DIV_FREQ|Add0~60        ; |TOP|PULSOS:DIV_FREQ|Add0~60           ; combout          ;
+; |TOP|PULSOS:DIV_FREQ|Add0~60        ; |TOP|PULSOS:DIV_FREQ|Add0~62           ; cout0            ;
+; |TOP|PULSOS:DIV_FREQ|Add0~60        ; |TOP|PULSOS:DIV_FREQ|Add0~62COUT1_204  ; cout1            ;
+; |TOP|PULSOS:DIV_FREQ|Add0~65        ; |TOP|PULSOS:DIV_FREQ|Add0~65           ; combout          ;
+; |TOP|PULSOS:DIV_FREQ|Add0~65        ; |TOP|PULSOS:DIV_FREQ|Add0~67           ; cout0            ;
+; |TOP|PULSOS:DIV_FREQ|Add0~65        ; |TOP|PULSOS:DIV_FREQ|Add0~67COUT1_206  ; cout1            ;
+; |TOP|PULSOS:DIV_FREQ|Add0~70        ; |TOP|PULSOS:DIV_FREQ|Add0~70           ; combout          ;
+; |TOP|PULSOS:DIV_FREQ|Add0~70        ; |TOP|PULSOS:DIV_FREQ|Add0~72           ; cout0            ;
+; |TOP|PULSOS:DIV_FREQ|Add0~70        ; |TOP|PULSOS:DIV_FREQ|Add0~72COUT1_208  ; cout1            ;
+; |TOP|PULSOS:DIV_FREQ|Add0~75        ; |TOP|PULSOS:DIV_FREQ|Add0~75           ; combout          ;
+; |TOP|PULSOS:DIV_FREQ|Add0~75        ; |TOP|PULSOS:DIV_FREQ|Add0~77           ; cout             ;
+; |TOP|PULSOS:DIV_FREQ|Equal0~3       ; |TOP|PULSOS:DIV_FREQ|Equal0~3          ; combout          ;
+; |TOP|PULSOS:DIV_FREQ|Add0~80        ; |TOP|PULSOS:DIV_FREQ|Add0~80           ; combout          ;
+; |TOP|PULSOS:DIV_FREQ|Add0~80        ; |TOP|PULSOS:DIV_FREQ|Add0~82           ; cout0            ;
+; |TOP|PULSOS:DIV_FREQ|Add0~80        ; |TOP|PULSOS:DIV_FREQ|Add0~82COUT1_210  ; cout1            ;
+; |TOP|PULSOS:DIV_FREQ|Add0~85        ; |TOP|PULSOS:DIV_FREQ|Add0~85           ; combout          ;
+; |TOP|PULSOS:DIV_FREQ|Add0~85        ; |TOP|PULSOS:DIV_FREQ|Add0~87           ; cout0            ;
+; |TOP|PULSOS:DIV_FREQ|Add0~85        ; |TOP|PULSOS:DIV_FREQ|Add0~87COUT1_212  ; cout1            ;
+; |TOP|PULSOS:DIV_FREQ|Add0~90        ; |TOP|PULSOS:DIV_FREQ|Add0~90           ; combout          ;
+; |TOP|PULSOS:DIV_FREQ|Add0~90        ; |TOP|PULSOS:DIV_FREQ|Add0~92           ; cout0            ;
+; |TOP|PULSOS:DIV_FREQ|Add0~90        ; |TOP|PULSOS:DIV_FREQ|Add0~92COUT1_214  ; cout1            ;
+; |TOP|PULSOS:DIV_FREQ|Add0~95        ; |TOP|PULSOS:DIV_FREQ|Add0~95           ; combout          ;
+; |TOP|PULSOS:DIV_FREQ|Add0~95        ; |TOP|PULSOS:DIV_FREQ|Add0~97           ; cout0            ;
+; |TOP|PULSOS:DIV_FREQ|Add0~95        ; |TOP|PULSOS:DIV_FREQ|Add0~97COUT1_216  ; cout1            ;
+; |TOP|PULSOS:DIV_FREQ|Equal0~5       ; |TOP|PULSOS:DIV_FREQ|Equal0~5          ; combout          ;
+; |TOP|PULSOS:DIV_FREQ|Add0~100       ; |TOP|PULSOS:DIV_FREQ|Add0~100          ; combout          ;
+; |TOP|PULSOS:DIV_FREQ|Add0~100       ; |TOP|PULSOS:DIV_FREQ|Add0~102          ; cout             ;
+; |TOP|PULSOS:DIV_FREQ|Add0~105       ; |TOP|PULSOS:DIV_FREQ|Add0~105          ; combout          ;
+; |TOP|PULSOS:DIV_FREQ|Add0~105       ; |TOP|PULSOS:DIV_FREQ|Add0~107          ; cout0            ;
+; |TOP|PULSOS:DIV_FREQ|Add0~105       ; |TOP|PULSOS:DIV_FREQ|Add0~107COUT1_218 ; cout1            ;
+; |TOP|PULSOS:DIV_FREQ|Add0~110       ; |TOP|PULSOS:DIV_FREQ|Add0~110          ; combout          ;
+; |TOP|PULSOS:DIV_FREQ|Add0~110       ; |TOP|PULSOS:DIV_FREQ|Add0~112          ; cout0            ;
+; |TOP|PULSOS:DIV_FREQ|Add0~110       ; |TOP|PULSOS:DIV_FREQ|Add0~112COUT1_220 ; cout1            ;
+; |TOP|PULSOS:DIV_FREQ|Add0~115       ; |TOP|PULSOS:DIV_FREQ|Add0~115          ; combout          ;
+; |TOP|PULSOS:DIV_FREQ|Add0~115       ; |TOP|PULSOS:DIV_FREQ|Add0~117          ; cout0            ;
+; |TOP|PULSOS:DIV_FREQ|Add0~115       ; |TOP|PULSOS:DIV_FREQ|Add0~117COUT1_222 ; cout1            ;
+; |TOP|PULSOS:DIV_FREQ|Equal0~6       ; |TOP|PULSOS:DIV_FREQ|Equal0~6          ; combout          ;
+; |TOP|PULSOS:DIV_FREQ|Add0~120       ; |TOP|PULSOS:DIV_FREQ|Add0~120          ; combout          ;
+; |TOP|PULSOS:DIV_FREQ|Add0~120       ; |TOP|PULSOS:DIV_FREQ|Add0~122          ; cout0            ;
+; |TOP|PULSOS:DIV_FREQ|Add0~120       ; |TOP|PULSOS:DIV_FREQ|Add0~122COUT1_224 ; cout1            ;
+; |TOP|PULSOS:DIV_FREQ|Add0~125       ; |TOP|PULSOS:DIV_FREQ|Add0~125          ; combout          ;
+; |TOP|PULSOS:DIV_FREQ|Add0~125       ; |TOP|PULSOS:DIV_FREQ|Add0~127          ; cout             ;
+; |TOP|PULSOS:DIV_FREQ|Add0~130       ; |TOP|PULSOS:DIV_FREQ|Add0~130          ; combout          ;
+; |TOP|PULSOS:DIV_FREQ|Add0~130       ; |TOP|PULSOS:DIV_FREQ|Add0~132          ; cout0            ;
+; |TOP|PULSOS:DIV_FREQ|Add0~130       ; |TOP|PULSOS:DIV_FREQ|Add0~132COUT1_226 ; cout1            ;
+; |TOP|PULSOS:DIV_FREQ|Add0~135       ; |TOP|PULSOS:DIV_FREQ|Add0~135          ; combout          ;
+; |TOP|PULSOS:DIV_FREQ|Add0~135       ; |TOP|PULSOS:DIV_FREQ|Add0~137          ; cout0            ;
+; |TOP|PULSOS:DIV_FREQ|Add0~135       ; |TOP|PULSOS:DIV_FREQ|Add0~137COUT1_228 ; cout1            ;
+; |TOP|PULSOS:DIV_FREQ|Equal0~7       ; |TOP|PULSOS:DIV_FREQ|Equal0~7          ; combout          ;
+; |TOP|PULSOS:DIV_FREQ|Add0~140       ; |TOP|PULSOS:DIV_FREQ|Add0~140          ; combout          ;
+; |TOP|PULSOS:DIV_FREQ|Add0~140       ; |TOP|PULSOS:DIV_FREQ|Add0~142          ; cout0            ;
+; |TOP|PULSOS:DIV_FREQ|Add0~140       ; |TOP|PULSOS:DIV_FREQ|Add0~142COUT1_230 ; cout1            ;
+; |TOP|PULSOS:DIV_FREQ|Add0~145       ; |TOP|PULSOS:DIV_FREQ|Add0~145          ; combout          ;
+; |TOP|PULSOS:DIV_FREQ|Add0~145       ; |TOP|PULSOS:DIV_FREQ|Add0~147          ; cout0            ;
+; |TOP|PULSOS:DIV_FREQ|Add0~145       ; |TOP|PULSOS:DIV_FREQ|Add0~147COUT1_232 ; cout1            ;
+; |TOP|PULSOS:DIV_FREQ|Add0~150       ; |TOP|PULSOS:DIV_FREQ|Add0~150          ; combout          ;
+; |TOP|PULSOS:DIV_FREQ|Add0~150       ; |TOP|PULSOS:DIV_FREQ|Add0~152          ; cout             ;
+; |TOP|PULSOS:DIV_FREQ|Add0~155       ; |TOP|PULSOS:DIV_FREQ|Add0~155          ; combout          ;
+; |TOP|PULSOS:DIV_FREQ|Equal0~8       ; |TOP|PULSOS:DIV_FREQ|Equal0~8          ; combout          ;
+; |TOP|PULSOS:DIV_FREQ|Equal0~9       ; |TOP|PULSOS:DIV_FREQ|Equal0~9          ; combout          ;
+; |TOP|ADC_INTERFACE:ADC|ADC_STATE[4] ; |TOP|ADC_INTERFACE:ADC|ADC_STATE[4]    ; regout           ;
+; |TOP|Add0~0                         ; |TOP|Add0~2                            ; cout0            ;
+; |TOP|Add0~10                        ; |TOP|Add0~12                           ; cout0            ;
+; |TOP|Add0~15                        ; |TOP|Add0~17                           ; cout0            ;
+; |TOP|Add0~20                        ; |TOP|Add0~22                           ; cout0            ;
+; |TOP|Add0~20                        ; |TOP|Add0~22COUT1_192                  ; cout1            ;
+; |TOP|Add0~25                        ; |TOP|Add0~25                           ; combout          ;
+; |TOP|Add0~25                        ; |TOP|Add0~27                           ; cout             ;
+; |TOP|Add0~30                        ; |TOP|Add0~30                           ; combout          ;
+; |TOP|Add0~30                        ; |TOP|Add0~32                           ; cout0            ;
+; |TOP|Add0~30                        ; |TOP|Add0~32COUT1_194                  ; cout1            ;
+; |TOP|Add0~35                        ; |TOP|Add0~35                           ; combout          ;
+; |TOP|Add0~35                        ; |TOP|Add0~37                           ; cout0            ;
+; |TOP|Add0~35                        ; |TOP|Add0~37COUT1_196                  ; cout1            ;
+; |TOP|Add0~40                        ; |TOP|Add0~40                           ; combout          ;
+; |TOP|Add0~40                        ; |TOP|Add0~42                           ; cout0            ;
+; |TOP|Add0~40                        ; |TOP|Add0~42COUT1_198                  ; cout1            ;
+; |TOP|Add0~45                        ; |TOP|Add0~45                           ; combout          ;
+; |TOP|Add0~45                        ; |TOP|Add0~47                           ; cout0            ;
+; |TOP|Add0~45                        ; |TOP|Add0~47COUT1_200                  ; cout1            ;
+; |TOP|Add0~50                        ; |TOP|Add0~50                           ; combout          ;
+; |TOP|Add0~50                        ; |TOP|Add0~52                           ; cout             ;
+; |TOP|Add0~55                        ; |TOP|Add0~55                           ; combout          ;
+; |TOP|Add0~55                        ; |TOP|Add0~57                           ; cout0            ;
+; |TOP|Add0~55                        ; |TOP|Add0~57COUT1_202                  ; cout1            ;
+; |TOP|Equal0~2                       ; |TOP|Equal0~2                          ; combout          ;
+; |TOP|Add0~60                        ; |TOP|Add0~60                           ; combout          ;
+; |TOP|Add0~60                        ; |TOP|Add0~62                           ; cout0            ;
+; |TOP|Add0~60                        ; |TOP|Add0~62COUT1_204                  ; cout1            ;
+; |TOP|Add0~65                        ; |TOP|Add0~65                           ; combout          ;
+; |TOP|Add0~65                        ; |TOP|Add0~67                           ; cout0            ;
+; |TOP|Add0~65                        ; |TOP|Add0~67COUT1_206                  ; cout1            ;
+; |TOP|Add0~70                        ; |TOP|Add0~70                           ; combout          ;
+; |TOP|Add0~70                        ; |TOP|Add0~72                           ; cout0            ;
+; |TOP|Add0~70                        ; |TOP|Add0~72COUT1_208                  ; cout1            ;
+; |TOP|Add0~75                        ; |TOP|Add0~75                           ; combout          ;
+; |TOP|Add0~75                        ; |TOP|Add0~77                           ; cout             ;
+; |TOP|Equal0~3                       ; |TOP|Equal0~3                          ; combout          ;
+; |TOP|Add0~80                        ; |TOP|Add0~80                           ; combout          ;
+; |TOP|Add0~80                        ; |TOP|Add0~82                           ; cout0            ;
+; |TOP|Add0~80                        ; |TOP|Add0~82COUT1_210                  ; cout1            ;
+; |TOP|Add0~85                        ; |TOP|Add0~85                           ; combout          ;
+; |TOP|Add0~85                        ; |TOP|Add0~87                           ; cout0            ;
+; |TOP|Add0~85                        ; |TOP|Add0~87COUT1_212                  ; cout1            ;
+; |TOP|Add0~90                        ; |TOP|Add0~90                           ; combout          ;
+; |TOP|Add0~90                        ; |TOP|Add0~92                           ; cout0            ;
+; |TOP|Add0~90                        ; |TOP|Add0~92COUT1_214                  ; cout1            ;
+; |TOP|Add0~95                        ; |TOP|Add0~95                           ; combout          ;
+; |TOP|Add0~95                        ; |TOP|Add0~97                           ; cout0            ;
+; |TOP|Add0~95                        ; |TOP|Add0~97COUT1_216                  ; cout1            ;
+; |TOP|Equal0~5                       ; |TOP|Equal0~5                          ; combout          ;
+; |TOP|Add0~100                       ; |TOP|Add0~100                          ; combout          ;
+; |TOP|Add0~100                       ; |TOP|Add0~102                          ; cout             ;
+; |TOP|Add0~105                       ; |TOP|Add0~105                          ; combout          ;
+; |TOP|Add0~105                       ; |TOP|Add0~107                          ; cout0            ;
+; |TOP|Add0~105                       ; |TOP|Add0~107COUT1_218                 ; cout1            ;
+; |TOP|Equal0~6                       ; |TOP|Equal0~6                          ; combout          ;
+; |TOP|Add0~110                       ; |TOP|Add0~110                          ; combout          ;
+; |TOP|Add0~110                       ; |TOP|Add0~112                          ; cout0            ;
+; |TOP|Add0~110                       ; |TOP|Add0~112COUT1_220                 ; cout1            ;
+; |TOP|Add0~115                       ; |TOP|Add0~115                          ; combout          ;
+; |TOP|Add0~115                       ; |TOP|Add0~117                          ; cout0            ;
+; |TOP|Add0~115                       ; |TOP|Add0~117COUT1_222                 ; cout1            ;
+; |TOP|Equal0~7                       ; |TOP|Equal0~7                          ; combout          ;
+; |TOP|Add0~120                       ; |TOP|Add0~120                          ; combout          ;
+; |TOP|Add0~120                       ; |TOP|Add0~122                          ; cout0            ;
+; |TOP|Add0~120                       ; |TOP|Add0~122COUT1_224                 ; cout1            ;
+; |TOP|Add0~125                       ; |TOP|Add0~125                          ; combout          ;
+; |TOP|Add0~125                       ; |TOP|Add0~127                          ; cout             ;
+; |TOP|Add0~130                       ; |TOP|Add0~130                          ; combout          ;
+; |TOP|Add0~130                       ; |TOP|Add0~132                          ; cout0            ;
+; |TOP|Add0~130                       ; |TOP|Add0~132COUT1_226                 ; cout1            ;
+; |TOP|Add0~135                       ; |TOP|Add0~135                          ; combout          ;
+; |TOP|Add0~135                       ; |TOP|Add0~137                          ; cout0            ;
+; |TOP|Add0~135                       ; |TOP|Add0~137COUT1_228                 ; cout1            ;
+; |TOP|Equal0~8                       ; |TOP|Equal0~8                          ; combout          ;
+; |TOP|Add0~140                       ; |TOP|Add0~140                          ; combout          ;
+; |TOP|Add0~140                       ; |TOP|Add0~142                          ; cout0            ;
+; |TOP|Add0~140                       ; |TOP|Add0~142COUT1_230                 ; cout1            ;
+; |TOP|Add0~145                       ; |TOP|Add0~145                          ; combout          ;
+; |TOP|Add0~145                       ; |TOP|Add0~147                          ; cout0            ;
+; |TOP|Add0~145                       ; |TOP|Add0~147COUT1_232                 ; cout1            ;
+; |TOP|Add0~150                       ; |TOP|Add0~150                          ; combout          ;
+; |TOP|Add0~150                       ; |TOP|Add0~152                          ; cout             ;
+; |TOP|Add0~155                       ; |TOP|Add0~155                          ; combout          ;
+; |TOP|Equal0~9                       ; |TOP|Equal0~9                          ; combout          ;
+; |TOP|PULSOS:DIV_FREQ|cont[7]        ; |TOP|PULSOS:DIV_FREQ|cont[7]           ; regout           ;
+; |TOP|PULSOS:DIV_FREQ|cont[8]        ; |TOP|PULSOS:DIV_FREQ|cont[8]           ; regout           ;
+; |TOP|PULSOS:DIV_FREQ|cont[9]        ; |TOP|PULSOS:DIV_FREQ|cont[9]           ; regout           ;
+; |TOP|PULSOS:DIV_FREQ|cont[10]       ; |TOP|PULSOS:DIV_FREQ|cont[10]          ; regout           ;
+; |TOP|PULSOS:DIV_FREQ|cont[11]       ; |TOP|PULSOS:DIV_FREQ|cont[11]          ; regout           ;
+; |TOP|PULSOS:DIV_FREQ|cont[12]       ; |TOP|PULSOS:DIV_FREQ|cont[12]          ; regout           ;
+; |TOP|PULSOS:DIV_FREQ|cont[13]       ; |TOP|PULSOS:DIV_FREQ|cont[13]          ; regout           ;
+; |TOP|PULSOS:DIV_FREQ|cont[14]       ; |TOP|PULSOS:DIV_FREQ|cont[14]          ; regout           ;
+; |TOP|PULSOS:DIV_FREQ|cont[15]       ; |TOP|PULSOS:DIV_FREQ|cont[15]          ; regout           ;
+; |TOP|PULSOS:DIV_FREQ|cont[16]       ; |TOP|PULSOS:DIV_FREQ|cont[16]          ; regout           ;
+; |TOP|PULSOS:DIV_FREQ|cont[17]       ; |TOP|PULSOS:DIV_FREQ|cont[17]          ; regout           ;
+; |TOP|PULSOS:DIV_FREQ|cont[18]       ; |TOP|PULSOS:DIV_FREQ|cont[18]          ; regout           ;
+; |TOP|PULSOS:DIV_FREQ|cont[19]       ; |TOP|PULSOS:DIV_FREQ|cont[19]          ; regout           ;
+; |TOP|PULSOS:DIV_FREQ|cont[20]       ; |TOP|PULSOS:DIV_FREQ|cont[20]          ; regout           ;
+; |TOP|PULSOS:DIV_FREQ|cont[21]       ; |TOP|PULSOS:DIV_FREQ|cont[21]          ; regout           ;
+; |TOP|PULSOS:DIV_FREQ|cont[22]       ; |TOP|PULSOS:DIV_FREQ|cont[22]          ; regout           ;
+; |TOP|PULSOS:DIV_FREQ|cont[23]       ; |TOP|PULSOS:DIV_FREQ|cont[23]          ; regout           ;
+; |TOP|PULSOS:DIV_FREQ|cont[24]       ; |TOP|PULSOS:DIV_FREQ|cont[24]          ; regout           ;
+; |TOP|PULSOS:DIV_FREQ|cont[25]       ; |TOP|PULSOS:DIV_FREQ|cont[25]          ; regout           ;
+; |TOP|PULSOS:DIV_FREQ|cont[26]       ; |TOP|PULSOS:DIV_FREQ|cont[26]          ; regout           ;
+; |TOP|PULSOS:DIV_FREQ|cont[27]       ; |TOP|PULSOS:DIV_FREQ|cont[27]          ; regout           ;
+; |TOP|PULSOS:DIV_FREQ|cont[28]       ; |TOP|PULSOS:DIV_FREQ|cont[28]          ; regout           ;
+; |TOP|PULSOS:DIV_FREQ|cont[29]       ; |TOP|PULSOS:DIV_FREQ|cont[29]          ; regout           ;
+; |TOP|PULSOS:DIV_FREQ|cont[30]       ; |TOP|PULSOS:DIV_FREQ|cont[30]          ; regout           ;
+; |TOP|PULSOS:DIV_FREQ|cont[31]       ; |TOP|PULSOS:DIV_FREQ|cont[31]          ; regout           ;
+; |TOP|ADC_INTERFACE:ADC|Add0~5       ; |TOP|ADC_INTERFACE:ADC|Add0~7          ; cout0            ;
+; |TOP|ADC_INTERFACE:ADC|Add0~5       ; |TOP|ADC_INTERFACE:ADC|Add0~7COUT1_29  ; cout1            ;
+; |TOP|ADC_INTERFACE:ADC|Add0~15      ; |TOP|ADC_INTERFACE:ADC|Add0~15         ; combout          ;
+; |TOP|c[5]                           ; |TOP|c[5]                              ; regout           ;
+; |TOP|c[6]                           ; |TOP|c[6]                              ; regout           ;
+; |TOP|c[7]                           ; |TOP|c[7]                              ; regout           ;
+; |TOP|c[8]                           ; |TOP|c[8]                              ; regout           ;
+; |TOP|c[9]                           ; |TOP|c[9]                              ; regout           ;
+; |TOP|c[10]                          ; |TOP|c[10]                             ; regout           ;
+; |TOP|c[11]                          ; |TOP|c[11]                             ; regout           ;
+; |TOP|c[12]                          ; |TOP|c[12]                             ; regout           ;
+; |TOP|c[13]                          ; |TOP|c[13]                             ; regout           ;
+; |TOP|c[14]                          ; |TOP|c[14]                             ; regout           ;
+; |TOP|c[15]                          ; |TOP|c[15]                             ; regout           ;
+; |TOP|c[16]                          ; |TOP|c[16]                             ; regout           ;
+; |TOP|c[17]                          ; |TOP|c[17]                             ; regout           ;
+; |TOP|c[18]                          ; |TOP|c[18]                             ; regout           ;
+; |TOP|c[19]                          ; |TOP|c[19]                             ; regout           ;
+; |TOP|c[20]                          ; |TOP|c[20]                             ; regout           ;
+; |TOP|c[21]                          ; |TOP|c[21]                             ; regout           ;
+; |TOP|c[22]                          ; |TOP|c[22]                             ; regout           ;
+; |TOP|c[23]                          ; |TOP|c[23]                             ; regout           ;
+; |TOP|c[24]                          ; |TOP|c[24]                             ; regout           ;
+; |TOP|c[25]                          ; |TOP|c[25]                             ; regout           ;
+; |TOP|c[26]                          ; |TOP|c[26]                             ; regout           ;
+; |TOP|c[27]                          ; |TOP|c[27]                             ; regout           ;
+; |TOP|c[28]                          ; |TOP|c[28]                             ; regout           ;
+; |TOP|c[29]                          ; |TOP|c[29]                             ; regout           ;
+; |TOP|c[30]                          ; |TOP|c[30]                             ; regout           ;
+; |TOP|c[31]                          ; |TOP|c[31]                             ; regout           ;
+; |TOP|ADC_DATA                       ; |TOP|ADC_DATA~corein                   ; combout          ;
+; |TOP|ADC_CSN                        ; |TOP|ADC_CSN                           ; padio            ;
+; |TOP|ADC_SHDN                       ; |TOP|ADC_SHDN                          ; padio            ;
++-------------------------------------+----------------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++-------------------------------------------------------------------------------------------------+
+; Missing 0-Value Coverage                                                                        ;
++-------------------------------------+----------------------------------------+------------------+
+; Node Name                           ; Output Port Name                       ; Output Port Type ;
++-------------------------------------+----------------------------------------+------------------+
+; |TOP|L1~reg0                        ; |TOP|L1~reg0                           ; regout           ;
+; |TOP|L2~reg0                        ; |TOP|L2~reg0                           ; regout           ;
+; |TOP|L3~reg0                        ; |TOP|L3~reg0                           ; regout           ;
+; |TOP|L4~reg0                        ; |TOP|L4~reg0                           ; regout           ;
+; |TOP|PULSOS:DIV_FREQ|Add0~5         ; |TOP|PULSOS:DIV_FREQ|Add0~7            ; cout0            ;
+; |TOP|PULSOS:DIV_FREQ|Add0~10        ; |TOP|PULSOS:DIV_FREQ|Add0~12           ; cout0            ;
+; |TOP|PULSOS:DIV_FREQ|Add0~15        ; |TOP|PULSOS:DIV_FREQ|Add0~17           ; cout0            ;
+; |TOP|PULSOS:DIV_FREQ|Add0~20        ; |TOP|PULSOS:DIV_FREQ|Add0~22           ; cout0            ;
+; |TOP|PULSOS:DIV_FREQ|Add0~20        ; |TOP|PULSOS:DIV_FREQ|Add0~22COUT1_196  ; cout1            ;
+; |TOP|PULSOS:DIV_FREQ|Add0~25        ; |TOP|PULSOS:DIV_FREQ|Add0~27           ; cout0            ;
+; |TOP|PULSOS:DIV_FREQ|Add0~35        ; |TOP|PULSOS:DIV_FREQ|Add0~37COUT1_194  ; cout1            ;
+; |TOP|PULSOS:DIV_FREQ|Add0~40        ; |TOP|PULSOS:DIV_FREQ|Add0~40           ; combout          ;
+; |TOP|PULSOS:DIV_FREQ|Add0~40        ; |TOP|PULSOS:DIV_FREQ|Add0~42           ; cout0            ;
+; |TOP|PULSOS:DIV_FREQ|Add0~40        ; |TOP|PULSOS:DIV_FREQ|Add0~42COUT1_198  ; cout1            ;
+; |TOP|PULSOS:DIV_FREQ|Add0~45        ; |TOP|PULSOS:DIV_FREQ|Add0~45           ; combout          ;
+; |TOP|PULSOS:DIV_FREQ|Add0~45        ; |TOP|PULSOS:DIV_FREQ|Add0~47           ; cout0            ;
+; |TOP|PULSOS:DIV_FREQ|Add0~45        ; |TOP|PULSOS:DIV_FREQ|Add0~47COUT1_200  ; cout1            ;
+; |TOP|PULSOS:DIV_FREQ|Add0~50        ; |TOP|PULSOS:DIV_FREQ|Add0~50           ; combout          ;
+; |TOP|PULSOS:DIV_FREQ|Add0~50        ; |TOP|PULSOS:DIV_FREQ|Add0~52           ; cout             ;
+; |TOP|PULSOS:DIV_FREQ|Add0~55        ; |TOP|PULSOS:DIV_FREQ|Add0~55           ; combout          ;
+; |TOP|PULSOS:DIV_FREQ|Add0~55        ; |TOP|PULSOS:DIV_FREQ|Add0~57           ; cout0            ;
+; |TOP|PULSOS:DIV_FREQ|Add0~55        ; |TOP|PULSOS:DIV_FREQ|Add0~57COUT1_202  ; cout1            ;
+; |TOP|PULSOS:DIV_FREQ|Equal0~2       ; |TOP|PULSOS:DIV_FREQ|Equal0~2          ; combout          ;
+; |TOP|PULSOS:DIV_FREQ|Add0~60        ; |TOP|PULSOS:DIV_FREQ|Add0~60           ; combout          ;
+; |TOP|PULSOS:DIV_FREQ|Add0~60        ; |TOP|PULSOS:DIV_FREQ|Add0~62           ; cout0            ;
+; |TOP|PULSOS:DIV_FREQ|Add0~60        ; |TOP|PULSOS:DIV_FREQ|Add0~62COUT1_204  ; cout1            ;
+; |TOP|PULSOS:DIV_FREQ|Add0~65        ; |TOP|PULSOS:DIV_FREQ|Add0~65           ; combout          ;
+; |TOP|PULSOS:DIV_FREQ|Add0~65        ; |TOP|PULSOS:DIV_FREQ|Add0~67           ; cout0            ;
+; |TOP|PULSOS:DIV_FREQ|Add0~65        ; |TOP|PULSOS:DIV_FREQ|Add0~67COUT1_206  ; cout1            ;
+; |TOP|PULSOS:DIV_FREQ|Add0~70        ; |TOP|PULSOS:DIV_FREQ|Add0~70           ; combout          ;
+; |TOP|PULSOS:DIV_FREQ|Add0~70        ; |TOP|PULSOS:DIV_FREQ|Add0~72           ; cout0            ;
+; |TOP|PULSOS:DIV_FREQ|Add0~70        ; |TOP|PULSOS:DIV_FREQ|Add0~72COUT1_208  ; cout1            ;
+; |TOP|PULSOS:DIV_FREQ|Add0~75        ; |TOP|PULSOS:DIV_FREQ|Add0~75           ; combout          ;
+; |TOP|PULSOS:DIV_FREQ|Add0~75        ; |TOP|PULSOS:DIV_FREQ|Add0~77           ; cout             ;
+; |TOP|PULSOS:DIV_FREQ|Equal0~3       ; |TOP|PULSOS:DIV_FREQ|Equal0~3          ; combout          ;
+; |TOP|PULSOS:DIV_FREQ|Add0~80        ; |TOP|PULSOS:DIV_FREQ|Add0~80           ; combout          ;
+; |TOP|PULSOS:DIV_FREQ|Add0~80        ; |TOP|PULSOS:DIV_FREQ|Add0~82           ; cout0            ;
+; |TOP|PULSOS:DIV_FREQ|Add0~80        ; |TOP|PULSOS:DIV_FREQ|Add0~82COUT1_210  ; cout1            ;
+; |TOP|PULSOS:DIV_FREQ|Add0~85        ; |TOP|PULSOS:DIV_FREQ|Add0~85           ; combout          ;
+; |TOP|PULSOS:DIV_FREQ|Add0~85        ; |TOP|PULSOS:DIV_FREQ|Add0~87           ; cout0            ;
+; |TOP|PULSOS:DIV_FREQ|Add0~85        ; |TOP|PULSOS:DIV_FREQ|Add0~87COUT1_212  ; cout1            ;
+; |TOP|PULSOS:DIV_FREQ|Add0~90        ; |TOP|PULSOS:DIV_FREQ|Add0~90           ; combout          ;
+; |TOP|PULSOS:DIV_FREQ|Add0~90        ; |TOP|PULSOS:DIV_FREQ|Add0~92           ; cout0            ;
+; |TOP|PULSOS:DIV_FREQ|Add0~90        ; |TOP|PULSOS:DIV_FREQ|Add0~92COUT1_214  ; cout1            ;
+; |TOP|PULSOS:DIV_FREQ|Add0~95        ; |TOP|PULSOS:DIV_FREQ|Add0~95           ; combout          ;
+; |TOP|PULSOS:DIV_FREQ|Add0~95        ; |TOP|PULSOS:DIV_FREQ|Add0~97           ; cout0            ;
+; |TOP|PULSOS:DIV_FREQ|Add0~95        ; |TOP|PULSOS:DIV_FREQ|Add0~97COUT1_216  ; cout1            ;
+; |TOP|PULSOS:DIV_FREQ|Equal0~5       ; |TOP|PULSOS:DIV_FREQ|Equal0~5          ; combout          ;
+; |TOP|PULSOS:DIV_FREQ|Add0~100       ; |TOP|PULSOS:DIV_FREQ|Add0~100          ; combout          ;
+; |TOP|PULSOS:DIV_FREQ|Add0~100       ; |TOP|PULSOS:DIV_FREQ|Add0~102          ; cout             ;
+; |TOP|PULSOS:DIV_FREQ|Add0~105       ; |TOP|PULSOS:DIV_FREQ|Add0~105          ; combout          ;
+; |TOP|PULSOS:DIV_FREQ|Add0~105       ; |TOP|PULSOS:DIV_FREQ|Add0~107          ; cout0            ;
+; |TOP|PULSOS:DIV_FREQ|Add0~105       ; |TOP|PULSOS:DIV_FREQ|Add0~107COUT1_218 ; cout1            ;
+; |TOP|PULSOS:DIV_FREQ|Add0~110       ; |TOP|PULSOS:DIV_FREQ|Add0~110          ; combout          ;
+; |TOP|PULSOS:DIV_FREQ|Add0~110       ; |TOP|PULSOS:DIV_FREQ|Add0~112          ; cout0            ;
+; |TOP|PULSOS:DIV_FREQ|Add0~110       ; |TOP|PULSOS:DIV_FREQ|Add0~112COUT1_220 ; cout1            ;
+; |TOP|PULSOS:DIV_FREQ|Add0~115       ; |TOP|PULSOS:DIV_FREQ|Add0~115          ; combout          ;
+; |TOP|PULSOS:DIV_FREQ|Add0~115       ; |TOP|PULSOS:DIV_FREQ|Add0~117          ; cout0            ;
+; |TOP|PULSOS:DIV_FREQ|Add0~115       ; |TOP|PULSOS:DIV_FREQ|Add0~117COUT1_222 ; cout1            ;
+; |TOP|PULSOS:DIV_FREQ|Equal0~6       ; |TOP|PULSOS:DIV_FREQ|Equal0~6          ; combout          ;
+; |TOP|PULSOS:DIV_FREQ|Add0~120       ; |TOP|PULSOS:DIV_FREQ|Add0~120          ; combout          ;
+; |TOP|PULSOS:DIV_FREQ|Add0~120       ; |TOP|PULSOS:DIV_FREQ|Add0~122          ; cout0            ;
+; |TOP|PULSOS:DIV_FREQ|Add0~120       ; |TOP|PULSOS:DIV_FREQ|Add0~122COUT1_224 ; cout1            ;
+; |TOP|PULSOS:DIV_FREQ|Add0~125       ; |TOP|PULSOS:DIV_FREQ|Add0~125          ; combout          ;
+; |TOP|PULSOS:DIV_FREQ|Add0~125       ; |TOP|PULSOS:DIV_FREQ|Add0~127          ; cout             ;
+; |TOP|PULSOS:DIV_FREQ|Add0~130       ; |TOP|PULSOS:DIV_FREQ|Add0~130          ; combout          ;
+; |TOP|PULSOS:DIV_FREQ|Add0~130       ; |TOP|PULSOS:DIV_FREQ|Add0~132          ; cout0            ;
+; |TOP|PULSOS:DIV_FREQ|Add0~130       ; |TOP|PULSOS:DIV_FREQ|Add0~132COUT1_226 ; cout1            ;
+; |TOP|PULSOS:DIV_FREQ|Add0~135       ; |TOP|PULSOS:DIV_FREQ|Add0~135          ; combout          ;
+; |TOP|PULSOS:DIV_FREQ|Add0~135       ; |TOP|PULSOS:DIV_FREQ|Add0~137          ; cout0            ;
+; |TOP|PULSOS:DIV_FREQ|Add0~135       ; |TOP|PULSOS:DIV_FREQ|Add0~137COUT1_228 ; cout1            ;
+; |TOP|PULSOS:DIV_FREQ|Equal0~7       ; |TOP|PULSOS:DIV_FREQ|Equal0~7          ; combout          ;
+; |TOP|PULSOS:DIV_FREQ|Add0~140       ; |TOP|PULSOS:DIV_FREQ|Add0~140          ; combout          ;
+; |TOP|PULSOS:DIV_FREQ|Add0~140       ; |TOP|PULSOS:DIV_FREQ|Add0~142          ; cout0            ;
+; |TOP|PULSOS:DIV_FREQ|Add0~140       ; |TOP|PULSOS:DIV_FREQ|Add0~142COUT1_230 ; cout1            ;
+; |TOP|PULSOS:DIV_FREQ|Add0~145       ; |TOP|PULSOS:DIV_FREQ|Add0~145          ; combout          ;
+; |TOP|PULSOS:DIV_FREQ|Add0~145       ; |TOP|PULSOS:DIV_FREQ|Add0~147          ; cout0            ;
+; |TOP|PULSOS:DIV_FREQ|Add0~145       ; |TOP|PULSOS:DIV_FREQ|Add0~147COUT1_232 ; cout1            ;
+; |TOP|PULSOS:DIV_FREQ|Add0~150       ; |TOP|PULSOS:DIV_FREQ|Add0~150          ; combout          ;
+; |TOP|PULSOS:DIV_FREQ|Add0~150       ; |TOP|PULSOS:DIV_FREQ|Add0~152          ; cout             ;
+; |TOP|PULSOS:DIV_FREQ|Add0~155       ; |TOP|PULSOS:DIV_FREQ|Add0~155          ; combout          ;
+; |TOP|PULSOS:DIV_FREQ|Equal0~8       ; |TOP|PULSOS:DIV_FREQ|Equal0~8          ; combout          ;
+; |TOP|PULSOS:DIV_FREQ|Equal0~9       ; |TOP|PULSOS:DIV_FREQ|Equal0~9          ; combout          ;
+; |TOP|ADC_INTERFACE:ADC|ADC_STATE[4] ; |TOP|ADC_INTERFACE:ADC|ADC_STATE[4]    ; regout           ;
+; |TOP|ADC_INTERFACE:ADC|DATA[7]      ; |TOP|ADC_INTERFACE:ADC|DATA[7]         ; regout           ;
+; |TOP|Add0~0                         ; |TOP|Add0~2                            ; cout0            ;
+; |TOP|Add0~10                        ; |TOP|Add0~12                           ; cout0            ;
+; |TOP|Add0~15                        ; |TOP|Add0~17                           ; cout0            ;
+; |TOP|Add0~20                        ; |TOP|Add0~22                           ; cout0            ;
+; |TOP|Add0~20                        ; |TOP|Add0~22COUT1_192                  ; cout1            ;
+; |TOP|Add0~25                        ; |TOP|Add0~25                           ; combout          ;
+; |TOP|Add0~25                        ; |TOP|Add0~27                           ; cout             ;
+; |TOP|Add0~30                        ; |TOP|Add0~30                           ; combout          ;
+; |TOP|Add0~30                        ; |TOP|Add0~32                           ; cout0            ;
+; |TOP|Add0~30                        ; |TOP|Add0~32COUT1_194                  ; cout1            ;
+; |TOP|Add0~35                        ; |TOP|Add0~35                           ; combout          ;
+; |TOP|Add0~35                        ; |TOP|Add0~37                           ; cout0            ;
+; |TOP|Add0~35                        ; |TOP|Add0~37COUT1_196                  ; cout1            ;
+; |TOP|Add0~40                        ; |TOP|Add0~40                           ; combout          ;
+; |TOP|Add0~40                        ; |TOP|Add0~42                           ; cout0            ;
+; |TOP|Add0~40                        ; |TOP|Add0~42COUT1_198                  ; cout1            ;
+; |TOP|Add0~45                        ; |TOP|Add0~45                           ; combout          ;
+; |TOP|Add0~45                        ; |TOP|Add0~47                           ; cout0            ;
+; |TOP|Add0~45                        ; |TOP|Add0~47COUT1_200                  ; cout1            ;
+; |TOP|Add0~50                        ; |TOP|Add0~50                           ; combout          ;
+; |TOP|Add0~50                        ; |TOP|Add0~52                           ; cout             ;
+; |TOP|Add0~55                        ; |TOP|Add0~55                           ; combout          ;
+; |TOP|Add0~55                        ; |TOP|Add0~57                           ; cout0            ;
+; |TOP|Add0~55                        ; |TOP|Add0~57COUT1_202                  ; cout1            ;
+; |TOP|Equal0~2                       ; |TOP|Equal0~2                          ; combout          ;
+; |TOP|Add0~60                        ; |TOP|Add0~60                           ; combout          ;
+; |TOP|Add0~60                        ; |TOP|Add0~62                           ; cout0            ;
+; |TOP|Add0~60                        ; |TOP|Add0~62COUT1_204                  ; cout1            ;
+; |TOP|Add0~65                        ; |TOP|Add0~65                           ; combout          ;
+; |TOP|Add0~65                        ; |TOP|Add0~67                           ; cout0            ;
+; |TOP|Add0~65                        ; |TOP|Add0~67COUT1_206                  ; cout1            ;
+; |TOP|Add0~70                        ; |TOP|Add0~70                           ; combout          ;
+; |TOP|Add0~70                        ; |TOP|Add0~72                           ; cout0            ;
+; |TOP|Add0~70                        ; |TOP|Add0~72COUT1_208                  ; cout1            ;
+; |TOP|Add0~75                        ; |TOP|Add0~75                           ; combout          ;
+; |TOP|Add0~75                        ; |TOP|Add0~77                           ; cout             ;
+; |TOP|Equal0~3                       ; |TOP|Equal0~3                          ; combout          ;
+; |TOP|Add0~80                        ; |TOP|Add0~80                           ; combout          ;
+; |TOP|Add0~80                        ; |TOP|Add0~82                           ; cout0            ;
+; |TOP|Add0~80                        ; |TOP|Add0~82COUT1_210                  ; cout1            ;
+; |TOP|Add0~85                        ; |TOP|Add0~85                           ; combout          ;
+; |TOP|Add0~85                        ; |TOP|Add0~87                           ; cout0            ;
+; |TOP|Add0~85                        ; |TOP|Add0~87COUT1_212                  ; cout1            ;
+; |TOP|Add0~90                        ; |TOP|Add0~90                           ; combout          ;
+; |TOP|Add0~90                        ; |TOP|Add0~92                           ; cout0            ;
+; |TOP|Add0~90                        ; |TOP|Add0~92COUT1_214                  ; cout1            ;
+; |TOP|Add0~95                        ; |TOP|Add0~95                           ; combout          ;
+; |TOP|Add0~95                        ; |TOP|Add0~97                           ; cout0            ;
+; |TOP|Add0~95                        ; |TOP|Add0~97COUT1_216                  ; cout1            ;
+; |TOP|Equal0~5                       ; |TOP|Equal0~5                          ; combout          ;
+; |TOP|Add0~100                       ; |TOP|Add0~100                          ; combout          ;
+; |TOP|Add0~100                       ; |TOP|Add0~102                          ; cout             ;
+; |TOP|Add0~105                       ; |TOP|Add0~105                          ; combout          ;
+; |TOP|Add0~105                       ; |TOP|Add0~107                          ; cout0            ;
+; |TOP|Add0~105                       ; |TOP|Add0~107COUT1_218                 ; cout1            ;
+; |TOP|Equal0~6                       ; |TOP|Equal0~6                          ; combout          ;
+; |TOP|Add0~110                       ; |TOP|Add0~110                          ; combout          ;
+; |TOP|Add0~110                       ; |TOP|Add0~112                          ; cout0            ;
+; |TOP|Add0~110                       ; |TOP|Add0~112COUT1_220                 ; cout1            ;
+; |TOP|Add0~115                       ; |TOP|Add0~115                          ; combout          ;
+; |TOP|Add0~115                       ; |TOP|Add0~117                          ; cout0            ;
+; |TOP|Add0~115                       ; |TOP|Add0~117COUT1_222                 ; cout1            ;
+; |TOP|Equal0~7                       ; |TOP|Equal0~7                          ; combout          ;
+; |TOP|Add0~120                       ; |TOP|Add0~120                          ; combout          ;
+; |TOP|Add0~120                       ; |TOP|Add0~122                          ; cout0            ;
+; |TOP|Add0~120                       ; |TOP|Add0~122COUT1_224                 ; cout1            ;
+; |TOP|Add0~125                       ; |TOP|Add0~125                          ; combout          ;
+; |TOP|Add0~125                       ; |TOP|Add0~127                          ; cout             ;
+; |TOP|Add0~130                       ; |TOP|Add0~130                          ; combout          ;
+; |TOP|Add0~130                       ; |TOP|Add0~132                          ; cout0            ;
+; |TOP|Add0~130                       ; |TOP|Add0~132COUT1_226                 ; cout1            ;
+; |TOP|Add0~135                       ; |TOP|Add0~135                          ; combout          ;
+; |TOP|Add0~135                       ; |TOP|Add0~137                          ; cout0            ;
+; |TOP|Add0~135                       ; |TOP|Add0~137COUT1_228                 ; cout1            ;
+; |TOP|Equal0~8                       ; |TOP|Equal0~8                          ; combout          ;
+; |TOP|Add0~140                       ; |TOP|Add0~140                          ; combout          ;
+; |TOP|Add0~140                       ; |TOP|Add0~142                          ; cout0            ;
+; |TOP|Add0~140                       ; |TOP|Add0~142COUT1_230                 ; cout1            ;
+; |TOP|Add0~145                       ; |TOP|Add0~145                          ; combout          ;
+; |TOP|Add0~145                       ; |TOP|Add0~147                          ; cout0            ;
+; |TOP|Add0~145                       ; |TOP|Add0~147COUT1_232                 ; cout1            ;
+; |TOP|Add0~150                       ; |TOP|Add0~150                          ; combout          ;
+; |TOP|Add0~150                       ; |TOP|Add0~152                          ; cout             ;
+; |TOP|Add0~155                       ; |TOP|Add0~155                          ; combout          ;
+; |TOP|Equal0~9                       ; |TOP|Equal0~9                          ; combout          ;
+; |TOP|ADC_INTERFACE:ADC|DATA[6]      ; |TOP|ADC_INTERFACE:ADC|DATA[6]         ; regout           ;
+; |TOP|ADC_INTERFACE:ADC|DATA[5]      ; |TOP|ADC_INTERFACE:ADC|DATA[5]         ; regout           ;
+; |TOP|ADC_INTERFACE:ADC|DATA[4]      ; |TOP|ADC_INTERFACE:ADC|DATA[4]         ; regout           ;
+; |TOP|PULSOS:DIV_FREQ|cont[7]        ; |TOP|PULSOS:DIV_FREQ|cont[7]           ; regout           ;
+; |TOP|PULSOS:DIV_FREQ|cont[8]        ; |TOP|PULSOS:DIV_FREQ|cont[8]           ; regout           ;
+; |TOP|PULSOS:DIV_FREQ|cont[9]        ; |TOP|PULSOS:DIV_FREQ|cont[9]           ; regout           ;
+; |TOP|PULSOS:DIV_FREQ|cont[10]       ; |TOP|PULSOS:DIV_FREQ|cont[10]          ; regout           ;
+; |TOP|PULSOS:DIV_FREQ|cont[11]       ; |TOP|PULSOS:DIV_FREQ|cont[11]          ; regout           ;
+; |TOP|PULSOS:DIV_FREQ|cont[12]       ; |TOP|PULSOS:DIV_FREQ|cont[12]          ; regout           ;
+; |TOP|PULSOS:DIV_FREQ|cont[13]       ; |TOP|PULSOS:DIV_FREQ|cont[13]          ; regout           ;
+; |TOP|PULSOS:DIV_FREQ|cont[14]       ; |TOP|PULSOS:DIV_FREQ|cont[14]          ; regout           ;
+; |TOP|PULSOS:DIV_FREQ|cont[15]       ; |TOP|PULSOS:DIV_FREQ|cont[15]          ; regout           ;
+; |TOP|PULSOS:DIV_FREQ|cont[16]       ; |TOP|PULSOS:DIV_FREQ|cont[16]          ; regout           ;
+; |TOP|PULSOS:DIV_FREQ|cont[17]       ; |TOP|PULSOS:DIV_FREQ|cont[17]          ; regout           ;
+; |TOP|PULSOS:DIV_FREQ|cont[18]       ; |TOP|PULSOS:DIV_FREQ|cont[18]          ; regout           ;
+; |TOP|PULSOS:DIV_FREQ|cont[19]       ; |TOP|PULSOS:DIV_FREQ|cont[19]          ; regout           ;
+; |TOP|PULSOS:DIV_FREQ|cont[20]       ; |TOP|PULSOS:DIV_FREQ|cont[20]          ; regout           ;
+; |TOP|PULSOS:DIV_FREQ|cont[21]       ; |TOP|PULSOS:DIV_FREQ|cont[21]          ; regout           ;
+; |TOP|PULSOS:DIV_FREQ|cont[22]       ; |TOP|PULSOS:DIV_FREQ|cont[22]          ; regout           ;
+; |TOP|PULSOS:DIV_FREQ|cont[23]       ; |TOP|PULSOS:DIV_FREQ|cont[23]          ; regout           ;
+; |TOP|PULSOS:DIV_FREQ|cont[24]       ; |TOP|PULSOS:DIV_FREQ|cont[24]          ; regout           ;
+; |TOP|PULSOS:DIV_FREQ|cont[25]       ; |TOP|PULSOS:DIV_FREQ|cont[25]          ; regout           ;
+; |TOP|PULSOS:DIV_FREQ|cont[26]       ; |TOP|PULSOS:DIV_FREQ|cont[26]          ; regout           ;
+; |TOP|PULSOS:DIV_FREQ|cont[27]       ; |TOP|PULSOS:DIV_FREQ|cont[27]          ; regout           ;
+; |TOP|PULSOS:DIV_FREQ|cont[28]       ; |TOP|PULSOS:DIV_FREQ|cont[28]          ; regout           ;
+; |TOP|PULSOS:DIV_FREQ|cont[29]       ; |TOP|PULSOS:DIV_FREQ|cont[29]          ; regout           ;
+; |TOP|PULSOS:DIV_FREQ|cont[30]       ; |TOP|PULSOS:DIV_FREQ|cont[30]          ; regout           ;
+; |TOP|PULSOS:DIV_FREQ|cont[31]       ; |TOP|PULSOS:DIV_FREQ|cont[31]          ; regout           ;
+; |TOP|ADC_INTERFACE:ADC|Add0~5       ; |TOP|ADC_INTERFACE:ADC|Add0~7          ; cout0            ;
+; |TOP|ADC_INTERFACE:ADC|Add0~5       ; |TOP|ADC_INTERFACE:ADC|Add0~7COUT1_29  ; cout1            ;
+; |TOP|ADC_INTERFACE:ADC|Add0~15      ; |TOP|ADC_INTERFACE:ADC|Add0~15         ; combout          ;
+; |TOP|c[5]                           ; |TOP|c[5]                              ; regout           ;
+; |TOP|c[6]                           ; |TOP|c[6]                              ; regout           ;
+; |TOP|c[7]                           ; |TOP|c[7]                              ; regout           ;
+; |TOP|c[8]                           ; |TOP|c[8]                              ; regout           ;
+; |TOP|c[9]                           ; |TOP|c[9]                              ; regout           ;
+; |TOP|c[10]                          ; |TOP|c[10]                             ; regout           ;
+; |TOP|c[11]                          ; |TOP|c[11]                             ; regout           ;
+; |TOP|c[12]                          ; |TOP|c[12]                             ; regout           ;
+; |TOP|c[13]                          ; |TOP|c[13]                             ; regout           ;
+; |TOP|c[14]                          ; |TOP|c[14]                             ; regout           ;
+; |TOP|c[15]                          ; |TOP|c[15]                             ; regout           ;
+; |TOP|c[16]                          ; |TOP|c[16]                             ; regout           ;
+; |TOP|c[17]                          ; |TOP|c[17]                             ; regout           ;
+; |TOP|c[18]                          ; |TOP|c[18]                             ; regout           ;
+; |TOP|c[19]                          ; |TOP|c[19]                             ; regout           ;
+; |TOP|c[20]                          ; |TOP|c[20]                             ; regout           ;
+; |TOP|c[21]                          ; |TOP|c[21]                             ; regout           ;
+; |TOP|c[22]                          ; |TOP|c[22]                             ; regout           ;
+; |TOP|c[23]                          ; |TOP|c[23]                             ; regout           ;
+; |TOP|c[24]                          ; |TOP|c[24]                             ; regout           ;
+; |TOP|c[25]                          ; |TOP|c[25]                             ; regout           ;
+; |TOP|c[26]                          ; |TOP|c[26]                             ; regout           ;
+; |TOP|c[27]                          ; |TOP|c[27]                             ; regout           ;
+; |TOP|c[28]                          ; |TOP|c[28]                             ; regout           ;
+; |TOP|c[29]                          ; |TOP|c[29]                             ; regout           ;
+; |TOP|c[30]                          ; |TOP|c[30]                             ; regout           ;
+; |TOP|c[31]                          ; |TOP|c[31]                             ; regout           ;
+; |TOP|ADC_DATA                       ; |TOP|ADC_DATA~corein                   ; combout          ;
+; |TOP|ADC_CSN                        ; |TOP|ADC_CSN                           ; padio            ;
+; |TOP|ADC_SHDN                       ; |TOP|ADC_SHDN                          ; padio            ;
+; |TOP|L1                             ; |TOP|L1                                ; padio            ;
+; |TOP|L2                             ; |TOP|L2                                ; padio            ;
+; |TOP|L3                             ; |TOP|L3                                ; padio            ;
+; |TOP|L4                             ; |TOP|L4                                ; padio            ;
++-------------------------------------+----------------------------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II Simulator
+    Info: Version 9.1 Build 304 01/25/2010 Service Pack 1 SJ Web Edition
+    Info: Processing started: Tue Oct 27 15:03:37 2015
+Info: Command: quartus_sim --read_settings_files=on --write_settings_files=off pratica6_conversor_ad -c TOP
+Info: Using vector source file "C:/Users/Lucas Paulo/Desktop/P6 RAUL E ITALO/simulation.vwf"
+Info: Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info: Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Info: Simulation partitioned into 1 sub-simulations
+Info: Simulation coverage is      25.87 %
+Info: Number of transitions in simulation is 413583
+Info: Quartus II Simulator was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 170 megabytes
+    Info: Processing ended: Tue Oct 27 15:03:40 2015
+    Info: Elapsed time: 00:00:03
+    Info: Total CPU time (on all processors): 00:00:03
+
+

@@ -1,0 +1,71 @@
+
+	ALGORITIMO
+
+
+Multiplicação em números inteiros:
+O algorítimo de multiplicação, considerando um hardware para uma multiplicação simples (não a forma mais efetiva e rápida), tenta “imitar” o processo de multiplicação que aprendemos na escola. Na base binária só temos duas possibilidades: 0 ou 1. Quando se multiplica um número por 0 o resultado é 0 e quando se multiplica por 1 o resultado é ele mesmo. Considerando essa linha de raciocínio, o algorítimo verifica se o multiplicador é 0 ou 1. No caso 0, temos que somar o 0 ao resultado, contudo, somar 0 ou não somar é a mesma coisa, então o algorítimo pula para próxima etapa. No caso 1, o algorítimo soma o multiplicando ao produto (o mesmo de repetir). Quando realizamos uma multiplicação na qual o multiplicador possui mais de dois dígitos, deslocamos o produto parcial para esquerda toda vez que pulamos para o próximo digito do multiplicador. Na base binária, em uma multiplicação onde o multiplicador possui mais de dois bits, será realizado um processo semelhante. Como só temos duas opções (0 ou 1) basta repetir ou não o multiplicando. Este é deslocado para esquerda toda vez que o multiplicador é deslocado para direita, com o objetivo de pegar o próximo bit do multiplicador e também de colocar zeros a direita do multiplicando, para que possa ser somado corretamente ao produto parcial, formando o produto final.
+Considerando 32 bits, o processo se repete 32 vezes até terminar por completo a operação. Para multiplicar números com sinal, basta repetir o algorítimo anterior 31 vezes, deixando os sinais de fora das operações. Após o termino, realiza-se uma operação NAND com os sinais de forma que, se opostos, o resultado é negativo (1).
+
+        	--------
+	        |Inicio|
+	        --------
+                    |<---------------------------------------------
+		    V	                                          |
+                ---------------                                   |
+	--------|Teste de     |---------------------              |
+	|	|multiplicador|			    |             |
+        |       ---------------			    |	          |
+	|					    |             |
+	V					    |             |
+----------------------------------------------      |             |
+|Adiciona o multiplicador ao produto e       |      |             |
+|coloca o resultado no registrador do produto|      |             |
+----------------------------------------------      |             |
+		|				    | 	          |
+		|				    |	          |
+                |                                   |             |
+		V				    V	          |
+-----------------------------------------------------------       |
+|Desloca o registrador multiplicador para 1 bit à esquerda|       |
+-----------------------------------------------------------       |
+			|                                         |
+			|                                         |
+			V                                         |
+----------------------------------------------------------        |
+|Desloca o registrador multiplicando para 1 bit à direita|        |
+----------------------------------------------------------        |
+			|                                         |
+			|                                         |
+			V                                         |
+		  ---------------                                 |
+		  |32 repetição?|----------------------------------
+		  ---------------
+			|
+			V	
+	             TERMINADO
+        
+  
+   
+           HARDWARE DE MULTIPLICAÇÃO
+
+              -------------------
+              | Multiplicando   |
+              |	deslocando para |    <-----------------                 
+              |	a esquerda      |                     |
+              -------------------                     | 
+                         |64 bits                     |  
+	----------|      |	         	      |
+        |         |      |                            |
+        |         V      V                            |
+	|	---------------                       |       -----------------------
+	|	| ALU 64-bit  |  <---------------     |       |Multiplicador desloca| <-----   
+	|	---------------                 |     |	      |para a direita	    |	   |
+	|		  |                     |     |	      -----------------------      |
+	|		  |                     |     |                    |               | 
+	|		  V                 --------------                 |               |
+	|	   ----------         	    |	Teste de |    <-------------               |
+	|	   | Produto|	<-----------|	controle |----------------------------------  	
+	|	   ----------               --------------
+	|		|
+	|		|64 bits
+	|----------------			
